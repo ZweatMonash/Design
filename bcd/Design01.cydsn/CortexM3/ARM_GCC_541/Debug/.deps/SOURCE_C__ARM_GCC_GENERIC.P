@@ -1,0 +1,196 @@
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/CortexM3/ARM_GCC_541/Debug/main.o : C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_Ext_CP_Clk.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_IRQ.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_theACLK.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/B.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/B_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_2.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_3.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_4.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_2.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_3.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_4.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_left.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_lift.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_right.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fl.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fl_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fr.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fr_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_l.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_l_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_r.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_r_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/G.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/G_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/IDAC8_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/LED.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/LED_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lift.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_rw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Photodiode.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Photodiode_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/R.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/R_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Start_switch.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Start_switch_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/TIA_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fl.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fl_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fr.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fr_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_l.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_l_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_r.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_r_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/VDAC8_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lift.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lift_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_1.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_Key.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_uart_rx.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/project.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/servo.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/servo_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lift.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lift_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw_aliases.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/timer_clock.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/header01.h C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/main.c 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_Ext_CP_Clk.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_IRQ.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/ADC_DelSig_1_theACLK.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/B.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/B_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_2.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_3.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_4.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_2.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_3.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_4.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_left.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_lift.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_right.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fl.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fl_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fr.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_fr_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_l.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_l_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_r.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_r_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/G.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/G_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/IDAC8_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/LED.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/LED_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lift.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_rw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Photodiode.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Photodiode_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/R.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/R_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Start_switch.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Start_switch_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/TIA_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fl.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fl_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fr.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_fr_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_l.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_l_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_r.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_r_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/VDAC8_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lift.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lift_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_1.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_Key.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_uart_rx.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/servo.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/servo_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lift.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lift_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw_aliases.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/timer_clock.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/header01.h : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/main.c : 
+

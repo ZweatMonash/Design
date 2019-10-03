@@ -1,0 +1,12 @@
+--------------- Rebuild Started: 09/19/2019 18:56:33 Project: main.c, Configuration: ARM GCC 5.4-2016-q2-update Debug ---------------
+arm-none-eabi-gcc.exe -mcpu=cortex-m3 -mthumb -I. -IGenerated_Source\PSoC5 -Wa,-alh=.\CortexM3\ARM_GCC_541\Debug/main.lst -g -D DEBUG -D CY_CORE_ID=0 -Wall -ffunction-sections -ffat-lto-objects -Og -c main.c -o .\CortexM3\ARM_GCC_541\Debug\main.o
+main.c: In function 'main':
+main.c:65:14: warning: implicit declaration of function 'Sense1' [-Wimplicit-function-declaration]
+     float *a=Sense1();
+              ^
+main.c:65:14: warning: initialization makes pointer from integer without a cast [-Wint-conversion]
+main.c:67:20: error: incompatible types when assigning to type 'float' from type 'float *'
+         distance[i]=(a+i);
+                    ^
+The command 'arm-none-eabi-gcc.exe' failed with exit code '1'.
+--------------- Rebuild Failed: 09/19/2019 18:56:34 ---------------

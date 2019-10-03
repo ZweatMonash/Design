@@ -1,0 +1,1048 @@
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"lifting.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.lift_up,"ax",%progbits
+  20              		.align	2
+  21              		.global	lift_up
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	lift_up, %function
+  25              	lift_up:
+  26              	.LFB64:
+  27              		.file 1 "lifting.c"
+   1:lifting.c     **** #include "header.h"
+   2:lifting.c     **** #include "math.h"
+   3:lifting.c     **** #include "stdlib.h"
+   4:lifting.c     **** #include "header01.h"
+   5:lifting.c     **** #include "string.h"
+   6:lifting.c     **** #include "project.h"
+   7:lifting.c     **** /* ========================================
+   8:lifting.c     ****  *
+   9:lifting.c     ****  * Copyright YOUR COMPANY, THE YEAR
+  10:lifting.c     ****  * All Rights Reserved
+  11:lifting.c     ****  * UNPUBLISHED, LICENSED SOFTWARE.
+  12:lifting.c     ****  *
+  13:lifting.c     ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+  14:lifting.c     ****  * WHICH IS THE PROPERTY OF your company.
+  15:lifting.c     ****  *
+  16:lifting.c     ****  * ========================================
+  17:lifting.c     **** */
+  18:lifting.c     **** 
+  19:lifting.c     **** /* [] END OF FILE */
+  20:lifting.c     **** char UART_str[40];
+  21:lifting.c     **** void lift_up()
+  22:lifting.c     **** {
+  28              		.loc 1 22 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 38B5     		push	{r3, r4, r5, lr}
+  33              		.cfi_def_cfa_offset 16
+  34              		.cfi_offset 3, -16
+  35              		.cfi_offset 4, -12
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 2
+
+
+  36              		.cfi_offset 5, -8
+  37              		.cfi_offset 14, -4
+  38              	.LVL0:
+  23:lifting.c     ****    int lift_count=0;
+  24:lifting.c     ****    Control_Reg_2_Write(1);
+  39              		.loc 1 24 0
+  40 0002 0120     		movs	r0, #1
+  41 0004 FFF7FEFF 		bl	Control_Reg_2_Write
+  42              	.LVL1:
+  25:lifting.c     ****    Control_Reg_2_Write(0);
+  43              		.loc 1 25 0
+  44 0008 0020     		movs	r0, #0
+  45 000a FFF7FEFF 		bl	Control_Reg_2_Write
+  46              	.LVL2:
+  26:lifting.c     ****    
+  27:lifting.c     ****    dir_lift_Write(0);
+  47              		.loc 1 27 0
+  48 000e 0020     		movs	r0, #0
+  49 0010 FFF7FEFF 		bl	dir_lift_Write
+  50              	.LVL3:
+  51              	.L2:
+  28:lifting.c     **** test1:
+  29:lifting.c     ****    lift_count = Counter_lift_ReadCounter();
+  52              		.loc 1 29 0 discriminator 1
+  53 0014 FFF7FEFF 		bl	Counter_lift_ReadCounter
+  54              	.LVL4:
+  55 0018 0446     		mov	r4, r0
+  56              	.LVL5:
+  30:lifting.c     ****    sprintf(UART_str,"lift Count %d\n",lift_count);
+  57              		.loc 1 30 0 discriminator 1
+  58 001a 084D     		ldr	r5, .L4
+  59 001c 0246     		mov	r2, r0
+  60 001e 0849     		ldr	r1, .L4+4
+  61 0020 2846     		mov	r0, r5
+  62              	.LVL6:
+  63 0022 FFF7FEFF 		bl	sprintf
+  64              	.LVL7:
+  31:lifting.c     ****    UART_1_PutString(UART_str);
+  65              		.loc 1 31 0 discriminator 1
+  66 0026 2846     		mov	r0, r5
+  67 0028 FFF7FEFF 		bl	UART_1_PutString
+  68              	.LVL8:
+  32:lifting.c     ****     
+  33:lifting.c     ****      if(lift_count >= 10000)
+  69              		.loc 1 33 0 discriminator 1
+  70 002c 42F20F73 		movw	r3, #9999
+  71 0030 9C42     		cmp	r4, r3
+  72 0032 EFDD     		ble	.L2
+  34:lifting.c     ****     {
+  35:lifting.c     ****         Control_Reg_2_Write(1);
+  73              		.loc 1 35 0
+  74 0034 0120     		movs	r0, #1
+  75 0036 FFF7FEFF 		bl	Control_Reg_2_Write
+  76              	.LVL9:
+  77 003a 38BD     		pop	{r3, r4, r5, pc}
+  78              	.LVL10:
+  79              	.L5:
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 3
+
+
+  80              		.align	2
+  81              	.L4:
+  82 003c 00000000 		.word	UART_str
+  83 0040 00000000 		.word	.LC0
+  84              		.cfi_endproc
+  85              	.LFE64:
+  86              		.size	lift_up, .-lift_up
+  87              		.section	.text.lift_down,"ax",%progbits
+  88              		.align	2
+  89              		.global	lift_down
+  90              		.thumb
+  91              		.thumb_func
+  92              		.type	lift_down, %function
+  93              	lift_down:
+  94              	.LFB65:
+  36:lifting.c     ****     }
+  37:lifting.c     ****     else goto test1;
+  38:lifting.c     ****      
+  39:lifting.c     **** }
+  40:lifting.c     **** 
+  41:lifting.c     **** void lift_down()
+  42:lifting.c     **** {
+  95              		.loc 1 42 0
+  96              		.cfi_startproc
+  97              		@ args = 0, pretend = 0, frame = 0
+  98              		@ frame_needed = 0, uses_anonymous_args = 0
+  99 0000 38B5     		push	{r3, r4, r5, lr}
+ 100              		.cfi_def_cfa_offset 16
+ 101              		.cfi_offset 3, -16
+ 102              		.cfi_offset 4, -12
+ 103              		.cfi_offset 5, -8
+ 104              		.cfi_offset 14, -4
+ 105              	.LVL11:
+  43:lifting.c     ****    int lift_count=0;
+  44:lifting.c     ****    Control_Reg_2_Write(1);
+ 106              		.loc 1 44 0
+ 107 0002 0120     		movs	r0, #1
+ 108 0004 FFF7FEFF 		bl	Control_Reg_2_Write
+ 109              	.LVL12:
+  45:lifting.c     ****    Control_Reg_2_Write(0);
+ 110              		.loc 1 45 0
+ 111 0008 0020     		movs	r0, #0
+ 112 000a FFF7FEFF 		bl	Control_Reg_2_Write
+ 113              	.LVL13:
+  46:lifting.c     ****    
+  47:lifting.c     ****    dir_lift_Write(1);
+ 114              		.loc 1 47 0
+ 115 000e 0120     		movs	r0, #1
+ 116 0010 FFF7FEFF 		bl	dir_lift_Write
+ 117              	.LVL14:
+ 118              	.L7:
+  48:lifting.c     **** test1:
+  49:lifting.c     ****    lift_count = Counter_lift_ReadCounter();
+ 119              		.loc 1 49 0 discriminator 1
+ 120 0014 FFF7FEFF 		bl	Counter_lift_ReadCounter
+ 121              	.LVL15:
+ 122 0018 0446     		mov	r4, r0
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 4
+
+
+ 123              	.LVL16:
+  50:lifting.c     ****    sprintf(UART_str,"lift Count %d\n",lift_count);
+ 124              		.loc 1 50 0 discriminator 1
+ 125 001a 084D     		ldr	r5, .L9
+ 126 001c 0246     		mov	r2, r0
+ 127 001e 0849     		ldr	r1, .L9+4
+ 128 0020 2846     		mov	r0, r5
+ 129              	.LVL17:
+ 130 0022 FFF7FEFF 		bl	sprintf
+ 131              	.LVL18:
+  51:lifting.c     ****    UART_1_PutString(UART_str);
+ 132              		.loc 1 51 0 discriminator 1
+ 133 0026 2846     		mov	r0, r5
+ 134 0028 FFF7FEFF 		bl	UART_1_PutString
+ 135              	.LVL19:
+  52:lifting.c     ****     
+  53:lifting.c     ****      if(lift_count >= 10000)
+ 136              		.loc 1 53 0 discriminator 1
+ 137 002c 42F20F73 		movw	r3, #9999
+ 138 0030 9C42     		cmp	r4, r3
+ 139 0032 EFDD     		ble	.L7
+  54:lifting.c     ****     {
+  55:lifting.c     ****         Control_Reg_2_Write(1);
+ 140              		.loc 1 55 0
+ 141 0034 0120     		movs	r0, #1
+ 142 0036 FFF7FEFF 		bl	Control_Reg_2_Write
+ 143              	.LVL20:
+ 144 003a 38BD     		pop	{r3, r4, r5, pc}
+ 145              	.LVL21:
+ 146              	.L10:
+ 147              		.align	2
+ 148              	.L9:
+ 149 003c 00000000 		.word	UART_str
+ 150 0040 00000000 		.word	.LC0
+ 151              		.cfi_endproc
+ 152              	.LFE65:
+ 153              		.size	lift_down, .-lift_down
+ 154              		.comm	UART_str,40,4
+ 155              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 156              		.align	2
+ 157              	.LC0:
+ 158 0000 6C696674 		.ascii	"lift Count %d\012\000"
+ 158      20436F75 
+ 158      6E742025 
+ 158      640A00
+ 159              		.text
+ 160              	.Letext0:
+ 161              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 162              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 163              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 164              		.file 5 "Generated_Source\\PSoC5/Control_Reg_2.h"
+ 165              		.file 6 "Generated_Source\\PSoC5/dir_lift.h"
+ 166              		.file 7 "Generated_Source\\PSoC5/Counter_lift.h"
+ 167              		.file 8 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 168              		.file 9 "Generated_Source\\PSoC5/UART_1.h"
+ 169              		.section	.debug_info,"",%progbits
+ 170              	.Ldebug_info0:
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 5
+
+
+ 171 0000 7A020000 		.4byte	0x27a
+ 172 0004 0400     		.2byte	0x4
+ 173 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 174 000a 04       		.byte	0x4
+ 175 000b 01       		.uleb128 0x1
+ 176 000c 4B000000 		.4byte	.LASF27
+ 177 0010 0C       		.byte	0xc
+ 178 0011 0A000000 		.4byte	.LASF28
+ 179 0015 D9000000 		.4byte	.LASF29
+ 180 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 181 001d 00000000 		.4byte	0
+ 182 0021 00000000 		.4byte	.Ldebug_line0
+ 183 0025 02       		.uleb128 0x2
+ 184 0026 01       		.byte	0x1
+ 185 0027 06       		.byte	0x6
+ 186 0028 F4010000 		.4byte	.LASF0
+ 187 002c 02       		.uleb128 0x2
+ 188 002d 01       		.byte	0x1
+ 189 002e 08       		.byte	0x8
+ 190 002f 3D000000 		.4byte	.LASF1
+ 191 0033 02       		.uleb128 0x2
+ 192 0034 02       		.byte	0x2
+ 193 0035 05       		.byte	0x5
+ 194 0036 C4010000 		.4byte	.LASF2
+ 195 003a 02       		.uleb128 0x2
+ 196 003b 02       		.byte	0x2
+ 197 003c 07       		.byte	0x7
+ 198 003d 32010000 		.4byte	.LASF3
+ 199 0041 03       		.uleb128 0x3
+ 200 0042 14000000 		.4byte	.LASF12
+ 201 0046 02       		.byte	0x2
+ 202 0047 3F       		.byte	0x3f
+ 203 0048 4C000000 		.4byte	0x4c
+ 204 004c 02       		.uleb128 0x2
+ 205 004d 04       		.byte	0x4
+ 206 004e 05       		.byte	0x5
+ 207 004f D7010000 		.4byte	.LASF4
+ 208 0053 02       		.uleb128 0x2
+ 209 0054 04       		.byte	0x4
+ 210 0055 07       		.byte	0x7
+ 211 0056 20010000 		.4byte	.LASF5
+ 212 005a 02       		.uleb128 0x2
+ 213 005b 08       		.byte	0x8
+ 214 005c 05       		.byte	0x5
+ 215 005d B1010000 		.4byte	.LASF6
+ 216 0061 02       		.uleb128 0x2
+ 217 0062 08       		.byte	0x8
+ 218 0063 07       		.byte	0x7
+ 219 0064 75010000 		.4byte	.LASF7
+ 220 0068 04       		.uleb128 0x4
+ 221 0069 04       		.byte	0x4
+ 222 006a 05       		.byte	0x5
+ 223 006b 696E7400 		.ascii	"int\000"
+ 224 006f 02       		.uleb128 0x2
+ 225 0070 04       		.byte	0x4
+ 226 0071 07       		.byte	0x7
+ 227 0072 68010000 		.4byte	.LASF8
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 6
+
+
+ 228 0076 02       		.uleb128 0x2
+ 229 0077 08       		.byte	0x8
+ 230 0078 04       		.byte	0x4
+ 231 0079 E8010000 		.4byte	.LASF9
+ 232 007d 02       		.uleb128 0x2
+ 233 007e 04       		.byte	0x4
+ 234 007f 07       		.byte	0x7
+ 235 0080 94010000 		.4byte	.LASF10
+ 236 0084 02       		.uleb128 0x2
+ 237 0085 01       		.byte	0x1
+ 238 0086 08       		.byte	0x8
+ 239 0087 BF010000 		.4byte	.LASF11
+ 240 008b 03       		.uleb128 0x3
+ 241 008c 8C010000 		.4byte	.LASF13
+ 242 0090 03       		.byte	0x3
+ 243 0091 2C       		.byte	0x2c
+ 244 0092 41000000 		.4byte	0x41
+ 245 0096 02       		.uleb128 0x2
+ 246 0097 04       		.byte	0x4
+ 247 0098 04       		.byte	0x4
+ 248 0099 1E000000 		.4byte	.LASF14
+ 249 009d 02       		.uleb128 0x2
+ 250 009e 08       		.byte	0x8
+ 251 009f 04       		.byte	0x4
+ 252 00a0 52010000 		.4byte	.LASF15
+ 253 00a4 05       		.uleb128 0x5
+ 254 00a5 E0010000 		.4byte	.LASF16
+ 255 00a9 01       		.byte	0x1
+ 256 00aa 15       		.byte	0x15
+ 257 00ab 00000000 		.4byte	.LFB64
+ 258 00af 44000000 		.4byte	.LFE64-.LFB64
+ 259 00b3 01       		.uleb128 0x1
+ 260 00b4 9C       		.byte	0x9c
+ 261 00b5 5C010000 		.4byte	0x15c
+ 262 00b9 06       		.uleb128 0x6
+ 263 00ba 15010000 		.4byte	.LASF18
+ 264 00be 01       		.byte	0x1
+ 265 00bf 17       		.byte	0x17
+ 266 00c0 68000000 		.4byte	0x68
+ 267 00c4 00000000 		.4byte	.LLST0
+ 268 00c8 07       		.uleb128 0x7
+ 269 00c9 11020000 		.4byte	.LASF19
+ 270 00cd 01       		.byte	0x1
+ 271 00ce 1C       		.byte	0x1c
+ 272 00cf 14000000 		.4byte	.L2
+ 273 00d3 08       		.uleb128 0x8
+ 274 00d4 08000000 		.4byte	.LVL1
+ 275 00d8 46020000 		.4byte	0x246
+ 276 00dc E6000000 		.4byte	0xe6
+ 277 00e0 09       		.uleb128 0x9
+ 278 00e1 01       		.uleb128 0x1
+ 279 00e2 50       		.byte	0x50
+ 280 00e3 01       		.uleb128 0x1
+ 281 00e4 31       		.byte	0x31
+ 282 00e5 00       		.byte	0
+ 283 00e6 08       		.uleb128 0x8
+ 284 00e7 0E000000 		.4byte	.LVL2
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 7
+
+
+ 285 00eb 46020000 		.4byte	0x246
+ 286 00ef F9000000 		.4byte	0xf9
+ 287 00f3 09       		.uleb128 0x9
+ 288 00f4 01       		.uleb128 0x1
+ 289 00f5 50       		.byte	0x50
+ 290 00f6 01       		.uleb128 0x1
+ 291 00f7 30       		.byte	0x30
+ 292 00f8 00       		.byte	0
+ 293 00f9 08       		.uleb128 0x8
+ 294 00fa 14000000 		.4byte	.LVL3
+ 295 00fe 51020000 		.4byte	0x251
+ 296 0102 0C010000 		.4byte	0x10c
+ 297 0106 09       		.uleb128 0x9
+ 298 0107 01       		.uleb128 0x1
+ 299 0108 50       		.byte	0x50
+ 300 0109 01       		.uleb128 0x1
+ 301 010a 30       		.byte	0x30
+ 302 010b 00       		.byte	0
+ 303 010c 0A       		.uleb128 0xa
+ 304 010d 18000000 		.4byte	.LVL4
+ 305 0111 5C020000 		.4byte	0x25c
+ 306 0115 08       		.uleb128 0x8
+ 307 0116 26000000 		.4byte	.LVL7
+ 308 011a 67020000 		.4byte	0x267
+ 309 011e 38010000 		.4byte	0x138
+ 310 0122 09       		.uleb128 0x9
+ 311 0123 01       		.uleb128 0x1
+ 312 0124 50       		.byte	0x50
+ 313 0125 02       		.uleb128 0x2
+ 314 0126 75       		.byte	0x75
+ 315 0127 00       		.sleb128 0
+ 316 0128 09       		.uleb128 0x9
+ 317 0129 01       		.uleb128 0x1
+ 318 012a 51       		.byte	0x51
+ 319 012b 05       		.uleb128 0x5
+ 320 012c 03       		.byte	0x3
+ 321 012d 00000000 		.4byte	.LC0
+ 322 0131 09       		.uleb128 0x9
+ 323 0132 01       		.uleb128 0x1
+ 324 0133 52       		.byte	0x52
+ 325 0134 02       		.uleb128 0x2
+ 326 0135 74       		.byte	0x74
+ 327 0136 00       		.sleb128 0
+ 328 0137 00       		.byte	0
+ 329 0138 08       		.uleb128 0x8
+ 330 0139 2C000000 		.4byte	.LVL8
+ 331 013d 72020000 		.4byte	0x272
+ 332 0141 4C010000 		.4byte	0x14c
+ 333 0145 09       		.uleb128 0x9
+ 334 0146 01       		.uleb128 0x1
+ 335 0147 50       		.byte	0x50
+ 336 0148 02       		.uleb128 0x2
+ 337 0149 75       		.byte	0x75
+ 338 014a 00       		.sleb128 0
+ 339 014b 00       		.byte	0
+ 340 014c 0B       		.uleb128 0xb
+ 341 014d 3A000000 		.4byte	.LVL9
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 8
+
+
+ 342 0151 46020000 		.4byte	0x246
+ 343 0155 09       		.uleb128 0x9
+ 344 0156 01       		.uleb128 0x1
+ 345 0157 50       		.byte	0x50
+ 346 0158 01       		.uleb128 0x1
+ 347 0159 31       		.byte	0x31
+ 348 015a 00       		.byte	0
+ 349 015b 00       		.byte	0
+ 350 015c 05       		.uleb128 0x5
+ 351 015d 00000000 		.4byte	.LASF17
+ 352 0161 01       		.byte	0x1
+ 353 0162 29       		.byte	0x29
+ 354 0163 00000000 		.4byte	.LFB65
+ 355 0167 44000000 		.4byte	.LFE65-.LFB65
+ 356 016b 01       		.uleb128 0x1
+ 357 016c 9C       		.byte	0x9c
+ 358 016d 14020000 		.4byte	0x214
+ 359 0171 06       		.uleb128 0x6
+ 360 0172 15010000 		.4byte	.LASF18
+ 361 0176 01       		.byte	0x1
+ 362 0177 2B       		.byte	0x2b
+ 363 0178 68000000 		.4byte	0x68
+ 364 017c 35000000 		.4byte	.LLST1
+ 365 0180 07       		.uleb128 0x7
+ 366 0181 11020000 		.4byte	.LASF19
+ 367 0185 01       		.byte	0x1
+ 368 0186 30       		.byte	0x30
+ 369 0187 14000000 		.4byte	.L7
+ 370 018b 08       		.uleb128 0x8
+ 371 018c 08000000 		.4byte	.LVL12
+ 372 0190 46020000 		.4byte	0x246
+ 373 0194 9E010000 		.4byte	0x19e
+ 374 0198 09       		.uleb128 0x9
+ 375 0199 01       		.uleb128 0x1
+ 376 019a 50       		.byte	0x50
+ 377 019b 01       		.uleb128 0x1
+ 378 019c 31       		.byte	0x31
+ 379 019d 00       		.byte	0
+ 380 019e 08       		.uleb128 0x8
+ 381 019f 0E000000 		.4byte	.LVL13
+ 382 01a3 46020000 		.4byte	0x246
+ 383 01a7 B1010000 		.4byte	0x1b1
+ 384 01ab 09       		.uleb128 0x9
+ 385 01ac 01       		.uleb128 0x1
+ 386 01ad 50       		.byte	0x50
+ 387 01ae 01       		.uleb128 0x1
+ 388 01af 30       		.byte	0x30
+ 389 01b0 00       		.byte	0
+ 390 01b1 08       		.uleb128 0x8
+ 391 01b2 14000000 		.4byte	.LVL14
+ 392 01b6 51020000 		.4byte	0x251
+ 393 01ba C4010000 		.4byte	0x1c4
+ 394 01be 09       		.uleb128 0x9
+ 395 01bf 01       		.uleb128 0x1
+ 396 01c0 50       		.byte	0x50
+ 397 01c1 01       		.uleb128 0x1
+ 398 01c2 31       		.byte	0x31
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 9
+
+
+ 399 01c3 00       		.byte	0
+ 400 01c4 0A       		.uleb128 0xa
+ 401 01c5 18000000 		.4byte	.LVL15
+ 402 01c9 5C020000 		.4byte	0x25c
+ 403 01cd 08       		.uleb128 0x8
+ 404 01ce 26000000 		.4byte	.LVL18
+ 405 01d2 67020000 		.4byte	0x267
+ 406 01d6 F0010000 		.4byte	0x1f0
+ 407 01da 09       		.uleb128 0x9
+ 408 01db 01       		.uleb128 0x1
+ 409 01dc 50       		.byte	0x50
+ 410 01dd 02       		.uleb128 0x2
+ 411 01de 75       		.byte	0x75
+ 412 01df 00       		.sleb128 0
+ 413 01e0 09       		.uleb128 0x9
+ 414 01e1 01       		.uleb128 0x1
+ 415 01e2 51       		.byte	0x51
+ 416 01e3 05       		.uleb128 0x5
+ 417 01e4 03       		.byte	0x3
+ 418 01e5 00000000 		.4byte	.LC0
+ 419 01e9 09       		.uleb128 0x9
+ 420 01ea 01       		.uleb128 0x1
+ 421 01eb 52       		.byte	0x52
+ 422 01ec 02       		.uleb128 0x2
+ 423 01ed 74       		.byte	0x74
+ 424 01ee 00       		.sleb128 0
+ 425 01ef 00       		.byte	0
+ 426 01f0 08       		.uleb128 0x8
+ 427 01f1 2C000000 		.4byte	.LVL19
+ 428 01f5 72020000 		.4byte	0x272
+ 429 01f9 04020000 		.4byte	0x204
+ 430 01fd 09       		.uleb128 0x9
+ 431 01fe 01       		.uleb128 0x1
+ 432 01ff 50       		.byte	0x50
+ 433 0200 02       		.uleb128 0x2
+ 434 0201 75       		.byte	0x75
+ 435 0202 00       		.sleb128 0
+ 436 0203 00       		.byte	0
+ 437 0204 0B       		.uleb128 0xb
+ 438 0205 3A000000 		.4byte	.LVL20
+ 439 0209 46020000 		.4byte	0x246
+ 440 020d 09       		.uleb128 0x9
+ 441 020e 01       		.uleb128 0x1
+ 442 020f 50       		.byte	0x50
+ 443 0210 01       		.uleb128 0x1
+ 444 0211 31       		.byte	0x31
+ 445 0212 00       		.byte	0
+ 446 0213 00       		.byte	0
+ 447 0214 0C       		.uleb128 0xc
+ 448 0215 45010000 		.4byte	.LASF20
+ 449 0219 04       		.byte	0x4
+ 450 021a 1207     		.2byte	0x712
+ 451 021c 20020000 		.4byte	0x220
+ 452 0220 0D       		.uleb128 0xd
+ 453 0221 8B000000 		.4byte	0x8b
+ 454 0225 0E       		.uleb128 0xe
+ 455 0226 84000000 		.4byte	0x84
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 10
+
+
+ 456 022a 35020000 		.4byte	0x235
+ 457 022e 0F       		.uleb128 0xf
+ 458 022f 7D000000 		.4byte	0x7d
+ 459 0233 27       		.byte	0x27
+ 460 0234 00       		.byte	0
+ 461 0235 10       		.uleb128 0x10
+ 462 0236 CE010000 		.4byte	.LASF21
+ 463 023a 01       		.byte	0x1
+ 464 023b 14       		.byte	0x14
+ 465 023c 25020000 		.4byte	0x225
+ 466 0240 05       		.uleb128 0x5
+ 467 0241 03       		.byte	0x3
+ 468 0242 00000000 		.4byte	UART_str
+ 469 0246 11       		.uleb128 0x11
+ 470 0247 9D010000 		.4byte	.LASF22
+ 471 024b 9D010000 		.4byte	.LASF22
+ 472 024f 05       		.byte	0x5
+ 473 0250 2F       		.byte	0x2f
+ 474 0251 11       		.uleb128 0x11
+ 475 0252 59010000 		.4byte	.LASF23
+ 476 0256 59010000 		.4byte	.LASF23
+ 477 025a 06       		.byte	0x6
+ 478 025b 26       		.byte	0x26
+ 479 025c 11       		.uleb128 0x11
+ 480 025d 24000000 		.4byte	.LASF24
+ 481 0261 24000000 		.4byte	.LASF24
+ 482 0265 07       		.byte	0x7
+ 483 0266 5D       		.byte	0x5d
+ 484 0267 11       		.uleb128 0x11
+ 485 0268 17020000 		.4byte	.LASF25
+ 486 026c 17020000 		.4byte	.LASF25
+ 487 0270 08       		.byte	0x8
+ 488 0271 E7       		.byte	0xe7
+ 489 0272 11       		.uleb128 0x11
+ 490 0273 00020000 		.4byte	.LASF26
+ 491 0277 00020000 		.4byte	.LASF26
+ 492 027b 09       		.byte	0x9
+ 493 027c 8B       		.byte	0x8b
+ 494 027d 00       		.byte	0
+ 495              		.section	.debug_abbrev,"",%progbits
+ 496              	.Ldebug_abbrev0:
+ 497 0000 01       		.uleb128 0x1
+ 498 0001 11       		.uleb128 0x11
+ 499 0002 01       		.byte	0x1
+ 500 0003 25       		.uleb128 0x25
+ 501 0004 0E       		.uleb128 0xe
+ 502 0005 13       		.uleb128 0x13
+ 503 0006 0B       		.uleb128 0xb
+ 504 0007 03       		.uleb128 0x3
+ 505 0008 0E       		.uleb128 0xe
+ 506 0009 1B       		.uleb128 0x1b
+ 507 000a 0E       		.uleb128 0xe
+ 508 000b 55       		.uleb128 0x55
+ 509 000c 17       		.uleb128 0x17
+ 510 000d 11       		.uleb128 0x11
+ 511 000e 01       		.uleb128 0x1
+ 512 000f 10       		.uleb128 0x10
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 11
+
+
+ 513 0010 17       		.uleb128 0x17
+ 514 0011 00       		.byte	0
+ 515 0012 00       		.byte	0
+ 516 0013 02       		.uleb128 0x2
+ 517 0014 24       		.uleb128 0x24
+ 518 0015 00       		.byte	0
+ 519 0016 0B       		.uleb128 0xb
+ 520 0017 0B       		.uleb128 0xb
+ 521 0018 3E       		.uleb128 0x3e
+ 522 0019 0B       		.uleb128 0xb
+ 523 001a 03       		.uleb128 0x3
+ 524 001b 0E       		.uleb128 0xe
+ 525 001c 00       		.byte	0
+ 526 001d 00       		.byte	0
+ 527 001e 03       		.uleb128 0x3
+ 528 001f 16       		.uleb128 0x16
+ 529 0020 00       		.byte	0
+ 530 0021 03       		.uleb128 0x3
+ 531 0022 0E       		.uleb128 0xe
+ 532 0023 3A       		.uleb128 0x3a
+ 533 0024 0B       		.uleb128 0xb
+ 534 0025 3B       		.uleb128 0x3b
+ 535 0026 0B       		.uleb128 0xb
+ 536 0027 49       		.uleb128 0x49
+ 537 0028 13       		.uleb128 0x13
+ 538 0029 00       		.byte	0
+ 539 002a 00       		.byte	0
+ 540 002b 04       		.uleb128 0x4
+ 541 002c 24       		.uleb128 0x24
+ 542 002d 00       		.byte	0
+ 543 002e 0B       		.uleb128 0xb
+ 544 002f 0B       		.uleb128 0xb
+ 545 0030 3E       		.uleb128 0x3e
+ 546 0031 0B       		.uleb128 0xb
+ 547 0032 03       		.uleb128 0x3
+ 548 0033 08       		.uleb128 0x8
+ 549 0034 00       		.byte	0
+ 550 0035 00       		.byte	0
+ 551 0036 05       		.uleb128 0x5
+ 552 0037 2E       		.uleb128 0x2e
+ 553 0038 01       		.byte	0x1
+ 554 0039 3F       		.uleb128 0x3f
+ 555 003a 19       		.uleb128 0x19
+ 556 003b 03       		.uleb128 0x3
+ 557 003c 0E       		.uleb128 0xe
+ 558 003d 3A       		.uleb128 0x3a
+ 559 003e 0B       		.uleb128 0xb
+ 560 003f 3B       		.uleb128 0x3b
+ 561 0040 0B       		.uleb128 0xb
+ 562 0041 11       		.uleb128 0x11
+ 563 0042 01       		.uleb128 0x1
+ 564 0043 12       		.uleb128 0x12
+ 565 0044 06       		.uleb128 0x6
+ 566 0045 40       		.uleb128 0x40
+ 567 0046 18       		.uleb128 0x18
+ 568 0047 9742     		.uleb128 0x2117
+ 569 0049 19       		.uleb128 0x19
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 12
+
+
+ 570 004a 01       		.uleb128 0x1
+ 571 004b 13       		.uleb128 0x13
+ 572 004c 00       		.byte	0
+ 573 004d 00       		.byte	0
+ 574 004e 06       		.uleb128 0x6
+ 575 004f 34       		.uleb128 0x34
+ 576 0050 00       		.byte	0
+ 577 0051 03       		.uleb128 0x3
+ 578 0052 0E       		.uleb128 0xe
+ 579 0053 3A       		.uleb128 0x3a
+ 580 0054 0B       		.uleb128 0xb
+ 581 0055 3B       		.uleb128 0x3b
+ 582 0056 0B       		.uleb128 0xb
+ 583 0057 49       		.uleb128 0x49
+ 584 0058 13       		.uleb128 0x13
+ 585 0059 02       		.uleb128 0x2
+ 586 005a 17       		.uleb128 0x17
+ 587 005b 00       		.byte	0
+ 588 005c 00       		.byte	0
+ 589 005d 07       		.uleb128 0x7
+ 590 005e 0A       		.uleb128 0xa
+ 591 005f 00       		.byte	0
+ 592 0060 03       		.uleb128 0x3
+ 593 0061 0E       		.uleb128 0xe
+ 594 0062 3A       		.uleb128 0x3a
+ 595 0063 0B       		.uleb128 0xb
+ 596 0064 3B       		.uleb128 0x3b
+ 597 0065 0B       		.uleb128 0xb
+ 598 0066 11       		.uleb128 0x11
+ 599 0067 01       		.uleb128 0x1
+ 600 0068 00       		.byte	0
+ 601 0069 00       		.byte	0
+ 602 006a 08       		.uleb128 0x8
+ 603 006b 898201   		.uleb128 0x4109
+ 604 006e 01       		.byte	0x1
+ 605 006f 11       		.uleb128 0x11
+ 606 0070 01       		.uleb128 0x1
+ 607 0071 31       		.uleb128 0x31
+ 608 0072 13       		.uleb128 0x13
+ 609 0073 01       		.uleb128 0x1
+ 610 0074 13       		.uleb128 0x13
+ 611 0075 00       		.byte	0
+ 612 0076 00       		.byte	0
+ 613 0077 09       		.uleb128 0x9
+ 614 0078 8A8201   		.uleb128 0x410a
+ 615 007b 00       		.byte	0
+ 616 007c 02       		.uleb128 0x2
+ 617 007d 18       		.uleb128 0x18
+ 618 007e 9142     		.uleb128 0x2111
+ 619 0080 18       		.uleb128 0x18
+ 620 0081 00       		.byte	0
+ 621 0082 00       		.byte	0
+ 622 0083 0A       		.uleb128 0xa
+ 623 0084 898201   		.uleb128 0x4109
+ 624 0087 00       		.byte	0
+ 625 0088 11       		.uleb128 0x11
+ 626 0089 01       		.uleb128 0x1
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 13
+
+
+ 627 008a 31       		.uleb128 0x31
+ 628 008b 13       		.uleb128 0x13
+ 629 008c 00       		.byte	0
+ 630 008d 00       		.byte	0
+ 631 008e 0B       		.uleb128 0xb
+ 632 008f 898201   		.uleb128 0x4109
+ 633 0092 01       		.byte	0x1
+ 634 0093 11       		.uleb128 0x11
+ 635 0094 01       		.uleb128 0x1
+ 636 0095 31       		.uleb128 0x31
+ 637 0096 13       		.uleb128 0x13
+ 638 0097 00       		.byte	0
+ 639 0098 00       		.byte	0
+ 640 0099 0C       		.uleb128 0xc
+ 641 009a 34       		.uleb128 0x34
+ 642 009b 00       		.byte	0
+ 643 009c 03       		.uleb128 0x3
+ 644 009d 0E       		.uleb128 0xe
+ 645 009e 3A       		.uleb128 0x3a
+ 646 009f 0B       		.uleb128 0xb
+ 647 00a0 3B       		.uleb128 0x3b
+ 648 00a1 05       		.uleb128 0x5
+ 649 00a2 49       		.uleb128 0x49
+ 650 00a3 13       		.uleb128 0x13
+ 651 00a4 3F       		.uleb128 0x3f
+ 652 00a5 19       		.uleb128 0x19
+ 653 00a6 3C       		.uleb128 0x3c
+ 654 00a7 19       		.uleb128 0x19
+ 655 00a8 00       		.byte	0
+ 656 00a9 00       		.byte	0
+ 657 00aa 0D       		.uleb128 0xd
+ 658 00ab 35       		.uleb128 0x35
+ 659 00ac 00       		.byte	0
+ 660 00ad 49       		.uleb128 0x49
+ 661 00ae 13       		.uleb128 0x13
+ 662 00af 00       		.byte	0
+ 663 00b0 00       		.byte	0
+ 664 00b1 0E       		.uleb128 0xe
+ 665 00b2 01       		.uleb128 0x1
+ 666 00b3 01       		.byte	0x1
+ 667 00b4 49       		.uleb128 0x49
+ 668 00b5 13       		.uleb128 0x13
+ 669 00b6 01       		.uleb128 0x1
+ 670 00b7 13       		.uleb128 0x13
+ 671 00b8 00       		.byte	0
+ 672 00b9 00       		.byte	0
+ 673 00ba 0F       		.uleb128 0xf
+ 674 00bb 21       		.uleb128 0x21
+ 675 00bc 00       		.byte	0
+ 676 00bd 49       		.uleb128 0x49
+ 677 00be 13       		.uleb128 0x13
+ 678 00bf 2F       		.uleb128 0x2f
+ 679 00c0 0B       		.uleb128 0xb
+ 680 00c1 00       		.byte	0
+ 681 00c2 00       		.byte	0
+ 682 00c3 10       		.uleb128 0x10
+ 683 00c4 34       		.uleb128 0x34
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 14
+
+
+ 684 00c5 00       		.byte	0
+ 685 00c6 03       		.uleb128 0x3
+ 686 00c7 0E       		.uleb128 0xe
+ 687 00c8 3A       		.uleb128 0x3a
+ 688 00c9 0B       		.uleb128 0xb
+ 689 00ca 3B       		.uleb128 0x3b
+ 690 00cb 0B       		.uleb128 0xb
+ 691 00cc 49       		.uleb128 0x49
+ 692 00cd 13       		.uleb128 0x13
+ 693 00ce 3F       		.uleb128 0x3f
+ 694 00cf 19       		.uleb128 0x19
+ 695 00d0 02       		.uleb128 0x2
+ 696 00d1 18       		.uleb128 0x18
+ 697 00d2 00       		.byte	0
+ 698 00d3 00       		.byte	0
+ 699 00d4 11       		.uleb128 0x11
+ 700 00d5 2E       		.uleb128 0x2e
+ 701 00d6 00       		.byte	0
+ 702 00d7 3F       		.uleb128 0x3f
+ 703 00d8 19       		.uleb128 0x19
+ 704 00d9 3C       		.uleb128 0x3c
+ 705 00da 19       		.uleb128 0x19
+ 706 00db 6E       		.uleb128 0x6e
+ 707 00dc 0E       		.uleb128 0xe
+ 708 00dd 03       		.uleb128 0x3
+ 709 00de 0E       		.uleb128 0xe
+ 710 00df 3A       		.uleb128 0x3a
+ 711 00e0 0B       		.uleb128 0xb
+ 712 00e1 3B       		.uleb128 0x3b
+ 713 00e2 0B       		.uleb128 0xb
+ 714 00e3 00       		.byte	0
+ 715 00e4 00       		.byte	0
+ 716 00e5 00       		.byte	0
+ 717              		.section	.debug_loc,"",%progbits
+ 718              	.Ldebug_loc0:
+ 719              	.LLST0:
+ 720 0000 02000000 		.4byte	.LVL0
+ 721 0004 14000000 		.4byte	.LVL3
+ 722 0008 0200     		.2byte	0x2
+ 723 000a 30       		.byte	0x30
+ 724 000b 9F       		.byte	0x9f
+ 725 000c 1A000000 		.4byte	.LVL5
+ 726 0010 22000000 		.4byte	.LVL6
+ 727 0014 0100     		.2byte	0x1
+ 728 0016 50       		.byte	0x50
+ 729 0017 22000000 		.4byte	.LVL6
+ 730 001b 25000000 		.4byte	.LVL7-1
+ 731 001f 0100     		.2byte	0x1
+ 732 0021 52       		.byte	0x52
+ 733 0022 25000000 		.4byte	.LVL7-1
+ 734 0026 3C000000 		.4byte	.LVL10
+ 735 002a 0100     		.2byte	0x1
+ 736 002c 54       		.byte	0x54
+ 737 002d 00000000 		.4byte	0
+ 738 0031 00000000 		.4byte	0
+ 739              	.LLST1:
+ 740 0035 02000000 		.4byte	.LVL11
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 15
+
+
+ 741 0039 14000000 		.4byte	.LVL14
+ 742 003d 0200     		.2byte	0x2
+ 743 003f 30       		.byte	0x30
+ 744 0040 9F       		.byte	0x9f
+ 745 0041 1A000000 		.4byte	.LVL16
+ 746 0045 22000000 		.4byte	.LVL17
+ 747 0049 0100     		.2byte	0x1
+ 748 004b 50       		.byte	0x50
+ 749 004c 22000000 		.4byte	.LVL17
+ 750 0050 25000000 		.4byte	.LVL18-1
+ 751 0054 0100     		.2byte	0x1
+ 752 0056 52       		.byte	0x52
+ 753 0057 25000000 		.4byte	.LVL18-1
+ 754 005b 3C000000 		.4byte	.LVL21
+ 755 005f 0100     		.2byte	0x1
+ 756 0061 54       		.byte	0x54
+ 757 0062 00000000 		.4byte	0
+ 758 0066 00000000 		.4byte	0
+ 759              		.section	.debug_aranges,"",%progbits
+ 760 0000 24000000 		.4byte	0x24
+ 761 0004 0200     		.2byte	0x2
+ 762 0006 00000000 		.4byte	.Ldebug_info0
+ 763 000a 04       		.byte	0x4
+ 764 000b 00       		.byte	0
+ 765 000c 0000     		.2byte	0
+ 766 000e 0000     		.2byte	0
+ 767 0010 00000000 		.4byte	.LFB64
+ 768 0014 44000000 		.4byte	.LFE64-.LFB64
+ 769 0018 00000000 		.4byte	.LFB65
+ 770 001c 44000000 		.4byte	.LFE65-.LFB65
+ 771 0020 00000000 		.4byte	0
+ 772 0024 00000000 		.4byte	0
+ 773              		.section	.debug_ranges,"",%progbits
+ 774              	.Ldebug_ranges0:
+ 775 0000 00000000 		.4byte	.LFB64
+ 776 0004 44000000 		.4byte	.LFE64
+ 777 0008 00000000 		.4byte	.LFB65
+ 778 000c 44000000 		.4byte	.LFE65
+ 779 0010 00000000 		.4byte	0
+ 780 0014 00000000 		.4byte	0
+ 781              		.section	.debug_line,"",%progbits
+ 782              	.Ldebug_line0:
+ 783 0000 48020000 		.section	.debug_str,"MS",%progbits,1
+ 783      0200F401 
+ 783      00000201 
+ 783      FB0E0D00 
+ 783      01010101 
+ 784              	.LASF17:
+ 785 0000 6C696674 		.ascii	"lift_down\000"
+ 785      5F646F77 
+ 785      6E00
+ 786              	.LASF28:
+ 787 000a 6C696674 		.ascii	"lifting.c\000"
+ 787      696E672E 
+ 787      6300
+ 788              	.LASF12:
+ 789 0014 5F5F696E 		.ascii	"__int32_t\000"
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 16
+
+
+ 789      7433325F 
+ 789      7400
+ 790              	.LASF14:
+ 791 001e 666C6F61 		.ascii	"float\000"
+ 791      7400
+ 792              	.LASF24:
+ 793 0024 436F756E 		.ascii	"Counter_lift_ReadCounter\000"
+ 793      7465725F 
+ 793      6C696674 
+ 793      5F526561 
+ 793      64436F75 
+ 794              	.LASF1:
+ 795 003d 756E7369 		.ascii	"unsigned char\000"
+ 795      676E6564 
+ 795      20636861 
+ 795      7200
+ 796              	.LASF27:
+ 797 004b 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 797      43313120 
+ 797      352E342E 
+ 797      31203230 
+ 797      31363036 
+ 798 007e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 798      20726576 
+ 798      6973696F 
+ 798      6E203233 
+ 798      37373135 
+ 799 00b1 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 799      66756E63 
+ 799      74696F6E 
+ 799      2D736563 
+ 799      74696F6E 
+ 800              	.LASF29:
+ 801 00d9 433A5C55 		.ascii	"C:\\Users\\zhaoh\\Downloads\\bcd0926\\bcd0904\\bcd\\"
+ 801      73657273 
+ 801      5C7A6861 
+ 801      6F685C44 
+ 801      6F776E6C 
+ 802 0106 44657369 		.ascii	"Design01.cydsn\000"
+ 802      676E3031 
+ 802      2E637964 
+ 802      736E00
+ 803              	.LASF18:
+ 804 0115 6C696674 		.ascii	"lift_count\000"
+ 804      5F636F75 
+ 804      6E7400
+ 805              	.LASF5:
+ 806 0120 6C6F6E67 		.ascii	"long unsigned int\000"
+ 806      20756E73 
+ 806      69676E65 
+ 806      6420696E 
+ 806      7400
+ 807              	.LASF3:
+ 808 0132 73686F72 		.ascii	"short unsigned int\000"
+ 808      7420756E 
+ 808      7369676E 
+ 808      65642069 
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 17
+
+
+ 808      6E7400
+ 809              	.LASF20:
+ 810 0145 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 810      52784275 
+ 810      66666572 
+ 810      00
+ 811              	.LASF15:
+ 812 0152 646F7562 		.ascii	"double\000"
+ 812      6C6500
+ 813              	.LASF23:
+ 814 0159 6469725F 		.ascii	"dir_lift_Write\000"
+ 814      6C696674 
+ 814      5F577269 
+ 814      746500
+ 815              	.LASF8:
+ 816 0168 756E7369 		.ascii	"unsigned int\000"
+ 816      676E6564 
+ 816      20696E74 
+ 816      00
+ 817              	.LASF7:
+ 818 0175 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 818      206C6F6E 
+ 818      6720756E 
+ 818      7369676E 
+ 818      65642069 
+ 819              	.LASF13:
+ 820 018c 696E7433 		.ascii	"int32_t\000"
+ 820      325F7400 
+ 821              	.LASF10:
+ 822 0194 73697A65 		.ascii	"sizetype\000"
+ 822      74797065 
+ 822      00
+ 823              	.LASF22:
+ 824 019d 436F6E74 		.ascii	"Control_Reg_2_Write\000"
+ 824      726F6C5F 
+ 824      5265675F 
+ 824      325F5772 
+ 824      69746500 
+ 825              	.LASF6:
+ 826 01b1 6C6F6E67 		.ascii	"long long int\000"
+ 826      206C6F6E 
+ 826      6720696E 
+ 826      7400
+ 827              	.LASF11:
+ 828 01bf 63686172 		.ascii	"char\000"
+ 828      00
+ 829              	.LASF2:
+ 830 01c4 73686F72 		.ascii	"short int\000"
+ 830      7420696E 
+ 830      7400
+ 831              	.LASF21:
+ 832 01ce 55415254 		.ascii	"UART_str\000"
+ 832      5F737472 
+ 832      00
+ 833              	.LASF4:
+ 834 01d7 6C6F6E67 		.ascii	"long int\000"
+ 834      20696E74 
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccDGpTNi.s 			page 18
+
+
+ 834      00
+ 835              	.LASF16:
+ 836 01e0 6C696674 		.ascii	"lift_up\000"
+ 836      5F757000 
+ 837              	.LASF9:
+ 838 01e8 6C6F6E67 		.ascii	"long double\000"
+ 838      20646F75 
+ 838      626C6500 
+ 839              	.LASF0:
+ 840 01f4 7369676E 		.ascii	"signed char\000"
+ 840      65642063 
+ 840      68617200 
+ 841              	.LASF26:
+ 842 0200 55415254 		.ascii	"UART_1_PutString\000"
+ 842      5F315F50 
+ 842      75745374 
+ 842      72696E67 
+ 842      00
+ 843              	.LASF19:
+ 844 0211 74657374 		.ascii	"test1\000"
+ 844      3100
+ 845              	.LASF25:
+ 846 0217 73707269 		.ascii	"sprintf\000"
+ 846      6E746600 
+ 847              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

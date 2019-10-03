@@ -1,0 +1,110 @@
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/CortexM3/ARM_GCC_541/Release/ultrasonic.o : C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_2.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_left.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_right.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyLib.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CySpc.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_Pin.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_Pin_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/LED.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/LED_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_rw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyPm.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cypins.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cytypes.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_1.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_uart_rx.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/project.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw_aliases.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/timer_clock.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/header.h C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/ultrasonic.c 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Clock_2.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Control_Reg_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_left.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Counter_right.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyDmac.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyFlash.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CyLib.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/CySpc.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_Pin.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Echo_Pin_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/LED.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/LED_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_lw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/PWM_rw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_1_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_2_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Pin_3_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Timer_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/Trigger_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/UART_1_IntClock.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_armcc.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_compiler.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cmsis_gcc.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/core_cm3_psoc5.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyPm.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cy_em_eeprom.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevice_trm.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cydisabledsheets.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfitter_cfg.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cypins.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/cytypes.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_lw_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/dir_rw_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_1.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/isr_uart_rx.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/project.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_lw_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/step_rw_aliases.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/Generated_Source/PSoC5/timer_clock.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/header.h : 
+
+C:/Users/Zwe/Desktop/Monash/Y3S2/ECE3091\ -\ ENGINEERING\ DESIGN/bcd/Design01.cydsn/ultrasonic.c : 
+

@@ -1,0 +1,1318 @@
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Pulse_Count.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Pulse_Count_Init,"ax",%progbits
+  20              		.align	1
+  21              		.global	Pulse_Count_Init
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Pulse_Count_Init, %function
+  25              	Pulse_Count_Init:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Pulse_Count.c"
+   1:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Pulse_Count.c **** * File Name: Pulse_Count.c
+   3:Generated_Source\PSoC5/Pulse_Count.c **** * Version 1.0
+   4:Generated_Source\PSoC5/Pulse_Count.c **** *
+   5:Generated_Source\PSoC5/Pulse_Count.c **** * Description:
+   6:Generated_Source\PSoC5/Pulse_Count.c **** *  This file provides source code for the Count7 component's API.
+   7:Generated_Source\PSoC5/Pulse_Count.c **** *
+   8:Generated_Source\PSoC5/Pulse_Count.c **** * Note:
+   9:Generated_Source\PSoC5/Pulse_Count.c **** *
+  10:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+  11:Generated_Source\PSoC5/Pulse_Count.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  12:Generated_Source\PSoC5/Pulse_Count.c **** * You may use this file only in accordance with the license, terms, conditions,
+  13:Generated_Source\PSoC5/Pulse_Count.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  14:Generated_Source\PSoC5/Pulse_Count.c **** * the software package with which this file was provided.
+  15:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+  16:Generated_Source\PSoC5/Pulse_Count.c **** 
+  17:Generated_Source\PSoC5/Pulse_Count.c **** #include "Pulse_Count.h"
+  18:Generated_Source\PSoC5/Pulse_Count.c **** 
+  19:Generated_Source\PSoC5/Pulse_Count.c **** uint8 Pulse_Count_initVar = 0u;
+  20:Generated_Source\PSoC5/Pulse_Count.c **** 
+  21:Generated_Source\PSoC5/Pulse_Count.c **** 
+  22:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+  23:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_Init
+  24:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+  25:Generated_Source\PSoC5/Pulse_Count.c **** *
+  26:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+  27:Generated_Source\PSoC5/Pulse_Count.c **** *  Initializes or restores the component according to the parameter editor
+  28:Generated_Source\PSoC5/Pulse_Count.c **** *  settings.
+  29:Generated_Source\PSoC5/Pulse_Count.c **** *
+  30:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+  32:Generated_Source\PSoC5/Pulse_Count.c **** *
+  33:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+  34:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+  35:Generated_Source\PSoC5/Pulse_Count.c **** *
+  36:Generated_Source\PSoC5/Pulse_Count.c **** * Theory:
+  37:Generated_Source\PSoC5/Pulse_Count.c **** *  It is not necessary to call Count7_Init() because the Count7_Start() API
+  38:Generated_Source\PSoC5/Pulse_Count.c **** *  calls this function and is the preferred method to begin component
+  39:Generated_Source\PSoC5/Pulse_Count.c **** *  operation.
+  40:Generated_Source\PSoC5/Pulse_Count.c **** *
+  41:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+  42:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_Init(void) 
+  43:Generated_Source\PSoC5/Pulse_Count.c **** {
+  28              		.loc 1 43 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  44:Generated_Source\PSoC5/Pulse_Count.c ****     /* Set the initial period value from parameter editor */
+  45:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_PERIOD_REG = Pulse_Count_INITIAL_PERIOD;
+  33              		.loc 1 45 0
+  34 0000 014B     		ldr	r3, .L2
+  35 0002 0122     		movs	r2, #1
+  36 0004 1A70     		strb	r2, [r3]
+  37 0006 7047     		bx	lr
+  38              	.L3:
+  39              		.align	2
+  40              	.L2:
+  41 0008 87650040 		.word	1073767815
+  42              		.cfi_endproc
+  43              	.LFE0:
+  44              		.size	Pulse_Count_Init, .-Pulse_Count_Init
+  45              		.section	.text.Pulse_Count_Enable,"ax",%progbits
+  46              		.align	1
+  47              		.global	Pulse_Count_Enable
+  48              		.thumb
+  49              		.thumb_func
+  50              		.type	Pulse_Count_Enable, %function
+  51              	Pulse_Count_Enable:
+  52              	.LFB1:
+  46:Generated_Source\PSoC5/Pulse_Count.c **** }
+  47:Generated_Source\PSoC5/Pulse_Count.c **** 
+  48:Generated_Source\PSoC5/Pulse_Count.c **** 
+  49:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+  50:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_Enable
+  51:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+  52:Generated_Source\PSoC5/Pulse_Count.c **** *
+  53:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+  54:Generated_Source\PSoC5/Pulse_Count.c **** *  Enables the software enable of the counter.
+  55:Generated_Source\PSoC5/Pulse_Count.c **** *
+  56:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+  57:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+  58:Generated_Source\PSoC5/Pulse_Count.c **** *
+  59:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+  60:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+  61:Generated_Source\PSoC5/Pulse_Count.c **** *
+  62:Generated_Source\PSoC5/Pulse_Count.c **** * Theory:
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 3
+
+
+  63:Generated_Source\PSoC5/Pulse_Count.c **** *  It is not necessary to call Count7_Enable() because the Count7_Start() API
+  64:Generated_Source\PSoC5/Pulse_Count.c **** *  calls this function, which is the preferred method to begin component
+  65:Generated_Source\PSoC5/Pulse_Count.c **** *  operation.
+  66:Generated_Source\PSoC5/Pulse_Count.c **** *  This API performs modification of auxiliary control register which is a
+  67:Generated_Source\PSoC5/Pulse_Count.c **** *  shared resource so it is required to disable interrupts until the
+  68:Generated_Source\PSoC5/Pulse_Count.c **** *  modification will complete.
+  69:Generated_Source\PSoC5/Pulse_Count.c **** *
+  70:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+  71:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_Enable(void) 
+  72:Generated_Source\PSoC5/Pulse_Count.c **** {
+  53              		.loc 1 72 0
+  54              		.cfi_startproc
+  55              		@ args = 0, pretend = 0, frame = 0
+  56              		@ frame_needed = 0, uses_anonymous_args = 0
+  57 0000 08B5     		push	{r3, lr}
+  58              		.cfi_def_cfa_offset 8
+  59              		.cfi_offset 3, -8
+  60              		.cfi_offset 14, -4
+  73:Generated_Source\PSoC5/Pulse_Count.c ****     uint8 interruptState;
+  74:Generated_Source\PSoC5/Pulse_Count.c **** 
+  75:Generated_Source\PSoC5/Pulse_Count.c ****     interruptState = CyEnterCriticalSection();
+  61              		.loc 1 75 0
+  62 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+  63              	.LVL0:
+  76:Generated_Source\PSoC5/Pulse_Count.c ****     /* Set the counter start bit in auxiliary control. If routed enable
+  77:Generated_Source\PSoC5/Pulse_Count.c ****     * isn't used then this will immediately star the Count7 operation.
+  78:Generated_Source\PSoC5/Pulse_Count.c ****     */
+  79:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_AUX_CONTROL_REG |= Pulse_Count_COUNTER_START;
+  64              		.loc 1 79 0
+  65 0006 044A     		ldr	r2, .L5
+  66 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+  67 000a 43F02003 		orr	r3, r3, #32
+  68 000e 1370     		strb	r3, [r2]
+  80:Generated_Source\PSoC5/Pulse_Count.c **** 
+  81:Generated_Source\PSoC5/Pulse_Count.c ****     CyExitCriticalSection(interruptState);
+  82:Generated_Source\PSoC5/Pulse_Count.c **** }
+  69              		.loc 1 82 0
+  70 0010 BDE80840 		pop	{r3, lr}
+  71              		.cfi_restore 14
+  72              		.cfi_restore 3
+  73              		.cfi_def_cfa_offset 0
+  81:Generated_Source\PSoC5/Pulse_Count.c **** }
+  74              		.loc 1 81 0
+  75 0014 FFF7FEBF 		b	CyExitCriticalSection
+  76              	.LVL1:
+  77              	.L6:
+  78              		.align	2
+  79              	.L5:
+  80 0018 97650040 		.word	1073767831
+  81              		.cfi_endproc
+  82              	.LFE1:
+  83              		.size	Pulse_Count_Enable, .-Pulse_Count_Enable
+  84              		.section	.text.Pulse_Count_Start,"ax",%progbits
+  85              		.align	1
+  86              		.global	Pulse_Count_Start
+  87              		.thumb
+  88              		.thumb_func
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 4
+
+
+  89              		.type	Pulse_Count_Start, %function
+  90              	Pulse_Count_Start:
+  91              	.LFB2:
+  83:Generated_Source\PSoC5/Pulse_Count.c **** 
+  84:Generated_Source\PSoC5/Pulse_Count.c **** 
+  85:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+  86:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_Start
+  87:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+  88:Generated_Source\PSoC5/Pulse_Count.c **** *
+  89:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+  90:Generated_Source\PSoC5/Pulse_Count.c **** *  Performs all of the required initialization for the component and enables
+  91:Generated_Source\PSoC5/Pulse_Count.c **** *  the counter. The first time the routine is executed, the period is set as
+  92:Generated_Source\PSoC5/Pulse_Count.c **** *  configured in the customizer. When called to restart the counter following a
+  93:Generated_Source\PSoC5/Pulse_Count.c **** *  Count7_Stop() call, the current period value is retained.
+  94:Generated_Source\PSoC5/Pulse_Count.c **** *
+  95:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+  96:Generated_Source\PSoC5/Pulse_Count.c **** *  None.
+  97:Generated_Source\PSoC5/Pulse_Count.c **** *
+  98:Generated_Source\PSoC5/Pulse_Count.c **** * Global Variables:
+  99:Generated_Source\PSoC5/Pulse_Count.c **** *  Pulse_Count_initVar - global variable.
+ 100:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 101:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 102:Generated_Source\PSoC5/Pulse_Count.c **** *  None.
+ 103:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 104:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 105:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_Start(void) 
+ 106:Generated_Source\PSoC5/Pulse_Count.c **** {
+  92              		.loc 1 106 0
+  93              		.cfi_startproc
+  94              		@ args = 0, pretend = 0, frame = 0
+  95              		@ frame_needed = 0, uses_anonymous_args = 0
+  96              		@ link register save eliminated.
+ 107:Generated_Source\PSoC5/Pulse_Count.c ****     /* If not initialized then perform initialization */
+ 108:Generated_Source\PSoC5/Pulse_Count.c ****     if(Pulse_Count_initVar == 0u)
+  97              		.loc 1 108 0
+  98 0000 044B     		ldr	r3, .L10
+  99 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+ 100 0004 1AB9     		cbnz	r2, .L8
+ 101              	.LBB4:
+ 102              	.LBB5:
+  45:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 103              		.loc 1 45 0
+ 104 0006 0449     		ldr	r1, .L10+4
+ 105 0008 0122     		movs	r2, #1
+ 106 000a 0A70     		strb	r2, [r1]
+ 107              	.LBE5:
+ 108              	.LBE4:
+ 109:Generated_Source\PSoC5/Pulse_Count.c ****     {
+ 110:Generated_Source\PSoC5/Pulse_Count.c ****         Pulse_Count_Init();
+ 111:Generated_Source\PSoC5/Pulse_Count.c ****         Pulse_Count_initVar = 1u;
+ 109              		.loc 1 111 0
+ 110 000c 1A70     		strb	r2, [r3]
+ 111              	.L8:
+ 112:Generated_Source\PSoC5/Pulse_Count.c ****     }
+ 113:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 114:Generated_Source\PSoC5/Pulse_Count.c ****     /* Enable Count7 */
+ 115:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_Enable();
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 5
+
+
+ 112              		.loc 1 115 0
+ 113 000e FFF7FEBF 		b	Pulse_Count_Enable
+ 114              	.LVL2:
+ 115              	.L11:
+ 116 0012 00BF     		.align	2
+ 117              	.L10:
+ 118 0014 00000000 		.word	.LANCHOR0
+ 119 0018 87650040 		.word	1073767815
+ 120              		.cfi_endproc
+ 121              	.LFE2:
+ 122              		.size	Pulse_Count_Start, .-Pulse_Count_Start
+ 123              		.section	.text.Pulse_Count_Stop,"ax",%progbits
+ 124              		.align	1
+ 125              		.global	Pulse_Count_Stop
+ 126              		.thumb
+ 127              		.thumb_func
+ 128              		.type	Pulse_Count_Stop, %function
+ 129              	Pulse_Count_Stop:
+ 130              	.LFB3:
+ 116:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 117:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 118:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 119:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+ 120:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_Stop
+ 121:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+ 122:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 123:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+ 124:Generated_Source\PSoC5/Pulse_Count.c **** *  Disables the software enable of the counter.
+ 125:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 126:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ 127:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 128:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 129:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 130:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 131:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 132:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 133:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_Stop(void) 
+ 134:Generated_Source\PSoC5/Pulse_Count.c **** {
+ 131              		.loc 1 134 0
+ 132              		.cfi_startproc
+ 133              		@ args = 0, pretend = 0, frame = 0
+ 134              		@ frame_needed = 0, uses_anonymous_args = 0
+ 135 0000 08B5     		push	{r3, lr}
+ 136              		.cfi_def_cfa_offset 8
+ 137              		.cfi_offset 3, -8
+ 138              		.cfi_offset 14, -4
+ 135:Generated_Source\PSoC5/Pulse_Count.c ****     uint8 interruptState;
+ 136:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 137:Generated_Source\PSoC5/Pulse_Count.c ****     interruptState = CyEnterCriticalSection();
+ 139              		.loc 1 137 0
+ 140 0002 FFF7FEFF 		bl	CyEnterCriticalSection
+ 141              	.LVL3:
+ 138:Generated_Source\PSoC5/Pulse_Count.c ****     /* Clear the counter start bit in auxiliary control. */
+ 139:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_AUX_CONTROL_REG &= (uint8) ~((uint8) Pulse_Count_COUNTER_START);
+ 142              		.loc 1 139 0
+ 143 0006 044A     		ldr	r2, .L13
+ 144 0008 1378     		ldrb	r3, [r2]	@ zero_extendqisi2
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 6
+
+
+ 145 000a 03F0DF03 		and	r3, r3, #223
+ 146 000e 1370     		strb	r3, [r2]
+ 140:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 141:Generated_Source\PSoC5/Pulse_Count.c ****     CyExitCriticalSection(interruptState);
+ 142:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 147              		.loc 1 142 0
+ 148 0010 BDE80840 		pop	{r3, lr}
+ 149              		.cfi_restore 14
+ 150              		.cfi_restore 3
+ 151              		.cfi_def_cfa_offset 0
+ 141:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 152              		.loc 1 141 0
+ 153 0014 FFF7FEBF 		b	CyExitCriticalSection
+ 154              	.LVL4:
+ 155              	.L14:
+ 156              		.align	2
+ 157              	.L13:
+ 158 0018 97650040 		.word	1073767831
+ 159              		.cfi_endproc
+ 160              	.LFE3:
+ 161              		.size	Pulse_Count_Stop, .-Pulse_Count_Stop
+ 162              		.section	.text.Pulse_Count_WriteCounter,"ax",%progbits
+ 163              		.align	1
+ 164              		.global	Pulse_Count_WriteCounter
+ 165              		.thumb
+ 166              		.thumb_func
+ 167              		.type	Pulse_Count_WriteCounter, %function
+ 168              	Pulse_Count_WriteCounter:
+ 169              	.LFB4:
+ 143:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 144:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 145:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+ 146:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_WriteCounter
+ 147:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+ 148:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 149:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+ 150:Generated_Source\PSoC5/Pulse_Count.c **** *  This function writes the counter directly. The counter should be disabled
+ 151:Generated_Source\PSoC5/Pulse_Count.c **** *  before calling this function.
+ 152:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 153:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ 154:Generated_Source\PSoC5/Pulse_Count.c **** *  count - Value to be written to counter.
+ 155:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 156:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 157:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 158:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 159:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 160:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_WriteCounter(uint8 count) 
+ 161:Generated_Source\PSoC5/Pulse_Count.c **** {
+ 170              		.loc 1 161 0
+ 171              		.cfi_startproc
+ 172              		@ args = 0, pretend = 0, frame = 0
+ 173              		@ frame_needed = 0, uses_anonymous_args = 0
+ 174              		@ link register save eliminated.
+ 175              	.LVL5:
+ 162:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_COUNT_REG = (count & Pulse_Count_COUNT_7BIT_MASK);
+ 176              		.loc 1 162 0
+ 177 0000 024B     		ldr	r3, .L16
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 7
+
+
+ 178 0002 00F07F00 		and	r0, r0, #127
+ 179              	.LVL6:
+ 180 0006 1870     		strb	r0, [r3]
+ 181 0008 7047     		bx	lr
+ 182              	.L17:
+ 183 000a 00BF     		.align	2
+ 184              	.L16:
+ 185 000c 77650040 		.word	1073767799
+ 186              		.cfi_endproc
+ 187              	.LFE4:
+ 188              		.size	Pulse_Count_WriteCounter, .-Pulse_Count_WriteCounter
+ 189              		.section	.text.Pulse_Count_ReadCounter,"ax",%progbits
+ 190              		.align	1
+ 191              		.global	Pulse_Count_ReadCounter
+ 192              		.thumb
+ 193              		.thumb_func
+ 194              		.type	Pulse_Count_ReadCounter, %function
+ 195              	Pulse_Count_ReadCounter:
+ 196              	.LFB5:
+ 163:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 164:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 165:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 166:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+ 167:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_ReadCounter
+ 168:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+ 169:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 170:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+ 171:Generated_Source\PSoC5/Pulse_Count.c **** *  This function reads the counter value.
+ 172:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 173:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ 174:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 175:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 176:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 177:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 178:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 179:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 180:Generated_Source\PSoC5/Pulse_Count.c **** uint8 Pulse_Count_ReadCounter(void) 
+ 181:Generated_Source\PSoC5/Pulse_Count.c **** {
+ 197              		.loc 1 181 0
+ 198              		.cfi_startproc
+ 199              		@ args = 0, pretend = 0, frame = 0
+ 200              		@ frame_needed = 0, uses_anonymous_args = 0
+ 201              		@ link register save eliminated.
+ 182:Generated_Source\PSoC5/Pulse_Count.c ****     return(Pulse_Count_COUNT_REG & Pulse_Count_COUNT_7BIT_MASK);
+ 202              		.loc 1 182 0
+ 203 0000 024B     		ldr	r3, .L19
+ 204 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 183:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 205              		.loc 1 183 0
+ 206 0004 00F07F00 		and	r0, r0, #127
+ 207 0008 7047     		bx	lr
+ 208              	.L20:
+ 209 000a 00BF     		.align	2
+ 210              	.L19:
+ 211 000c 77650040 		.word	1073767799
+ 212              		.cfi_endproc
+ 213              	.LFE5:
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 8
+
+
+ 214              		.size	Pulse_Count_ReadCounter, .-Pulse_Count_ReadCounter
+ 215              		.section	.text.Pulse_Count_WritePeriod,"ax",%progbits
+ 216              		.align	1
+ 217              		.global	Pulse_Count_WritePeriod
+ 218              		.thumb
+ 219              		.thumb_func
+ 220              		.type	Pulse_Count_WritePeriod, %function
+ 221              	Pulse_Count_WritePeriod:
+ 222              	.LFB6:
+ 184:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 185:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 186:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+ 187:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_WritePeriod
+ 188:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+ 189:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 190:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+ 191:Generated_Source\PSoC5/Pulse_Count.c **** *  This function writes the period register. The actual period is one greater
+ 192:Generated_Source\PSoC5/Pulse_Count.c **** *  than the value in the period register since the counting sequence starts
+ 193:Generated_Source\PSoC5/Pulse_Count.c **** *  with the period register and counts down to 0 inclusive. The period of the
+ 194:Generated_Source\PSoC5/Pulse_Count.c **** *  counter output does not change until the counter is reloaded following the
+ 195:Generated_Source\PSoC5/Pulse_Count.c **** *  terminal count value of 0 or due to a hardware load signal.
+ 196:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 197:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ 198:Generated_Source\PSoC5/Pulse_Count.c **** *  period - Period value to be written.
+ 199:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 200:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 201:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 202:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 203:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 204:Generated_Source\PSoC5/Pulse_Count.c **** void Pulse_Count_WritePeriod(uint8 period) 
+ 205:Generated_Source\PSoC5/Pulse_Count.c **** {
+ 223              		.loc 1 205 0
+ 224              		.cfi_startproc
+ 225              		@ args = 0, pretend = 0, frame = 0
+ 226              		@ frame_needed = 0, uses_anonymous_args = 0
+ 227              		@ link register save eliminated.
+ 228              	.LVL7:
+ 206:Generated_Source\PSoC5/Pulse_Count.c ****     Pulse_Count_PERIOD_REG = period;
+ 229              		.loc 1 206 0
+ 230 0000 014B     		ldr	r3, .L22
+ 231 0002 1870     		strb	r0, [r3]
+ 232 0004 7047     		bx	lr
+ 233              	.L23:
+ 234 0006 00BF     		.align	2
+ 235              	.L22:
+ 236 0008 87650040 		.word	1073767815
+ 237              		.cfi_endproc
+ 238              	.LFE6:
+ 239              		.size	Pulse_Count_WritePeriod, .-Pulse_Count_WritePeriod
+ 240              		.section	.text.Pulse_Count_ReadPeriod,"ax",%progbits
+ 241              		.align	1
+ 242              		.global	Pulse_Count_ReadPeriod
+ 243              		.thumb
+ 244              		.thumb_func
+ 245              		.type	Pulse_Count_ReadPeriod, %function
+ 246              	Pulse_Count_ReadPeriod:
+ 247              	.LFB7:
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 9
+
+
+ 207:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 208:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 209:Generated_Source\PSoC5/Pulse_Count.c **** 
+ 210:Generated_Source\PSoC5/Pulse_Count.c **** /*******************************************************************************
+ 211:Generated_Source\PSoC5/Pulse_Count.c **** * Function Name: Pulse_Count_ReadPeriod
+ 212:Generated_Source\PSoC5/Pulse_Count.c **** ********************************************************************************
+ 213:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 214:Generated_Source\PSoC5/Pulse_Count.c **** * Summary:
+ 215:Generated_Source\PSoC5/Pulse_Count.c **** *  This function reads the period register.
+ 216:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 217:Generated_Source\PSoC5/Pulse_Count.c **** * Parameters:
+ 218:Generated_Source\PSoC5/Pulse_Count.c **** *  None
+ 219:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 220:Generated_Source\PSoC5/Pulse_Count.c **** * Return:
+ 221:Generated_Source\PSoC5/Pulse_Count.c **** *  uint8 - Current period value.
+ 222:Generated_Source\PSoC5/Pulse_Count.c **** *
+ 223:Generated_Source\PSoC5/Pulse_Count.c **** *******************************************************************************/
+ 224:Generated_Source\PSoC5/Pulse_Count.c **** uint8 Pulse_Count_ReadPeriod(void) 
+ 225:Generated_Source\PSoC5/Pulse_Count.c **** {
+ 248              		.loc 1 225 0
+ 249              		.cfi_startproc
+ 250              		@ args = 0, pretend = 0, frame = 0
+ 251              		@ frame_needed = 0, uses_anonymous_args = 0
+ 252              		@ link register save eliminated.
+ 226:Generated_Source\PSoC5/Pulse_Count.c ****     return(Pulse_Count_PERIOD_REG);
+ 253              		.loc 1 226 0
+ 254 0000 014B     		ldr	r3, .L25
+ 255 0002 1878     		ldrb	r0, [r3]	@ zero_extendqisi2
+ 227:Generated_Source\PSoC5/Pulse_Count.c **** }
+ 256              		.loc 1 227 0
+ 257 0004 7047     		bx	lr
+ 258              	.L26:
+ 259 0006 00BF     		.align	2
+ 260              	.L25:
+ 261 0008 87650040 		.word	1073767815
+ 262              		.cfi_endproc
+ 263              	.LFE7:
+ 264              		.size	Pulse_Count_ReadPeriod, .-Pulse_Count_ReadPeriod
+ 265              		.global	Pulse_Count_initVar
+ 266              		.bss
+ 267              		.set	.LANCHOR0,. + 0
+ 268              		.type	Pulse_Count_initVar, %object
+ 269              		.size	Pulse_Count_initVar, 1
+ 270              	Pulse_Count_initVar:
+ 271 0000 00       		.space	1
+ 272              		.text
+ 273              	.Letext0:
+ 274              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 275              		.file 3 "Generated_Source\\PSoC5\\CyLib.h"
+ 276              		.section	.debug_info,"",%progbits
+ 277              	.Ldebug_info0:
+ 278 0000 F4010000 		.4byte	0x1f4
+ 279 0004 0400     		.2byte	0x4
+ 280 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 281 000a 04       		.byte	0x4
+ 282 000b 01       		.uleb128 0x1
+ 283 000c 8E000000 		.4byte	.LASF28
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 10
+
+
+ 284 0010 0C       		.byte	0xc
+ 285 0011 39020000 		.4byte	.LASF29
+ 286 0015 41010000 		.4byte	.LASF30
+ 287 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 288 001d 00000000 		.4byte	0
+ 289 0021 00000000 		.4byte	.Ldebug_line0
+ 290 0025 02       		.uleb128 0x2
+ 291 0026 01       		.byte	0x1
+ 292 0027 06       		.byte	0x6
+ 293 0028 73020000 		.4byte	.LASF0
+ 294 002c 02       		.uleb128 0x2
+ 295 002d 01       		.byte	0x1
+ 296 002e 08       		.byte	0x8
+ 297 002f 6C000000 		.4byte	.LASF1
+ 298 0033 02       		.uleb128 0x2
+ 299 0034 02       		.byte	0x2
+ 300 0035 05       		.byte	0x5
+ 301 0036 1B020000 		.4byte	.LASF2
+ 302 003a 02       		.uleb128 0x2
+ 303 003b 02       		.byte	0x2
+ 304 003c 07       		.byte	0x7
+ 305 003d 0D000000 		.4byte	.LASF3
+ 306 0041 02       		.uleb128 0x2
+ 307 0042 04       		.byte	0x4
+ 308 0043 05       		.byte	0x5
+ 309 0044 5E020000 		.4byte	.LASF4
+ 310 0048 02       		.uleb128 0x2
+ 311 0049 04       		.byte	0x4
+ 312 004a 07       		.byte	0x7
+ 313 004b B9010000 		.4byte	.LASF5
+ 314 004f 02       		.uleb128 0x2
+ 315 0050 08       		.byte	0x8
+ 316 0051 05       		.byte	0x5
+ 317 0052 08020000 		.4byte	.LASF6
+ 318 0056 02       		.uleb128 0x2
+ 319 0057 08       		.byte	0x8
+ 320 0058 07       		.byte	0x7
+ 321 0059 55000000 		.4byte	.LASF7
+ 322 005d 03       		.uleb128 0x3
+ 323 005e 04       		.byte	0x4
+ 324 005f 05       		.byte	0x5
+ 325 0060 696E7400 		.ascii	"int\000"
+ 326 0064 02       		.uleb128 0x2
+ 327 0065 04       		.byte	0x4
+ 328 0066 07       		.byte	0x7
+ 329 0067 CB010000 		.4byte	.LASF8
+ 330 006b 04       		.uleb128 0x4
+ 331 006c 1C010000 		.4byte	.LASF12
+ 332 0070 02       		.byte	0x2
+ 333 0071 E401     		.2byte	0x1e4
+ 334 0073 2C000000 		.4byte	0x2c
+ 335 0077 02       		.uleb128 0x2
+ 336 0078 04       		.byte	0x4
+ 337 0079 04       		.byte	0x4
+ 338 007a 4F000000 		.4byte	.LASF9
+ 339 007e 02       		.uleb128 0x2
+ 340 007f 08       		.byte	0x8
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 11
+
+
+ 341 0080 04       		.byte	0x4
+ 342 0081 3A010000 		.4byte	.LASF10
+ 343 0085 02       		.uleb128 0x2
+ 344 0086 01       		.byte	0x1
+ 345 0087 08       		.byte	0x8
+ 346 0088 16020000 		.4byte	.LASF11
+ 347 008c 04       		.uleb128 0x4
+ 348 008d 7A000000 		.4byte	.LASF13
+ 349 0091 02       		.byte	0x2
+ 350 0092 8E02     		.2byte	0x28e
+ 351 0094 98000000 		.4byte	0x98
+ 352 0098 05       		.uleb128 0x5
+ 353 0099 6B000000 		.4byte	0x6b
+ 354 009d 02       		.uleb128 0x2
+ 355 009e 08       		.byte	0x8
+ 356 009f 04       		.byte	0x4
+ 357 00a0 67020000 		.4byte	.LASF14
+ 358 00a4 02       		.uleb128 0x2
+ 359 00a5 04       		.byte	0x4
+ 360 00a6 07       		.byte	0x7
+ 361 00a7 FF010000 		.4byte	.LASF15
+ 362 00ab 06       		.uleb128 0x6
+ 363 00ac EE010000 		.4byte	.LASF31
+ 364 00b0 01       		.byte	0x1
+ 365 00b1 2A       		.byte	0x2a
+ 366 00b2 01       		.byte	0x1
+ 367 00b3 07       		.uleb128 0x7
+ 368 00b4 AB000000 		.4byte	0xab
+ 369 00b8 00000000 		.4byte	.LFB0
+ 370 00bc 0C000000 		.4byte	.LFE0-.LFB0
+ 371 00c0 01       		.uleb128 0x1
+ 372 00c1 9C       		.byte	0x9c
+ 373 00c2 08       		.uleb128 0x8
+ 374 00c3 8F010000 		.4byte	.LASF16
+ 375 00c7 01       		.byte	0x1
+ 376 00c8 47       		.byte	0x47
+ 377 00c9 00000000 		.4byte	.LFB1
+ 378 00cd 1C000000 		.4byte	.LFE1-.LFB1
+ 379 00d1 01       		.uleb128 0x1
+ 380 00d2 9C       		.byte	0x9c
+ 381 00d3 F9000000 		.4byte	0xf9
+ 382 00d7 09       		.uleb128 0x9
+ 383 00d8 7F000000 		.4byte	.LASF19
+ 384 00dc 01       		.byte	0x1
+ 385 00dd 49       		.byte	0x49
+ 386 00de 6B000000 		.4byte	0x6b
+ 387 00e2 00000000 		.4byte	.LLST0
+ 388 00e6 0A       		.uleb128 0xa
+ 389 00e7 06000000 		.4byte	.LVL0
+ 390 00eb E1010000 		.4byte	0x1e1
+ 391 00ef 0B       		.uleb128 0xb
+ 392 00f0 18000000 		.4byte	.LVL1
+ 393 00f4 EC010000 		.4byte	0x1ec
+ 394 00f8 00       		.byte	0
+ 395 00f9 08       		.uleb128 0x8
+ 396 00fa 64010000 		.4byte	.LASF17
+ 397 00fe 01       		.byte	0x1
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 12
+
+
+ 398 00ff 69       		.byte	0x69
+ 399 0100 00000000 		.4byte	.LFB2
+ 400 0104 1C000000 		.4byte	.LFE2-.LFB2
+ 401 0108 01       		.uleb128 0x1
+ 402 0109 9C       		.byte	0x9c
+ 403 010a 27010000 		.4byte	0x127
+ 404 010e 0C       		.uleb128 0xc
+ 405 010f AB000000 		.4byte	0xab
+ 406 0113 06000000 		.4byte	.LBB4
+ 407 0117 06000000 		.4byte	.LBE4-.LBB4
+ 408 011b 01       		.byte	0x1
+ 409 011c 6E       		.byte	0x6e
+ 410 011d 0B       		.uleb128 0xb
+ 411 011e 12000000 		.4byte	.LVL2
+ 412 0122 C2000000 		.4byte	0xc2
+ 413 0126 00       		.byte	0
+ 414 0127 08       		.uleb128 0x8
+ 415 0128 7F020000 		.4byte	.LASF18
+ 416 012c 01       		.byte	0x1
+ 417 012d 85       		.byte	0x85
+ 418 012e 00000000 		.4byte	.LFB3
+ 419 0132 1C000000 		.4byte	.LFE3-.LFB3
+ 420 0136 01       		.uleb128 0x1
+ 421 0137 9C       		.byte	0x9c
+ 422 0138 5E010000 		.4byte	0x15e
+ 423 013c 09       		.uleb128 0x9
+ 424 013d 7F000000 		.4byte	.LASF19
+ 425 0141 01       		.byte	0x1
+ 426 0142 87       		.byte	0x87
+ 427 0143 6B000000 		.4byte	0x6b
+ 428 0147 13000000 		.4byte	.LLST1
+ 429 014b 0A       		.uleb128 0xa
+ 430 014c 06000000 		.4byte	.LVL3
+ 431 0150 E1010000 		.4byte	0x1e1
+ 432 0154 0B       		.uleb128 0xb
+ 433 0155 18000000 		.4byte	.LVL4
+ 434 0159 EC010000 		.4byte	0x1ec
+ 435 015d 00       		.byte	0
+ 436 015e 08       		.uleb128 0x8
+ 437 015f 76010000 		.4byte	.LASF20
+ 438 0163 01       		.byte	0x1
+ 439 0164 A0       		.byte	0xa0
+ 440 0165 00000000 		.4byte	.LFB4
+ 441 0169 10000000 		.4byte	.LFE4-.LFB4
+ 442 016d 01       		.uleb128 0x1
+ 443 016e 9C       		.byte	0x9c
+ 444 016f 83010000 		.4byte	0x183
+ 445 0173 0D       		.uleb128 0xd
+ 446 0174 00000000 		.4byte	.LASF22
+ 447 0178 01       		.byte	0x1
+ 448 0179 A0       		.byte	0xa0
+ 449 017a 6B000000 		.4byte	0x6b
+ 450 017e 26000000 		.4byte	.LLST2
+ 451 0182 00       		.byte	0
+ 452 0183 0E       		.uleb128 0xe
+ 453 0184 20000000 		.4byte	.LASF24
+ 454 0188 01       		.byte	0x1
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 13
+
+
+ 455 0189 B4       		.byte	0xb4
+ 456 018a 6B000000 		.4byte	0x6b
+ 457 018e 00000000 		.4byte	.LFB5
+ 458 0192 10000000 		.4byte	.LFE5-.LFB5
+ 459 0196 01       		.uleb128 0x1
+ 460 0197 9C       		.byte	0x9c
+ 461 0198 08       		.uleb128 0x8
+ 462 0199 22010000 		.4byte	.LASF21
+ 463 019d 01       		.byte	0x1
+ 464 019e CC       		.byte	0xcc
+ 465 019f 00000000 		.4byte	.LFB6
+ 466 01a3 0C000000 		.4byte	.LFE6-.LFB6
+ 467 01a7 01       		.uleb128 0x1
+ 468 01a8 9C       		.byte	0x9c
+ 469 01a9 BB010000 		.4byte	0x1bb
+ 470 01ad 0F       		.uleb128 0xf
+ 471 01ae 06000000 		.4byte	.LASF23
+ 472 01b2 01       		.byte	0x1
+ 473 01b3 CC       		.byte	0xcc
+ 474 01b4 6B000000 		.4byte	0x6b
+ 475 01b8 01       		.uleb128 0x1
+ 476 01b9 50       		.byte	0x50
+ 477 01ba 00       		.byte	0
+ 478 01bb 0E       		.uleb128 0xe
+ 479 01bc 38000000 		.4byte	.LASF25
+ 480 01c0 01       		.byte	0x1
+ 481 01c1 E0       		.byte	0xe0
+ 482 01c2 6B000000 		.4byte	0x6b
+ 483 01c6 00000000 		.4byte	.LFB7
+ 484 01ca 0C000000 		.4byte	.LFE7-.LFB7
+ 485 01ce 01       		.uleb128 0x1
+ 486 01cf 9C       		.byte	0x9c
+ 487 01d0 10       		.uleb128 0x10
+ 488 01d1 25020000 		.4byte	.LASF32
+ 489 01d5 01       		.byte	0x1
+ 490 01d6 13       		.byte	0x13
+ 491 01d7 6B000000 		.4byte	0x6b
+ 492 01db 05       		.uleb128 0x5
+ 493 01dc 03       		.byte	0x3
+ 494 01dd 00000000 		.4byte	Pulse_Count_initVar
+ 495 01e1 11       		.uleb128 0x11
+ 496 01e2 A2010000 		.4byte	.LASF26
+ 497 01e6 A2010000 		.4byte	.LASF26
+ 498 01ea 03       		.byte	0x3
+ 499 01eb 7D       		.byte	0x7d
+ 500 01ec 11       		.uleb128 0x11
+ 501 01ed D8010000 		.4byte	.LASF27
+ 502 01f1 D8010000 		.4byte	.LASF27
+ 503 01f5 03       		.byte	0x3
+ 504 01f6 7E       		.byte	0x7e
+ 505 01f7 00       		.byte	0
+ 506              		.section	.debug_abbrev,"",%progbits
+ 507              	.Ldebug_abbrev0:
+ 508 0000 01       		.uleb128 0x1
+ 509 0001 11       		.uleb128 0x11
+ 510 0002 01       		.byte	0x1
+ 511 0003 25       		.uleb128 0x25
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 14
+
+
+ 512 0004 0E       		.uleb128 0xe
+ 513 0005 13       		.uleb128 0x13
+ 514 0006 0B       		.uleb128 0xb
+ 515 0007 03       		.uleb128 0x3
+ 516 0008 0E       		.uleb128 0xe
+ 517 0009 1B       		.uleb128 0x1b
+ 518 000a 0E       		.uleb128 0xe
+ 519 000b 55       		.uleb128 0x55
+ 520 000c 17       		.uleb128 0x17
+ 521 000d 11       		.uleb128 0x11
+ 522 000e 01       		.uleb128 0x1
+ 523 000f 10       		.uleb128 0x10
+ 524 0010 17       		.uleb128 0x17
+ 525 0011 00       		.byte	0
+ 526 0012 00       		.byte	0
+ 527 0013 02       		.uleb128 0x2
+ 528 0014 24       		.uleb128 0x24
+ 529 0015 00       		.byte	0
+ 530 0016 0B       		.uleb128 0xb
+ 531 0017 0B       		.uleb128 0xb
+ 532 0018 3E       		.uleb128 0x3e
+ 533 0019 0B       		.uleb128 0xb
+ 534 001a 03       		.uleb128 0x3
+ 535 001b 0E       		.uleb128 0xe
+ 536 001c 00       		.byte	0
+ 537 001d 00       		.byte	0
+ 538 001e 03       		.uleb128 0x3
+ 539 001f 24       		.uleb128 0x24
+ 540 0020 00       		.byte	0
+ 541 0021 0B       		.uleb128 0xb
+ 542 0022 0B       		.uleb128 0xb
+ 543 0023 3E       		.uleb128 0x3e
+ 544 0024 0B       		.uleb128 0xb
+ 545 0025 03       		.uleb128 0x3
+ 546 0026 08       		.uleb128 0x8
+ 547 0027 00       		.byte	0
+ 548 0028 00       		.byte	0
+ 549 0029 04       		.uleb128 0x4
+ 550 002a 16       		.uleb128 0x16
+ 551 002b 00       		.byte	0
+ 552 002c 03       		.uleb128 0x3
+ 553 002d 0E       		.uleb128 0xe
+ 554 002e 3A       		.uleb128 0x3a
+ 555 002f 0B       		.uleb128 0xb
+ 556 0030 3B       		.uleb128 0x3b
+ 557 0031 05       		.uleb128 0x5
+ 558 0032 49       		.uleb128 0x49
+ 559 0033 13       		.uleb128 0x13
+ 560 0034 00       		.byte	0
+ 561 0035 00       		.byte	0
+ 562 0036 05       		.uleb128 0x5
+ 563 0037 35       		.uleb128 0x35
+ 564 0038 00       		.byte	0
+ 565 0039 49       		.uleb128 0x49
+ 566 003a 13       		.uleb128 0x13
+ 567 003b 00       		.byte	0
+ 568 003c 00       		.byte	0
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 15
+
+
+ 569 003d 06       		.uleb128 0x6
+ 570 003e 2E       		.uleb128 0x2e
+ 571 003f 00       		.byte	0
+ 572 0040 3F       		.uleb128 0x3f
+ 573 0041 19       		.uleb128 0x19
+ 574 0042 03       		.uleb128 0x3
+ 575 0043 0E       		.uleb128 0xe
+ 576 0044 3A       		.uleb128 0x3a
+ 577 0045 0B       		.uleb128 0xb
+ 578 0046 3B       		.uleb128 0x3b
+ 579 0047 0B       		.uleb128 0xb
+ 580 0048 27       		.uleb128 0x27
+ 581 0049 19       		.uleb128 0x19
+ 582 004a 20       		.uleb128 0x20
+ 583 004b 0B       		.uleb128 0xb
+ 584 004c 00       		.byte	0
+ 585 004d 00       		.byte	0
+ 586 004e 07       		.uleb128 0x7
+ 587 004f 2E       		.uleb128 0x2e
+ 588 0050 00       		.byte	0
+ 589 0051 31       		.uleb128 0x31
+ 590 0052 13       		.uleb128 0x13
+ 591 0053 11       		.uleb128 0x11
+ 592 0054 01       		.uleb128 0x1
+ 593 0055 12       		.uleb128 0x12
+ 594 0056 06       		.uleb128 0x6
+ 595 0057 40       		.uleb128 0x40
+ 596 0058 18       		.uleb128 0x18
+ 597 0059 9742     		.uleb128 0x2117
+ 598 005b 19       		.uleb128 0x19
+ 599 005c 00       		.byte	0
+ 600 005d 00       		.byte	0
+ 601 005e 08       		.uleb128 0x8
+ 602 005f 2E       		.uleb128 0x2e
+ 603 0060 01       		.byte	0x1
+ 604 0061 3F       		.uleb128 0x3f
+ 605 0062 19       		.uleb128 0x19
+ 606 0063 03       		.uleb128 0x3
+ 607 0064 0E       		.uleb128 0xe
+ 608 0065 3A       		.uleb128 0x3a
+ 609 0066 0B       		.uleb128 0xb
+ 610 0067 3B       		.uleb128 0x3b
+ 611 0068 0B       		.uleb128 0xb
+ 612 0069 27       		.uleb128 0x27
+ 613 006a 19       		.uleb128 0x19
+ 614 006b 11       		.uleb128 0x11
+ 615 006c 01       		.uleb128 0x1
+ 616 006d 12       		.uleb128 0x12
+ 617 006e 06       		.uleb128 0x6
+ 618 006f 40       		.uleb128 0x40
+ 619 0070 18       		.uleb128 0x18
+ 620 0071 9742     		.uleb128 0x2117
+ 621 0073 19       		.uleb128 0x19
+ 622 0074 01       		.uleb128 0x1
+ 623 0075 13       		.uleb128 0x13
+ 624 0076 00       		.byte	0
+ 625 0077 00       		.byte	0
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 16
+
+
+ 626 0078 09       		.uleb128 0x9
+ 627 0079 34       		.uleb128 0x34
+ 628 007a 00       		.byte	0
+ 629 007b 03       		.uleb128 0x3
+ 630 007c 0E       		.uleb128 0xe
+ 631 007d 3A       		.uleb128 0x3a
+ 632 007e 0B       		.uleb128 0xb
+ 633 007f 3B       		.uleb128 0x3b
+ 634 0080 0B       		.uleb128 0xb
+ 635 0081 49       		.uleb128 0x49
+ 636 0082 13       		.uleb128 0x13
+ 637 0083 02       		.uleb128 0x2
+ 638 0084 17       		.uleb128 0x17
+ 639 0085 00       		.byte	0
+ 640 0086 00       		.byte	0
+ 641 0087 0A       		.uleb128 0xa
+ 642 0088 898201   		.uleb128 0x4109
+ 643 008b 00       		.byte	0
+ 644 008c 11       		.uleb128 0x11
+ 645 008d 01       		.uleb128 0x1
+ 646 008e 31       		.uleb128 0x31
+ 647 008f 13       		.uleb128 0x13
+ 648 0090 00       		.byte	0
+ 649 0091 00       		.byte	0
+ 650 0092 0B       		.uleb128 0xb
+ 651 0093 898201   		.uleb128 0x4109
+ 652 0096 00       		.byte	0
+ 653 0097 11       		.uleb128 0x11
+ 654 0098 01       		.uleb128 0x1
+ 655 0099 9542     		.uleb128 0x2115
+ 656 009b 19       		.uleb128 0x19
+ 657 009c 31       		.uleb128 0x31
+ 658 009d 13       		.uleb128 0x13
+ 659 009e 00       		.byte	0
+ 660 009f 00       		.byte	0
+ 661 00a0 0C       		.uleb128 0xc
+ 662 00a1 1D       		.uleb128 0x1d
+ 663 00a2 00       		.byte	0
+ 664 00a3 31       		.uleb128 0x31
+ 665 00a4 13       		.uleb128 0x13
+ 666 00a5 11       		.uleb128 0x11
+ 667 00a6 01       		.uleb128 0x1
+ 668 00a7 12       		.uleb128 0x12
+ 669 00a8 06       		.uleb128 0x6
+ 670 00a9 58       		.uleb128 0x58
+ 671 00aa 0B       		.uleb128 0xb
+ 672 00ab 59       		.uleb128 0x59
+ 673 00ac 0B       		.uleb128 0xb
+ 674 00ad 00       		.byte	0
+ 675 00ae 00       		.byte	0
+ 676 00af 0D       		.uleb128 0xd
+ 677 00b0 05       		.uleb128 0x5
+ 678 00b1 00       		.byte	0
+ 679 00b2 03       		.uleb128 0x3
+ 680 00b3 0E       		.uleb128 0xe
+ 681 00b4 3A       		.uleb128 0x3a
+ 682 00b5 0B       		.uleb128 0xb
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 17
+
+
+ 683 00b6 3B       		.uleb128 0x3b
+ 684 00b7 0B       		.uleb128 0xb
+ 685 00b8 49       		.uleb128 0x49
+ 686 00b9 13       		.uleb128 0x13
+ 687 00ba 02       		.uleb128 0x2
+ 688 00bb 17       		.uleb128 0x17
+ 689 00bc 00       		.byte	0
+ 690 00bd 00       		.byte	0
+ 691 00be 0E       		.uleb128 0xe
+ 692 00bf 2E       		.uleb128 0x2e
+ 693 00c0 00       		.byte	0
+ 694 00c1 3F       		.uleb128 0x3f
+ 695 00c2 19       		.uleb128 0x19
+ 696 00c3 03       		.uleb128 0x3
+ 697 00c4 0E       		.uleb128 0xe
+ 698 00c5 3A       		.uleb128 0x3a
+ 699 00c6 0B       		.uleb128 0xb
+ 700 00c7 3B       		.uleb128 0x3b
+ 701 00c8 0B       		.uleb128 0xb
+ 702 00c9 27       		.uleb128 0x27
+ 703 00ca 19       		.uleb128 0x19
+ 704 00cb 49       		.uleb128 0x49
+ 705 00cc 13       		.uleb128 0x13
+ 706 00cd 11       		.uleb128 0x11
+ 707 00ce 01       		.uleb128 0x1
+ 708 00cf 12       		.uleb128 0x12
+ 709 00d0 06       		.uleb128 0x6
+ 710 00d1 40       		.uleb128 0x40
+ 711 00d2 18       		.uleb128 0x18
+ 712 00d3 9742     		.uleb128 0x2117
+ 713 00d5 19       		.uleb128 0x19
+ 714 00d6 00       		.byte	0
+ 715 00d7 00       		.byte	0
+ 716 00d8 0F       		.uleb128 0xf
+ 717 00d9 05       		.uleb128 0x5
+ 718 00da 00       		.byte	0
+ 719 00db 03       		.uleb128 0x3
+ 720 00dc 0E       		.uleb128 0xe
+ 721 00dd 3A       		.uleb128 0x3a
+ 722 00de 0B       		.uleb128 0xb
+ 723 00df 3B       		.uleb128 0x3b
+ 724 00e0 0B       		.uleb128 0xb
+ 725 00e1 49       		.uleb128 0x49
+ 726 00e2 13       		.uleb128 0x13
+ 727 00e3 02       		.uleb128 0x2
+ 728 00e4 18       		.uleb128 0x18
+ 729 00e5 00       		.byte	0
+ 730 00e6 00       		.byte	0
+ 731 00e7 10       		.uleb128 0x10
+ 732 00e8 34       		.uleb128 0x34
+ 733 00e9 00       		.byte	0
+ 734 00ea 03       		.uleb128 0x3
+ 735 00eb 0E       		.uleb128 0xe
+ 736 00ec 3A       		.uleb128 0x3a
+ 737 00ed 0B       		.uleb128 0xb
+ 738 00ee 3B       		.uleb128 0x3b
+ 739 00ef 0B       		.uleb128 0xb
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 18
+
+
+ 740 00f0 49       		.uleb128 0x49
+ 741 00f1 13       		.uleb128 0x13
+ 742 00f2 3F       		.uleb128 0x3f
+ 743 00f3 19       		.uleb128 0x19
+ 744 00f4 02       		.uleb128 0x2
+ 745 00f5 18       		.uleb128 0x18
+ 746 00f6 00       		.byte	0
+ 747 00f7 00       		.byte	0
+ 748 00f8 11       		.uleb128 0x11
+ 749 00f9 2E       		.uleb128 0x2e
+ 750 00fa 00       		.byte	0
+ 751 00fb 3F       		.uleb128 0x3f
+ 752 00fc 19       		.uleb128 0x19
+ 753 00fd 3C       		.uleb128 0x3c
+ 754 00fe 19       		.uleb128 0x19
+ 755 00ff 6E       		.uleb128 0x6e
+ 756 0100 0E       		.uleb128 0xe
+ 757 0101 03       		.uleb128 0x3
+ 758 0102 0E       		.uleb128 0xe
+ 759 0103 3A       		.uleb128 0x3a
+ 760 0104 0B       		.uleb128 0xb
+ 761 0105 3B       		.uleb128 0x3b
+ 762 0106 0B       		.uleb128 0xb
+ 763 0107 00       		.byte	0
+ 764 0108 00       		.byte	0
+ 765 0109 00       		.byte	0
+ 766              		.section	.debug_loc,"",%progbits
+ 767              	.Ldebug_loc0:
+ 768              	.LLST0:
+ 769 0000 06000000 		.4byte	.LVL0
+ 770 0004 17000000 		.4byte	.LVL1-1
+ 771 0008 0100     		.2byte	0x1
+ 772 000a 50       		.byte	0x50
+ 773 000b 00000000 		.4byte	0
+ 774 000f 00000000 		.4byte	0
+ 775              	.LLST1:
+ 776 0013 06000000 		.4byte	.LVL3
+ 777 0017 17000000 		.4byte	.LVL4-1
+ 778 001b 0100     		.2byte	0x1
+ 779 001d 50       		.byte	0x50
+ 780 001e 00000000 		.4byte	0
+ 781 0022 00000000 		.4byte	0
+ 782              	.LLST2:
+ 783 0026 00000000 		.4byte	.LVL5
+ 784 002a 06000000 		.4byte	.LVL6
+ 785 002e 0100     		.2byte	0x1
+ 786 0030 50       		.byte	0x50
+ 787 0031 06000000 		.4byte	.LVL6
+ 788 0035 10000000 		.4byte	.LFE4
+ 789 0039 0400     		.2byte	0x4
+ 790 003b F3       		.byte	0xf3
+ 791 003c 01       		.uleb128 0x1
+ 792 003d 50       		.byte	0x50
+ 793 003e 9F       		.byte	0x9f
+ 794 003f 00000000 		.4byte	0
+ 795 0043 00000000 		.4byte	0
+ 796              		.section	.debug_aranges,"",%progbits
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 19
+
+
+ 797 0000 54000000 		.4byte	0x54
+ 798 0004 0200     		.2byte	0x2
+ 799 0006 00000000 		.4byte	.Ldebug_info0
+ 800 000a 04       		.byte	0x4
+ 801 000b 00       		.byte	0
+ 802 000c 0000     		.2byte	0
+ 803 000e 0000     		.2byte	0
+ 804 0010 00000000 		.4byte	.LFB0
+ 805 0014 0C000000 		.4byte	.LFE0-.LFB0
+ 806 0018 00000000 		.4byte	.LFB1
+ 807 001c 1C000000 		.4byte	.LFE1-.LFB1
+ 808 0020 00000000 		.4byte	.LFB2
+ 809 0024 1C000000 		.4byte	.LFE2-.LFB2
+ 810 0028 00000000 		.4byte	.LFB3
+ 811 002c 1C000000 		.4byte	.LFE3-.LFB3
+ 812 0030 00000000 		.4byte	.LFB4
+ 813 0034 10000000 		.4byte	.LFE4-.LFB4
+ 814 0038 00000000 		.4byte	.LFB5
+ 815 003c 10000000 		.4byte	.LFE5-.LFB5
+ 816 0040 00000000 		.4byte	.LFB6
+ 817 0044 0C000000 		.4byte	.LFE6-.LFB6
+ 818 0048 00000000 		.4byte	.LFB7
+ 819 004c 0C000000 		.4byte	.LFE7-.LFB7
+ 820 0050 00000000 		.4byte	0
+ 821 0054 00000000 		.4byte	0
+ 822              		.section	.debug_ranges,"",%progbits
+ 823              	.Ldebug_ranges0:
+ 824 0000 00000000 		.4byte	.LFB0
+ 825 0004 0C000000 		.4byte	.LFE0
+ 826 0008 00000000 		.4byte	.LFB1
+ 827 000c 1C000000 		.4byte	.LFE1
+ 828 0010 00000000 		.4byte	.LFB2
+ 829 0014 1C000000 		.4byte	.LFE2
+ 830 0018 00000000 		.4byte	.LFB3
+ 831 001c 1C000000 		.4byte	.LFE3
+ 832 0020 00000000 		.4byte	.LFB4
+ 833 0024 10000000 		.4byte	.LFE4
+ 834 0028 00000000 		.4byte	.LFB5
+ 835 002c 10000000 		.4byte	.LFE5
+ 836 0030 00000000 		.4byte	.LFB6
+ 837 0034 0C000000 		.4byte	.LFE6
+ 838 0038 00000000 		.4byte	.LFB7
+ 839 003c 0C000000 		.4byte	.LFE7
+ 840 0040 00000000 		.4byte	0
+ 841 0044 00000000 		.4byte	0
+ 842              		.section	.debug_line,"",%progbits
+ 843              	.Ldebug_line0:
+ 844 0000 F0000000 		.section	.debug_str,"MS",%progbits,1
+ 844      02005300 
+ 844      00000201 
+ 844      FB0E0D00 
+ 844      01010101 
+ 845              	.LASF22:
+ 846 0000 636F756E 		.ascii	"count\000"
+ 846      7400
+ 847              	.LASF23:
+ 848 0006 70657269 		.ascii	"period\000"
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 20
+
+
+ 848      6F6400
+ 849              	.LASF3:
+ 850 000d 73686F72 		.ascii	"short unsigned int\000"
+ 850      7420756E 
+ 850      7369676E 
+ 850      65642069 
+ 850      6E7400
+ 851              	.LASF24:
+ 852 0020 50756C73 		.ascii	"Pulse_Count_ReadCounter\000"
+ 852      655F436F 
+ 852      756E745F 
+ 852      52656164 
+ 852      436F756E 
+ 853              	.LASF25:
+ 854 0038 50756C73 		.ascii	"Pulse_Count_ReadPeriod\000"
+ 854      655F436F 
+ 854      756E745F 
+ 854      52656164 
+ 854      50657269 
+ 855              	.LASF9:
+ 856 004f 666C6F61 		.ascii	"float\000"
+ 856      7400
+ 857              	.LASF7:
+ 858 0055 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 858      206C6F6E 
+ 858      6720756E 
+ 858      7369676E 
+ 858      65642069 
+ 859              	.LASF1:
+ 860 006c 756E7369 		.ascii	"unsigned char\000"
+ 860      676E6564 
+ 860      20636861 
+ 860      7200
+ 861              	.LASF13:
+ 862 007a 72656738 		.ascii	"reg8\000"
+ 862      00
+ 863              	.LASF19:
+ 864 007f 696E7465 		.ascii	"interruptState\000"
+ 864      72727570 
+ 864      74537461 
+ 864      746500
+ 865              	.LASF28:
+ 866 008e 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 866      43313120 
+ 866      352E342E 
+ 866      31203230 
+ 866      31363036 
+ 867 00c1 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 867      20726576 
+ 867      6973696F 
+ 867      6E203233 
+ 867      37373135 
+ 868 00f4 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 868      66756E63 
+ 868      74696F6E 
+ 868      2D736563 
+ 868      74696F6E 
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 21
+
+
+ 869              	.LASF12:
+ 870 011c 75696E74 		.ascii	"uint8\000"
+ 870      3800
+ 871              	.LASF21:
+ 872 0122 50756C73 		.ascii	"Pulse_Count_WritePeriod\000"
+ 872      655F436F 
+ 872      756E745F 
+ 872      57726974 
+ 872      65506572 
+ 873              	.LASF10:
+ 874 013a 646F7562 		.ascii	"double\000"
+ 874      6C6500
+ 875              	.LASF30:
+ 876 0141 453A5C54 		.ascii	"E:\\TRC3500\\Psoc\\BCD\\Design01.cydsn\000"
+ 876      52433335 
+ 876      30305C50 
+ 876      736F635C 
+ 876      4243445C 
+ 877              	.LASF17:
+ 878 0164 50756C73 		.ascii	"Pulse_Count_Start\000"
+ 878      655F436F 
+ 878      756E745F 
+ 878      53746172 
+ 878      7400
+ 879              	.LASF20:
+ 880 0176 50756C73 		.ascii	"Pulse_Count_WriteCounter\000"
+ 880      655F436F 
+ 880      756E745F 
+ 880      57726974 
+ 880      65436F75 
+ 881              	.LASF16:
+ 882 018f 50756C73 		.ascii	"Pulse_Count_Enable\000"
+ 882      655F436F 
+ 882      756E745F 
+ 882      456E6162 
+ 882      6C6500
+ 883              	.LASF26:
+ 884 01a2 4379456E 		.ascii	"CyEnterCriticalSection\000"
+ 884      74657243 
+ 884      72697469 
+ 884      63616C53 
+ 884      65637469 
+ 885              	.LASF5:
+ 886 01b9 6C6F6E67 		.ascii	"long unsigned int\000"
+ 886      20756E73 
+ 886      69676E65 
+ 886      6420696E 
+ 886      7400
+ 887              	.LASF8:
+ 888 01cb 756E7369 		.ascii	"unsigned int\000"
+ 888      676E6564 
+ 888      20696E74 
+ 888      00
+ 889              	.LASF27:
+ 890 01d8 43794578 		.ascii	"CyExitCriticalSection\000"
+ 890      69744372 
+ 890      69746963 
+ARM GAS  C:\Users\mmoh0006\AppData\Local\Temp\cczwaMpa.s 			page 22
+
+
+ 890      616C5365 
+ 890      6374696F 
+ 891              	.LASF31:
+ 892 01ee 50756C73 		.ascii	"Pulse_Count_Init\000"
+ 892      655F436F 
+ 892      756E745F 
+ 892      496E6974 
+ 892      00
+ 893              	.LASF15:
+ 894 01ff 73697A65 		.ascii	"sizetype\000"
+ 894      74797065 
+ 894      00
+ 895              	.LASF6:
+ 896 0208 6C6F6E67 		.ascii	"long long int\000"
+ 896      206C6F6E 
+ 896      6720696E 
+ 896      7400
+ 897              	.LASF11:
+ 898 0216 63686172 		.ascii	"char\000"
+ 898      00
+ 899              	.LASF2:
+ 900 021b 73686F72 		.ascii	"short int\000"
+ 900      7420696E 
+ 900      7400
+ 901              	.LASF32:
+ 902 0225 50756C73 		.ascii	"Pulse_Count_initVar\000"
+ 902      655F436F 
+ 902      756E745F 
+ 902      696E6974 
+ 902      56617200 
+ 903              	.LASF29:
+ 904 0239 47656E65 		.ascii	"Generated_Source\\PSoC5\\Pulse_Count.c\000"
+ 904      72617465 
+ 904      645F536F 
+ 904      75726365 
+ 904      5C50536F 
+ 905              	.LASF4:
+ 906 025e 6C6F6E67 		.ascii	"long int\000"
+ 906      20696E74 
+ 906      00
+ 907              	.LASF14:
+ 908 0267 6C6F6E67 		.ascii	"long double\000"
+ 908      20646F75 
+ 908      626C6500 
+ 909              	.LASF0:
+ 910 0273 7369676E 		.ascii	"signed char\000"
+ 910      65642063 
+ 910      68617200 
+ 911              	.LASF18:
+ 912 027f 50756C73 		.ascii	"Pulse_Count_Stop\000"
+ 912      655F436F 
+ 912      756E745F 
+ 912      53746F70 
+ 912      00
+ 913              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

@@ -1,0 +1,3098 @@
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"cymetadata.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	cy_metadata
+  20              		.global	cy_meta_flashprotect
+  21              		.global	cy_meta_wonvl
+  22              		.global	cy_meta_custnvl
+  23              		.global	cy_meta_configecc
+  24              		.section	.cyconfigecc,"a",%progbits
+  25              		.type	cy_meta_configecc, %object
+  26              		.size	cy_meta_configecc, 2468
+  27              	cy_meta_configecc:
+  28 0000 01       		.byte	1
+  29 0001 52       		.byte	82
+  30 0002 00       		.byte	0
+  31 0003 40       		.byte	64
+  32 0004 05       		.byte	5
+  33 0005 64       		.byte	100
+  34 0006 00       		.byte	0
+  35 0007 40       		.byte	64
+  36 0008 03       		.byte	3
+  37 0009 65       		.byte	101
+  38 000a 00       		.byte	0
+  39 000b 40       		.byte	64
+  40 000c 5B       		.byte	91
+  41 000d 04       		.byte	4
+  42 000e 01       		.byte	1
+  43 000f 40       		.byte	64
+  44 0010 38       		.byte	56
+  45 0011 05       		.byte	5
+  46 0012 01       		.byte	1
+  47 0013 40       		.byte	64
+  48 0014 54       		.byte	84
+  49 0015 06       		.byte	6
+  50 0016 01       		.byte	1
+  51 0017 40       		.byte	64
+  52 0018 47       		.byte	71
+  53 0019 07       		.byte	7
+  54 001a 01       		.byte	1
+  55 001b 40       		.byte	64
+  56 001c 59       		.byte	89
+  57 001d 08       		.byte	8
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 2
+
+
+  58 001e 01       		.byte	1
+  59 001f 40       		.byte	64
+  60 0020 46       		.byte	70
+  61 0021 09       		.byte	9
+  62 0022 01       		.byte	1
+  63 0023 40       		.byte	64
+  64 0024 5A       		.byte	90
+  65 0025 0A       		.byte	10
+  66 0026 01       		.byte	1
+  67 0027 40       		.byte	64
+  68 0028 39       		.byte	57
+  69 0029 0B       		.byte	11
+  70 002a 01       		.byte	1
+  71 002b 40       		.byte	64
+  72 002c 04       		.byte	4
+  73 002d 0C       		.byte	12
+  74 002e 01       		.byte	1
+  75 002f 40       		.byte	64
+  76 0030 01       		.byte	1
+  77 0031 0D       		.byte	13
+  78 0032 01       		.byte	1
+  79 0033 40       		.byte	64
+  80 0034 0D       		.byte	13
+  81 0035 15       		.byte	21
+  82 0036 01       		.byte	1
+  83 0037 40       		.byte	64
+  84 0038 4D       		.byte	77
+  85 0039 16       		.byte	22
+  86 003a 01       		.byte	1
+  87 003b 40       		.byte	64
+  88 003c 49       		.byte	73
+  89 003d 17       		.byte	23
+  90 003e 01       		.byte	1
+  91 003f 40       		.byte	64
+  92 0040 60       		.byte	96
+  93 0041 18       		.byte	24
+  94 0042 01       		.byte	1
+  95 0043 40       		.byte	64
+  96 0044 46       		.byte	70
+  97 0045 19       		.byte	25
+  98 0046 01       		.byte	1
+  99 0047 40       		.byte	64
+ 100 0048 13       		.byte	19
+ 101 0049 1A       		.byte	26
+ 102 004a 01       		.byte	1
+ 103 004b 40       		.byte	64
+ 104 004c 45       		.byte	69
+ 105 004d 1B       		.byte	27
+ 106 004e 01       		.byte	1
+ 107 004f 40       		.byte	64
+ 108 0050 03       		.byte	3
+ 109 0051 40       		.byte	64
+ 110 0052 01       		.byte	1
+ 111 0053 40       		.byte	64
+ 112 0054 05       		.byte	5
+ 113 0055 41       		.byte	65
+ 114 0056 01       		.byte	1
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 3
+
+
+ 115 0057 40       		.byte	64
+ 116 0058 06       		.byte	6
+ 117 0059 42       		.byte	66
+ 118 005a 01       		.byte	1
+ 119 005b 40       		.byte	64
+ 120 005c 03       		.byte	3
+ 121 005d 43       		.byte	67
+ 122 005e 01       		.byte	1
+ 123 005f 40       		.byte	64
+ 124 0060 03       		.byte	3
+ 125 0061 45       		.byte	69
+ 126 0062 01       		.byte	1
+ 127 0063 40       		.byte	64
+ 128 0064 04       		.byte	4
+ 129 0065 46       		.byte	70
+ 130 0066 01       		.byte	1
+ 131 0067 40       		.byte	64
+ 132 0068 03       		.byte	3
+ 133 0069 47       		.byte	71
+ 134 006a 01       		.byte	1
+ 135 006b 40       		.byte	64
+ 136 006c 03       		.byte	3
+ 137 006d 48       		.byte	72
+ 138 006e 01       		.byte	1
+ 139 006f 40       		.byte	64
+ 140 0070 08       		.byte	8
+ 141 0071 4D       		.byte	77
+ 142 0072 01       		.byte	1
+ 143 0073 40       		.byte	64
+ 144 0074 06       		.byte	6
+ 145 0075 50       		.byte	80
+ 146 0076 01       		.byte	1
+ 147 0077 40       		.byte	64
+ 148 0078 01       		.byte	1
+ 149 0079 51       		.byte	81
+ 150 007a 01       		.byte	1
+ 151 007b 40       		.byte	64
+ 152 007c 10       		.byte	16
+ 153 007d 40       		.byte	64
+ 154 007e 85       		.byte	-123
+ 155 007f 0F       		.byte	15
+ 156 0080 87       		.byte	-121
+ 157 0081 0F       		.byte	15
+ 158 0082 89       		.byte	-119
+ 159 0083 0D       		.byte	13
+ 160 0084 8A       		.byte	-118
+ 161 0085 67       		.byte	103
+ 162 0086 8B       		.byte	-117
+ 163 0087 67       		.byte	103
+ 164 0088 87       		.byte	-121
+ 165 0089 38       		.byte	56
+ 166 008a 88       		.byte	-120
+ 167 008b 0D       		.byte	13
+ 168 008c 89       		.byte	-119
+ 169 008d 72       		.byte	114
+ 170 008e 05       		.byte	5
+ 171 008f 01       		.byte	1
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 4
+
+
+ 172 0090 0D       		.byte	13
+ 173 0091 02       		.byte	2
+ 174 0092 0F       		.byte	15
+ 175 0093 04       		.byte	4
+ 176 0094 1B       		.byte	27
+ 177 0095 02       		.byte	2
+ 178 0096 2B       		.byte	43
+ 179 0097 02       		.byte	2
+ 180 0098 31       		.byte	49
+ 181 0099 02       		.byte	2
+ 182 009a 33       		.byte	51
+ 183 009b 01       		.byte	1
+ 184 009c 35       		.byte	53
+ 185 009d 04       		.byte	4
+ 186 009e 3F       		.byte	63
+ 187 009f 05       		.byte	5
+ 188 00a0 40       		.byte	64
+ 189 00a1 61       		.byte	97
+ 190 00a2 41       		.byte	65
+ 191 00a3 02       		.byte	2
+ 192 00a4 42       		.byte	66
+ 193 00a5 05       		.byte	5
+ 194 00a6 49       		.byte	73
+ 195 00a7 FF       		.byte	-1
+ 196 00a8 4A       		.byte	74
+ 197 00a9 FF       		.byte	-1
+ 198 00aa 4B       		.byte	75
+ 199 00ab FF       		.byte	-1
+ 200 00ac 4F       		.byte	79
+ 201 00ad 01       		.byte	1
+ 202 00ae 50       		.byte	80
+ 203 00af 18       		.byte	24
+ 204 00b0 59       		.byte	89
+ 205 00b1 04       		.byte	4
+ 206 00b2 5A       		.byte	90
+ 207 00b3 04       		.byte	4
+ 208 00b4 5C       		.byte	92
+ 209 00b5 10       		.byte	16
+ 210 00b6 5D       		.byte	93
+ 211 00b7 01       		.byte	1
+ 212 00b8 5F       		.byte	95
+ 213 00b9 01       		.byte	1
+ 214 00ba 60       		.byte	96
+ 215 00bb 40       		.byte	64
+ 216 00bc 62       		.byte	98
+ 217 00bd 40       		.byte	64
+ 218 00be 64       		.byte	100
+ 219 00bf 40       		.byte	64
+ 220 00c0 65       		.byte	101
+ 221 00c1 40       		.byte	64
+ 222 00c2 66       		.byte	102
+ 223 00c3 80       		.byte	-128
+ 224 00c4 68       		.byte	104
+ 225 00c5 80       		.byte	-128
+ 226 00c6 6A       		.byte	106
+ 227 00c7 80       		.byte	-128
+ 228 00c8 6C       		.byte	108
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 5
+
+
+ 229 00c9 80       		.byte	-128
+ 230 00ca 6E       		.byte	110
+ 231 00cb 80       		.byte	-128
+ 232 00cc 82       		.byte	-126
+ 233 00cd 07       		.byte	7
+ 234 00ce 83       		.byte	-125
+ 235 00cf 02       		.byte	2
+ 236 00d0 84       		.byte	-124
+ 237 00d1 07       		.byte	7
+ 238 00d2 85       		.byte	-123
+ 239 00d3 0C       		.byte	12
+ 240 00d4 87       		.byte	-121
+ 241 00d5 30       		.byte	48
+ 242 00d6 88       		.byte	-120
+ 243 00d7 01       		.byte	1
+ 244 00d8 8B       		.byte	-117
+ 245 00d9 3C       		.byte	60
+ 246 00da 8C       		.byte	-116
+ 247 00db 04       		.byte	4
+ 248 00dc 8D       		.byte	-115
+ 249 00dd 3C       		.byte	60
+ 250 00de 8F       		.byte	-113
+ 251 00df 01       		.byte	1
+ 252 00e0 91       		.byte	-111
+ 253 00e1 14       		.byte	20
+ 254 00e2 93       		.byte	-109
+ 255 00e3 28       		.byte	40
+ 256 00e4 97       		.byte	-105
+ 257 00e5 3C       		.byte	60
+ 258 00e6 9B       		.byte	-101
+ 259 00e7 02       		.byte	2
+ 260 00e8 9E       		.byte	-98
+ 261 00e9 07       		.byte	7
+ 262 00ea 9F       		.byte	-97
+ 263 00eb 01       		.byte	1
+ 264 00ec A4       		.byte	-92
+ 265 00ed 02       		.byte	2
+ 266 00ee A5       		.byte	-91
+ 267 00ef 3C       		.byte	60
+ 268 00f0 A8       		.byte	-88
+ 269 00f1 07       		.byte	7
+ 270 00f2 A9       		.byte	-87
+ 271 00f3 0C       		.byte	12
+ 272 00f4 AB       		.byte	-85
+ 273 00f5 30       		.byte	48
+ 274 00f6 AD       		.byte	-83
+ 275 00f7 14       		.byte	20
+ 276 00f8 AF       		.byte	-81
+ 277 00f9 28       		.byte	40
+ 278 00fa B3       		.byte	-77
+ 279 00fb 3C       		.byte	60
+ 280 00fc B4       		.byte	-76
+ 281 00fd 07       		.byte	7
+ 282 00fe B5       		.byte	-75
+ 283 00ff 01       		.byte	1
+ 284 0100 B7       		.byte	-73
+ 285 0101 02       		.byte	2
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 6
+
+
+ 286 0102 BF       		.byte	-65
+ 287 0103 40       		.byte	64
+ 288 0104 C0       		.byte	-64
+ 289 0105 61       		.byte	97
+ 290 0106 C1       		.byte	-63
+ 291 0107 02       		.byte	2
+ 292 0108 C2       		.byte	-62
+ 293 0109 05       		.byte	5
+ 294 010a C5       		.byte	-59
+ 295 010b EC       		.byte	-20
+ 296 010c C7       		.byte	-57
+ 297 010d 20       		.byte	32
+ 298 010e C8       		.byte	-56
+ 299 010f 23       		.byte	35
+ 300 0110 C9       		.byte	-55
+ 301 0111 FF       		.byte	-1
+ 302 0112 CA       		.byte	-54
+ 303 0113 FF       		.byte	-1
+ 304 0114 CB       		.byte	-53
+ 305 0115 FF       		.byte	-1
+ 306 0116 CD       		.byte	-51
+ 307 0117 83       		.byte	-125
+ 308 0118 CE       		.byte	-50
+ 309 0119 03       		.byte	3
+ 310 011a CF       		.byte	-49
+ 311 011b 01       		.byte	1
+ 312 011c D0       		.byte	-48
+ 313 011d 18       		.byte	24
+ 314 011e D2       		.byte	-46
+ 315 011f 83       		.byte	-125
+ 316 0120 D4       		.byte	-44
+ 317 0121 03       		.byte	3
+ 318 0122 D6       		.byte	-42
+ 319 0123 04       		.byte	4
+ 320 0124 D8       		.byte	-40
+ 321 0125 04       		.byte	4
+ 322 0126 D9       		.byte	-39
+ 323 0127 04       		.byte	4
+ 324 0128 DA       		.byte	-38
+ 325 0129 04       		.byte	4
+ 326 012a DB       		.byte	-37
+ 327 012b 04       		.byte	4
+ 328 012c DC       		.byte	-36
+ 329 012d 11       		.byte	17
+ 330 012e DD       		.byte	-35
+ 331 012f 11       		.byte	17
+ 332 0130 DF       		.byte	-33
+ 333 0131 05       		.byte	5
+ 334 0132 E0       		.byte	-32
+ 335 0133 40       		.byte	64
+ 336 0134 E2       		.byte	-30
+ 337 0135 40       		.byte	64
+ 338 0136 E4       		.byte	-28
+ 339 0137 40       		.byte	64
+ 340 0138 E5       		.byte	-27
+ 341 0139 40       		.byte	64
+ 342 013a E6       		.byte	-26
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 7
+
+
+ 343 013b 80       		.byte	-128
+ 344 013c E8       		.byte	-24
+ 345 013d 80       		.byte	-128
+ 346 013e EA       		.byte	-22
+ 347 013f 80       		.byte	-128
+ 348 0140 EC       		.byte	-20
+ 349 0141 80       		.byte	-128
+ 350 0142 EE       		.byte	-18
+ 351 0143 80       		.byte	-128
+ 352 0144 05       		.byte	5
+ 353 0145 14       		.byte	20
+ 354 0146 06       		.byte	6
+ 355 0147 02       		.byte	2
+ 356 0148 07       		.byte	7
+ 357 0149 40       		.byte	64
+ 358 014a 0D       		.byte	13
+ 359 014b 40       		.byte	64
+ 360 014c 14       		.byte	20
+ 361 014d 08       		.byte	8
+ 362 014e 17       		.byte	23
+ 363 014f 04       		.byte	4
+ 364 0150 1D       		.byte	29
+ 365 0151 10       		.byte	16
+ 366 0152 1E       		.byte	30
+ 367 0153 08       		.byte	8
+ 368 0154 21       		.byte	33
+ 369 0155 30       		.byte	48
+ 370 0156 22       		.byte	34
+ 371 0157 04       		.byte	4
+ 372 0158 23       		.byte	35
+ 373 0159 48       		.byte	72
+ 374 015a 26       		.byte	38
+ 375 015b 50       		.byte	80
+ 376 015c 27       		.byte	39
+ 377 015d 24       		.byte	36
+ 378 015e 29       		.byte	41
+ 379 015f 10       		.byte	16
+ 380 0160 2A       		.byte	42
+ 381 0161 20       		.byte	32
+ 382 0162 2F       		.byte	47
+ 383 0163 2A       		.byte	42
+ 384 0164 31       		.byte	49
+ 385 0165 20       		.byte	32
+ 386 0166 36       		.byte	54
+ 387 0167 10       		.byte	16
+ 388 0168 37       		.byte	55
+ 389 0169 4A       		.byte	74
+ 390 016a 38       		.byte	56
+ 391 016b 40       		.byte	64
+ 392 016c 39       		.byte	57
+ 393 016d 80       		.byte	-128
+ 394 016e 3B       		.byte	59
+ 395 016f 08       		.byte	8
+ 396 0170 3C       		.byte	60
+ 397 0171 40       		.byte	64
+ 398 0172 3E       		.byte	62
+ 399 0173 26       		.byte	38
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 8
+
+
+ 400 0174 42       		.byte	66
+ 401 0175 02       		.byte	2
+ 402 0176 43       		.byte	67
+ 403 0177 20       		.byte	32
+ 404 0178 44       		.byte	68
+ 405 0179 0C       		.byte	12
+ 406 017a 46       		.byte	70
+ 407 017b 02       		.byte	2
+ 408 017c 49       		.byte	73
+ 409 017d 10       		.byte	16
+ 410 017e 4A       		.byte	74
+ 411 017f 08       		.byte	8
+ 412 0180 4B       		.byte	75
+ 413 0181 40       		.byte	64
+ 414 0182 4D       		.byte	77
+ 415 0183 05       		.byte	5
+ 416 0184 4E       		.byte	78
+ 417 0185 08       		.byte	8
+ 418 0186 4F       		.byte	79
+ 419 0187 40       		.byte	64
+ 420 0188 54       		.byte	84
+ 421 0189 02       		.byte	2
+ 422 018a 56       		.byte	86
+ 423 018b 02       		.byte	2
+ 424 018c 5D       		.byte	93
+ 425 018d 05       		.byte	5
+ 426 018e 5E       		.byte	94
+ 427 018f 80       		.byte	-128
+ 428 0190 5F       		.byte	95
+ 429 0191 20       		.byte	32
+ 430 0192 65       		.byte	101
+ 431 0193 02       		.byte	2
+ 432 0194 6D       		.byte	109
+ 433 0195 20       		.byte	32
+ 434 0196 6F       		.byte	111
+ 435 0197 0B       		.byte	11
+ 436 0198 77       		.byte	119
+ 437 0199 40       		.byte	64
+ 438 019a 7F       		.byte	127
+ 439 019b 20       		.byte	32
+ 440 019c 85       		.byte	-123
+ 441 019d 02       		.byte	2
+ 442 019e C0       		.byte	-64
+ 443 019f F0       		.byte	-16
+ 444 01a0 C2       		.byte	-62
+ 445 01a1 80       		.byte	-128
+ 446 01a2 C4       		.byte	-60
+ 447 01a3 60       		.byte	96
+ 448 01a4 CA       		.byte	-54
+ 449 01a5 74       		.byte	116
+ 450 01a6 CC       		.byte	-52
+ 451 01a7 F4       		.byte	-12
+ 452 01a8 CE       		.byte	-50
+ 453 01a9 FA       		.byte	-6
+ 454 01aa D0       		.byte	-48
+ 455 01ab 3C       		.byte	60
+ 456 01ac D2       		.byte	-46
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 9
+
+
+ 457 01ad 3C       		.byte	60
+ 458 01ae D6       		.byte	-42
+ 459 01af F0       		.byte	-16
+ 460 01b0 D8       		.byte	-40
+ 461 01b1 80       		.byte	-128
+ 462 01b2 DE       		.byte	-34
+ 463 01b3 40       		.byte	64
+ 464 01b4 02       		.byte	2
+ 465 01b5 19       		.byte	25
+ 466 01b6 03       		.byte	3
+ 467 01b7 18       		.byte	24
+ 468 01b8 05       		.byte	5
+ 469 01b9 02       		.byte	2
+ 470 01ba 06       		.byte	6
+ 471 01bb 40       		.byte	64
+ 472 01bc 07       		.byte	7
+ 473 01bd 01       		.byte	1
+ 474 01be 09       		.byte	9
+ 475 01bf 01       		.byte	1
+ 476 01c0 0A       		.byte	10
+ 477 01c1 20       		.byte	32
+ 478 01c2 0B       		.byte	11
+ 479 01c3 02       		.byte	2
+ 480 01c4 0C       		.byte	12
+ 481 01c5 05       		.byte	5
+ 482 01c6 0F       		.byte	15
+ 483 01c7 20       		.byte	32
+ 484 01c8 11       		.byte	17
+ 485 01c9 60       		.byte	96
+ 486 01ca 12       		.byte	18
+ 487 01cb 20       		.byte	32
+ 488 01cc 14       		.byte	20
+ 489 01cd 66       		.byte	102
+ 490 01ce 16       		.byte	22
+ 491 01cf 10       		.byte	16
+ 492 01d0 17       		.byte	23
+ 493 01d1 0F       		.byte	15
+ 494 01d2 19       		.byte	25
+ 495 01d3 60       		.byte	96
+ 496 01d4 1A       		.byte	26
+ 497 01d5 2F       		.byte	47
+ 498 01d6 1C       		.byte	28
+ 499 01d7 0F       		.byte	15
+ 500 01d8 1F       		.byte	31
+ 501 01d9 0F       		.byte	15
+ 502 01da 21       		.byte	33
+ 503 01db 0F       		.byte	15
+ 504 01dc 22       		.byte	34
+ 505 01dd 0E       		.byte	14
+ 506 01de 25       		.byte	37
+ 507 01df 40       		.byte	64
+ 508 01e0 26       		.byte	38
+ 509 01e1 03       		.byte	3
+ 510 01e2 29       		.byte	41
+ 511 01e3 07       		.byte	7
+ 512 01e4 2A       		.byte	42
+ 513 01e5 0F       		.byte	15
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 10
+
+
+ 514 01e6 2B       		.byte	43
+ 515 01e7 10       		.byte	16
+ 516 01e8 2F       		.byte	47
+ 517 01e9 04       		.byte	4
+ 518 01ea 32       		.byte	50
+ 519 01eb 60       		.byte	96
+ 520 01ec 33       		.byte	51
+ 521 01ed 60       		.byte	96
+ 522 01ee 34       		.byte	52
+ 523 01ef 1F       		.byte	31
+ 524 01f0 37       		.byte	55
+ 525 01f1 1F       		.byte	31
+ 526 01f2 39       		.byte	57
+ 527 01f3 08       		.byte	8
+ 528 01f4 3A       		.byte	58
+ 529 01f5 20       		.byte	32
+ 530 01f6 3B       		.byte	59
+ 531 01f7 80       		.byte	-128
+ 532 01f8 3F       		.byte	63
+ 533 01f9 04       		.byte	4
+ 534 01fa 40       		.byte	64
+ 535 01fb 02       		.byte	2
+ 536 01fc 47       		.byte	71
+ 537 01fd 04       		.byte	4
+ 538 01fe 49       		.byte	73
+ 539 01ff FF       		.byte	-1
+ 540 0200 4A       		.byte	74
+ 541 0201 07       		.byte	7
+ 542 0202 4B       		.byte	75
+ 543 0203 FF       		.byte	-1
+ 544 0204 4C       		.byte	76
+ 545 0205 40       		.byte	64
+ 546 0206 4D       		.byte	77
+ 547 0207 20       		.byte	32
+ 548 0208 4E       		.byte	78
+ 549 0209 F0       		.byte	-16
+ 550 020a 4F       		.byte	79
+ 551 020b 05       		.byte	5
+ 552 020c 50       		.byte	80
+ 553 020d 08       		.byte	8
+ 554 020e 58       		.byte	88
+ 555 020f 04       		.byte	4
+ 556 0210 59       		.byte	89
+ 557 0211 04       		.byte	4
+ 558 0212 5A       		.byte	90
+ 559 0213 04       		.byte	4
+ 560 0214 5C       		.byte	92
+ 561 0215 11       		.byte	17
+ 562 0216 5D       		.byte	93
+ 563 0217 02       		.byte	2
+ 564 0218 5F       		.byte	95
+ 565 0219 01       		.byte	1
+ 566 021a 60       		.byte	96
+ 567 021b 40       		.byte	64
+ 568 021c 61       		.byte	97
+ 569 021d A8       		.byte	-88
+ 570 021e 62       		.byte	98
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 11
+
+
+ 571 021f 40       		.byte	64
+ 572 0220 63       		.byte	99
+ 573 0221 20       		.byte	32
+ 574 0222 81       		.byte	-127
+ 575 0223 09       		.byte	9
+ 576 0224 83       		.byte	-125
+ 577 0225 D0       		.byte	-48
+ 578 0226 86       		.byte	-122
+ 579 0227 01       		.byte	1
+ 580 0228 87       		.byte	-121
+ 581 0229 03       		.byte	3
+ 582 022a 8C       		.byte	-116
+ 583 022b 01       		.byte	1
+ 584 022c 8D       		.byte	-115
+ 585 022d 0C       		.byte	12
+ 586 022e 8F       		.byte	-113
+ 587 022f 71       		.byte	113
+ 588 0230 99       		.byte	-103
+ 589 0231 DC       		.byte	-36
+ 590 0232 9B       		.byte	-101
+ 591 0233 22       		.byte	34
+ 592 0234 9F       		.byte	-97
+ 593 0235 20       		.byte	32
+ 594 0236 A0       		.byte	-96
+ 595 0237 02       		.byte	2
+ 596 0238 A1       		.byte	-95
+ 597 0239 10       		.byte	16
+ 598 023a A3       		.byte	-93
+ 599 023b AC       		.byte	-84
+ 600 023c A5       		.byte	-91
+ 601 023d 10       		.byte	16
+ 602 023e A7       		.byte	-89
+ 603 023f 40       		.byte	64
+ 604 0240 A8       		.byte	-88
+ 605 0241 01       		.byte	1
+ 606 0242 AD       		.byte	-83
+ 607 0243 14       		.byte	20
+ 608 0244 B3       		.byte	-77
+ 609 0245 E0       		.byte	-32
+ 610 0246 B5       		.byte	-75
+ 611 0247 1F       		.byte	31
+ 612 0248 B6       		.byte	-74
+ 613 0249 03       		.byte	3
+ 614 024a B8       		.byte	-72
+ 615 024b 80       		.byte	-128
+ 616 024c BB       		.byte	-69
+ 617 024d 08       		.byte	8
+ 618 024e D4       		.byte	-44
+ 619 024f 01       		.byte	1
+ 620 0250 D8       		.byte	-40
+ 621 0251 04       		.byte	4
+ 622 0252 D9       		.byte	-39
+ 623 0253 04       		.byte	4
+ 624 0254 DB       		.byte	-37
+ 625 0255 04       		.byte	4
+ 626 0256 DC       		.byte	-36
+ 627 0257 22       		.byte	34
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 12
+
+
+ 628 0258 DD       		.byte	-35
+ 629 0259 20       		.byte	32
+ 630 025a DF       		.byte	-33
+ 631 025b 01       		.byte	1
+ 632 025c 02       		.byte	2
+ 633 025d 02       		.byte	2
+ 634 025e 03       		.byte	3
+ 635 025f 20       		.byte	32
+ 636 0260 05       		.byte	5
+ 637 0261 84       		.byte	-124
+ 638 0262 06       		.byte	6
+ 639 0263 80       		.byte	-128
+ 640 0264 07       		.byte	7
+ 641 0265 05       		.byte	5
+ 642 0266 0C       		.byte	12
+ 643 0267 06       		.byte	6
+ 644 0268 0D       		.byte	13
+ 645 0269 40       		.byte	64
+ 646 026a 0E       		.byte	14
+ 647 026b 09       		.byte	9
+ 648 026c 10       		.byte	16
+ 649 026d 80       		.byte	-128
+ 650 026e 13       		.byte	19
+ 651 026f 20       		.byte	32
+ 652 0270 15       		.byte	21
+ 653 0271 30       		.byte	48
+ 654 0272 16       		.byte	22
+ 655 0273 20       		.byte	32
+ 656 0274 17       		.byte	23
+ 657 0275 02       		.byte	2
+ 658 0276 18       		.byte	24
+ 659 0277 02       		.byte	2
+ 660 0278 1B       		.byte	27
+ 661 0279 80       		.byte	-128
+ 662 027a 1D       		.byte	29
+ 663 027b 04       		.byte	4
+ 664 027c 1E       		.byte	30
+ 665 027d 04       		.byte	4
+ 666 027e 23       		.byte	35
+ 667 027f 24       		.byte	36
+ 668 0280 24       		.byte	36
+ 669 0281 01       		.byte	1
+ 670 0282 27       		.byte	39
+ 671 0283 12       		.byte	18
+ 672 0284 29       		.byte	41
+ 673 0285 02       		.byte	2
+ 674 0286 2A       		.byte	42
+ 675 0287 48       		.byte	72
+ 676 0288 2C       		.byte	44
+ 677 0289 04       		.byte	4
+ 678 028a 2D       		.byte	45
+ 679 028b 80       		.byte	-128
+ 680 028c 2E       		.byte	46
+ 681 028d 01       		.byte	1
+ 682 028e 2F       		.byte	47
+ 683 028f 20       		.byte	32
+ 684 0290 30       		.byte	48
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 13
+
+
+ 685 0291 80       		.byte	-128
+ 686 0292 33       		.byte	51
+ 687 0293 20       		.byte	32
+ 688 0294 35       		.byte	53
+ 689 0295 02       		.byte	2
+ 690 0296 36       		.byte	54
+ 691 0297 86       		.byte	-122
+ 692 0298 37       		.byte	55
+ 693 0299 20       		.byte	32
+ 694 029a 38       		.byte	56
+ 695 029b 82       		.byte	-126
+ 696 029c 3B       		.byte	59
+ 697 029d 04       		.byte	4
+ 698 029e 3C       		.byte	60
+ 699 029f 01       		.byte	1
+ 700 02a0 3D       		.byte	61
+ 701 02a1 20       		.byte	32
+ 702 02a2 3E       		.byte	62
+ 703 02a3 24       		.byte	36
+ 704 02a4 3F       		.byte	63
+ 705 02a5 80       		.byte	-128
+ 706 02a6 47       		.byte	71
+ 707 02a7 10       		.byte	16
+ 708 02a8 54       		.byte	84
+ 709 02a9 80       		.byte	-128
+ 710 02aa 56       		.byte	86
+ 711 02ab 08       		.byte	8
+ 712 02ac 57       		.byte	87
+ 713 02ad 40       		.byte	64
+ 714 02ae 58       		.byte	88
+ 715 02af 01       		.byte	1
+ 716 02b0 59       		.byte	89
+ 717 02b1 10       		.byte	16
+ 718 02b2 5A       		.byte	90
+ 719 02b3 88       		.byte	-120
+ 720 02b4 83       		.byte	-125
+ 721 02b5 01       		.byte	1
+ 722 02b6 86       		.byte	-122
+ 723 02b7 84       		.byte	-124
+ 724 02b8 8B       		.byte	-117
+ 725 02b9 04       		.byte	4
+ 726 02ba 91       		.byte	-111
+ 727 02bb A0       		.byte	-96
+ 728 02bc 92       		.byte	-110
+ 729 02bd 08       		.byte	8
+ 730 02be 96       		.byte	-106
+ 731 02bf 04       		.byte	4
+ 732 02c0 97       		.byte	-105
+ 733 02c1 08       		.byte	8
+ 734 02c2 98       		.byte	-104
+ 735 02c3 04       		.byte	4
+ 736 02c4 9B       		.byte	-101
+ 737 02c5 05       		.byte	5
+ 738 02c6 9D       		.byte	-99
+ 739 02c7 04       		.byte	4
+ 740 02c8 9F       		.byte	-97
+ 741 02c9 02       		.byte	2
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 14
+
+
+ 742 02ca A0       		.byte	-96
+ 743 02cb 02       		.byte	2
+ 744 02cc A1       		.byte	-95
+ 745 02cd 10       		.byte	16
+ 746 02ce A2       		.byte	-94
+ 747 02cf 04       		.byte	4
+ 748 02d0 B0       		.byte	-80
+ 749 02d1 08       		.byte	8
+ 750 02d2 B3       		.byte	-77
+ 751 02d3 20       		.byte	32
+ 752 02d4 B4       		.byte	-76
+ 753 02d5 40       		.byte	64
+ 754 02d6 C0       		.byte	-64
+ 755 02d7 F5       		.byte	-11
+ 756 02d8 C2       		.byte	-62
+ 757 02d9 F0       		.byte	-16
+ 758 02da C4       		.byte	-60
+ 759 02db 7A       		.byte	122
+ 760 02dc CA       		.byte	-54
+ 761 02dd FB       		.byte	-5
+ 762 02de CC       		.byte	-52
+ 763 02df FC       		.byte	-4
+ 764 02e0 CE       		.byte	-50
+ 765 02e1 FB       		.byte	-5
+ 766 02e2 D0       		.byte	-48
+ 767 02e3 20       		.byte	32
+ 768 02e4 D6       		.byte	-42
+ 769 02e5 0F       		.byte	15
+ 770 02e6 E2       		.byte	-30
+ 771 02e7 01       		.byte	1
+ 772 02e8 E8       		.byte	-24
+ 773 02e9 C0       		.byte	-64
+ 774 02ea 00       		.byte	0
+ 775 02eb 02       		.byte	2
+ 776 02ec 06       		.byte	6
+ 777 02ed 04       		.byte	4
+ 778 02ee 0B       		.byte	11
+ 779 02ef 01       		.byte	1
+ 780 02f0 0E       		.byte	14
+ 781 02f1 02       		.byte	2
+ 782 02f2 16       		.byte	22
+ 783 02f3 04       		.byte	4
+ 784 02f4 18       		.byte	24
+ 785 02f5 01       		.byte	1
+ 786 02f6 1B       		.byte	27
+ 787 02f7 01       		.byte	1
+ 788 02f8 1E       		.byte	30
+ 789 02f9 01       		.byte	1
+ 790 02fa 30       		.byte	48
+ 791 02fb 02       		.byte	2
+ 792 02fc 33       		.byte	51
+ 793 02fd 01       		.byte	1
+ 794 02fe 34       		.byte	52
+ 795 02ff 04       		.byte	4
+ 796 0300 36       		.byte	54
+ 797 0301 01       		.byte	1
+ 798 0302 3C       		.byte	60
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 15
+
+
+ 799 0303 82       		.byte	-126
+ 800 0304 3F       		.byte	63
+ 801 0305 04       		.byte	4
+ 802 0306 40       		.byte	64
+ 803 0307 25       		.byte	37
+ 804 0308 41       		.byte	65
+ 805 0309 06       		.byte	6
+ 806 030a 45       		.byte	69
+ 807 030b D0       		.byte	-48
+ 808 030c 46       		.byte	70
+ 809 030d 20       		.byte	32
+ 810 030e 47       		.byte	71
+ 811 030f 10       		.byte	16
+ 812 0310 48       		.byte	72
+ 813 0311 2A       		.byte	42
+ 814 0312 49       		.byte	73
+ 815 0313 FF       		.byte	-1
+ 816 0314 4A       		.byte	74
+ 817 0315 FF       		.byte	-1
+ 818 0316 4B       		.byte	75
+ 819 0317 FF       		.byte	-1
+ 820 0318 4D       		.byte	77
+ 821 0319 A0       		.byte	-96
+ 822 031a 4F       		.byte	79
+ 823 031b 04       		.byte	4
+ 824 031c 50       		.byte	80
+ 825 031d 18       		.byte	24
+ 826 031e 58       		.byte	88
+ 827 031f 04       		.byte	4
+ 828 0320 59       		.byte	89
+ 829 0321 04       		.byte	4
+ 830 0322 5A       		.byte	90
+ 831 0323 04       		.byte	4
+ 832 0324 5B       		.byte	91
+ 833 0325 04       		.byte	4
+ 834 0326 5C       		.byte	92
+ 835 0327 03       		.byte	3
+ 836 0328 5D       		.byte	93
+ 837 0329 03       		.byte	3
+ 838 032a 5F       		.byte	95
+ 839 032b 01       		.byte	1
+ 840 032c 60       		.byte	96
+ 841 032d 40       		.byte	64
+ 842 032e 62       		.byte	98
+ 843 032f C0       		.byte	-64
+ 844 0330 64       		.byte	100
+ 845 0331 40       		.byte	64
+ 846 0332 65       		.byte	101
+ 847 0333 40       		.byte	64
+ 848 0334 66       		.byte	102
+ 849 0335 C0       		.byte	-64
+ 850 0336 68       		.byte	104
+ 851 0337 C0       		.byte	-64
+ 852 0338 6A       		.byte	106
+ 853 0339 C0       		.byte	-64
+ 854 033a 6C       		.byte	108
+ 855 033b C0       		.byte	-64
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 16
+
+
+ 856 033c 6E       		.byte	110
+ 857 033d C0       		.byte	-64
+ 858 033e 82       		.byte	-126
+ 859 033f 01       		.byte	1
+ 860 0340 87       		.byte	-121
+ 861 0341 01       		.byte	1
+ 862 0342 8A       		.byte	-118
+ 863 0343 01       		.byte	1
+ 864 0344 8B       		.byte	-117
+ 865 0345 08       		.byte	8
+ 866 0346 8D       		.byte	-115
+ 867 0347 04       		.byte	4
+ 868 0348 92       		.byte	-110
+ 869 0349 02       		.byte	2
+ 870 034a 9B       		.byte	-101
+ 871 034b 08       		.byte	8
+ 872 034c A3       		.byte	-93
+ 873 034d 04       		.byte	4
+ 874 034e AA       		.byte	-86
+ 875 034f 02       		.byte	2
+ 876 0350 AF       		.byte	-81
+ 877 0351 02       		.byte	2
+ 878 0352 B0       		.byte	-80
+ 879 0353 02       		.byte	2
+ 880 0354 B1       		.byte	-79
+ 881 0355 04       		.byte	4
+ 882 0356 B2       		.byte	-78
+ 883 0357 01       		.byte	1
+ 884 0358 B3       		.byte	-77
+ 885 0359 02       		.byte	2
+ 886 035a B5       		.byte	-75
+ 887 035b 01       		.byte	1
+ 888 035c B7       		.byte	-73
+ 889 035d 08       		.byte	8
+ 890 035e BD       		.byte	-67
+ 891 035f 28       		.byte	40
+ 892 0360 BF       		.byte	-65
+ 893 0361 41       		.byte	65
+ 894 0362 C0       		.byte	-64
+ 895 0363 24       		.byte	36
+ 896 0364 C1       		.byte	-63
+ 897 0365 06       		.byte	6
+ 898 0366 C5       		.byte	-59
+ 899 0367 D2       		.byte	-46
+ 900 0368 C6       		.byte	-58
+ 901 0369 01       		.byte	1
+ 902 036a C8       		.byte	-56
+ 903 036b 07       		.byte	7
+ 904 036c C9       		.byte	-55
+ 905 036d FF       		.byte	-1
+ 906 036e CA       		.byte	-54
+ 907 036f FF       		.byte	-1
+ 908 0370 CB       		.byte	-53
+ 909 0371 FF       		.byte	-1
+ 910 0372 CD       		.byte	-51
+ 911 0373 A0       		.byte	-96
+ 912 0374 CF       		.byte	-49
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 17
+
+
+ 913 0375 04       		.byte	4
+ 914 0376 D0       		.byte	-48
+ 915 0377 18       		.byte	24
+ 916 0378 D2       		.byte	-46
+ 917 0379 80       		.byte	-128
+ 918 037a D4       		.byte	-44
+ 919 037b 05       		.byte	5
+ 920 037c D8       		.byte	-40
+ 921 037d 04       		.byte	4
+ 922 037e D9       		.byte	-39
+ 923 037f 04       		.byte	4
+ 924 0380 DA       		.byte	-38
+ 925 0381 04       		.byte	4
+ 926 0382 DB       		.byte	-37
+ 927 0383 04       		.byte	4
+ 928 0384 DC       		.byte	-36
+ 929 0385 33       		.byte	51
+ 930 0386 DD       		.byte	-35
+ 931 0387 33       		.byte	51
+ 932 0388 DF       		.byte	-33
+ 933 0389 05       		.byte	5
+ 934 038a E0       		.byte	-32
+ 935 038b 40       		.byte	64
+ 936 038c E2       		.byte	-30
+ 937 038d C0       		.byte	-64
+ 938 038e E4       		.byte	-28
+ 939 038f 40       		.byte	64
+ 940 0390 E5       		.byte	-27
+ 941 0391 40       		.byte	64
+ 942 0392 E6       		.byte	-26
+ 943 0393 C0       		.byte	-64
+ 944 0394 E8       		.byte	-24
+ 945 0395 C0       		.byte	-64
+ 946 0396 EA       		.byte	-22
+ 947 0397 C0       		.byte	-64
+ 948 0398 EC       		.byte	-20
+ 949 0399 C0       		.byte	-64
+ 950 039a EE       		.byte	-18
+ 951 039b C0       		.byte	-64
+ 952 039c 00       		.byte	0
+ 953 039d 10       		.byte	16
+ 954 039e 02       		.byte	2
+ 955 039f 80       		.byte	-128
+ 956 03a0 04       		.byte	4
+ 957 03a1 80       		.byte	-128
+ 958 03a2 07       		.byte	7
+ 959 03a3 60       		.byte	96
+ 960 03a4 09       		.byte	9
+ 961 03a5 01       		.byte	1
+ 962 03a6 0F       		.byte	15
+ 963 03a7 2A       		.byte	42
+ 964 03a8 13       		.byte	19
+ 965 03a9 20       		.byte	32
+ 966 03aa 14       		.byte	20
+ 967 03ab 80       		.byte	-128
+ 968 03ac 15       		.byte	21
+ 969 03ad 02       		.byte	2
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 18
+
+
+ 970 03ae 1A       		.byte	26
+ 971 03af 90       		.byte	-112
+ 972 03b0 1E       		.byte	30
+ 973 03b1 44       		.byte	68
+ 974 03b2 1F       		.byte	31
+ 975 03b3 40       		.byte	64
+ 976 03b4 20       		.byte	32
+ 977 03b5 02       		.byte	2
+ 978 03b6 21       		.byte	33
+ 979 03b7 11       		.byte	17
+ 980 03b8 23       		.byte	35
+ 981 03b9 20       		.byte	32
+ 982 03ba 26       		.byte	38
+ 983 03bb 04       		.byte	4
+ 984 03bc 28       		.byte	40
+ 985 03bd 40       		.byte	64
+ 986 03be 2A       		.byte	42
+ 987 03bf 81       		.byte	-127
+ 988 03c0 30       		.byte	48
+ 989 03c1 20       		.byte	32
+ 990 03c2 31       		.byte	49
+ 991 03c3 10       		.byte	16
+ 992 03c4 37       		.byte	55
+ 993 03c5 20       		.byte	32
+ 994 03c6 38       		.byte	56
+ 995 03c7 50       		.byte	80
+ 996 03c8 39       		.byte	57
+ 997 03c9 20       		.byte	32
+ 998 03ca 3A       		.byte	58
+ 999 03cb 04       		.byte	4
+ 1000 03cc 3F       		.byte	63
+ 1001 03cd 20       		.byte	32
+ 1002 03ce 41       		.byte	65
+ 1003 03cf 10       		.byte	16
+ 1004 03d0 43       		.byte	67
+ 1005 03d1 02       		.byte	2
+ 1006 03d2 47       		.byte	71
+ 1007 03d3 20       		.byte	32
+ 1008 03d4 48       		.byte	72
+ 1009 03d5 20       		.byte	32
+ 1010 03d6 49       		.byte	73
+ 1011 03d7 11       		.byte	17
+ 1012 03d8 4D       		.byte	77
+ 1013 03d9 41       		.byte	65
+ 1014 03da 4F       		.byte	79
+ 1015 03db 20       		.byte	32
+ 1016 03dc 50       		.byte	80
+ 1017 03dd 40       		.byte	64
+ 1018 03de 52       		.byte	82
+ 1019 03df 80       		.byte	-128
+ 1020 03e0 55       		.byte	85
+ 1021 03e1 01       		.byte	1
+ 1022 03e2 57       		.byte	87
+ 1023 03e3 11       		.byte	17
+ 1024 03e4 59       		.byte	89
+ 1025 03e5 09       		.byte	9
+ 1026 03e6 5A       		.byte	90
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 19
+
+
+ 1027 03e7 40       		.byte	64
+ 1028 03e8 67       		.byte	103
+ 1029 03e9 C0       		.byte	-64
+ 1030 03ea 6D       		.byte	109
+ 1031 03eb 40       		.byte	64
+ 1032 03ec 6F       		.byte	111
+ 1033 03ed 02       		.byte	2
+ 1034 03ee 72       		.byte	114
+ 1035 03ef 80       		.byte	-128
+ 1036 03f0 79       		.byte	121
+ 1037 03f1 40       		.byte	64
+ 1038 03f2 7F       		.byte	127
+ 1039 03f3 02       		.byte	2
+ 1040 03f4 81       		.byte	-127
+ 1041 03f5 08       		.byte	8
+ 1042 03f6 88       		.byte	-120
+ 1043 03f7 09       		.byte	9
+ 1044 03f8 89       		.byte	-119
+ 1045 03f9 08       		.byte	8
+ 1046 03fa 8E       		.byte	-114
+ 1047 03fb 40       		.byte	64
+ 1048 03fc 90       		.byte	-112
+ 1049 03fd 44       		.byte	68
+ 1050 03fe 95       		.byte	-107
+ 1051 03ff 40       		.byte	64
+ 1052 0400 96       		.byte	-106
+ 1053 0401 30       		.byte	48
+ 1054 0402 9B       		.byte	-101
+ 1055 0403 41       		.byte	65
+ 1056 0404 9C       		.byte	-100
+ 1057 0405 E0       		.byte	-32
+ 1058 0406 9D       		.byte	-99
+ 1059 0407 04       		.byte	4
+ 1060 0408 9F       		.byte	-97
+ 1061 0409 14       		.byte	20
+ 1062 040a A1       		.byte	-95
+ 1063 040b 0A       		.byte	10
+ 1064 040c A5       		.byte	-91
+ 1065 040d 80       		.byte	-128
+ 1066 040e A6       		.byte	-90
+ 1067 040f A0       		.byte	-96
+ 1068 0410 A7       		.byte	-89
+ 1069 0411 08       		.byte	8
+ 1070 0412 C0       		.byte	-64
+ 1071 0413 BA       		.byte	-70
+ 1072 0414 C2       		.byte	-62
+ 1073 0415 E8       		.byte	-24
+ 1074 0416 C4       		.byte	-60
+ 1075 0417 02       		.byte	2
+ 1076 0418 CA       		.byte	-54
+ 1077 0419 09       		.byte	9
+ 1078 041a CC       		.byte	-52
+ 1079 041b 24       		.byte	36
+ 1080 041c CE       		.byte	-50
+ 1081 041d 2E       		.byte	46
+ 1082 041e D0       		.byte	-48
+ 1083 041f 25       		.byte	37
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 20
+
+
+ 1084 0420 D2       		.byte	-46
+ 1085 0421 34       		.byte	52
+ 1086 0422 D6       		.byte	-42
+ 1087 0423 0B       		.byte	11
+ 1088 0424 DE       		.byte	-34
+ 1089 0425 18       		.byte	24
+ 1090 0426 E4       		.byte	-28
+ 1091 0427 20       		.byte	32
+ 1092 0428 03       		.byte	3
+ 1093 0429 01       		.byte	1
+ 1094 042a 04       		.byte	4
+ 1095 042b 01       		.byte	1
+ 1096 042c 0C       		.byte	12
+ 1097 042d 08       		.byte	8
+ 1098 042e 16       		.byte	22
+ 1099 042f 04       		.byte	4
+ 1100 0430 1E       		.byte	30
+ 1101 0431 01       		.byte	1
+ 1102 0432 1F       		.byte	31
+ 1103 0433 02       		.byte	2
+ 1104 0434 22       		.byte	34
+ 1105 0435 02       		.byte	2
+ 1106 0436 2C       		.byte	44
+ 1107 0437 08       		.byte	8
+ 1108 0438 30       		.byte	48
+ 1109 0439 02       		.byte	2
+ 1110 043a 32       		.byte	50
+ 1111 043b 01       		.byte	1
+ 1112 043c 34       		.byte	52
+ 1113 043d 04       		.byte	4
+ 1114 043e 35       		.byte	53
+ 1115 043f 02       		.byte	2
+ 1116 0440 36       		.byte	54
+ 1117 0441 08       		.byte	8
+ 1118 0442 37       		.byte	55
+ 1119 0443 01       		.byte	1
+ 1120 0444 38       		.byte	56
+ 1121 0445 80       		.byte	-128
+ 1122 0446 3E       		.byte	62
+ 1123 0447 44       		.byte	68
+ 1124 0448 40       		.byte	64
+ 1125 0449 31       		.byte	49
+ 1126 044a 41       		.byte	65
+ 1127 044b 04       		.byte	4
+ 1128 044c 49       		.byte	73
+ 1129 044d FF       		.byte	-1
+ 1130 044e 4A       		.byte	74
+ 1131 044f FF       		.byte	-1
+ 1132 0450 4B       		.byte	75
+ 1133 0451 FF       		.byte	-1
+ 1134 0452 4D       		.byte	77
+ 1135 0453 A0       		.byte	-96
+ 1136 0454 4F       		.byte	79
+ 1137 0455 01       		.byte	1
+ 1138 0456 50       		.byte	80
+ 1139 0457 18       		.byte	24
+ 1140 0458 52       		.byte	82
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 21
+
+
+ 1141 0459 80       		.byte	-128
+ 1142 045a 54       		.byte	84
+ 1143 045b 07       		.byte	7
+ 1144 045c 58       		.byte	88
+ 1145 045d 04       		.byte	4
+ 1146 045e 59       		.byte	89
+ 1147 045f 04       		.byte	4
+ 1148 0460 5A       		.byte	90
+ 1149 0461 04       		.byte	4
+ 1150 0462 5B       		.byte	91
+ 1151 0463 04       		.byte	4
+ 1152 0464 5F       		.byte	95
+ 1153 0465 05       		.byte	5
+ 1154 0466 60       		.byte	96
+ 1155 0467 40       		.byte	64
+ 1156 0468 62       		.byte	98
+ 1157 0469 80       		.byte	-128
+ 1158 046a 64       		.byte	100
+ 1159 046b 40       		.byte	64
+ 1160 046c 65       		.byte	101
+ 1161 046d 40       		.byte	64
+ 1162 046e 66       		.byte	102
+ 1163 046f 80       		.byte	-128
+ 1164 0470 68       		.byte	104
+ 1165 0471 40       		.byte	64
+ 1166 0472 6A       		.byte	106
+ 1167 0473 50       		.byte	80
+ 1168 0474 6B       		.byte	107
+ 1169 0475 A8       		.byte	-88
+ 1170 0476 6C       		.byte	108
+ 1171 0477 40       		.byte	64
+ 1172 0478 6D       		.byte	109
+ 1173 0479 20       		.byte	32
+ 1174 047a 6E       		.byte	110
+ 1175 047b 50       		.byte	80
+ 1176 047c 6F       		.byte	111
+ 1177 047d A8       		.byte	-88
+ 1178 047e 8E       		.byte	-114
+ 1179 047f 01       		.byte	1
+ 1180 0480 8F       		.byte	-113
+ 1181 0481 01       		.byte	1
+ 1182 0482 92       		.byte	-110
+ 1183 0483 02       		.byte	2
+ 1184 0484 9B       		.byte	-101
+ 1185 0485 04       		.byte	4
+ 1186 0486 9F       		.byte	-97
+ 1187 0487 02       		.byte	2
+ 1188 0488 A1       		.byte	-95
+ 1189 0489 01       		.byte	1
+ 1190 048a AB       		.byte	-85
+ 1191 048b 04       		.byte	4
+ 1192 048c AC       		.byte	-84
+ 1193 048d 01       		.byte	1
+ 1194 048e B1       		.byte	-79
+ 1195 048f 02       		.byte	2
+ 1196 0490 B3       		.byte	-77
+ 1197 0491 04       		.byte	4
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 22
+
+
+ 1198 0492 B4       		.byte	-76
+ 1199 0493 01       		.byte	1
+ 1200 0494 B6       		.byte	-74
+ 1201 0495 02       		.byte	2
+ 1202 0496 B7       		.byte	-73
+ 1203 0497 01       		.byte	1
+ 1204 0498 BE       		.byte	-66
+ 1205 0499 10       		.byte	16
+ 1206 049a BF       		.byte	-65
+ 1207 049b 44       		.byte	68
+ 1208 049c C0       		.byte	-64
+ 1209 049d 35       		.byte	53
+ 1210 049e C1       		.byte	-63
+ 1211 049f 04       		.byte	4
+ 1212 04a0 C5       		.byte	-59
+ 1213 04a1 20       		.byte	32
+ 1214 04a2 C6       		.byte	-58
+ 1215 04a3 C5       		.byte	-59
+ 1216 04a4 C7       		.byte	-57
+ 1217 04a5 0E       		.byte	14
+ 1218 04a6 C8       		.byte	-56
+ 1219 04a7 3E       		.byte	62
+ 1220 04a8 C9       		.byte	-55
+ 1221 04a9 FF       		.byte	-1
+ 1222 04aa CA       		.byte	-54
+ 1223 04ab FF       		.byte	-1
+ 1224 04ac CB       		.byte	-53
+ 1225 04ad FF       		.byte	-1
+ 1226 04ae CD       		.byte	-51
+ 1227 04af AF       		.byte	-81
+ 1228 04b0 CE       		.byte	-50
+ 1229 04b1 07       		.byte	7
+ 1230 04b2 CF       		.byte	-49
+ 1231 04b3 01       		.byte	1
+ 1232 04b4 D0       		.byte	-48
+ 1233 04b5 18       		.byte	24
+ 1234 04b6 D4       		.byte	-44
+ 1235 04b7 07       		.byte	7
+ 1236 04b8 D8       		.byte	-40
+ 1237 04b9 04       		.byte	4
+ 1238 04ba D9       		.byte	-39
+ 1239 04bb 04       		.byte	4
+ 1240 04bc DA       		.byte	-38
+ 1241 04bd 04       		.byte	4
+ 1242 04be DB       		.byte	-37
+ 1243 04bf 04       		.byte	4
+ 1244 04c0 DC       		.byte	-36
+ 1245 04c1 30       		.byte	48
+ 1246 04c2 DF       		.byte	-33
+ 1247 04c3 05       		.byte	5
+ 1248 04c4 E0       		.byte	-32
+ 1249 04c5 40       		.byte	64
+ 1250 04c6 E2       		.byte	-30
+ 1251 04c7 80       		.byte	-128
+ 1252 04c8 E4       		.byte	-28
+ 1253 04c9 40       		.byte	64
+ 1254 04ca E5       		.byte	-27
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 23
+
+
+ 1255 04cb 40       		.byte	64
+ 1256 04cc E6       		.byte	-26
+ 1257 04cd 80       		.byte	-128
+ 1258 04ce E8       		.byte	-24
+ 1259 04cf 40       		.byte	64
+ 1260 04d0 EA       		.byte	-22
+ 1261 04d1 50       		.byte	80
+ 1262 04d2 EB       		.byte	-21
+ 1263 04d3 A8       		.byte	-88
+ 1264 04d4 EC       		.byte	-20
+ 1265 04d5 40       		.byte	64
+ 1266 04d6 ED       		.byte	-19
+ 1267 04d7 20       		.byte	32
+ 1268 04d8 EE       		.byte	-18
+ 1269 04d9 50       		.byte	80
+ 1270 04da EF       		.byte	-17
+ 1271 04db A8       		.byte	-88
+ 1272 04dc 00       		.byte	0
+ 1273 04dd 08       		.byte	8
+ 1274 04de 01       		.byte	1
+ 1275 04df 40       		.byte	64
+ 1276 04e0 06       		.byte	6
+ 1277 04e1 01       		.byte	1
+ 1278 04e2 09       		.byte	9
+ 1279 04e3 80       		.byte	-128
+ 1280 04e4 0A       		.byte	10
+ 1281 04e5 20       		.byte	32
+ 1282 04e6 0F       		.byte	15
+ 1283 04e7 80       		.byte	-128
+ 1284 04e8 10       		.byte	16
+ 1285 04e9 40       		.byte	64
+ 1286 04ea 12       		.byte	18
+ 1287 04eb 01       		.byte	1
+ 1288 04ec 15       		.byte	21
+ 1289 04ed 80       		.byte	-128
+ 1290 04ee 18       		.byte	24
+ 1291 04ef 45       		.byte	69
+ 1292 04f0 19       		.byte	25
+ 1293 04f1 08       		.byte	8
+ 1294 04f2 1A       		.byte	26
+ 1295 04f3 02       		.byte	2
+ 1296 04f4 1E       		.byte	30
+ 1297 04f5 04       		.byte	4
+ 1298 04f6 1F       		.byte	31
+ 1299 04f7 80       		.byte	-128
+ 1300 04f8 20       		.byte	32
+ 1301 04f9 08       		.byte	8
+ 1302 04fa 21       		.byte	33
+ 1303 04fb 40       		.byte	64
+ 1304 04fc 25       		.byte	37
+ 1305 04fd 08       		.byte	8
+ 1306 04fe 26       		.byte	38
+ 1307 04ff 40       		.byte	64
+ 1308 0500 27       		.byte	39
+ 1309 0501 40       		.byte	64
+ 1310 0502 2F       		.byte	47
+ 1311 0503 88       		.byte	-120
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 24
+
+
+ 1312 0504 31       		.byte	49
+ 1313 0505 80       		.byte	-128
+ 1314 0506 36       		.byte	54
+ 1315 0507 80       		.byte	-128
+ 1316 0508 37       		.byte	55
+ 1317 0509 10       		.byte	16
+ 1318 050a 3A       		.byte	58
+ 1319 050b 01       		.byte	1
+ 1320 050c 3F       		.byte	63
+ 1321 050d 80       		.byte	-128
+ 1322 050e 40       		.byte	64
+ 1323 050f 01       		.byte	1
+ 1324 0510 43       		.byte	67
+ 1325 0511 05       		.byte	5
+ 1326 0512 47       		.byte	71
+ 1327 0513 05       		.byte	5
+ 1328 0514 4E       		.byte	78
+ 1329 0515 01       		.byte	1
+ 1330 0516 4F       		.byte	79
+ 1331 0517 02       		.byte	2
+ 1332 0518 56       		.byte	86
+ 1333 0519 19       		.byte	25
+ 1334 051a 57       		.byte	87
+ 1335 051b 40       		.byte	64
+ 1336 051c 58       		.byte	88
+ 1337 051d A0       		.byte	-96
+ 1338 051e 59       		.byte	89
+ 1339 051f 08       		.byte	8
+ 1340 0520 5D       		.byte	93
+ 1341 0521 10       		.byte	16
+ 1342 0522 5E       		.byte	94
+ 1343 0523 84       		.byte	-124
+ 1344 0524 61       		.byte	97
+ 1345 0525 04       		.byte	4
+ 1346 0526 62       		.byte	98
+ 1347 0527 20       		.byte	32
+ 1348 0528 66       		.byte	102
+ 1349 0529 18       		.byte	24
+ 1350 052a 71       		.byte	113
+ 1351 052b 02       		.byte	2
+ 1352 052c 79       		.byte	121
+ 1353 052d 40       		.byte	64
+ 1354 052e 7D       		.byte	125
+ 1355 052f 40       		.byte	64
+ 1356 0530 89       		.byte	-119
+ 1357 0531 10       		.byte	16
+ 1358 0532 8B       		.byte	-117
+ 1359 0533 01       		.byte	1
+ 1360 0534 8E       		.byte	-114
+ 1361 0535 10       		.byte	16
+ 1362 0536 9B       		.byte	-101
+ 1363 0537 01       		.byte	1
+ 1364 0538 C0       		.byte	-64
+ 1365 0539 85       		.byte	-123
+ 1366 053a C2       		.byte	-62
+ 1367 053b 15       		.byte	21
+ 1368 053c C4       		.byte	-60
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 25
+
+
+ 1369 053d 89       		.byte	-119
+ 1370 053e CA       		.byte	-54
+ 1371 053f A0       		.byte	-96
+ 1372 0540 CC       		.byte	-52
+ 1373 0541 38       		.byte	56
+ 1374 0542 CE       		.byte	-50
+ 1375 0543 11       		.byte	17
+ 1376 0544 D0       		.byte	-48
+ 1377 0545 CB       		.byte	-53
+ 1378 0546 D2       		.byte	-46
+ 1379 0547 10       		.byte	16
+ 1380 0548 D6       		.byte	-42
+ 1381 0549 7E       		.byte	126
+ 1382 054a D8       		.byte	-40
+ 1383 054b 66       		.byte	102
+ 1384 054c DE       		.byte	-34
+ 1385 054d 18       		.byte	24
+ 1386 054e 39       		.byte	57
+ 1387 054f 80       		.byte	-128
+ 1388 0550 3F       		.byte	63
+ 1389 0551 40       		.byte	64
+ 1390 0552 59       		.byte	89
+ 1391 0553 04       		.byte	4
+ 1392 0554 5F       		.byte	95
+ 1393 0555 01       		.byte	1
+ 1394 0556 27       		.byte	39
+ 1395 0557 01       		.byte	1
+ 1396 0558 85       		.byte	-123
+ 1397 0559 20       		.byte	32
+ 1398 055a 88       		.byte	-120
+ 1399 055b 14       		.byte	20
+ 1400 055c 8B       		.byte	-117
+ 1401 055d 04       		.byte	4
+ 1402 055e 8C       		.byte	-116
+ 1403 055f 10       		.byte	16
+ 1404 0560 94       		.byte	-108
+ 1405 0561 10       		.byte	16
+ 1406 0562 97       		.byte	-105
+ 1407 0563 04       		.byte	4
+ 1408 0564 9C       		.byte	-100
+ 1409 0565 14       		.byte	20
+ 1410 0566 9D       		.byte	-99
+ 1411 0567 20       		.byte	32
+ 1412 0568 AA       		.byte	-86
+ 1413 0569 01       		.byte	1
+ 1414 056a B2       		.byte	-78
+ 1415 056b 08       		.byte	8
+ 1416 056c B7       		.byte	-73
+ 1417 056d 80       		.byte	-128
+ 1418 056e E6       		.byte	-26
+ 1419 056f 02       		.byte	2
+ 1420 0570 EA       		.byte	-22
+ 1421 0571 04       		.byte	4
+ 1422 0572 04       		.byte	4
+ 1423 0573 0C       		.byte	12
+ 1424 0574 06       		.byte	6
+ 1425 0575 03       		.byte	3
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 26
+
+
+ 1426 0576 0C       		.byte	12
+ 1427 0577 01       		.byte	1
+ 1428 0578 0E       		.byte	14
+ 1429 0579 0E       		.byte	14
+ 1430 057a 10       		.byte	16
+ 1431 057b 01       		.byte	1
+ 1432 057c 12       		.byte	18
+ 1433 057d 06       		.byte	6
+ 1434 057e 14       		.byte	20
+ 1435 057f 10       		.byte	16
+ 1436 0580 1A       		.byte	26
+ 1437 0581 10       		.byte	16
+ 1438 0582 1E       		.byte	30
+ 1439 0583 0C       		.byte	12
+ 1440 0584 20       		.byte	32
+ 1441 0585 10       		.byte	16
+ 1442 0586 26       		.byte	38
+ 1443 0587 10       		.byte	16
+ 1444 0588 2A       		.byte	42
+ 1445 0589 08       		.byte	8
+ 1446 058a 2E       		.byte	46
+ 1447 058b 03       		.byte	3
+ 1448 058c 30       		.byte	48
+ 1449 058d 10       		.byte	16
+ 1450 058e 34       		.byte	52
+ 1451 058f 0F       		.byte	15
+ 1452 0590 38       		.byte	56
+ 1453 0591 02       		.byte	2
+ 1454 0592 3A       		.byte	58
+ 1455 0593 20       		.byte	32
+ 1456 0594 52       		.byte	82
+ 1457 0595 80       		.byte	-128
+ 1458 0596 58       		.byte	88
+ 1459 0597 04       		.byte	4
+ 1460 0598 5B       		.byte	91
+ 1461 0599 04       		.byte	4
+ 1462 059a 5C       		.byte	92
+ 1463 059b 02       		.byte	2
+ 1464 059c 5D       		.byte	93
+ 1465 059d 30       		.byte	48
+ 1466 059e 5F       		.byte	95
+ 1467 059f 01       		.byte	1
+ 1468 05a0 81       		.byte	-127
+ 1469 05a1 20       		.byte	32
+ 1470 05a2 85       		.byte	-123
+ 1471 05a3 20       		.byte	32
+ 1472 05a4 88       		.byte	-120
+ 1473 05a5 01       		.byte	1
+ 1474 05a6 89       		.byte	-119
+ 1475 05a7 03       		.byte	3
+ 1476 05a8 8B       		.byte	-117
+ 1477 05a9 44       		.byte	68
+ 1478 05aa 8C       		.byte	-116
+ 1479 05ab 03       		.byte	3
+ 1480 05ac 8D       		.byte	-115
+ 1481 05ad 43       		.byte	67
+ 1482 05ae 8F       		.byte	-113
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 27
+
+
+ 1483 05af 04       		.byte	4
+ 1484 05b0 91       		.byte	-111
+ 1485 05b1 43       		.byte	67
+ 1486 05b2 92       		.byte	-110
+ 1487 05b3 03       		.byte	3
+ 1488 05b4 93       		.byte	-109
+ 1489 05b5 0C       		.byte	12
+ 1490 05b6 94       		.byte	-108
+ 1491 05b7 03       		.byte	3
+ 1492 05b8 95       		.byte	-107
+ 1493 05b9 20       		.byte	32
+ 1494 05ba 99       		.byte	-103
+ 1495 05bb 0A       		.byte	10
+ 1496 05bc 9A       		.byte	-102
+ 1497 05bd 03       		.byte	3
+ 1498 05be 9B       		.byte	-101
+ 1499 05bf 44       		.byte	68
+ 1500 05c0 9F       		.byte	-97
+ 1501 05c1 08       		.byte	8
+ 1502 05c2 A0       		.byte	-96
+ 1503 05c3 02       		.byte	2
+ 1504 05c4 A3       		.byte	-93
+ 1505 05c5 45       		.byte	69
+ 1506 05c6 A5       		.byte	-91
+ 1507 05c7 20       		.byte	32
+ 1508 05c8 A6       		.byte	-90
+ 1509 05c9 03       		.byte	3
+ 1510 05ca A8       		.byte	-88
+ 1511 05cb 03       		.byte	3
+ 1512 05cc AB       		.byte	-85
+ 1513 05cd 10       		.byte	16
+ 1514 05ce AF       		.byte	-81
+ 1515 05cf 10       		.byte	16
+ 1516 05d0 B1       		.byte	-79
+ 1517 05d1 0F       		.byte	15
+ 1518 05d2 B3       		.byte	-77
+ 1519 05d3 20       		.byte	32
+ 1520 05d4 B5       		.byte	-75
+ 1521 05d5 10       		.byte	16
+ 1522 05d6 B6       		.byte	-74
+ 1523 05d7 03       		.byte	3
+ 1524 05d8 B7       		.byte	-73
+ 1525 05d9 40       		.byte	64
+ 1526 05da BB       		.byte	-69
+ 1527 05db 02       		.byte	2
+ 1528 05dc BF       		.byte	-65
+ 1529 05dd 54       		.byte	84
+ 1530 05de C0       		.byte	-64
+ 1531 05df 54       		.byte	84
+ 1532 05e0 C1       		.byte	-63
+ 1533 05e1 01       		.byte	1
+ 1534 05e2 C6       		.byte	-58
+ 1535 05e3 CB       		.byte	-53
+ 1536 05e4 C7       		.byte	-57
+ 1537 05e5 0E       		.byte	14
+ 1538 05e6 C8       		.byte	-56
+ 1539 05e7 1C       		.byte	28
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 28
+
+
+ 1540 05e8 C9       		.byte	-55
+ 1541 05e9 FF       		.byte	-1
+ 1542 05ea CA       		.byte	-54
+ 1543 05eb FF       		.byte	-1
+ 1544 05ec CB       		.byte	-53
+ 1545 05ed FF       		.byte	-1
+ 1546 05ee CE       		.byte	-50
+ 1547 05ef F0       		.byte	-16
+ 1548 05f0 CF       		.byte	-49
+ 1549 05f1 44       		.byte	68
+ 1550 05f2 D0       		.byte	-48
+ 1551 05f3 0C       		.byte	12
+ 1552 05f4 D4       		.byte	-44
+ 1553 05f5 18       		.byte	24
+ 1554 05f6 D6       		.byte	-42
+ 1555 05f7 04       		.byte	4
+ 1556 05f8 D8       		.byte	-40
+ 1557 05f9 04       		.byte	4
+ 1558 05fa D9       		.byte	-39
+ 1559 05fb 04       		.byte	4
+ 1560 05fc DA       		.byte	-38
+ 1561 05fd 04       		.byte	4
+ 1562 05fe DB       		.byte	-37
+ 1563 05ff 04       		.byte	4
+ 1564 0600 DC       		.byte	-36
+ 1565 0601 22       		.byte	34
+ 1566 0602 DD       		.byte	-35
+ 1567 0603 22       		.byte	34
+ 1568 0604 DF       		.byte	-33
+ 1569 0605 01       		.byte	1
+ 1570 0606 E6       		.byte	-26
+ 1571 0607 C0       		.byte	-64
+ 1572 0608 EA       		.byte	-22
+ 1573 0609 40       		.byte	64
+ 1574 060a EB       		.byte	-21
+ 1575 060b 02       		.byte	2
+ 1576 060c 00       		.byte	0
+ 1577 060d 10       		.byte	16
+ 1578 060e 02       		.byte	2
+ 1579 060f 01       		.byte	1
+ 1580 0610 04       		.byte	4
+ 1581 0611 A0       		.byte	-96
+ 1582 0612 05       		.byte	5
+ 1583 0613 10       		.byte	16
+ 1584 0614 07       		.byte	7
+ 1585 0615 10       		.byte	16
+ 1586 0616 08       		.byte	8
+ 1587 0617 02       		.byte	2
+ 1588 0618 0B       		.byte	11
+ 1589 0619 14       		.byte	20
+ 1590 061a 0C       		.byte	12
+ 1591 061b 04       		.byte	4
+ 1592 061c 0D       		.byte	13
+ 1593 061d 81       		.byte	-127
+ 1594 061e 0F       		.byte	15
+ 1595 061f 04       		.byte	4
+ 1596 0620 10       		.byte	16
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 29
+
+
+ 1597 0621 14       		.byte	20
+ 1598 0622 12       		.byte	18
+ 1599 0623 80       		.byte	-128
+ 1600 0624 14       		.byte	20
+ 1601 0625 10       		.byte	16
+ 1602 0626 15       		.byte	21
+ 1603 0627 01       		.byte	1
+ 1604 0628 16       		.byte	22
+ 1605 0629 0A       		.byte	10
+ 1606 062a 1A       		.byte	26
+ 1607 062b 02       		.byte	2
+ 1608 062c 1F       		.byte	31
+ 1609 062d 22       		.byte	34
+ 1610 062e 21       		.byte	33
+ 1611 062f 21       		.byte	33
+ 1612 0630 22       		.byte	34
+ 1613 0631 4A       		.byte	74
+ 1614 0632 28       		.byte	40
+ 1615 0633 90       		.byte	-112
+ 1616 0634 29       		.byte	41
+ 1617 0635 20       		.byte	32
+ 1618 0636 2A       		.byte	42
+ 1619 0637 02       		.byte	2
+ 1620 0638 2B       		.byte	43
+ 1621 0639 42       		.byte	66
+ 1622 063a 30       		.byte	48
+ 1623 063b 04       		.byte	4
+ 1624 063c 31       		.byte	49
+ 1625 063d 80       		.byte	-128
+ 1626 063e 32       		.byte	50
+ 1627 063f 02       		.byte	2
+ 1628 0640 33       		.byte	51
+ 1629 0641 B0       		.byte	-80
+ 1630 0642 38       		.byte	56
+ 1631 0643 A0       		.byte	-96
+ 1632 0644 39       		.byte	57
+ 1633 0645 81       		.byte	-127
+ 1634 0646 3B       		.byte	59
+ 1635 0647 04       		.byte	4
+ 1636 0648 40       		.byte	64
+ 1637 0649 80       		.byte	-128
+ 1638 064a 41       		.byte	65
+ 1639 064b 40       		.byte	64
+ 1640 064c 4A       		.byte	74
+ 1641 064d 02       		.byte	2
+ 1642 064e 50       		.byte	80
+ 1643 064f 10       		.byte	16
+ 1644 0650 51       		.byte	81
+ 1645 0651 08       		.byte	8
+ 1646 0652 52       		.byte	82
+ 1647 0653 40       		.byte	64
+ 1648 0654 53       		.byte	83
+ 1649 0655 04       		.byte	4
+ 1650 0656 5A       		.byte	90
+ 1651 0657 02       		.byte	2
+ 1652 0658 61       		.byte	97
+ 1653 0659 20       		.byte	32
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 30
+
+
+ 1654 065a 63       		.byte	99
+ 1655 065b 41       		.byte	65
+ 1656 065c 77       		.byte	119
+ 1657 065d 80       		.byte	-128
+ 1658 065e 80       		.byte	-128
+ 1659 065f 02       		.byte	2
+ 1660 0660 85       		.byte	-123
+ 1661 0661 01       		.byte	1
+ 1662 0662 86       		.byte	-122
+ 1663 0663 80       		.byte	-128
+ 1664 0664 87       		.byte	-121
+ 1665 0665 50       		.byte	80
+ 1666 0666 90       		.byte	-112
+ 1667 0667 80       		.byte	-128
+ 1668 0668 93       		.byte	-109
+ 1669 0669 01       		.byte	1
+ 1670 066a 96       		.byte	-106
+ 1671 066b 80       		.byte	-128
+ 1672 066c 97       		.byte	-105
+ 1673 066d 08       		.byte	8
+ 1674 066e 9A       		.byte	-102
+ 1675 066f 08       		.byte	8
+ 1676 0670 9D       		.byte	-99
+ 1677 0671 10       		.byte	16
+ 1678 0672 9E       		.byte	-98
+ 1679 0673 40       		.byte	64
+ 1680 0674 A3       		.byte	-93
+ 1681 0675 C0       		.byte	-64
+ 1682 0676 A5       		.byte	-91
+ 1683 0677 08       		.byte	8
+ 1684 0678 A6       		.byte	-90
+ 1685 0679 02       		.byte	2
+ 1686 067a A7       		.byte	-89
+ 1687 067b 20       		.byte	32
+ 1688 067c AC       		.byte	-84
+ 1689 067d 01       		.byte	1
+ 1690 067e AD       		.byte	-83
+ 1691 067f 18       		.byte	24
+ 1692 0680 AE       		.byte	-82
+ 1693 0681 80       		.byte	-128
+ 1694 0682 B4       		.byte	-76
+ 1695 0683 40       		.byte	64
+ 1696 0684 B7       		.byte	-73
+ 1697 0685 20       		.byte	32
+ 1698 0686 C0       		.byte	-64
+ 1699 0687 A3       		.byte	-93
+ 1700 0688 C2       		.byte	-62
+ 1701 0689 FE       		.byte	-2
+ 1702 068a C4       		.byte	-60
+ 1703 068b FE       		.byte	-2
+ 1704 068c CA       		.byte	-54
+ 1705 068d 0F       		.byte	15
+ 1706 068e CC       		.byte	-52
+ 1707 068f 0F       		.byte	15
+ 1708 0690 CE       		.byte	-50
+ 1709 0691 0F       		.byte	15
+ 1710 0692 D0       		.byte	-48
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 31
+
+
+ 1711 0693 09       		.byte	9
+ 1712 0694 D2       		.byte	-46
+ 1713 0695 08       		.byte	8
+ 1714 0696 D6       		.byte	-42
+ 1715 0697 01       		.byte	1
+ 1716 0698 D8       		.byte	-40
+ 1717 0699 0D       		.byte	13
+ 1718 069a E2       		.byte	-30
+ 1719 069b 08       		.byte	8
+ 1720 069c E6       		.byte	-26
+ 1721 069d 09       		.byte	9
+ 1722 069e 03       		.byte	3
+ 1723 069f 01       		.byte	1
+ 1724 06a0 07       		.byte	7
+ 1725 06a1 05       		.byte	5
+ 1726 06a2 08       		.byte	8
+ 1727 06a3 09       		.byte	9
+ 1728 06a4 0A       		.byte	10
+ 1729 06a5 12       		.byte	18
+ 1730 06a6 0C       		.byte	12
+ 1731 06a7 14       		.byte	20
+ 1732 06a8 0E       		.byte	14
+ 1733 06a9 0A       		.byte	10
+ 1734 06aa 10       		.byte	16
+ 1735 06ab 02       		.byte	2
+ 1736 06ac 12       		.byte	18
+ 1737 06ad 05       		.byte	5
+ 1738 06ae 14       		.byte	20
+ 1739 06af 1F       		.byte	31
+ 1740 06b0 1D       		.byte	29
+ 1741 06b1 01       		.byte	1
+ 1742 06b2 28       		.byte	40
+ 1743 06b3 1F       		.byte	31
+ 1744 06b4 29       		.byte	41
+ 1745 06b5 02       		.byte	2
+ 1746 06b6 30       		.byte	48
+ 1747 06b7 07       		.byte	7
+ 1748 06b8 33       		.byte	51
+ 1749 06b9 02       		.byte	2
+ 1750 06ba 35       		.byte	53
+ 1751 06bb 01       		.byte	1
+ 1752 06bc 36       		.byte	54
+ 1753 06bd 18       		.byte	24
+ 1754 06be 37       		.byte	55
+ 1755 06bf 04       		.byte	4
+ 1756 06c0 3F       		.byte	63
+ 1757 06c1 14       		.byte	20
+ 1758 06c2 40       		.byte	64
+ 1759 06c3 56       		.byte	86
+ 1760 06c4 41       		.byte	65
+ 1761 06c5 04       		.byte	4
+ 1762 06c6 49       		.byte	73
+ 1763 06c7 FF       		.byte	-1
+ 1764 06c8 4A       		.byte	74
+ 1765 06c9 FF       		.byte	-1
+ 1766 06ca 4B       		.byte	75
+ 1767 06cb FF       		.byte	-1
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 32
+
+
+ 1768 06cc 4D       		.byte	77
+ 1769 06cd A0       		.byte	-96
+ 1770 06ce 4F       		.byte	79
+ 1771 06cf 01       		.byte	1
+ 1772 06d0 50       		.byte	80
+ 1773 06d1 18       		.byte	24
+ 1774 06d2 54       		.byte	84
+ 1775 06d3 05       		.byte	5
+ 1776 06d4 58       		.byte	88
+ 1777 06d5 04       		.byte	4
+ 1778 06d6 59       		.byte	89
+ 1779 06d7 04       		.byte	4
+ 1780 06d8 5A       		.byte	90
+ 1781 06d9 04       		.byte	4
+ 1782 06da 5B       		.byte	91
+ 1783 06db 04       		.byte	4
+ 1784 06dc 5C       		.byte	92
+ 1785 06dd 02       		.byte	2
+ 1786 06de 5D       		.byte	93
+ 1787 06df 30       		.byte	48
+ 1788 06e0 5F       		.byte	95
+ 1789 06e1 05       		.byte	5
+ 1790 06e2 60       		.byte	96
+ 1791 06e3 40       		.byte	64
+ 1792 06e4 62       		.byte	98
+ 1793 06e5 80       		.byte	-128
+ 1794 06e6 64       		.byte	100
+ 1795 06e7 40       		.byte	64
+ 1796 06e8 65       		.byte	101
+ 1797 06e9 40       		.byte	64
+ 1798 06ea 66       		.byte	102
+ 1799 06eb 80       		.byte	-128
+ 1800 06ec 68       		.byte	104
+ 1801 06ed 40       		.byte	64
+ 1802 06ee 6A       		.byte	106
+ 1803 06ef 50       		.byte	80
+ 1804 06f0 6B       		.byte	107
+ 1805 06f1 A8       		.byte	-88
+ 1806 06f2 6C       		.byte	108
+ 1807 06f3 40       		.byte	64
+ 1808 06f4 6D       		.byte	109
+ 1809 06f5 20       		.byte	32
+ 1810 06f6 6E       		.byte	110
+ 1811 06f7 50       		.byte	80
+ 1812 06f8 6F       		.byte	111
+ 1813 06f9 A8       		.byte	-88
+ 1814 06fa 84       		.byte	-124
+ 1815 06fb 02       		.byte	2
+ 1816 06fc 85       		.byte	-123
+ 1817 06fd 01       		.byte	1
+ 1818 06fe 89       		.byte	-119
+ 1819 06ff 01       		.byte	1
+ 1820 0700 8A       		.byte	-118
+ 1821 0701 01       		.byte	1
+ 1822 0702 8C       		.byte	-116
+ 1823 0703 04       		.byte	4
+ 1824 0704 8D       		.byte	-115
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 33
+
+
+ 1825 0705 01       		.byte	1
+ 1826 0706 92       		.byte	-110
+ 1827 0707 02       		.byte	2
+ 1828 0708 96       		.byte	-106
+ 1829 0709 02       		.byte	2
+ 1830 070a 9C       		.byte	-100
+ 1831 070b 04       		.byte	4
+ 1832 070c A6       		.byte	-90
+ 1833 070d 01       		.byte	1
+ 1834 070e B2       		.byte	-78
+ 1835 070f 01       		.byte	1
+ 1836 0710 B4       		.byte	-76
+ 1837 0711 04       		.byte	4
+ 1838 0712 B6       		.byte	-74
+ 1839 0713 02       		.byte	2
+ 1840 0714 B7       		.byte	-73
+ 1841 0715 01       		.byte	1
+ 1842 0716 B8       		.byte	-72
+ 1843 0717 20       		.byte	32
+ 1844 0718 BE       		.byte	-66
+ 1845 0719 50       		.byte	80
+ 1846 071a C0       		.byte	-64
+ 1847 071b 16       		.byte	22
+ 1848 071c C1       		.byte	-63
+ 1849 071d 04       		.byte	4
+ 1850 071e C5       		.byte	-59
+ 1851 071f 0E       		.byte	14
+ 1852 0720 C6       		.byte	-58
+ 1853 0721 C0       		.byte	-64
+ 1854 0722 C7       		.byte	-57
+ 1855 0723 52       		.byte	82
+ 1856 0724 C8       		.byte	-56
+ 1857 0725 3D       		.byte	61
+ 1858 0726 C9       		.byte	-55
+ 1859 0727 FF       		.byte	-1
+ 1860 0728 CA       		.byte	-54
+ 1861 0729 FF       		.byte	-1
+ 1862 072a CB       		.byte	-53
+ 1863 072b FF       		.byte	-1
+ 1864 072c CD       		.byte	-51
+ 1865 072d AF       		.byte	-81
+ 1866 072e CE       		.byte	-50
+ 1867 072f 07       		.byte	7
+ 1868 0730 CF       		.byte	-49
+ 1869 0731 01       		.byte	1
+ 1870 0732 D0       		.byte	-48
+ 1871 0733 18       		.byte	24
+ 1872 0734 D6       		.byte	-42
+ 1873 0735 02       		.byte	2
+ 1874 0736 D7       		.byte	-41
+ 1875 0737 10       		.byte	16
+ 1876 0738 D8       		.byte	-40
+ 1877 0739 04       		.byte	4
+ 1878 073a D9       		.byte	-39
+ 1879 073b 04       		.byte	4
+ 1880 073c DA       		.byte	-38
+ 1881 073d 04       		.byte	4
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 34
+
+
+ 1882 073e DB       		.byte	-37
+ 1883 073f 04       		.byte	4
+ 1884 0740 DC       		.byte	-36
+ 1885 0741 23       		.byte	35
+ 1886 0742 DD       		.byte	-35
+ 1887 0743 20       		.byte	32
+ 1888 0744 DF       		.byte	-33
+ 1889 0745 01       		.byte	1
+ 1890 0746 E0       		.byte	-32
+ 1891 0747 40       		.byte	64
+ 1892 0748 E2       		.byte	-30
+ 1893 0749 80       		.byte	-128
+ 1894 074a E4       		.byte	-28
+ 1895 074b 40       		.byte	64
+ 1896 074c E5       		.byte	-27
+ 1897 074d 40       		.byte	64
+ 1898 074e E6       		.byte	-26
+ 1899 074f 80       		.byte	-128
+ 1900 0750 E8       		.byte	-24
+ 1901 0751 40       		.byte	64
+ 1902 0752 EA       		.byte	-22
+ 1903 0753 50       		.byte	80
+ 1904 0754 EB       		.byte	-21
+ 1905 0755 A8       		.byte	-88
+ 1906 0756 EC       		.byte	-20
+ 1907 0757 40       		.byte	64
+ 1908 0758 ED       		.byte	-19
+ 1909 0759 20       		.byte	32
+ 1910 075a EE       		.byte	-18
+ 1911 075b 50       		.byte	80
+ 1912 075c EF       		.byte	-17
+ 1913 075d A8       		.byte	-88
+ 1914 075e 00       		.byte	0
+ 1915 075f 14       		.byte	20
+ 1916 0760 01       		.byte	1
+ 1917 0761 40       		.byte	64
+ 1918 0762 05       		.byte	5
+ 1919 0763 40       		.byte	64
+ 1920 0764 06       		.byte	6
+ 1921 0765 08       		.byte	8
+ 1922 0766 09       		.byte	9
+ 1923 0767 82       		.byte	-126
+ 1924 0768 0A       		.byte	10
+ 1925 0769 20       		.byte	32
+ 1926 076a 0D       		.byte	13
+ 1927 076b 04       		.byte	4
+ 1928 076c 0E       		.byte	14
+ 1929 076d 40       		.byte	64
+ 1930 076e 10       		.byte	16
+ 1931 076f 20       		.byte	32
+ 1932 0770 15       		.byte	21
+ 1933 0771 10       		.byte	16
+ 1934 0772 19       		.byte	25
+ 1935 0773 10       		.byte	16
+ 1936 0774 1A       		.byte	26
+ 1937 0775 28       		.byte	40
+ 1938 0776 1B       		.byte	27
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 35
+
+
+ 1939 0777 C0       		.byte	-64
+ 1940 0778 1D       		.byte	29
+ 1941 0779 40       		.byte	64
+ 1942 077a 1E       		.byte	30
+ 1943 077b 40       		.byte	64
+ 1944 077c 23       		.byte	35
+ 1945 077d 02       		.byte	2
+ 1946 077e 25       		.byte	37
+ 1947 077f 04       		.byte	4
+ 1948 0780 26       		.byte	38
+ 1949 0781 80       		.byte	-128
+ 1950 0782 27       		.byte	39
+ 1951 0783 04       		.byte	4
+ 1952 0784 2C       		.byte	44
+ 1953 0785 08       		.byte	8
+ 1954 0786 36       		.byte	54
+ 1955 0787 80       		.byte	-128
+ 1956 0788 39       		.byte	57
+ 1957 0789 98       		.byte	-104
+ 1958 078a 3C       		.byte	60
+ 1959 078b 02       		.byte	2
+ 1960 078c 3E       		.byte	62
+ 1961 078d 04       		.byte	4
+ 1962 078e 43       		.byte	67
+ 1963 078f 81       		.byte	-127
+ 1964 0790 47       		.byte	71
+ 1965 0791 01       		.byte	1
+ 1966 0792 49       		.byte	73
+ 1967 0793 14       		.byte	20
+ 1968 0794 4E       		.byte	78
+ 1969 0795 04       		.byte	4
+ 1970 0796 4F       		.byte	79
+ 1971 0797 80       		.byte	-128
+ 1972 0798 51       		.byte	81
+ 1973 0799 88       		.byte	-120
+ 1974 079a 52       		.byte	82
+ 1975 079b 21       		.byte	33
+ 1976 079c 59       		.byte	89
+ 1977 079d 80       		.byte	-128
+ 1978 079e 5D       		.byte	93
+ 1979 079f 01       		.byte	1
+ 1980 07a0 5E       		.byte	94
+ 1981 07a1 08       		.byte	8
+ 1982 07a2 5F       		.byte	95
+ 1983 07a3 40       		.byte	64
+ 1984 07a4 60       		.byte	96
+ 1985 07a5 20       		.byte	32
+ 1986 07a6 61       		.byte	97
+ 1987 07a7 08       		.byte	8
+ 1988 07a8 69       		.byte	105
+ 1989 07a9 98       		.byte	-104
+ 1990 07aa 72       		.byte	114
+ 1991 07ab 01       		.byte	1
+ 1992 07ac 73       		.byte	115
+ 1993 07ad 14       		.byte	20
+ 1994 07ae 7D       		.byte	125
+ 1995 07af 40       		.byte	64
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 36
+
+
+ 1996 07b0 83       		.byte	-125
+ 1997 07b1 02       		.byte	2
+ 1998 07b2 84       		.byte	-124
+ 1999 07b3 10       		.byte	16
+ 2000 07b4 85       		.byte	-123
+ 2001 07b5 40       		.byte	64
+ 2002 07b6 90       		.byte	-112
+ 2003 07b7 14       		.byte	20
+ 2004 07b8 91       		.byte	-111
+ 2005 07b9 41       		.byte	65
+ 2006 07ba 92       		.byte	-110
+ 2007 07bb 04       		.byte	4
+ 2008 07bc 93       		.byte	-109
+ 2009 07bd 40       		.byte	64
+ 2010 07be 96       		.byte	-106
+ 2011 07bf 20       		.byte	32
+ 2012 07c0 9B       		.byte	-101
+ 2013 07c1 01       		.byte	1
+ 2014 07c2 9C       		.byte	-100
+ 2015 07c3 20       		.byte	32
+ 2016 07c4 9D       		.byte	-99
+ 2017 07c5 04       		.byte	4
+ 2018 07c6 9E       		.byte	-98
+ 2019 07c7 05       		.byte	5
+ 2020 07c8 9F       		.byte	-97
+ 2021 07c9 14       		.byte	20
+ 2022 07ca A0       		.byte	-96
+ 2023 07cb 28       		.byte	40
+ 2024 07cc A1       		.byte	-95
+ 2025 07cd 03       		.byte	3
+ 2026 07ce A2       		.byte	-94
+ 2027 07cf 04       		.byte	4
+ 2028 07d0 A5       		.byte	-91
+ 2029 07d1 80       		.byte	-128
+ 2030 07d2 A6       		.byte	-90
+ 2031 07d3 20       		.byte	32
+ 2032 07d4 A7       		.byte	-89
+ 2033 07d5 0C       		.byte	12
+ 2034 07d6 C0       		.byte	-64
+ 2035 07d7 C7       		.byte	-57
+ 2036 07d8 C2       		.byte	-62
+ 2037 07d9 3D       		.byte	61
+ 2038 07da C4       		.byte	-60
+ 2039 07db 44       		.byte	68
+ 2040 07dc CA       		.byte	-54
+ 2041 07dd 20       		.byte	32
+ 2042 07de CC       		.byte	-52
+ 2043 07df 10       		.byte	16
+ 2044 07e0 CE       		.byte	-50
+ 2045 07e1 CE       		.byte	-50
+ 2046 07e2 D0       		.byte	-48
+ 2047 07e3 89       		.byte	-119
+ 2048 07e4 D2       		.byte	-46
+ 2049 07e5 34       		.byte	52
+ 2050 07e6 D6       		.byte	-42
+ 2051 07e7 D8       		.byte	-40
+ 2052 07e8 DE       		.byte	-34
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 37
+
+
+ 2053 07e9 10       		.byte	16
+ 2054 07ea 05       		.byte	5
+ 2055 07eb 02       		.byte	2
+ 2056 07ec 09       		.byte	9
+ 2057 07ed 01       		.byte	1
+ 2058 07ee 0B       		.byte	11
+ 2059 07ef 06       		.byte	6
+ 2060 07f0 0F       		.byte	15
+ 2061 07f1 01       		.byte	1
+ 2062 07f2 11       		.byte	17
+ 2063 07f3 06       		.byte	6
+ 2064 07f4 13       		.byte	19
+ 2065 07f5 01       		.byte	1
+ 2066 07f6 15       		.byte	21
+ 2067 07f7 07       		.byte	7
+ 2068 07f8 19       		.byte	25
+ 2069 07f9 06       		.byte	6
+ 2070 07fa 1B       		.byte	27
+ 2071 07fb 01       		.byte	1
+ 2072 07fc 22       		.byte	34
+ 2073 07fd 01       		.byte	1
+ 2074 07fe 25       		.byte	37
+ 2075 07ff 06       		.byte	6
+ 2076 0800 2D       		.byte	45
+ 2077 0801 04       		.byte	4
+ 2078 0802 32       		.byte	50
+ 2079 0803 01       		.byte	1
+ 2080 0804 35       		.byte	53
+ 2081 0805 07       		.byte	7
+ 2082 0806 3B       		.byte	59
+ 2083 0807 20       		.byte	32
+ 2084 0808 58       		.byte	88
+ 2085 0809 04       		.byte	4
+ 2086 080a 59       		.byte	89
+ 2087 080b 04       		.byte	4
+ 2088 080c 5C       		.byte	92
+ 2089 080d 23       		.byte	35
+ 2090 080e 5F       		.byte	95
+ 2091 080f 01       		.byte	1
+ 2092 0810 00       		.byte	0
+ 2093 0811 20       		.byte	32
+ 2094 0812 02       		.byte	2
+ 2095 0813 08       		.byte	8
+ 2096 0814 04       		.byte	4
+ 2097 0815 40       		.byte	64
+ 2098 0816 05       		.byte	5
+ 2099 0817 04       		.byte	4
+ 2100 0818 06       		.byte	6
+ 2101 0819 08       		.byte	8
+ 2102 081a 07       		.byte	7
+ 2103 081b 40       		.byte	64
+ 2104 081c 0D       		.byte	13
+ 2105 081d 02       		.byte	2
+ 2106 081e 0E       		.byte	14
+ 2107 081f 01       		.byte	1
+ 2108 0820 0F       		.byte	15
+ 2109 0821 16       		.byte	22
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 38
+
+
+ 2110 0822 11       		.byte	17
+ 2111 0823 02       		.byte	2
+ 2112 0824 15       		.byte	21
+ 2113 0825 20       		.byte	32
+ 2114 0826 17       		.byte	23
+ 2115 0827 0A       		.byte	10
+ 2116 0828 1B       		.byte	27
+ 2117 0829 04       		.byte	4
+ 2118 082a 1C       		.byte	28
+ 2119 082b 30       		.byte	48
+ 2120 082c 1D       		.byte	29
+ 2121 082d 04       		.byte	4
+ 2122 082e 1F       		.byte	31
+ 2123 082f 44       		.byte	68
+ 2124 0830 20       		.byte	32
+ 2125 0831 08       		.byte	8
+ 2126 0832 21       		.byte	33
+ 2127 0833 30       		.byte	48
+ 2128 0834 22       		.byte	34
+ 2129 0835 20       		.byte	32
+ 2130 0836 26       		.byte	38
+ 2131 0837 02       		.byte	2
+ 2132 0838 27       		.byte	39
+ 2133 0839 1D       		.byte	29
+ 2134 083a 2B       		.byte	43
+ 2135 083b 11       		.byte	17
+ 2136 083c 2E       		.byte	46
+ 2137 083d 88       		.byte	-120
+ 2138 083e 2F       		.byte	47
+ 2139 083f 44       		.byte	68
+ 2140 0840 31       		.byte	49
+ 2141 0841 22       		.byte	34
+ 2142 0842 33       		.byte	51
+ 2143 0843 05       		.byte	5
+ 2144 0844 35       		.byte	53
+ 2145 0845 40       		.byte	64
+ 2146 0846 36       		.byte	54
+ 2147 0847 20       		.byte	32
+ 2148 0848 37       		.byte	55
+ 2149 0849 49       		.byte	73
+ 2150 084a 38       		.byte	56
+ 2151 084b 10       		.byte	16
+ 2152 084c 3A       		.byte	58
+ 2153 084d 80       		.byte	-128
+ 2154 084e 3B       		.byte	59
+ 2155 084f 04       		.byte	4
+ 2156 0850 3C       		.byte	60
+ 2157 0851 40       		.byte	64
+ 2158 0852 3E       		.byte	62
+ 2159 0853 41       		.byte	65
+ 2160 0854 3F       		.byte	63
+ 2161 0855 34       		.byte	52
+ 2162 0856 46       		.byte	70
+ 2163 0857 80       		.byte	-128
+ 2164 0858 47       		.byte	71
+ 2165 0859 1A       		.byte	26
+ 2166 085a 4D       		.byte	77
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 39
+
+
+ 2167 085b 04       		.byte	4
+ 2168 085c 4E       		.byte	78
+ 2169 085d 0A       		.byte	10
+ 2170 085e 57       		.byte	87
+ 2171 085f 08       		.byte	8
+ 2172 0860 74       		.byte	116
+ 2173 0861 01       		.byte	1
+ 2174 0862 85       		.byte	-123
+ 2175 0863 04       		.byte	4
+ 2176 0864 88       		.byte	-120
+ 2177 0865 04       		.byte	4
+ 2178 0866 8B       		.byte	-117
+ 2179 0867 09       		.byte	9
+ 2180 0868 8D       		.byte	-115
+ 2181 0869 04       		.byte	4
+ 2182 086a 8E       		.byte	-114
+ 2183 086b 08       		.byte	8
+ 2184 086c 92       		.byte	-110
+ 2185 086d 41       		.byte	65
+ 2186 086e 93       		.byte	-109
+ 2187 086f 14       		.byte	20
+ 2188 0870 99       		.byte	-103
+ 2189 0871 40       		.byte	64
+ 2190 0872 9B       		.byte	-101
+ 2191 0873 02       		.byte	2
+ 2192 0874 9E       		.byte	-98
+ 2193 0875 08       		.byte	8
+ 2194 0876 9F       		.byte	-97
+ 2195 0877 10       		.byte	16
+ 2196 0878 A1       		.byte	-95
+ 2197 0879 05       		.byte	5
+ 2198 087a A4       		.byte	-92
+ 2199 087b 11       		.byte	17
+ 2200 087c A7       		.byte	-89
+ 2201 087d 0C       		.byte	12
+ 2202 087e AA       		.byte	-86
+ 2203 087f 40       		.byte	64
+ 2204 0880 B1       		.byte	-79
+ 2205 0881 80       		.byte	-128
+ 2206 0882 B6       		.byte	-74
+ 2207 0883 04       		.byte	4
+ 2208 0884 C0       		.byte	-64
+ 2209 0885 F0       		.byte	-16
+ 2210 0886 C2       		.byte	-62
+ 2211 0887 F0       		.byte	-16
+ 2212 0888 C4       		.byte	-60
+ 2213 0889 78       		.byte	120
+ 2214 088a CA       		.byte	-54
+ 2215 088b FA       		.byte	-6
+ 2216 088c CC       		.byte	-52
+ 2217 088d F7       		.byte	-9
+ 2218 088e CE       		.byte	-50
+ 2219 088f FE       		.byte	-2
+ 2220 0890 D0       		.byte	-48
+ 2221 0891 E0       		.byte	-32
+ 2222 0892 D2       		.byte	-46
+ 2223 0893 30       		.byte	48
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 40
+
+
+ 2224 0894 E2       		.byte	-30
+ 2225 0895 30       		.byte	48
+ 2226 0896 E6       		.byte	-26
+ 2227 0897 A0       		.byte	-96
+ 2228 0898 EC       		.byte	-20
+ 2229 0899 90       		.byte	-112
+ 2230 089a 33       		.byte	51
+ 2231 089b 80       		.byte	-128
+ 2232 089c 36       		.byte	54
+ 2233 089d 40       		.byte	64
+ 2234 089e CC       		.byte	-52
+ 2235 089f 30       		.byte	48
+ 2236 08a0 08       		.byte	8
+ 2237 08a1 20       		.byte	32
+ 2238 08a2 0F       		.byte	15
+ 2239 08a3 08       		.byte	8
+ 2240 08a4 A6       		.byte	-90
+ 2241 08a5 40       		.byte	64
+ 2242 08a6 A7       		.byte	-89
+ 2243 08a7 80       		.byte	-128
+ 2244 08a8 C2       		.byte	-62
+ 2245 08a9 C0       		.byte	-64
+ 2246 08aa 87       		.byte	-121
+ 2247 08ab 80       		.byte	-128
+ 2248 08ac 98       		.byte	-104
+ 2249 08ad 20       		.byte	32
+ 2250 08ae A3       		.byte	-93
+ 2251 08af 04       		.byte	4
+ 2252 08b0 A6       		.byte	-90
+ 2253 08b1 40       		.byte	64
+ 2254 08b2 A7       		.byte	-89
+ 2255 08b3 80       		.byte	-128
+ 2256 08b4 E6       		.byte	-26
+ 2257 08b5 10       		.byte	16
+ 2258 08b6 A6       		.byte	-90
+ 2259 08b7 40       		.byte	64
+ 2260 08b8 B0       		.byte	-80
+ 2261 08b9 20       		.byte	32
+ 2262 08ba B7       		.byte	-73
+ 2263 08bb 04       		.byte	4
+ 2264 08bc 5E       		.byte	94
+ 2265 08bd 02       		.byte	2
+ 2266 08be 63       		.byte	99
+ 2267 08bf 01       		.byte	1
+ 2268 08c0 D6       		.byte	-42
+ 2269 08c1 03       		.byte	3
+ 2270 08c2 8F       		.byte	-113
+ 2271 08c3 01       		.byte	1
+ 2272 08c4 97       		.byte	-105
+ 2273 08c5 01       		.byte	1
+ 2274 08c6 A6       		.byte	-90
+ 2275 08c7 01       		.byte	1
+ 2276 08c8 E4       		.byte	-28
+ 2277 08c9 08       		.byte	8
+ 2278 08ca 8E       		.byte	-114
+ 2279 08cb 01       		.byte	1
+ 2280 08cc A6       		.byte	-90
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 41
+
+
+ 2281 08cd 01       		.byte	1
+ 2282 08ce E0       		.byte	-32
+ 2283 08cf 08       		.byte	8
+ 2284 08d0 86       		.byte	-122
+ 2285 08d1 40       		.byte	64
+ 2286 08d2 A6       		.byte	-90
+ 2287 08d3 40       		.byte	64
+ 2288 08d4 E6       		.byte	-26
+ 2289 08d5 40       		.byte	64
+ 2290 08d6 12       		.byte	18
+ 2291 08d7 20       		.byte	32
+ 2292 08d8 77       		.byte	119
+ 2293 08d9 10       		.byte	16
+ 2294 08da 8E       		.byte	-114
+ 2295 08db 20       		.byte	32
+ 2296 08dc 8F       		.byte	-113
+ 2297 08dd 10       		.byte	16
+ 2298 08de C4       		.byte	-60
+ 2299 08df 08       		.byte	8
+ 2300 08e0 DE       		.byte	-34
+ 2301 08e1 04       		.byte	4
+ 2302 08e2 E2       		.byte	-30
+ 2303 08e3 08       		.byte	8
+ 2304 08e4 E4       		.byte	-28
+ 2305 08e5 02       		.byte	2
+ 2306 08e6 00       		.byte	0
+ 2307 08e7 0F       		.byte	15
+ 2308 08e8 0A       		.byte	10
+ 2309 08e9 06       		.byte	6
+ 2310 08ea 0C       		.byte	12
+ 2311 08eb 09       		.byte	9
+ 2312 08ec 10       		.byte	16
+ 2313 08ed 0D       		.byte	13
+ 2314 08ee 1A       		.byte	26
+ 2315 08ef 0C       		.byte	12
+ 2316 08f0 1C       		.byte	28
+ 2317 08f1 0D       		.byte	13
+ 2318 08f2 00       		.byte	0
+ 2319 08f3 0F       		.byte	15
+ 2320 08f4 80       		.byte	-128
+ 2321 08f5 80       		.byte	-128
+ 2322 08f6 00       		.byte	0
+ 2323 08f7 00       		.byte	0
+ 2324 08f8 40       		.byte	64
+ 2325 08f9 00       		.byte	0
+ 2326 08fa 00       		.byte	0
+ 2327 08fb 00       		.byte	0
+ 2328 08fc 02       		.byte	2
+ 2329 08fd 10       		.byte	16
+ 2330 08fe 00       		.byte	0
+ 2331 08ff 00       		.byte	0
+ 2332 0900 03       		.byte	3
+ 2333 0901 08       		.byte	8
+ 2334 0902 0C       		.byte	12
+ 2335 0903 00       		.byte	0
+ 2336 0904 01       		.byte	1
+ 2337 0905 18       		.byte	24
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 42
+
+
+ 2338 0906 10       		.byte	16
+ 2339 0907 00       		.byte	0
+ 2340 0908 03       		.byte	3
+ 2341 0909 00       		.byte	0
+ 2342 090a 00       		.byte	0
+ 2343 090b 80       		.byte	-128
+ 2344 090c 0C       		.byte	12
+ 2345 090d 39       		.byte	57
+ 2346 090e 03       		.byte	3
+ 2347 090f 04       		.byte	4
+ 2348 0910 0C       		.byte	12
+ 2349 0911 3F       		.byte	63
+ 2350 0912 00       		.byte	0
+ 2351 0913 00       		.byte	0
+ 2352 0914 04       		.byte	4
+ 2353 0915 19       		.byte	25
+ 2354 0916 00       		.byte	0
+ 2355 0917 22       		.byte	34
+ 2356 0918 08       		.byte	8
+ 2357 0919 00       		.byte	0
+ 2358 091a 00       		.byte	0
+ 2359 091b 40       		.byte	64
+ 2360 091c 00       		.byte	0
+ 2361 091d 00       		.byte	0
+ 2362 091e 03       		.byte	3
+ 2363 091f 01       		.byte	1
+ 2364 0920 0F       		.byte	15
+ 2365 0921 01       		.byte	1
+ 2366 0922 00       		.byte	0
+ 2367 0923 40       		.byte	64
+ 2368 0924 0F       		.byte	15
+ 2369 0925 27       		.byte	39
+ 2370 0926 00       		.byte	0
+ 2371 0927 18       		.byte	24
+ 2372 0928 00       		.byte	0
+ 2373 0929 00       		.byte	0
+ 2374 092a 00       		.byte	0
+ 2375 092b 26       		.byte	38
+ 2376 092c 00       		.byte	0
+ 2377 092d C0       		.byte	-64
+ 2378 092e 0F       		.byte	15
+ 2379 092f 38       		.byte	56
+ 2380 0930 00       		.byte	0
+ 2381 0931 00       		.byte	0
+ 2382 0932 10       		.byte	16
+ 2383 0933 1F       		.byte	31
+ 2384 0934 00       		.byte	0
+ 2385 0935 00       		.byte	0
+ 2386 0936 08       		.byte	8
+ 2387 0937 A0       		.byte	-96
+ 2388 0938 00       		.byte	0
+ 2389 0939 00       		.byte	0
+ 2390 093a 00       		.byte	0
+ 2391 093b 01       		.byte	1
+ 2392 093c 64       		.byte	100
+ 2393 093d 03       		.byte	3
+ 2394 093e 02       		.byte	2
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 43
+
+
+ 2395 093f 00       		.byte	0
+ 2396 0940 05       		.byte	5
+ 2397 0941 0E       		.byte	14
+ 2398 0942 00       		.byte	0
+ 2399 0943 0C       		.byte	12
+ 2400 0944 11       		.byte	17
+ 2401 0945 FF       		.byte	-1
+ 2402 0946 FF       		.byte	-1
+ 2403 0947 FF       		.byte	-1
+ 2404 0948 62       		.byte	98
+ 2405 0949 A0       		.byte	-96
+ 2406 094a F0       		.byte	-16
+ 2407 094b 41       		.byte	65
+ 2408 094c 0C       		.byte	12
+ 2409 094d 00       		.byte	0
+ 2410 094e 80       		.byte	-128
+ 2411 094f 00       		.byte	0
+ 2412 0950 00       		.byte	0
+ 2413 0951 00       		.byte	0
+ 2414 0952 00       		.byte	0
+ 2415 0953 00       		.byte	0
+ 2416 0954 04       		.byte	4
+ 2417 0955 04       		.byte	4
+ 2418 0956 04       		.byte	4
+ 2419 0957 04       		.byte	4
+ 2420 0958 22       		.byte	34
+ 2421 0959 02       		.byte	2
+ 2422 095a 00       		.byte	0
+ 2423 095b 01       		.byte	1
+ 2424 095c 00       		.byte	0
+ 2425 095d 00       		.byte	0
+ 2426 095e 00       		.byte	0
+ 2427 095f 00       		.byte	0
+ 2428 0960 00       		.byte	0
+ 2429 0961 00       		.byte	0
+ 2430 0962 40       		.byte	64
+ 2431 0963 02       		.byte	2
+ 2432 0964 00       		.byte	0
+ 2433 0965 10       		.byte	16
+ 2434 0966 30       		.byte	48
+ 2435 0967 10       		.byte	16
+ 2436 0968 00       		.byte	0
+ 2437 0969 10       		.byte	16
+ 2438 096a 10       		.byte	16
+ 2439 096b 12       		.byte	18
+ 2440 096c 00       		.byte	0
+ 2441 096d 00       		.byte	0
+ 2442 096e 00       		.byte	0
+ 2443 096f 00       		.byte	0
+ 2444 0970 00       		.byte	0
+ 2445 0971 00       		.byte	0
+ 2446 0972 00       		.byte	0
+ 2447 0973 00       		.byte	0
+ 2448 0974 00       		.byte	0
+ 2449 0975 00       		.byte	0
+ 2450 0976 00       		.byte	0
+ 2451 0977 00       		.byte	0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 44
+
+
+ 2452 0978 00       		.byte	0
+ 2453 0979 00       		.byte	0
+ 2454 097a 00       		.byte	0
+ 2455 097b 00       		.byte	0
+ 2456 097c 06       		.byte	6
+ 2457 097d 00       		.byte	0
+ 2458 097e 87       		.byte	-121
+ 2459 097f 40       		.byte	64
+ 2460 0980 40       		.byte	64
+ 2461 0981 00       		.byte	0
+ 2462 0982 00       		.byte	0
+ 2463 0983 00       		.byte	0
+ 2464 0984 00       		.byte	0
+ 2465 0985 00       		.byte	0
+ 2466 0986 00       		.byte	0
+ 2467 0987 00       		.byte	0
+ 2468 0988 80       		.byte	-128
+ 2469 0989 00       		.byte	0
+ 2470 098a 40       		.byte	64
+ 2471 098b 80       		.byte	-128
+ 2472 098c 80       		.byte	-128
+ 2473 098d 00       		.byte	0
+ 2474 098e 80       		.byte	-128
+ 2475 098f 00       		.byte	0
+ 2476 0990 00       		.byte	0
+ 2477 0991 00       		.byte	0
+ 2478 0992 00       		.byte	0
+ 2479 0993 00       		.byte	0
+ 2480 0994 00       		.byte	0
+ 2481 0995 0B       		.byte	11
+ 2482 0996 0B       		.byte	11
+ 2483 0997 00       		.byte	0
+ 2484 0998 00       		.byte	0
+ 2485 0999 00       		.byte	0
+ 2486 099a 00       		.byte	0
+ 2487 099b 00       		.byte	0
+ 2488 099c 00       		.byte	0
+ 2489 099d F2       		.byte	-14
+ 2490 099e F2       		.byte	-14
+ 2491 099f 00       		.byte	0
+ 2492 09a0 C0       		.byte	-64
+ 2493 09a1 00       		.byte	0
+ 2494 09a2 00       		.byte	0
+ 2495 09a3 00       		.byte	0
+ 2496              		.section	.cywolatch,"a",%progbits
+ 2497              		.type	cy_meta_wonvl, %object
+ 2498              		.size	cy_meta_wonvl, 4
+ 2499              	cy_meta_wonvl:
+ 2500 0000 BC       		.byte	-68
+ 2501 0001 90       		.byte	-112
+ 2502 0002 AC       		.byte	-84
+ 2503 0003 AF       		.byte	-81
+ 2504              		.section	.cycustnvl,"a",%progbits
+ 2505              		.type	cy_meta_custnvl, %object
+ 2506              		.size	cy_meta_custnvl, 4
+ 2507              	cy_meta_custnvl:
+ 2508 0000 00       		.byte	0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 45
+
+
+ 2509 0001 00       		.byte	0
+ 2510 0002 40       		.byte	64
+ 2511 0003 05       		.byte	5
+ 2512              		.section	.cymeta,"a",%progbits
+ 2513              		.type	cy_metadata, %object
+ 2514              		.size	cy_metadata, 12
+ 2515              	cy_metadata:
+ 2516 0000 00       		.byte	0
+ 2517 0001 01       		.byte	1
+ 2518 0002 2E       		.byte	46
+ 2519 0003 12       		.byte	18
+ 2520 0004 70       		.byte	112
+ 2521 0005 69       		.byte	105
+ 2522 0006 00       		.byte	0
+ 2523 0007 01       		.byte	1
+ 2524 0008 00       		.byte	0
+ 2525 0009 00       		.byte	0
+ 2526 000a 00       		.byte	0
+ 2527 000b 00       		.byte	0
+ 2528              		.section	.cyflashprotect,"a",%progbits
+ 2529              		.type	cy_meta_flashprotect, %object
+ 2530              		.size	cy_meta_flashprotect, 256
+ 2531              	cy_meta_flashprotect:
+ 2532 0000 00000000 		.space	256
+ 2532      00000000 
+ 2532      00000000 
+ 2532      00000000 
+ 2532      00000000 
+ 2533              		.text
+ 2534              	.Letext0:
+ 2535              		.file 1 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2536              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 2537              		.file 3 "Generated_Source\\PSoC5\\cymetadata.c"
+ 2538              		.section	.debug_info,"",%progbits
+ 2539              	.Ldebug_info0:
+ 2540 0000 35010000 		.4byte	0x135
+ 2541 0004 0400     		.2byte	0x4
+ 2542 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 2543 000a 04       		.byte	0x4
+ 2544 000b 01       		.uleb128 0x1
+ 2545 000c 99000000 		.4byte	.LASF17
+ 2546 0010 0C       		.byte	0xc
+ 2547 0011 CF010000 		.4byte	.LASF18
+ 2548 0015 69010000 		.4byte	.LASF19
+ 2549 0019 00000000 		.4byte	.Ldebug_line0
+ 2550 001d 02       		.uleb128 0x2
+ 2551 001e 01       		.byte	0x1
+ 2552 001f 06       		.byte	0x6
+ 2553 0020 C3010000 		.4byte	.LASF0
+ 2554 0024 03       		.uleb128 0x3
+ 2555 0025 00000000 		.4byte	.LASF9
+ 2556 0029 01       		.byte	0x1
+ 2557 002a 1D       		.byte	0x1d
+ 2558 002b 2F000000 		.4byte	0x2f
+ 2559 002f 02       		.uleb128 0x2
+ 2560 0030 01       		.byte	0x1
+ 2561 0031 08       		.byte	0x8
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 46
+
+
+ 2562 0032 2D000000 		.4byte	.LASF1
+ 2563 0036 02       		.uleb128 0x2
+ 2564 0037 02       		.byte	0x2
+ 2565 0038 05       		.byte	0x5
+ 2566 0039 60000000 		.4byte	.LASF2
+ 2567 003d 02       		.uleb128 0x2
+ 2568 003e 02       		.byte	0x2
+ 2569 003f 07       		.byte	0x7
+ 2570 0040 4D000000 		.4byte	.LASF3
+ 2571 0044 02       		.uleb128 0x2
+ 2572 0045 04       		.byte	0x4
+ 2573 0046 05       		.byte	0x5
+ 2574 0047 BA010000 		.4byte	.LASF4
+ 2575 004b 02       		.uleb128 0x2
+ 2576 004c 04       		.byte	0x4
+ 2577 004d 07       		.byte	0x7
+ 2578 004e 3B000000 		.4byte	.LASF5
+ 2579 0052 02       		.uleb128 0x2
+ 2580 0053 08       		.byte	0x8
+ 2581 0054 05       		.byte	0x5
+ 2582 0055 5B010000 		.4byte	.LASF6
+ 2583 0059 02       		.uleb128 0x2
+ 2584 005a 08       		.byte	0x8
+ 2585 005b 07       		.byte	0x7
+ 2586 005c 16000000 		.4byte	.LASF7
+ 2587 0060 04       		.uleb128 0x4
+ 2588 0061 04       		.byte	0x4
+ 2589 0062 05       		.byte	0x5
+ 2590 0063 696E7400 		.ascii	"int\000"
+ 2591 0067 02       		.uleb128 0x2
+ 2592 0068 04       		.byte	0x4
+ 2593 0069 07       		.byte	0x7
+ 2594 006a 8C000000 		.4byte	.LASF8
+ 2595 006e 03       		.uleb128 0x3
+ 2596 006f 27010000 		.4byte	.LASF10
+ 2597 0073 02       		.byte	0x2
+ 2598 0074 18       		.byte	0x18
+ 2599 0075 24000000 		.4byte	0x24
+ 2600 0079 05       		.uleb128 0x5
+ 2601 007a 91000000 		.4byte	0x91
+ 2602 007e 8A000000 		.4byte	0x8a
+ 2603 0082 06       		.uleb128 0x6
+ 2604 0083 8A000000 		.4byte	0x8a
+ 2605 0087 A309     		.2byte	0x9a3
+ 2606 0089 00       		.byte	0
+ 2607 008a 02       		.uleb128 0x2
+ 2608 008b 04       		.byte	0x4
+ 2609 008c 07       		.byte	0x7
+ 2610 008d 52010000 		.4byte	.LASF11
+ 2611 0091 07       		.uleb128 0x7
+ 2612 0092 6E000000 		.4byte	0x6e
+ 2613 0096 08       		.uleb128 0x8
+ 2614 0097 7A000000 		.4byte	.LASF12
+ 2615 009b 03       		.byte	0x3
+ 2616 009c 1F       		.byte	0x1f
+ 2617 009d A7000000 		.4byte	0xa7
+ 2618 00a1 05       		.uleb128 0x5
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 47
+
+
+ 2619 00a2 03       		.byte	0x3
+ 2620 00a3 00000000 		.4byte	cy_meta_configecc
+ 2621 00a7 07       		.uleb128 0x7
+ 2622 00a8 79000000 		.4byte	0x79
+ 2623 00ac 05       		.uleb128 0x5
+ 2624 00ad 91000000 		.4byte	0x91
+ 2625 00b1 BC000000 		.4byte	0xbc
+ 2626 00b5 09       		.uleb128 0x9
+ 2627 00b6 8A000000 		.4byte	0x8a
+ 2628 00ba 03       		.byte	0x3
+ 2629 00bb 00       		.byte	0
+ 2630 00bc 0A       		.uleb128 0xa
+ 2631 00bd 6A000000 		.4byte	.LASF13
+ 2632 00c1 03       		.byte	0x3
+ 2633 00c2 6101     		.2byte	0x161
+ 2634 00c4 CE000000 		.4byte	0xce
+ 2635 00c8 05       		.uleb128 0x5
+ 2636 00c9 03       		.byte	0x3
+ 2637 00ca 00000000 		.4byte	cy_meta_custnvl
+ 2638 00ce 07       		.uleb128 0x7
+ 2639 00cf AC000000 		.4byte	0xac
+ 2640 00d3 0A       		.uleb128 0xa
+ 2641 00d4 44010000 		.4byte	.LASF14
+ 2642 00d8 03       		.byte	0x3
+ 2643 00d9 6F01     		.2byte	0x16f
+ 2644 00db E5000000 		.4byte	0xe5
+ 2645 00df 05       		.uleb128 0x5
+ 2646 00e0 03       		.byte	0x3
+ 2647 00e1 00000000 		.4byte	cy_meta_wonvl
+ 2648 00e5 07       		.uleb128 0x7
+ 2649 00e6 AC000000 		.4byte	0xac
+ 2650 00ea 05       		.uleb128 0x5
+ 2651 00eb 91000000 		.4byte	0x91
+ 2652 00ef FA000000 		.4byte	0xfa
+ 2653 00f3 09       		.uleb128 0x9
+ 2654 00f4 8A000000 		.4byte	0x8a
+ 2655 00f8 FF       		.byte	0xff
+ 2656 00f9 00       		.byte	0
+ 2657 00fa 0A       		.uleb128 0xa
+ 2658 00fb 2F010000 		.4byte	.LASF15
+ 2659 00ff 03       		.byte	0x3
+ 2660 0100 7D01     		.2byte	0x17d
+ 2661 0102 0C010000 		.4byte	0x10c
+ 2662 0106 05       		.uleb128 0x5
+ 2663 0107 03       		.byte	0x3
+ 2664 0108 00000000 		.4byte	cy_meta_flashprotect
+ 2665 010c 07       		.uleb128 0x7
+ 2666 010d EA000000 		.4byte	0xea
+ 2667 0111 05       		.uleb128 0x5
+ 2668 0112 91000000 		.4byte	0x91
+ 2669 0116 21010000 		.4byte	0x121
+ 2670 011a 09       		.uleb128 0x9
+ 2671 011b 8A000000 		.4byte	0x8a
+ 2672 011f 0B       		.byte	0xb
+ 2673 0120 00       		.byte	0
+ 2674 0121 0A       		.uleb128 0xa
+ 2675 0122 0A000000 		.4byte	.LASF16
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 48
+
+
+ 2676 0126 03       		.byte	0x3
+ 2677 0127 AA01     		.2byte	0x1aa
+ 2678 0129 33010000 		.4byte	0x133
+ 2679 012d 05       		.uleb128 0x5
+ 2680 012e 03       		.byte	0x3
+ 2681 012f 00000000 		.4byte	cy_metadata
+ 2682 0133 07       		.uleb128 0x7
+ 2683 0134 11010000 		.4byte	0x111
+ 2684 0138 00       		.byte	0
+ 2685              		.section	.debug_abbrev,"",%progbits
+ 2686              	.Ldebug_abbrev0:
+ 2687 0000 01       		.uleb128 0x1
+ 2688 0001 11       		.uleb128 0x11
+ 2689 0002 01       		.byte	0x1
+ 2690 0003 25       		.uleb128 0x25
+ 2691 0004 0E       		.uleb128 0xe
+ 2692 0005 13       		.uleb128 0x13
+ 2693 0006 0B       		.uleb128 0xb
+ 2694 0007 03       		.uleb128 0x3
+ 2695 0008 0E       		.uleb128 0xe
+ 2696 0009 1B       		.uleb128 0x1b
+ 2697 000a 0E       		.uleb128 0xe
+ 2698 000b 10       		.uleb128 0x10
+ 2699 000c 17       		.uleb128 0x17
+ 2700 000d 00       		.byte	0
+ 2701 000e 00       		.byte	0
+ 2702 000f 02       		.uleb128 0x2
+ 2703 0010 24       		.uleb128 0x24
+ 2704 0011 00       		.byte	0
+ 2705 0012 0B       		.uleb128 0xb
+ 2706 0013 0B       		.uleb128 0xb
+ 2707 0014 3E       		.uleb128 0x3e
+ 2708 0015 0B       		.uleb128 0xb
+ 2709 0016 03       		.uleb128 0x3
+ 2710 0017 0E       		.uleb128 0xe
+ 2711 0018 00       		.byte	0
+ 2712 0019 00       		.byte	0
+ 2713 001a 03       		.uleb128 0x3
+ 2714 001b 16       		.uleb128 0x16
+ 2715 001c 00       		.byte	0
+ 2716 001d 03       		.uleb128 0x3
+ 2717 001e 0E       		.uleb128 0xe
+ 2718 001f 3A       		.uleb128 0x3a
+ 2719 0020 0B       		.uleb128 0xb
+ 2720 0021 3B       		.uleb128 0x3b
+ 2721 0022 0B       		.uleb128 0xb
+ 2722 0023 49       		.uleb128 0x49
+ 2723 0024 13       		.uleb128 0x13
+ 2724 0025 00       		.byte	0
+ 2725 0026 00       		.byte	0
+ 2726 0027 04       		.uleb128 0x4
+ 2727 0028 24       		.uleb128 0x24
+ 2728 0029 00       		.byte	0
+ 2729 002a 0B       		.uleb128 0xb
+ 2730 002b 0B       		.uleb128 0xb
+ 2731 002c 3E       		.uleb128 0x3e
+ 2732 002d 0B       		.uleb128 0xb
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 49
+
+
+ 2733 002e 03       		.uleb128 0x3
+ 2734 002f 08       		.uleb128 0x8
+ 2735 0030 00       		.byte	0
+ 2736 0031 00       		.byte	0
+ 2737 0032 05       		.uleb128 0x5
+ 2738 0033 01       		.uleb128 0x1
+ 2739 0034 01       		.byte	0x1
+ 2740 0035 49       		.uleb128 0x49
+ 2741 0036 13       		.uleb128 0x13
+ 2742 0037 01       		.uleb128 0x1
+ 2743 0038 13       		.uleb128 0x13
+ 2744 0039 00       		.byte	0
+ 2745 003a 00       		.byte	0
+ 2746 003b 06       		.uleb128 0x6
+ 2747 003c 21       		.uleb128 0x21
+ 2748 003d 00       		.byte	0
+ 2749 003e 49       		.uleb128 0x49
+ 2750 003f 13       		.uleb128 0x13
+ 2751 0040 2F       		.uleb128 0x2f
+ 2752 0041 05       		.uleb128 0x5
+ 2753 0042 00       		.byte	0
+ 2754 0043 00       		.byte	0
+ 2755 0044 07       		.uleb128 0x7
+ 2756 0045 26       		.uleb128 0x26
+ 2757 0046 00       		.byte	0
+ 2758 0047 49       		.uleb128 0x49
+ 2759 0048 13       		.uleb128 0x13
+ 2760 0049 00       		.byte	0
+ 2761 004a 00       		.byte	0
+ 2762 004b 08       		.uleb128 0x8
+ 2763 004c 34       		.uleb128 0x34
+ 2764 004d 00       		.byte	0
+ 2765 004e 03       		.uleb128 0x3
+ 2766 004f 0E       		.uleb128 0xe
+ 2767 0050 3A       		.uleb128 0x3a
+ 2768 0051 0B       		.uleb128 0xb
+ 2769 0052 3B       		.uleb128 0x3b
+ 2770 0053 0B       		.uleb128 0xb
+ 2771 0054 49       		.uleb128 0x49
+ 2772 0055 13       		.uleb128 0x13
+ 2773 0056 3F       		.uleb128 0x3f
+ 2774 0057 19       		.uleb128 0x19
+ 2775 0058 02       		.uleb128 0x2
+ 2776 0059 18       		.uleb128 0x18
+ 2777 005a 00       		.byte	0
+ 2778 005b 00       		.byte	0
+ 2779 005c 09       		.uleb128 0x9
+ 2780 005d 21       		.uleb128 0x21
+ 2781 005e 00       		.byte	0
+ 2782 005f 49       		.uleb128 0x49
+ 2783 0060 13       		.uleb128 0x13
+ 2784 0061 2F       		.uleb128 0x2f
+ 2785 0062 0B       		.uleb128 0xb
+ 2786 0063 00       		.byte	0
+ 2787 0064 00       		.byte	0
+ 2788 0065 0A       		.uleb128 0xa
+ 2789 0066 34       		.uleb128 0x34
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 50
+
+
+ 2790 0067 00       		.byte	0
+ 2791 0068 03       		.uleb128 0x3
+ 2792 0069 0E       		.uleb128 0xe
+ 2793 006a 3A       		.uleb128 0x3a
+ 2794 006b 0B       		.uleb128 0xb
+ 2795 006c 3B       		.uleb128 0x3b
+ 2796 006d 05       		.uleb128 0x5
+ 2797 006e 49       		.uleb128 0x49
+ 2798 006f 13       		.uleb128 0x13
+ 2799 0070 3F       		.uleb128 0x3f
+ 2800 0071 19       		.uleb128 0x19
+ 2801 0072 02       		.uleb128 0x2
+ 2802 0073 18       		.uleb128 0x18
+ 2803 0074 00       		.byte	0
+ 2804 0075 00       		.byte	0
+ 2805 0076 00       		.byte	0
+ 2806              		.section	.debug_aranges,"",%progbits
+ 2807 0000 14000000 		.4byte	0x14
+ 2808 0004 0200     		.2byte	0x2
+ 2809 0006 00000000 		.4byte	.Ldebug_info0
+ 2810 000a 04       		.byte	0x4
+ 2811 000b 00       		.byte	0
+ 2812 000c 0000     		.2byte	0
+ 2813 000e 0000     		.2byte	0
+ 2814 0010 00000000 		.4byte	0
+ 2815 0014 00000000 		.4byte	0
+ 2816              		.section	.debug_line,"",%progbits
+ 2817              	.Ldebug_line0:
+ 2818 0000 3D010000 		.section	.debug_str,"MS",%progbits,1
+ 2818      02003701 
+ 2818      00000201 
+ 2818      FB0E0D00 
+ 2818      01010101 
+ 2819              	.LASF9:
+ 2820 0000 5F5F7569 		.ascii	"__uint8_t\000"
+ 2820      6E74385F 
+ 2820      7400
+ 2821              	.LASF16:
+ 2822 000a 63795F6D 		.ascii	"cy_metadata\000"
+ 2822      65746164 
+ 2822      61746100 
+ 2823              	.LASF7:
+ 2824 0016 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 2824      206C6F6E 
+ 2824      6720756E 
+ 2824      7369676E 
+ 2824      65642069 
+ 2825              	.LASF1:
+ 2826 002d 756E7369 		.ascii	"unsigned char\000"
+ 2826      676E6564 
+ 2826      20636861 
+ 2826      7200
+ 2827              	.LASF5:
+ 2828 003b 6C6F6E67 		.ascii	"long unsigned int\000"
+ 2828      20756E73 
+ 2828      69676E65 
+ 2828      6420696E 
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 51
+
+
+ 2828      7400
+ 2829              	.LASF3:
+ 2830 004d 73686F72 		.ascii	"short unsigned int\000"
+ 2830      7420756E 
+ 2830      7369676E 
+ 2830      65642069 
+ 2830      6E7400
+ 2831              	.LASF2:
+ 2832 0060 73686F72 		.ascii	"short int\000"
+ 2832      7420696E 
+ 2832      7400
+ 2833              	.LASF13:
+ 2834 006a 63795F6D 		.ascii	"cy_meta_custnvl\000"
+ 2834      6574615F 
+ 2834      63757374 
+ 2834      6E766C00 
+ 2835              	.LASF12:
+ 2836 007a 63795F6D 		.ascii	"cy_meta_configecc\000"
+ 2836      6574615F 
+ 2836      636F6E66 
+ 2836      69676563 
+ 2836      6300
+ 2837              	.LASF8:
+ 2838 008c 756E7369 		.ascii	"unsigned int\000"
+ 2838      676E6564 
+ 2838      20696E74 
+ 2838      00
+ 2839              	.LASF17:
+ 2840 0099 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 2840      43313120 
+ 2840      352E342E 
+ 2840      31203230 
+ 2840      31363036 
+ 2841 00cc 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 2841      20726576 
+ 2841      6973696F 
+ 2841      6E203233 
+ 2841      37373135 
+ 2842 00ff 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 2842      66756E63 
+ 2842      74696F6E 
+ 2842      2D736563 
+ 2842      74696F6E 
+ 2843              	.LASF10:
+ 2844 0127 75696E74 		.ascii	"uint8_t\000"
+ 2844      385F7400 
+ 2845              	.LASF15:
+ 2846 012f 63795F6D 		.ascii	"cy_meta_flashprotect\000"
+ 2846      6574615F 
+ 2846      666C6173 
+ 2846      6870726F 
+ 2846      74656374 
+ 2847              	.LASF14:
+ 2848 0144 63795F6D 		.ascii	"cy_meta_wonvl\000"
+ 2848      6574615F 
+ 2848      776F6E76 
+ 2848      6C00
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\cc2whGa6.s 			page 52
+
+
+ 2849              	.LASF11:
+ 2850 0152 73697A65 		.ascii	"sizetype\000"
+ 2850      74797065 
+ 2850      00
+ 2851              	.LASF6:
+ 2852 015b 6C6F6E67 		.ascii	"long long int\000"
+ 2852      206C6F6E 
+ 2852      6720696E 
+ 2852      7400
+ 2853              	.LASF19:
+ 2854 0169 433A5C55 		.ascii	"C:\\Users\\Zwe\\Desktop\\Monash\\Y3S2\\ECE3091 - EN"
+ 2854      73657273 
+ 2854      5C5A7765 
+ 2854      5C446573 
+ 2854      6B746F70 
+ 2855 0196 47494E45 		.ascii	"GINEERING DESIGN\\bcd\\Design01.cydsn\000"
+ 2855      4552494E 
+ 2855      47204445 
+ 2855      5349474E 
+ 2855      5C626364 
+ 2856              	.LASF4:
+ 2857 01ba 6C6F6E67 		.ascii	"long int\000"
+ 2857      20696E74 
+ 2857      00
+ 2858              	.LASF0:
+ 2859 01c3 7369676E 		.ascii	"signed char\000"
+ 2859      65642063 
+ 2859      68617200 
+ 2860              	.LASF18:
+ 2861 01cf 47656E65 		.ascii	"Generated_Source\\PSoC5\\cymetadata.c\000"
+ 2861      72617465 
+ 2861      645F536F 
+ 2861      75726365 
+ 2861      5C50536F 
+ 2862              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

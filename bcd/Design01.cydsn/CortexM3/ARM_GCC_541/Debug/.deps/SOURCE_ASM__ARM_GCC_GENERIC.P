@@ -1,0 +1,10 @@
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/CortexM3/ARM_GCC_541/Debug/CyBootAsmGnu.o : C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/CyBootAsmGnu.s : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevicegnu.inc : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cydevicegnu_trm.inc : 
+
+C:/Users/zhaoh/Downloads/bcd0926/bcd0904/bcd/Design01.cydsn/Generated_Source/PSoC5/cyfittergnu.inc : 
+

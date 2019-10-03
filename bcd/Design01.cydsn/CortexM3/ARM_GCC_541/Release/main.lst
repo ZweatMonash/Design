@@ -1,0 +1,597 @@
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"main.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.startup.main,"ax",%progbits
+  20              		.align	1
+  21              		.global	main
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	main, %function
+  25              	main:
+  26              	.LFB64:
+  27              		.file 1 "main.c"
+   1:main.c        **** #include <stdio.h>
+   2:main.c        **** #include "project.h"
+   3:main.c        **** #include "string.h"
+   4:main.c        **** #include "header.h"
+   5:main.c        **** 
+   6:main.c        **** int main(void)
+   7:main.c        **** {
+  28              		.loc 1 7 0
+  29              		.cfi_startproc
+  30              		@ Volatile: function does not return.
+  31              		@ args = 0, pretend = 0, frame = 0
+  32              		@ frame_needed = 0, uses_anonymous_args = 0
+  33 0000 08B5     		push	{r3, lr}
+  34              		.cfi_def_cfa_offset 8
+  35              		.cfi_offset 3, -8
+  36              		.cfi_offset 14, -4
+   8:main.c        ****     /* Prepare components */
+   9:main.c        ****     CyGlobalIntEnable;
+  37              		.loc 1 9 0
+  38              		.syntax unified
+  39              	@ 9 "main.c" 1
+  40 0002 62B6     		CPSIE   i
+  41              	@ 0 "" 2
+  10:main.c        ****     Timer_1_Start();
+  42              		.loc 1 10 0
+  43              		.thumb
+  44              		.syntax unified
+  45 0004 FFF7FEFF 		bl	Timer_1_Start
+  46              	.LVL0:
+  11:main.c        ****     UART_1_Start();
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 2
+
+
+  47              		.loc 1 11 0
+  48 0008 FFF7FEFF 		bl	UART_1_Start
+  49              	.LVL1:
+  12:main.c        ****     isr_1_StartEx(Timer_1_ISR_Handler);
+  50              		.loc 1 12 0
+  51 000c 0548     		ldr	r0, .L4
+  52 000e FFF7FEFF 		bl	isr_1_StartEx
+  53              	.LVL2:
+  13:main.c        ****     PWM_lw_Start();
+  54              		.loc 1 13 0
+  55 0012 FFF7FEFF 		bl	PWM_lw_Start
+  56              	.LVL3:
+  14:main.c        ****     PWM_rw_Start();
+  57              		.loc 1 14 0
+  58 0016 FFF7FEFF 		bl	PWM_rw_Start
+  59              	.LVL4:
+  15:main.c        ****     Counter_right_Start();
+  60              		.loc 1 15 0
+  61 001a FFF7FEFF 		bl	Counter_right_Start
+  62              	.LVL5:
+  16:main.c        ****     Counter_left_Start();
+  63              		.loc 1 16 0
+  64 001e FFF7FEFF 		bl	Counter_left_Start
+  65              	.LVL6:
+  66              	.L2:
+  67 0022 FEE7     		b	.L2
+  68              	.L5:
+  69              		.align	2
+  70              	.L4:
+  71 0024 00000000 		.word	Timer_1_ISR_Handler
+  72              		.cfi_endproc
+  73              	.LFE64:
+  74              		.size	main, .-main
+  75              		.text
+  76              	.Letext0:
+  77              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  78              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  79              		.file 4 "Generated_Source\\PSoC5/Timer_1.h"
+  80              		.file 5 "Generated_Source\\PSoC5/UART_1.h"
+  81              		.file 6 "Generated_Source\\PSoC5/isr_1.h"
+  82              		.file 7 "Generated_Source\\PSoC5/PWM_lw.h"
+  83              		.file 8 "Generated_Source\\PSoC5/PWM_rw.h"
+  84              		.file 9 "Generated_Source\\PSoC5/Counter_right.h"
+  85              		.file 10 "Generated_Source\\PSoC5/Counter_left.h"
+  86              		.file 11 "Generated_Source\\PSoC5/core_cm3.h"
+  87              		.section	.debug_info,"",%progbits
+  88              	.Ldebug_info0:
+  89 0000 58010000 		.4byte	0x158
+  90 0004 0400     		.2byte	0x4
+  91 0006 00000000 		.4byte	.Ldebug_abbrev0
+  92 000a 04       		.byte	0x4
+  93 000b 01       		.uleb128 0x1
+  94 000c EB000000 		.4byte	.LASF23
+  95 0010 0C       		.byte	0xc
+  96 0011 2E000000 		.4byte	.LASF24
+  97 0015 79010000 		.4byte	.LASF25
+  98 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 3
+
+
+  99 001d 00000000 		.4byte	0
+ 100 0021 00000000 		.4byte	.Ldebug_line0
+ 101 0025 02       		.uleb128 0x2
+ 102 0026 01       		.byte	0x1
+ 103 0027 06       		.byte	0x6
+ 104 0028 D7010000 		.4byte	.LASF0
+ 105 002c 02       		.uleb128 0x2
+ 106 002d 01       		.byte	0x1
+ 107 002e 08       		.byte	0x8
+ 108 002f A6000000 		.4byte	.LASF1
+ 109 0033 02       		.uleb128 0x2
+ 110 0034 02       		.byte	0x2
+ 111 0035 05       		.byte	0x5
+ 112 0036 04020000 		.4byte	.LASF2
+ 113 003a 02       		.uleb128 0x2
+ 114 003b 02       		.byte	0x2
+ 115 003c 07       		.byte	0x7
+ 116 003d 0E000000 		.4byte	.LASF3
+ 117 0041 03       		.uleb128 0x3
+ 118 0042 EF010000 		.4byte	.LASF12
+ 119 0046 02       		.byte	0x2
+ 120 0047 3F       		.byte	0x3f
+ 121 0048 4C000000 		.4byte	0x4c
+ 122 004c 02       		.uleb128 0x2
+ 123 004d 04       		.byte	0x4
+ 124 004e 05       		.byte	0x5
+ 125 004f E2000000 		.4byte	.LASF4
+ 126 0053 02       		.uleb128 0x2
+ 127 0054 04       		.byte	0x4
+ 128 0055 07       		.byte	0x7
+ 129 0056 55000000 		.4byte	.LASF5
+ 130 005a 02       		.uleb128 0x2
+ 131 005b 08       		.byte	0x8
+ 132 005c 05       		.byte	0x5
+ 133 005d 00000000 		.4byte	.LASF6
+ 134 0061 02       		.uleb128 0x2
+ 135 0062 08       		.byte	0x8
+ 136 0063 07       		.byte	0x7
+ 137 0064 67000000 		.4byte	.LASF7
+ 138 0068 04       		.uleb128 0x4
+ 139 0069 04       		.byte	0x4
+ 140 006a 05       		.byte	0x5
+ 141 006b 696E7400 		.ascii	"int\000"
+ 142 006f 02       		.uleb128 0x2
+ 143 0070 04       		.byte	0x4
+ 144 0071 07       		.byte	0x7
+ 145 0072 21000000 		.4byte	.LASF8
+ 146 0076 02       		.uleb128 0x2
+ 147 0077 08       		.byte	0x8
+ 148 0078 04       		.byte	0x4
+ 149 0079 E3010000 		.4byte	.LASF9
+ 150 007d 02       		.uleb128 0x2
+ 151 007e 04       		.byte	0x4
+ 152 007f 07       		.byte	0x7
+ 153 0080 16020000 		.4byte	.LASF10
+ 154 0084 02       		.uleb128 0x2
+ 155 0085 01       		.byte	0x1
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 4
+
+
+ 156 0086 08       		.byte	0x8
+ 157 0087 B4000000 		.4byte	.LASF11
+ 158 008b 03       		.uleb128 0x3
+ 159 008c 0E020000 		.4byte	.LASF13
+ 160 0090 03       		.byte	0x3
+ 161 0091 2C       		.byte	0x2c
+ 162 0092 41000000 		.4byte	0x41
+ 163 0096 02       		.uleb128 0x2
+ 164 0097 04       		.byte	0x4
+ 165 0098 04       		.byte	0x4
+ 166 0099 FE010000 		.4byte	.LASF14
+ 167 009d 02       		.uleb128 0x2
+ 168 009e 08       		.byte	0x8
+ 169 009f 04       		.byte	0x4
+ 170 00a0 DB000000 		.4byte	.LASF15
+ 171 00a4 05       		.uleb128 0x5
+ 172 00a5 F9010000 		.4byte	.LASF26
+ 173 00a9 01       		.byte	0x1
+ 174 00aa 06       		.byte	0x6
+ 175 00ab 68000000 		.4byte	0x68
+ 176 00af 00000000 		.4byte	.LFB64
+ 177 00b3 28000000 		.4byte	.LFE64-.LFB64
+ 178 00b7 01       		.uleb128 0x1
+ 179 00b8 9C       		.byte	0x9c
+ 180 00b9 FD000000 		.4byte	0xfd
+ 181 00bd 06       		.uleb128 0x6
+ 182 00be 08000000 		.4byte	.LVL0
+ 183 00c2 0E010000 		.4byte	0x10e
+ 184 00c6 06       		.uleb128 0x6
+ 185 00c7 0C000000 		.4byte	.LVL1
+ 186 00cb 19010000 		.4byte	0x119
+ 187 00cf 06       		.uleb128 0x6
+ 188 00d0 12000000 		.4byte	.LVL2
+ 189 00d4 24010000 		.4byte	0x124
+ 190 00d8 06       		.uleb128 0x6
+ 191 00d9 16000000 		.4byte	.LVL3
+ 192 00dd 2F010000 		.4byte	0x12f
+ 193 00e1 06       		.uleb128 0x6
+ 194 00e2 1A000000 		.4byte	.LVL4
+ 195 00e6 3A010000 		.4byte	0x13a
+ 196 00ea 06       		.uleb128 0x6
+ 197 00eb 1E000000 		.4byte	.LVL5
+ 198 00ef 45010000 		.4byte	0x145
+ 199 00f3 06       		.uleb128 0x6
+ 200 00f4 22000000 		.4byte	.LVL6
+ 201 00f8 50010000 		.4byte	0x150
+ 202 00fc 00       		.byte	0
+ 203 00fd 07       		.uleb128 0x7
+ 204 00fe CA010000 		.4byte	.LASF27
+ 205 0102 0B       		.byte	0xb
+ 206 0103 1207     		.2byte	0x712
+ 207 0105 09010000 		.4byte	0x109
+ 208 0109 08       		.uleb128 0x8
+ 209 010a 8B000000 		.4byte	0x8b
+ 210 010e 09       		.uleb128 0x9
+ 211 010f 98000000 		.4byte	.LASF16
+ 212 0113 98000000 		.4byte	.LASF16
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 5
+
+
+ 213 0117 04       		.byte	0x4
+ 214 0118 5A       		.byte	0x5a
+ 215 0119 09       		.uleb128 0x9
+ 216 011a 8B000000 		.4byte	.LASF17
+ 217 011e 8B000000 		.4byte	.LASF17
+ 218 0122 05       		.byte	0x5
+ 219 0123 54       		.byte	0x54
+ 220 0124 09       		.uleb128 0x9
+ 221 0125 B9000000 		.4byte	.LASF18
+ 222 0129 B9000000 		.4byte	.LASF18
+ 223 012d 06       		.byte	0x6
+ 224 012e 18       		.byte	0x18
+ 225 012f 09       		.uleb128 0x9
+ 226 0130 48000000 		.4byte	.LASF19
+ 227 0134 48000000 		.4byte	.LASF19
+ 228 0138 07       		.byte	0x7
+ 229 0139 92       		.byte	0x92
+ 230 013a 09       		.uleb128 0x9
+ 231 013b 7E000000 		.4byte	.LASF20
+ 232 013f 7E000000 		.4byte	.LASF20
+ 233 0143 08       		.byte	0x8
+ 234 0144 92       		.byte	0x92
+ 235 0145 09       		.uleb128 0x9
+ 236 0146 C7000000 		.4byte	.LASF21
+ 237 014a C7000000 		.4byte	.LASF21
+ 238 014e 09       		.byte	0x9
+ 239 014f 4F       		.byte	0x4f
+ 240 0150 09       		.uleb128 0x9
+ 241 0151 35000000 		.4byte	.LASF22
+ 242 0155 35000000 		.4byte	.LASF22
+ 243 0159 0A       		.byte	0xa
+ 244 015a 4F       		.byte	0x4f
+ 245 015b 00       		.byte	0
+ 246              		.section	.debug_abbrev,"",%progbits
+ 247              	.Ldebug_abbrev0:
+ 248 0000 01       		.uleb128 0x1
+ 249 0001 11       		.uleb128 0x11
+ 250 0002 01       		.byte	0x1
+ 251 0003 25       		.uleb128 0x25
+ 252 0004 0E       		.uleb128 0xe
+ 253 0005 13       		.uleb128 0x13
+ 254 0006 0B       		.uleb128 0xb
+ 255 0007 03       		.uleb128 0x3
+ 256 0008 0E       		.uleb128 0xe
+ 257 0009 1B       		.uleb128 0x1b
+ 258 000a 0E       		.uleb128 0xe
+ 259 000b 55       		.uleb128 0x55
+ 260 000c 17       		.uleb128 0x17
+ 261 000d 11       		.uleb128 0x11
+ 262 000e 01       		.uleb128 0x1
+ 263 000f 10       		.uleb128 0x10
+ 264 0010 17       		.uleb128 0x17
+ 265 0011 00       		.byte	0
+ 266 0012 00       		.byte	0
+ 267 0013 02       		.uleb128 0x2
+ 268 0014 24       		.uleb128 0x24
+ 269 0015 00       		.byte	0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 6
+
+
+ 270 0016 0B       		.uleb128 0xb
+ 271 0017 0B       		.uleb128 0xb
+ 272 0018 3E       		.uleb128 0x3e
+ 273 0019 0B       		.uleb128 0xb
+ 274 001a 03       		.uleb128 0x3
+ 275 001b 0E       		.uleb128 0xe
+ 276 001c 00       		.byte	0
+ 277 001d 00       		.byte	0
+ 278 001e 03       		.uleb128 0x3
+ 279 001f 16       		.uleb128 0x16
+ 280 0020 00       		.byte	0
+ 281 0021 03       		.uleb128 0x3
+ 282 0022 0E       		.uleb128 0xe
+ 283 0023 3A       		.uleb128 0x3a
+ 284 0024 0B       		.uleb128 0xb
+ 285 0025 3B       		.uleb128 0x3b
+ 286 0026 0B       		.uleb128 0xb
+ 287 0027 49       		.uleb128 0x49
+ 288 0028 13       		.uleb128 0x13
+ 289 0029 00       		.byte	0
+ 290 002a 00       		.byte	0
+ 291 002b 04       		.uleb128 0x4
+ 292 002c 24       		.uleb128 0x24
+ 293 002d 00       		.byte	0
+ 294 002e 0B       		.uleb128 0xb
+ 295 002f 0B       		.uleb128 0xb
+ 296 0030 3E       		.uleb128 0x3e
+ 297 0031 0B       		.uleb128 0xb
+ 298 0032 03       		.uleb128 0x3
+ 299 0033 08       		.uleb128 0x8
+ 300 0034 00       		.byte	0
+ 301 0035 00       		.byte	0
+ 302 0036 05       		.uleb128 0x5
+ 303 0037 2E       		.uleb128 0x2e
+ 304 0038 01       		.byte	0x1
+ 305 0039 3F       		.uleb128 0x3f
+ 306 003a 19       		.uleb128 0x19
+ 307 003b 03       		.uleb128 0x3
+ 308 003c 0E       		.uleb128 0xe
+ 309 003d 3A       		.uleb128 0x3a
+ 310 003e 0B       		.uleb128 0xb
+ 311 003f 3B       		.uleb128 0x3b
+ 312 0040 0B       		.uleb128 0xb
+ 313 0041 27       		.uleb128 0x27
+ 314 0042 19       		.uleb128 0x19
+ 315 0043 49       		.uleb128 0x49
+ 316 0044 13       		.uleb128 0x13
+ 317 0045 8701     		.uleb128 0x87
+ 318 0047 19       		.uleb128 0x19
+ 319 0048 11       		.uleb128 0x11
+ 320 0049 01       		.uleb128 0x1
+ 321 004a 12       		.uleb128 0x12
+ 322 004b 06       		.uleb128 0x6
+ 323 004c 40       		.uleb128 0x40
+ 324 004d 18       		.uleb128 0x18
+ 325 004e 9742     		.uleb128 0x2117
+ 326 0050 19       		.uleb128 0x19
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 7
+
+
+ 327 0051 01       		.uleb128 0x1
+ 328 0052 13       		.uleb128 0x13
+ 329 0053 00       		.byte	0
+ 330 0054 00       		.byte	0
+ 331 0055 06       		.uleb128 0x6
+ 332 0056 898201   		.uleb128 0x4109
+ 333 0059 00       		.byte	0
+ 334 005a 11       		.uleb128 0x11
+ 335 005b 01       		.uleb128 0x1
+ 336 005c 31       		.uleb128 0x31
+ 337 005d 13       		.uleb128 0x13
+ 338 005e 00       		.byte	0
+ 339 005f 00       		.byte	0
+ 340 0060 07       		.uleb128 0x7
+ 341 0061 34       		.uleb128 0x34
+ 342 0062 00       		.byte	0
+ 343 0063 03       		.uleb128 0x3
+ 344 0064 0E       		.uleb128 0xe
+ 345 0065 3A       		.uleb128 0x3a
+ 346 0066 0B       		.uleb128 0xb
+ 347 0067 3B       		.uleb128 0x3b
+ 348 0068 05       		.uleb128 0x5
+ 349 0069 49       		.uleb128 0x49
+ 350 006a 13       		.uleb128 0x13
+ 351 006b 3F       		.uleb128 0x3f
+ 352 006c 19       		.uleb128 0x19
+ 353 006d 3C       		.uleb128 0x3c
+ 354 006e 19       		.uleb128 0x19
+ 355 006f 00       		.byte	0
+ 356 0070 00       		.byte	0
+ 357 0071 08       		.uleb128 0x8
+ 358 0072 35       		.uleb128 0x35
+ 359 0073 00       		.byte	0
+ 360 0074 49       		.uleb128 0x49
+ 361 0075 13       		.uleb128 0x13
+ 362 0076 00       		.byte	0
+ 363 0077 00       		.byte	0
+ 364 0078 09       		.uleb128 0x9
+ 365 0079 2E       		.uleb128 0x2e
+ 366 007a 00       		.byte	0
+ 367 007b 3F       		.uleb128 0x3f
+ 368 007c 19       		.uleb128 0x19
+ 369 007d 3C       		.uleb128 0x3c
+ 370 007e 19       		.uleb128 0x19
+ 371 007f 6E       		.uleb128 0x6e
+ 372 0080 0E       		.uleb128 0xe
+ 373 0081 03       		.uleb128 0x3
+ 374 0082 0E       		.uleb128 0xe
+ 375 0083 3A       		.uleb128 0x3a
+ 376 0084 0B       		.uleb128 0xb
+ 377 0085 3B       		.uleb128 0x3b
+ 378 0086 0B       		.uleb128 0xb
+ 379 0087 00       		.byte	0
+ 380 0088 00       		.byte	0
+ 381 0089 00       		.byte	0
+ 382              		.section	.debug_aranges,"",%progbits
+ 383 0000 1C000000 		.4byte	0x1c
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 8
+
+
+ 384 0004 0200     		.2byte	0x2
+ 385 0006 00000000 		.4byte	.Ldebug_info0
+ 386 000a 04       		.byte	0x4
+ 387 000b 00       		.byte	0
+ 388 000c 0000     		.2byte	0
+ 389 000e 0000     		.2byte	0
+ 390 0010 00000000 		.4byte	.LFB64
+ 391 0014 28000000 		.4byte	.LFE64-.LFB64
+ 392 0018 00000000 		.4byte	0
+ 393 001c 00000000 		.4byte	0
+ 394              		.section	.debug_ranges,"",%progbits
+ 395              	.Ldebug_ranges0:
+ 396 0000 00000000 		.4byte	.LFB64
+ 397 0004 28000000 		.4byte	.LFE64
+ 398 0008 00000000 		.4byte	0
+ 399 000c 00000000 		.4byte	0
+ 400              		.section	.debug_line,"",%progbits
+ 401              	.Ldebug_line0:
+ 402 0000 BB010000 		.section	.debug_str,"MS",%progbits,1
+ 402      0200A001 
+ 402      00000201 
+ 402      FB0E0D00 
+ 402      01010101 
+ 403              	.LASF6:
+ 404 0000 6C6F6E67 		.ascii	"long long int\000"
+ 404      206C6F6E 
+ 404      6720696E 
+ 404      7400
+ 405              	.LASF3:
+ 406 000e 73686F72 		.ascii	"short unsigned int\000"
+ 406      7420756E 
+ 406      7369676E 
+ 406      65642069 
+ 406      6E7400
+ 407              	.LASF8:
+ 408 0021 756E7369 		.ascii	"unsigned int\000"
+ 408      676E6564 
+ 408      20696E74 
+ 408      00
+ 409              	.LASF24:
+ 410 002e 6D61696E 		.ascii	"main.c\000"
+ 410      2E6300
+ 411              	.LASF22:
+ 412 0035 436F756E 		.ascii	"Counter_left_Start\000"
+ 412      7465725F 
+ 412      6C656674 
+ 412      5F537461 
+ 412      727400
+ 413              	.LASF19:
+ 414 0048 50574D5F 		.ascii	"PWM_lw_Start\000"
+ 414      6C775F53 
+ 414      74617274 
+ 414      00
+ 415              	.LASF5:
+ 416 0055 6C6F6E67 		.ascii	"long unsigned int\000"
+ 416      20756E73 
+ 416      69676E65 
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 9
+
+
+ 416      6420696E 
+ 416      7400
+ 417              	.LASF7:
+ 418 0067 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 418      206C6F6E 
+ 418      6720756E 
+ 418      7369676E 
+ 418      65642069 
+ 419              	.LASF20:
+ 420 007e 50574D5F 		.ascii	"PWM_rw_Start\000"
+ 420      72775F53 
+ 420      74617274 
+ 420      00
+ 421              	.LASF17:
+ 422 008b 55415254 		.ascii	"UART_1_Start\000"
+ 422      5F315F53 
+ 422      74617274 
+ 422      00
+ 423              	.LASF16:
+ 424 0098 54696D65 		.ascii	"Timer_1_Start\000"
+ 424      725F315F 
+ 424      53746172 
+ 424      7400
+ 425              	.LASF1:
+ 426 00a6 756E7369 		.ascii	"unsigned char\000"
+ 426      676E6564 
+ 426      20636861 
+ 426      7200
+ 427              	.LASF11:
+ 428 00b4 63686172 		.ascii	"char\000"
+ 428      00
+ 429              	.LASF18:
+ 430 00b9 6973725F 		.ascii	"isr_1_StartEx\000"
+ 430      315F5374 
+ 430      61727445 
+ 430      7800
+ 431              	.LASF21:
+ 432 00c7 436F756E 		.ascii	"Counter_right_Start\000"
+ 432      7465725F 
+ 432      72696768 
+ 432      745F5374 
+ 432      61727400 
+ 433              	.LASF15:
+ 434 00db 646F7562 		.ascii	"double\000"
+ 434      6C6500
+ 435              	.LASF4:
+ 436 00e2 6C6F6E67 		.ascii	"long int\000"
+ 436      20696E74 
+ 436      00
+ 437              	.LASF23:
+ 438 00eb 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 438      43313120 
+ 438      352E342E 
+ 438      31203230 
+ 438      31363036 
+ 439 011e 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 439      20726576 
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccKfRckx.s 			page 10
+
+
+ 439      6973696F 
+ 439      6E203233 
+ 439      37373135 
+ 440 0151 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 440      66756E63 
+ 440      74696F6E 
+ 440      2D736563 
+ 440      74696F6E 
+ 441              	.LASF25:
+ 442 0179 433A5C55 		.ascii	"C:\\Users\\Zwe\\Desktop\\Monash\\Y3S2\\ECE3091 - EN"
+ 442      73657273 
+ 442      5C5A7765 
+ 442      5C446573 
+ 442      6B746F70 
+ 443 01a6 47494E45 		.ascii	"GINEERING DESIGN\\bcd\\Design01.cydsn\000"
+ 443      4552494E 
+ 443      47204445 
+ 443      5349474E 
+ 443      5C626364 
+ 444              	.LASF27:
+ 445 01ca 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 445      52784275 
+ 445      66666572 
+ 445      00
+ 446              	.LASF0:
+ 447 01d7 7369676E 		.ascii	"signed char\000"
+ 447      65642063 
+ 447      68617200 
+ 448              	.LASF9:
+ 449 01e3 6C6F6E67 		.ascii	"long double\000"
+ 449      20646F75 
+ 449      626C6500 
+ 450              	.LASF12:
+ 451 01ef 5F5F696E 		.ascii	"__int32_t\000"
+ 451      7433325F 
+ 451      7400
+ 452              	.LASF26:
+ 453 01f9 6D61696E 		.ascii	"main\000"
+ 453      00
+ 454              	.LASF14:
+ 455 01fe 666C6F61 		.ascii	"float\000"
+ 455      7400
+ 456              	.LASF2:
+ 457 0204 73686F72 		.ascii	"short int\000"
+ 457      7420696E 
+ 457      7400
+ 458              	.LASF13:
+ 459 020e 696E7433 		.ascii	"int32_t\000"
+ 459      325F7400 
+ 460              	.LASF10:
+ 461 0216 73697A65 		.ascii	"sizetype\000"
+ 461      74797065 
+ 461      00
+ 462              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

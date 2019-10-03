@@ -1,0 +1,916 @@
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"Tx_PM.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.Tx_SaveConfig,"ax",%progbits
+  20              		.align	1
+  21              		.global	Tx_SaveConfig
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	Tx_SaveConfig, %function
+  25              	Tx_SaveConfig:
+  26              	.LFB0:
+  27              		.file 1 "Generated_Source\\PSoC5\\Tx_PM.c"
+   1:Generated_Source\PSoC5/Tx_PM.c **** /*******************************************************************************
+   2:Generated_Source\PSoC5/Tx_PM.c **** * File Name: Tx_PM.c
+   3:Generated_Source\PSoC5/Tx_PM.c **** * Version 1.0
+   4:Generated_Source\PSoC5/Tx_PM.c **** *
+   5:Generated_Source\PSoC5/Tx_PM.c **** * Description:
+   6:Generated_Source\PSoC5/Tx_PM.c **** *  This file provides Low power mode APIs for Count7 component.
+   7:Generated_Source\PSoC5/Tx_PM.c **** *
+   8:Generated_Source\PSoC5/Tx_PM.c **** * Note:
+   9:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  10:Generated_Source\PSoC5/Tx_PM.c **** *
+  11:Generated_Source\PSoC5/Tx_PM.c **** ********************************************************************************
+  12:Generated_Source\PSoC5/Tx_PM.c **** * Copyright 2013, Cypress Semiconductor Corporation.  All rights reserved.
+  13:Generated_Source\PSoC5/Tx_PM.c **** * You may use this file only in accordance with the license, terms, conditions,
+  14:Generated_Source\PSoC5/Tx_PM.c **** * disclaimers, and limitations in the end user license agreement accompanying
+  15:Generated_Source\PSoC5/Tx_PM.c **** * the software package with which this file was provided.
+  16:Generated_Source\PSoC5/Tx_PM.c **** *******************************************************************************/
+  17:Generated_Source\PSoC5/Tx_PM.c **** 
+  18:Generated_Source\PSoC5/Tx_PM.c **** #include "Tx.h"
+  19:Generated_Source\PSoC5/Tx_PM.c **** 
+  20:Generated_Source\PSoC5/Tx_PM.c **** 
+  21:Generated_Source\PSoC5/Tx_PM.c **** Tx_BACKUP_STRUCT Tx_backup;
+  22:Generated_Source\PSoC5/Tx_PM.c **** 
+  23:Generated_Source\PSoC5/Tx_PM.c **** 
+  24:Generated_Source\PSoC5/Tx_PM.c **** /*******************************************************************************
+  25:Generated_Source\PSoC5/Tx_PM.c **** * Function Name: Tx_SaveConfig
+  26:Generated_Source\PSoC5/Tx_PM.c **** ********************************************************************************
+  27:Generated_Source\PSoC5/Tx_PM.c **** *
+  28:Generated_Source\PSoC5/Tx_PM.c **** * Summary:
+  29:Generated_Source\PSoC5/Tx_PM.c **** *  This function saves the component configuration and non-retention registers.
+  30:Generated_Source\PSoC5/Tx_PM.c **** *  This function is called by the Count7_Sleep() function.
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 2
+
+
+  31:Generated_Source\PSoC5/Tx_PM.c **** *
+  32:Generated_Source\PSoC5/Tx_PM.c **** * Parameters:
+  33:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  34:Generated_Source\PSoC5/Tx_PM.c **** *
+  35:Generated_Source\PSoC5/Tx_PM.c **** * Return:
+  36:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  37:Generated_Source\PSoC5/Tx_PM.c **** *
+  38:Generated_Source\PSoC5/Tx_PM.c **** * Global Variables:
+  39:Generated_Source\PSoC5/Tx_PM.c **** *  Tx_backup - used to save component configuration and non-
+  40:Generated_Source\PSoC5/Tx_PM.c **** *  retention registers before enter sleep mode.
+  41:Generated_Source\PSoC5/Tx_PM.c **** *
+  42:Generated_Source\PSoC5/Tx_PM.c **** *******************************************************************************/
+  43:Generated_Source\PSoC5/Tx_PM.c **** void Tx_SaveConfig(void) 
+  44:Generated_Source\PSoC5/Tx_PM.c **** {
+  28              		.loc 1 44 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32              		@ link register save eliminated.
+  45:Generated_Source\PSoC5/Tx_PM.c ****     Tx_backup.count = Tx_COUNT_REG;
+  33              		.loc 1 45 0
+  34 0000 024B     		ldr	r3, .L2
+  35 0002 1A78     		ldrb	r2, [r3]	@ zero_extendqisi2
+  36 0004 024B     		ldr	r3, .L2+4
+  37 0006 5A70     		strb	r2, [r3, #1]
+  38 0008 7047     		bx	lr
+  39              	.L3:
+  40 000a 00BF     		.align	2
+  41              	.L2:
+  42 000c 7A640040 		.word	1073767546
+  43 0010 00000000 		.word	Tx_backup
+  44              		.cfi_endproc
+  45              	.LFE0:
+  46              		.size	Tx_SaveConfig, .-Tx_SaveConfig
+  47              		.section	.text.Tx_Sleep,"ax",%progbits
+  48              		.align	1
+  49              		.global	Tx_Sleep
+  50              		.thumb
+  51              		.thumb_func
+  52              		.type	Tx_Sleep, %function
+  53              	Tx_Sleep:
+  54              	.LFB1:
+  46:Generated_Source\PSoC5/Tx_PM.c **** }
+  47:Generated_Source\PSoC5/Tx_PM.c **** 
+  48:Generated_Source\PSoC5/Tx_PM.c **** 
+  49:Generated_Source\PSoC5/Tx_PM.c **** /*******************************************************************************
+  50:Generated_Source\PSoC5/Tx_PM.c **** * Function Name: Tx_Sleep
+  51:Generated_Source\PSoC5/Tx_PM.c **** ********************************************************************************
+  52:Generated_Source\PSoC5/Tx_PM.c **** *
+  53:Generated_Source\PSoC5/Tx_PM.c **** * Summary:
+  54:Generated_Source\PSoC5/Tx_PM.c **** *  This is the preferred API to prepare the component for low power mode
+  55:Generated_Source\PSoC5/Tx_PM.c **** *  operation. The Count7_Sleep() API saves the current component state using
+  56:Generated_Source\PSoC5/Tx_PM.c **** *  Count7_SaveConfig() and disables the counter.
+  57:Generated_Source\PSoC5/Tx_PM.c **** *
+  58:Generated_Source\PSoC5/Tx_PM.c **** * Parameters:
+  59:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  60:Generated_Source\PSoC5/Tx_PM.c **** *
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 3
+
+
+  61:Generated_Source\PSoC5/Tx_PM.c **** * Return:
+  62:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  63:Generated_Source\PSoC5/Tx_PM.c **** *
+  64:Generated_Source\PSoC5/Tx_PM.c **** *******************************************************************************/
+  65:Generated_Source\PSoC5/Tx_PM.c **** void Tx_Sleep(void) 
+  66:Generated_Source\PSoC5/Tx_PM.c **** {
+  55              		.loc 1 66 0
+  56              		.cfi_startproc
+  57              		@ args = 0, pretend = 0, frame = 0
+  58              		@ frame_needed = 0, uses_anonymous_args = 0
+  59 0000 08B5     		push	{r3, lr}
+  60              		.cfi_def_cfa_offset 8
+  61              		.cfi_offset 3, -8
+  62              		.cfi_offset 14, -4
+  67:Generated_Source\PSoC5/Tx_PM.c ****     if(0u != (Tx_AUX_CONTROL_REG & Tx_COUNTER_START))
+  63              		.loc 1 67 0
+  64 0002 094B     		ldr	r3, .L8
+  65 0004 094A     		ldr	r2, .L8+4
+  66 0006 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+  67 0008 03F02003 		and	r3, r3, #32
+  68 000c 03F0FF01 		and	r1, r3, #255
+  69 0010 23B1     		cbz	r3, .L5
+  68:Generated_Source\PSoC5/Tx_PM.c ****     {
+  69:Generated_Source\PSoC5/Tx_PM.c ****         Tx_backup.enableState = 1u;
+  70              		.loc 1 69 0
+  71 0012 0123     		movs	r3, #1
+  72 0014 1370     		strb	r3, [r2]
+  70:Generated_Source\PSoC5/Tx_PM.c ****         Tx_Stop();
+  73              		.loc 1 70 0
+  74 0016 FFF7FEFF 		bl	Tx_Stop
+  75              	.LVL0:
+  76 001a 00E0     		b	.L6
+  77              	.L5:
+  71:Generated_Source\PSoC5/Tx_PM.c ****     }
+  72:Generated_Source\PSoC5/Tx_PM.c ****     else
+  73:Generated_Source\PSoC5/Tx_PM.c ****     {
+  74:Generated_Source\PSoC5/Tx_PM.c ****         Tx_backup.enableState = 0u;
+  78              		.loc 1 74 0
+  79 001c 1170     		strb	r1, [r2]
+  80              	.L6:
+  75:Generated_Source\PSoC5/Tx_PM.c ****     }
+  76:Generated_Source\PSoC5/Tx_PM.c **** 
+  77:Generated_Source\PSoC5/Tx_PM.c ****     Tx_SaveConfig();
+  78:Generated_Source\PSoC5/Tx_PM.c **** }
+  81              		.loc 1 78 0
+  82 001e BDE80840 		pop	{r3, lr}
+  83              		.cfi_restore 14
+  84              		.cfi_restore 3
+  85              		.cfi_def_cfa_offset 0
+  77:Generated_Source\PSoC5/Tx_PM.c **** }
+  86              		.loc 1 77 0
+  87 0022 FFF7FEBF 		b	Tx_SaveConfig
+  88              	.LVL1:
+  89              	.L9:
+  90 0026 00BF     		.align	2
+  91              	.L8:
+  92 0028 9A640040 		.word	1073767578
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 4
+
+
+  93 002c 00000000 		.word	Tx_backup
+  94              		.cfi_endproc
+  95              	.LFE1:
+  96              		.size	Tx_Sleep, .-Tx_Sleep
+  97              		.section	.text.Tx_RestoreConfig,"ax",%progbits
+  98              		.align	1
+  99              		.global	Tx_RestoreConfig
+ 100              		.thumb
+ 101              		.thumb_func
+ 102              		.type	Tx_RestoreConfig, %function
+ 103              	Tx_RestoreConfig:
+ 104              	.LFB2:
+  79:Generated_Source\PSoC5/Tx_PM.c **** 
+  80:Generated_Source\PSoC5/Tx_PM.c **** 
+  81:Generated_Source\PSoC5/Tx_PM.c **** /*******************************************************************************
+  82:Generated_Source\PSoC5/Tx_PM.c **** * Function Name: Tx_RestoreConfig
+  83:Generated_Source\PSoC5/Tx_PM.c **** ********************************************************************************
+  84:Generated_Source\PSoC5/Tx_PM.c **** *
+  85:Generated_Source\PSoC5/Tx_PM.c **** * Summary:
+  86:Generated_Source\PSoC5/Tx_PM.c **** *  This function restores the component configuration and non-retention
+  87:Generated_Source\PSoC5/Tx_PM.c **** *  registers. This function is called by the Count7_Wakeup() function.
+  88:Generated_Source\PSoC5/Tx_PM.c **** *
+  89:Generated_Source\PSoC5/Tx_PM.c **** * Parameters:
+  90:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  91:Generated_Source\PSoC5/Tx_PM.c **** *
+  92:Generated_Source\PSoC5/Tx_PM.c **** * Return:
+  93:Generated_Source\PSoC5/Tx_PM.c **** *  None
+  94:Generated_Source\PSoC5/Tx_PM.c **** *
+  95:Generated_Source\PSoC5/Tx_PM.c **** * Global Variables:
+  96:Generated_Source\PSoC5/Tx_PM.c **** *  Tx_backup - used to save component configuration and
+  97:Generated_Source\PSoC5/Tx_PM.c **** *  non-retention registers before exit sleep mode.
+  98:Generated_Source\PSoC5/Tx_PM.c **** *
+  99:Generated_Source\PSoC5/Tx_PM.c **** *******************************************************************************/
+ 100:Generated_Source\PSoC5/Tx_PM.c **** void Tx_RestoreConfig(void) 
+ 101:Generated_Source\PSoC5/Tx_PM.c **** {
+ 105              		.loc 1 101 0
+ 106              		.cfi_startproc
+ 107              		@ args = 0, pretend = 0, frame = 0
+ 108              		@ frame_needed = 0, uses_anonymous_args = 0
+ 109              		@ link register save eliminated.
+ 102:Generated_Source\PSoC5/Tx_PM.c ****     Tx_COUNT_REG = Tx_backup.count;
+ 110              		.loc 1 102 0
+ 111 0000 024B     		ldr	r3, .L11
+ 112 0002 5A78     		ldrb	r2, [r3, #1]	@ zero_extendqisi2
+ 113 0004 024B     		ldr	r3, .L11+4
+ 114 0006 1A70     		strb	r2, [r3]
+ 115 0008 7047     		bx	lr
+ 116              	.L12:
+ 117 000a 00BF     		.align	2
+ 118              	.L11:
+ 119 000c 00000000 		.word	Tx_backup
+ 120 0010 7A640040 		.word	1073767546
+ 121              		.cfi_endproc
+ 122              	.LFE2:
+ 123              		.size	Tx_RestoreConfig, .-Tx_RestoreConfig
+ 124              		.section	.text.Tx_Wakeup,"ax",%progbits
+ 125              		.align	1
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 5
+
+
+ 126              		.global	Tx_Wakeup
+ 127              		.thumb
+ 128              		.thumb_func
+ 129              		.type	Tx_Wakeup, %function
+ 130              	Tx_Wakeup:
+ 131              	.LFB3:
+ 103:Generated_Source\PSoC5/Tx_PM.c **** }
+ 104:Generated_Source\PSoC5/Tx_PM.c **** 
+ 105:Generated_Source\PSoC5/Tx_PM.c **** 
+ 106:Generated_Source\PSoC5/Tx_PM.c **** /*******************************************************************************
+ 107:Generated_Source\PSoC5/Tx_PM.c **** * Function Name: Tx_Wakeup
+ 108:Generated_Source\PSoC5/Tx_PM.c **** ********************************************************************************
+ 109:Generated_Source\PSoC5/Tx_PM.c **** *
+ 110:Generated_Source\PSoC5/Tx_PM.c **** * Summary:
+ 111:Generated_Source\PSoC5/Tx_PM.c **** *  This is the preferred API to restore the component to the state when
+ 112:Generated_Source\PSoC5/Tx_PM.c **** *  Count7_Sleep() was called. The Count7_Wakeup() function calls the
+ 113:Generated_Source\PSoC5/Tx_PM.c **** *  Count7_RestoreConfig() function to restore the configuration.
+ 114:Generated_Source\PSoC5/Tx_PM.c **** *
+ 115:Generated_Source\PSoC5/Tx_PM.c **** * Parameters:
+ 116:Generated_Source\PSoC5/Tx_PM.c **** *  None
+ 117:Generated_Source\PSoC5/Tx_PM.c **** *
+ 118:Generated_Source\PSoC5/Tx_PM.c **** * Return:
+ 119:Generated_Source\PSoC5/Tx_PM.c **** *  None
+ 120:Generated_Source\PSoC5/Tx_PM.c **** *
+ 121:Generated_Source\PSoC5/Tx_PM.c **** *******************************************************************************/
+ 122:Generated_Source\PSoC5/Tx_PM.c **** void Tx_Wakeup(void) 
+ 123:Generated_Source\PSoC5/Tx_PM.c **** {
+ 132              		.loc 1 123 0
+ 133              		.cfi_startproc
+ 134              		@ args = 0, pretend = 0, frame = 0
+ 135              		@ frame_needed = 0, uses_anonymous_args = 0
+ 136 0000 08B5     		push	{r3, lr}
+ 137              		.cfi_def_cfa_offset 8
+ 138              		.cfi_offset 3, -8
+ 139              		.cfi_offset 14, -4
+ 124:Generated_Source\PSoC5/Tx_PM.c ****     Tx_RestoreConfig();
+ 140              		.loc 1 124 0
+ 141 0002 FFF7FEFF 		bl	Tx_RestoreConfig
+ 142              	.LVL2:
+ 125:Generated_Source\PSoC5/Tx_PM.c **** 
+ 126:Generated_Source\PSoC5/Tx_PM.c ****     /* Restore enable state */
+ 127:Generated_Source\PSoC5/Tx_PM.c ****     if (Tx_backup.enableState != 0u)
+ 143              		.loc 1 127 0
+ 144 0006 044B     		ldr	r3, .L15
+ 145 0008 1B78     		ldrb	r3, [r3]	@ zero_extendqisi2
+ 146 000a 1BB1     		cbz	r3, .L13
+ 128:Generated_Source\PSoC5/Tx_PM.c ****     {
+ 129:Generated_Source\PSoC5/Tx_PM.c ****         Tx_Enable();
+ 130:Generated_Source\PSoC5/Tx_PM.c ****     }
+ 131:Generated_Source\PSoC5/Tx_PM.c **** }
+ 147              		.loc 1 131 0
+ 148 000c BDE80840 		pop	{r3, lr}
+ 149              		.cfi_remember_state
+ 150              		.cfi_restore 14
+ 151              		.cfi_restore 3
+ 152              		.cfi_def_cfa_offset 0
+ 129:Generated_Source\PSoC5/Tx_PM.c ****     }
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 6
+
+
+ 153              		.loc 1 129 0
+ 154 0010 FFF7FEBF 		b	Tx_Enable
+ 155              	.LVL3:
+ 156              	.L13:
+ 157              		.cfi_restore_state
+ 158 0014 08BD     		pop	{r3, pc}
+ 159              	.L16:
+ 160 0016 00BF     		.align	2
+ 161              	.L15:
+ 162 0018 00000000 		.word	Tx_backup
+ 163              		.cfi_endproc
+ 164              	.LFE3:
+ 165              		.size	Tx_Wakeup, .-Tx_Wakeup
+ 166              		.comm	Tx_backup,2,1
+ 167              		.text
+ 168              	.Letext0:
+ 169              		.file 2 "Generated_Source\\PSoC5\\cytypes.h"
+ 170              		.file 3 "Generated_Source\\PSoC5\\Tx.h"
+ 171              		.section	.debug_info,"",%progbits
+ 172              	.Ldebug_info0:
+ 173 0000 6D010000 		.4byte	0x16d
+ 174 0004 0400     		.2byte	0x4
+ 175 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 176 000a 04       		.byte	0x4
+ 177 000b 01       		.uleb128 0x1
+ 178 000c DF000000 		.4byte	.LASF25
+ 179 0010 0C       		.byte	0xc
+ 180 0011 7C000000 		.4byte	.LASF26
+ 181 0015 96010000 		.4byte	.LASF27
+ 182 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 183 001d 00000000 		.4byte	0
+ 184 0021 00000000 		.4byte	.Ldebug_line0
+ 185 0025 02       		.uleb128 0x2
+ 186 0026 01       		.byte	0x1
+ 187 0027 06       		.byte	0x6
+ 188 0028 8A010000 		.4byte	.LASF0
+ 189 002c 02       		.uleb128 0x2
+ 190 002d 01       		.byte	0x1
+ 191 002e 08       		.byte	0x8
+ 192 002f A0000000 		.4byte	.LASF1
+ 193 0033 02       		.uleb128 0x2
+ 194 0034 02       		.byte	0x2
+ 195 0035 05       		.byte	0x5
+ 196 0036 5B000000 		.4byte	.LASF2
+ 197 003a 02       		.uleb128 0x2
+ 198 003b 02       		.byte	0x2
+ 199 003c 07       		.byte	0x7
+ 200 003d 77010000 		.4byte	.LASF3
+ 201 0041 02       		.uleb128 0x2
+ 202 0042 04       		.byte	0x4
+ 203 0043 05       		.byte	0x5
+ 204 0044 BE000000 		.4byte	.LASF4
+ 205 0048 02       		.uleb128 0x2
+ 206 0049 04       		.byte	0x4
+ 207 004a 07       		.byte	0x7
+ 208 004b 49000000 		.4byte	.LASF5
+ 209 004f 02       		.uleb128 0x2
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 7
+
+
+ 210 0050 08       		.byte	0x8
+ 211 0051 05       		.byte	0x5
+ 212 0052 00000000 		.4byte	.LASF6
+ 213 0056 02       		.uleb128 0x2
+ 214 0057 08       		.byte	0x8
+ 215 0058 07       		.byte	0x7
+ 216 0059 65000000 		.4byte	.LASF7
+ 217 005d 03       		.uleb128 0x3
+ 218 005e 04       		.byte	0x4
+ 219 005f 05       		.byte	0x5
+ 220 0060 696E7400 		.ascii	"int\000"
+ 221 0064 02       		.uleb128 0x2
+ 222 0065 04       		.byte	0x4
+ 223 0066 07       		.byte	0x7
+ 224 0067 F0010000 		.4byte	.LASF8
+ 225 006b 04       		.uleb128 0x4
+ 226 006c 43000000 		.4byte	.LASF12
+ 227 0070 02       		.byte	0x2
+ 228 0071 E401     		.2byte	0x1e4
+ 229 0073 2C000000 		.4byte	0x2c
+ 230 0077 02       		.uleb128 0x2
+ 231 0078 04       		.byte	0x4
+ 232 0079 04       		.byte	0x4
+ 233 007a E5010000 		.4byte	.LASF9
+ 234 007e 02       		.uleb128 0x2
+ 235 007f 08       		.byte	0x8
+ 236 0080 04       		.byte	0x4
+ 237 0081 D8000000 		.4byte	.LASF10
+ 238 0085 02       		.uleb128 0x2
+ 239 0086 01       		.byte	0x1
+ 240 0087 08       		.byte	0x8
+ 241 0088 9B000000 		.4byte	.LASF11
+ 242 008c 04       		.uleb128 0x4
+ 243 008d EB010000 		.4byte	.LASF13
+ 244 0091 02       		.byte	0x2
+ 245 0092 8E02     		.2byte	0x28e
+ 246 0094 98000000 		.4byte	0x98
+ 247 0098 05       		.uleb128 0x5
+ 248 0099 6B000000 		.4byte	0x6b
+ 249 009d 02       		.uleb128 0x2
+ 250 009e 08       		.byte	0x8
+ 251 009f 04       		.byte	0x4
+ 252 00a0 D9010000 		.4byte	.LASF14
+ 253 00a4 02       		.uleb128 0x2
+ 254 00a5 04       		.byte	0x4
+ 255 00a6 07       		.byte	0x7
+ 256 00a7 FD010000 		.4byte	.LASF15
+ 257 00ab 06       		.uleb128 0x6
+ 258 00ac 02       		.byte	0x2
+ 259 00ad 03       		.byte	0x3
+ 260 00ae 36       		.byte	0x36
+ 261 00af CC000000 		.4byte	0xcc
+ 262 00b3 07       		.uleb128 0x7
+ 263 00b4 0E000000 		.4byte	.LASF16
+ 264 00b8 03       		.byte	0x3
+ 265 00b9 38       		.byte	0x38
+ 266 00ba 6B000000 		.4byte	0x6b
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 8
+
+
+ 267 00be 00       		.byte	0
+ 268 00bf 07       		.uleb128 0x7
+ 269 00c0 B8000000 		.4byte	.LASF17
+ 270 00c4 03       		.byte	0x3
+ 271 00c5 39       		.byte	0x39
+ 272 00c6 6B000000 		.4byte	0x6b
+ 273 00ca 01       		.byte	0x1
+ 274 00cb 00       		.byte	0
+ 275 00cc 08       		.uleb128 0x8
+ 276 00cd 32000000 		.4byte	.LASF18
+ 277 00d1 03       		.byte	0x3
+ 278 00d2 3A       		.byte	0x3a
+ 279 00d3 AB000000 		.4byte	0xab
+ 280 00d7 09       		.uleb128 0x9
+ 281 00d8 24000000 		.4byte	.LASF19
+ 282 00dc 01       		.byte	0x1
+ 283 00dd 2B       		.byte	0x2b
+ 284 00de 00000000 		.4byte	.LFB0
+ 285 00e2 14000000 		.4byte	.LFE0-.LFB0
+ 286 00e6 01       		.uleb128 0x1
+ 287 00e7 9C       		.byte	0x9c
+ 288 00e8 0A       		.uleb128 0xa
+ 289 00e9 C7000000 		.4byte	.LASF21
+ 290 00ed 01       		.byte	0x1
+ 291 00ee 41       		.byte	0x41
+ 292 00ef 00000000 		.4byte	.LFB1
+ 293 00f3 30000000 		.4byte	.LFE1-.LFB1
+ 294 00f7 01       		.uleb128 0x1
+ 295 00f8 9C       		.byte	0x9c
+ 296 00f9 10010000 		.4byte	0x110
+ 297 00fd 0B       		.uleb128 0xb
+ 298 00fe 1A000000 		.4byte	.LVL0
+ 299 0102 5A010000 		.4byte	0x15a
+ 300 0106 0C       		.uleb128 0xc
+ 301 0107 26000000 		.4byte	.LVL1
+ 302 010b D7000000 		.4byte	0xd7
+ 303 010f 00       		.byte	0
+ 304 0110 09       		.uleb128 0x9
+ 305 0111 06020000 		.4byte	.LASF20
+ 306 0115 01       		.byte	0x1
+ 307 0116 64       		.byte	0x64
+ 308 0117 00000000 		.4byte	.LFB2
+ 309 011b 14000000 		.4byte	.LFE2-.LFB2
+ 310 011f 01       		.uleb128 0x1
+ 311 0120 9C       		.byte	0x9c
+ 312 0121 0A       		.uleb128 0xa
+ 313 0122 AE000000 		.4byte	.LASF22
+ 314 0126 01       		.byte	0x1
+ 315 0127 7A       		.byte	0x7a
+ 316 0128 00000000 		.4byte	.LFB3
+ 317 012c 1C000000 		.4byte	.LFE3-.LFB3
+ 318 0130 01       		.uleb128 0x1
+ 319 0131 9C       		.byte	0x9c
+ 320 0132 49010000 		.4byte	0x149
+ 321 0136 0B       		.uleb128 0xb
+ 322 0137 06000000 		.4byte	.LVL2
+ 323 013b 10010000 		.4byte	0x110
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 9
+
+
+ 324 013f 0C       		.uleb128 0xc
+ 325 0140 14000000 		.4byte	.LVL3
+ 326 0144 65010000 		.4byte	0x165
+ 327 0148 00       		.byte	0
+ 328 0149 0D       		.uleb128 0xd
+ 329 014a 6D010000 		.4byte	.LASF28
+ 330 014e 01       		.byte	0x1
+ 331 014f 15       		.byte	0x15
+ 332 0150 CC000000 		.4byte	0xcc
+ 333 0154 05       		.uleb128 0x5
+ 334 0155 03       		.byte	0x3
+ 335 0156 00000000 		.4byte	Tx_backup
+ 336 015a 0E       		.uleb128 0xe
+ 337 015b D0000000 		.4byte	.LASF23
+ 338 015f D0000000 		.4byte	.LASF23
+ 339 0163 03       		.byte	0x3
+ 340 0164 27       		.byte	0x27
+ 341 0165 0E       		.uleb128 0xe
+ 342 0166 1A000000 		.4byte	.LASF24
+ 343 016a 1A000000 		.4byte	.LASF24
+ 344 016e 03       		.byte	0x3
+ 345 016f 25       		.byte	0x25
+ 346 0170 00       		.byte	0
+ 347              		.section	.debug_abbrev,"",%progbits
+ 348              	.Ldebug_abbrev0:
+ 349 0000 01       		.uleb128 0x1
+ 350 0001 11       		.uleb128 0x11
+ 351 0002 01       		.byte	0x1
+ 352 0003 25       		.uleb128 0x25
+ 353 0004 0E       		.uleb128 0xe
+ 354 0005 13       		.uleb128 0x13
+ 355 0006 0B       		.uleb128 0xb
+ 356 0007 03       		.uleb128 0x3
+ 357 0008 0E       		.uleb128 0xe
+ 358 0009 1B       		.uleb128 0x1b
+ 359 000a 0E       		.uleb128 0xe
+ 360 000b 55       		.uleb128 0x55
+ 361 000c 17       		.uleb128 0x17
+ 362 000d 11       		.uleb128 0x11
+ 363 000e 01       		.uleb128 0x1
+ 364 000f 10       		.uleb128 0x10
+ 365 0010 17       		.uleb128 0x17
+ 366 0011 00       		.byte	0
+ 367 0012 00       		.byte	0
+ 368 0013 02       		.uleb128 0x2
+ 369 0014 24       		.uleb128 0x24
+ 370 0015 00       		.byte	0
+ 371 0016 0B       		.uleb128 0xb
+ 372 0017 0B       		.uleb128 0xb
+ 373 0018 3E       		.uleb128 0x3e
+ 374 0019 0B       		.uleb128 0xb
+ 375 001a 03       		.uleb128 0x3
+ 376 001b 0E       		.uleb128 0xe
+ 377 001c 00       		.byte	0
+ 378 001d 00       		.byte	0
+ 379 001e 03       		.uleb128 0x3
+ 380 001f 24       		.uleb128 0x24
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 10
+
+
+ 381 0020 00       		.byte	0
+ 382 0021 0B       		.uleb128 0xb
+ 383 0022 0B       		.uleb128 0xb
+ 384 0023 3E       		.uleb128 0x3e
+ 385 0024 0B       		.uleb128 0xb
+ 386 0025 03       		.uleb128 0x3
+ 387 0026 08       		.uleb128 0x8
+ 388 0027 00       		.byte	0
+ 389 0028 00       		.byte	0
+ 390 0029 04       		.uleb128 0x4
+ 391 002a 16       		.uleb128 0x16
+ 392 002b 00       		.byte	0
+ 393 002c 03       		.uleb128 0x3
+ 394 002d 0E       		.uleb128 0xe
+ 395 002e 3A       		.uleb128 0x3a
+ 396 002f 0B       		.uleb128 0xb
+ 397 0030 3B       		.uleb128 0x3b
+ 398 0031 05       		.uleb128 0x5
+ 399 0032 49       		.uleb128 0x49
+ 400 0033 13       		.uleb128 0x13
+ 401 0034 00       		.byte	0
+ 402 0035 00       		.byte	0
+ 403 0036 05       		.uleb128 0x5
+ 404 0037 35       		.uleb128 0x35
+ 405 0038 00       		.byte	0
+ 406 0039 49       		.uleb128 0x49
+ 407 003a 13       		.uleb128 0x13
+ 408 003b 00       		.byte	0
+ 409 003c 00       		.byte	0
+ 410 003d 06       		.uleb128 0x6
+ 411 003e 13       		.uleb128 0x13
+ 412 003f 01       		.byte	0x1
+ 413 0040 0B       		.uleb128 0xb
+ 414 0041 0B       		.uleb128 0xb
+ 415 0042 3A       		.uleb128 0x3a
+ 416 0043 0B       		.uleb128 0xb
+ 417 0044 3B       		.uleb128 0x3b
+ 418 0045 0B       		.uleb128 0xb
+ 419 0046 01       		.uleb128 0x1
+ 420 0047 13       		.uleb128 0x13
+ 421 0048 00       		.byte	0
+ 422 0049 00       		.byte	0
+ 423 004a 07       		.uleb128 0x7
+ 424 004b 0D       		.uleb128 0xd
+ 425 004c 00       		.byte	0
+ 426 004d 03       		.uleb128 0x3
+ 427 004e 0E       		.uleb128 0xe
+ 428 004f 3A       		.uleb128 0x3a
+ 429 0050 0B       		.uleb128 0xb
+ 430 0051 3B       		.uleb128 0x3b
+ 431 0052 0B       		.uleb128 0xb
+ 432 0053 49       		.uleb128 0x49
+ 433 0054 13       		.uleb128 0x13
+ 434 0055 38       		.uleb128 0x38
+ 435 0056 0B       		.uleb128 0xb
+ 436 0057 00       		.byte	0
+ 437 0058 00       		.byte	0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 11
+
+
+ 438 0059 08       		.uleb128 0x8
+ 439 005a 16       		.uleb128 0x16
+ 440 005b 00       		.byte	0
+ 441 005c 03       		.uleb128 0x3
+ 442 005d 0E       		.uleb128 0xe
+ 443 005e 3A       		.uleb128 0x3a
+ 444 005f 0B       		.uleb128 0xb
+ 445 0060 3B       		.uleb128 0x3b
+ 446 0061 0B       		.uleb128 0xb
+ 447 0062 49       		.uleb128 0x49
+ 448 0063 13       		.uleb128 0x13
+ 449 0064 00       		.byte	0
+ 450 0065 00       		.byte	0
+ 451 0066 09       		.uleb128 0x9
+ 452 0067 2E       		.uleb128 0x2e
+ 453 0068 00       		.byte	0
+ 454 0069 3F       		.uleb128 0x3f
+ 455 006a 19       		.uleb128 0x19
+ 456 006b 03       		.uleb128 0x3
+ 457 006c 0E       		.uleb128 0xe
+ 458 006d 3A       		.uleb128 0x3a
+ 459 006e 0B       		.uleb128 0xb
+ 460 006f 3B       		.uleb128 0x3b
+ 461 0070 0B       		.uleb128 0xb
+ 462 0071 27       		.uleb128 0x27
+ 463 0072 19       		.uleb128 0x19
+ 464 0073 11       		.uleb128 0x11
+ 465 0074 01       		.uleb128 0x1
+ 466 0075 12       		.uleb128 0x12
+ 467 0076 06       		.uleb128 0x6
+ 468 0077 40       		.uleb128 0x40
+ 469 0078 18       		.uleb128 0x18
+ 470 0079 9742     		.uleb128 0x2117
+ 471 007b 19       		.uleb128 0x19
+ 472 007c 00       		.byte	0
+ 473 007d 00       		.byte	0
+ 474 007e 0A       		.uleb128 0xa
+ 475 007f 2E       		.uleb128 0x2e
+ 476 0080 01       		.byte	0x1
+ 477 0081 3F       		.uleb128 0x3f
+ 478 0082 19       		.uleb128 0x19
+ 479 0083 03       		.uleb128 0x3
+ 480 0084 0E       		.uleb128 0xe
+ 481 0085 3A       		.uleb128 0x3a
+ 482 0086 0B       		.uleb128 0xb
+ 483 0087 3B       		.uleb128 0x3b
+ 484 0088 0B       		.uleb128 0xb
+ 485 0089 27       		.uleb128 0x27
+ 486 008a 19       		.uleb128 0x19
+ 487 008b 11       		.uleb128 0x11
+ 488 008c 01       		.uleb128 0x1
+ 489 008d 12       		.uleb128 0x12
+ 490 008e 06       		.uleb128 0x6
+ 491 008f 40       		.uleb128 0x40
+ 492 0090 18       		.uleb128 0x18
+ 493 0091 9742     		.uleb128 0x2117
+ 494 0093 19       		.uleb128 0x19
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 12
+
+
+ 495 0094 01       		.uleb128 0x1
+ 496 0095 13       		.uleb128 0x13
+ 497 0096 00       		.byte	0
+ 498 0097 00       		.byte	0
+ 499 0098 0B       		.uleb128 0xb
+ 500 0099 898201   		.uleb128 0x4109
+ 501 009c 00       		.byte	0
+ 502 009d 11       		.uleb128 0x11
+ 503 009e 01       		.uleb128 0x1
+ 504 009f 31       		.uleb128 0x31
+ 505 00a0 13       		.uleb128 0x13
+ 506 00a1 00       		.byte	0
+ 507 00a2 00       		.byte	0
+ 508 00a3 0C       		.uleb128 0xc
+ 509 00a4 898201   		.uleb128 0x4109
+ 510 00a7 00       		.byte	0
+ 511 00a8 11       		.uleb128 0x11
+ 512 00a9 01       		.uleb128 0x1
+ 513 00aa 9542     		.uleb128 0x2115
+ 514 00ac 19       		.uleb128 0x19
+ 515 00ad 31       		.uleb128 0x31
+ 516 00ae 13       		.uleb128 0x13
+ 517 00af 00       		.byte	0
+ 518 00b0 00       		.byte	0
+ 519 00b1 0D       		.uleb128 0xd
+ 520 00b2 34       		.uleb128 0x34
+ 521 00b3 00       		.byte	0
+ 522 00b4 03       		.uleb128 0x3
+ 523 00b5 0E       		.uleb128 0xe
+ 524 00b6 3A       		.uleb128 0x3a
+ 525 00b7 0B       		.uleb128 0xb
+ 526 00b8 3B       		.uleb128 0x3b
+ 527 00b9 0B       		.uleb128 0xb
+ 528 00ba 49       		.uleb128 0x49
+ 529 00bb 13       		.uleb128 0x13
+ 530 00bc 3F       		.uleb128 0x3f
+ 531 00bd 19       		.uleb128 0x19
+ 532 00be 02       		.uleb128 0x2
+ 533 00bf 18       		.uleb128 0x18
+ 534 00c0 00       		.byte	0
+ 535 00c1 00       		.byte	0
+ 536 00c2 0E       		.uleb128 0xe
+ 537 00c3 2E       		.uleb128 0x2e
+ 538 00c4 00       		.byte	0
+ 539 00c5 3F       		.uleb128 0x3f
+ 540 00c6 19       		.uleb128 0x19
+ 541 00c7 3C       		.uleb128 0x3c
+ 542 00c8 19       		.uleb128 0x19
+ 543 00c9 6E       		.uleb128 0x6e
+ 544 00ca 0E       		.uleb128 0xe
+ 545 00cb 03       		.uleb128 0x3
+ 546 00cc 0E       		.uleb128 0xe
+ 547 00cd 3A       		.uleb128 0x3a
+ 548 00ce 0B       		.uleb128 0xb
+ 549 00cf 3B       		.uleb128 0x3b
+ 550 00d0 0B       		.uleb128 0xb
+ 551 00d1 00       		.byte	0
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 13
+
+
+ 552 00d2 00       		.byte	0
+ 553 00d3 00       		.byte	0
+ 554              		.section	.debug_aranges,"",%progbits
+ 555 0000 34000000 		.4byte	0x34
+ 556 0004 0200     		.2byte	0x2
+ 557 0006 00000000 		.4byte	.Ldebug_info0
+ 558 000a 04       		.byte	0x4
+ 559 000b 00       		.byte	0
+ 560 000c 0000     		.2byte	0
+ 561 000e 0000     		.2byte	0
+ 562 0010 00000000 		.4byte	.LFB0
+ 563 0014 14000000 		.4byte	.LFE0-.LFB0
+ 564 0018 00000000 		.4byte	.LFB1
+ 565 001c 30000000 		.4byte	.LFE1-.LFB1
+ 566 0020 00000000 		.4byte	.LFB2
+ 567 0024 14000000 		.4byte	.LFE2-.LFB2
+ 568 0028 00000000 		.4byte	.LFB3
+ 569 002c 1C000000 		.4byte	.LFE3-.LFB3
+ 570 0030 00000000 		.4byte	0
+ 571 0034 00000000 		.4byte	0
+ 572              		.section	.debug_ranges,"",%progbits
+ 573              	.Ldebug_ranges0:
+ 574 0000 00000000 		.4byte	.LFB0
+ 575 0004 14000000 		.4byte	.LFE0
+ 576 0008 00000000 		.4byte	.LFB1
+ 577 000c 30000000 		.4byte	.LFE1
+ 578 0010 00000000 		.4byte	.LFB2
+ 579 0014 14000000 		.4byte	.LFE2
+ 580 0018 00000000 		.4byte	.LFB3
+ 581 001c 1C000000 		.4byte	.LFE3
+ 582 0020 00000000 		.4byte	0
+ 583 0024 00000000 		.4byte	0
+ 584              		.section	.debug_line,"",%progbits
+ 585              	.Ldebug_line0:
+ 586 0000 9B000000 		.section	.debug_str,"MS",%progbits,1
+ 586      02004A00 
+ 586      00000201 
+ 586      FB0E0D00 
+ 586      01010101 
+ 587              	.LASF6:
+ 588 0000 6C6F6E67 		.ascii	"long long int\000"
+ 588      206C6F6E 
+ 588      6720696E 
+ 588      7400
+ 589              	.LASF16:
+ 590 000e 656E6162 		.ascii	"enableState\000"
+ 590      6C655374 
+ 590      61746500 
+ 591              	.LASF24:
+ 592 001a 54785F45 		.ascii	"Tx_Enable\000"
+ 592      6E61626C 
+ 592      6500
+ 593              	.LASF19:
+ 594 0024 54785F53 		.ascii	"Tx_SaveConfig\000"
+ 594      61766543 
+ 594      6F6E6669 
+ 594      6700
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 14
+
+
+ 595              	.LASF18:
+ 596 0032 54785F42 		.ascii	"Tx_BACKUP_STRUCT\000"
+ 596      41434B55 
+ 596      505F5354 
+ 596      52554354 
+ 596      00
+ 597              	.LASF12:
+ 598 0043 75696E74 		.ascii	"uint8\000"
+ 598      3800
+ 599              	.LASF5:
+ 600 0049 6C6F6E67 		.ascii	"long unsigned int\000"
+ 600      20756E73 
+ 600      69676E65 
+ 600      6420696E 
+ 600      7400
+ 601              	.LASF2:
+ 602 005b 73686F72 		.ascii	"short int\000"
+ 602      7420696E 
+ 602      7400
+ 603              	.LASF7:
+ 604 0065 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 604      206C6F6E 
+ 604      6720756E 
+ 604      7369676E 
+ 604      65642069 
+ 605              	.LASF26:
+ 606 007c 47656E65 		.ascii	"Generated_Source\\PSoC5\\Tx_PM.c\000"
+ 606      72617465 
+ 606      645F536F 
+ 606      75726365 
+ 606      5C50536F 
+ 607              	.LASF11:
+ 608 009b 63686172 		.ascii	"char\000"
+ 608      00
+ 609              	.LASF1:
+ 610 00a0 756E7369 		.ascii	"unsigned char\000"
+ 610      676E6564 
+ 610      20636861 
+ 610      7200
+ 611              	.LASF22:
+ 612 00ae 54785F57 		.ascii	"Tx_Wakeup\000"
+ 612      616B6575 
+ 612      7000
+ 613              	.LASF17:
+ 614 00b8 636F756E 		.ascii	"count\000"
+ 614      7400
+ 615              	.LASF4:
+ 616 00be 6C6F6E67 		.ascii	"long int\000"
+ 616      20696E74 
+ 616      00
+ 617              	.LASF21:
+ 618 00c7 54785F53 		.ascii	"Tx_Sleep\000"
+ 618      6C656570 
+ 618      00
+ 619              	.LASF23:
+ 620 00d0 54785F53 		.ascii	"Tx_Stop\000"
+ 620      746F7000 
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 15
+
+
+ 621              	.LASF10:
+ 622 00d8 646F7562 		.ascii	"double\000"
+ 622      6C6500
+ 623              	.LASF25:
+ 624 00df 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 624      43313120 
+ 624      352E342E 
+ 624      31203230 
+ 624      31363036 
+ 625 0112 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 625      20726576 
+ 625      6973696F 
+ 625      6E203233 
+ 625      37373135 
+ 626 0145 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+ 626      66756E63 
+ 626      74696F6E 
+ 626      2D736563 
+ 626      74696F6E 
+ 627              	.LASF28:
+ 628 016d 54785F62 		.ascii	"Tx_backup\000"
+ 628      61636B75 
+ 628      7000
+ 629              	.LASF3:
+ 630 0177 73686F72 		.ascii	"short unsigned int\000"
+ 630      7420756E 
+ 630      7369676E 
+ 630      65642069 
+ 630      6E7400
+ 631              	.LASF0:
+ 632 018a 7369676E 		.ascii	"signed char\000"
+ 632      65642063 
+ 632      68617200 
+ 633              	.LASF27:
+ 634 0196 433A5C55 		.ascii	"C:\\Users\\Zwe\\Desktop\\Psoc_Backup\\WIP4-interfac"
+ 634      73657273 
+ 634      5C5A7765 
+ 634      5C446573 
+ 634      6B746F70 
+ 635 01c4 655C4243 		.ascii	"e\\BCD\\Design01.cydsn\000"
+ 635      445C4465 
+ 635      7369676E 
+ 635      30312E63 
+ 635      7964736E 
+ 636              	.LASF14:
+ 637 01d9 6C6F6E67 		.ascii	"long double\000"
+ 637      20646F75 
+ 637      626C6500 
+ 638              	.LASF9:
+ 639 01e5 666C6F61 		.ascii	"float\000"
+ 639      7400
+ 640              	.LASF13:
+ 641 01eb 72656738 		.ascii	"reg8\000"
+ 641      00
+ 642              	.LASF8:
+ 643 01f0 756E7369 		.ascii	"unsigned int\000"
+ 643      676E6564 
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccXqxBnM.s 			page 16
+
+
+ 643      20696E74 
+ 643      00
+ 644              	.LASF15:
+ 645 01fd 73697A65 		.ascii	"sizetype\000"
+ 645      74797065 
+ 645      00
+ 646              	.LASF20:
+ 647 0206 54785F52 		.ascii	"Tx_RestoreConfig\000"
+ 647      6573746F 
+ 647      7265436F 
+ 647      6E666967 
+ 647      00
+ 648              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

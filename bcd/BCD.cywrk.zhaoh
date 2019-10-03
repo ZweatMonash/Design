@@ -1,0 +1,298 @@
+<?xml version="1.0" encoding="utf-8"?>
+<CyXmlSerializer>
+<!--This file is machine generated and read. It is not intended to be edited by hand.-->
+<!--Due to this, there is no schema for this file.-->
+<CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21 type_name="CyDesigner.Common.ProjMgmt.Model.CyPrjMgmtWrkspcCustomData" version="4">
+<CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997 type_name="CyDesigner.Common.Base.CyCustomData" version="2">
+<userData>
+<dataGuid v="1b906a0f-a7b6-4e4d-a428-82f98b53cb35">
+<CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35 type_name="CyDesigner.Common.ProjMgmt.GUI.CyExplorerWindow+CyExplorerWindowState" version="3" SelectedTab="Source">
+<TreeKeys>
+<v>Source</v>
+<v>Components</v>
+<v>Output</v>
+</TreeKeys>
+<TreeStates>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="BCD\Design01\Source Files\movement.c">
+<ExpandedNodeIds>
+<v>BCD</v>
+<v>BCD\Design01</v>
+<v>BCD\Design01\TopDesign</v>
+<v>BCD\Design01\Design01.cydwr</v>
+<v>BCD\Design01\Design01.cydwr\Pins</v>
+<v>BCD\Design01\Design01.cydwr\Analog</v>
+<v>BCD\Design01\Design01.cydwr\Clocks</v>
+<v>BCD\Design01\Design01.cydwr\Interrupts</v>
+<v>BCD\Design01\Design01.cydwr\DMA</v>
+<v>BCD\Design01\Design01.cydwr\System</v>
+<v>BCD\Design01\Design01.cydwr\Directives</v>
+<v>BCD\Design01\Design01.cydwr\Flash Security</v>
+<v>BCD\Design01\Design01.cydwr\EEPROM</v>
+<v>BCD\Design01\Header Files</v>
+<v>BCD\Design01\Header Files\cyapicallbacks.h</v>
+<v>BCD\Design01\Header Files\header01.h</v>
+<v>BCD\Design01\Source Files</v>
+<v>BCD\Design01\Source Files\colorsensor.c</v>
+<v>BCD\Design01\Source Files\gripper.c</v>
+<v>BCD\Design01\Source Files\lifting.c</v>
+<v>BCD\Design01\Source Files\main.c</v>
+<v>BCD\Design01\Source Files\movement.c</v>
+<v>BCD\Design01\Source Files\temp.c</v>
+<v>BCD\Design01\Source Files\temp_ultrasonic.c</v>
+<v>BCD\Design01\Source Files\ultrasonic.c</v>
+<v>BCD\Design01\Generated_Source</v>
+<v>BCD\Design01\Generated_Source\PSoC5</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BCD</v>
+<v>BCD\Design01</v>
+<v>BCD\Design01\TopDesign</v>
+<v>BCD\Design01\TopDesign\TopDesign.cysch</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BCD</v>
+<v>BCD\Design01</v>
+<v>BCD\Design01\CortexM3</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_Ext_CP_Clk.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_INT.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_IRQ.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ADC_DelSig_1_theACLK.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\B.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Clock_4.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Cm3Start.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\colorsensor.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_2_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_3_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_4.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Control_Reg_4_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_left.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_left_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_lift.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_lift_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_right.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Counter_right_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyBootAsmGnu.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyDmac.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyfitter_cfg.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyFlash.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CyLib.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cymetadata.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyPm.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\CySpc.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\cyutils.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\dir_lift.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\dir_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\dir_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_fl.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_fr.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_l.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Echo_r.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\G.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\gripper.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\IDAC8_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_Key.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\isr_uart_rx.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\LED.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\lifting.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\main.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\movement.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Photodiode.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Pin_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_lift.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_lift_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_lw_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\PWM_rw_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\R.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\servo.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Start_switch.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\step_lift.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\step_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\step_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\temp.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\temp_ultrasonic.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\TIA_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Timer_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\timer_clock.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_fl.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_fr.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_l.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\Trigger_r.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_BOOT.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_INT.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_IntClock.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\UART_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\ultrasonic.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Listing Files\VDAC8_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Design01.elf</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Design01.hex</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Debug\Design01.map</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Clock_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Clock_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Clock_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Clock_4.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Cm3Start.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\colorsensor.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_2_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Control_Reg_3_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Counter_left.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Counter_left_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Counter_right.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Counter_right_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\CyBootAsmGnu.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\CyDmac.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\cyfitter_cfg.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\CyFlash.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\CyLib.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\cymetadata.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\cyPm.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\CySpc.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\cyutils.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\dir_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\dir_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\isr_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\isr_uart_rx.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\LED.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\main.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\movement.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Pin_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Pin_2.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Pin_3.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\PWM_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\PWM_lw_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\PWM_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\PWM_rw_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\step_lw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\step_rw.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\temp.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\temp_ultrasonic.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Timer_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\Timer_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\timer_clock.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\UART_1.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\UART_1_BOOT.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\UART_1_INT.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\UART_1_IntClock.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\UART_1_PM.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Listing Files\ultrasonic.lst</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Design01.elf</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Design01.hex</v>
+<v>BCD\Design01\CortexM3\ARM_GCC_541\Release\Design01.map</v>
+<v>BCD\Design01\Design01.gpdsc</v>
+<v>BCD\Design01\Design01.rpt</v>
+<v>BCD\Design01\Design01_timing.html</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStates>
+<TreeKeysV2>
+<v>Datasheet</v>
+</TreeKeysV2>
+<TreeStatesV2>
+<CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237 type_name="CyDesigner.Common.Base.Controls.CyTreeViewState" version="1" SelectedNodeId="">
+<ExpandedNodeIds>
+<v>BCD</v>
+<v>BCD\Design01</v>
+<v>BCD\Design01\PSoC 5LP Architecture TRM</v>
+<v>BCD\Design01\CY8C58LP Family Datasheet</v>
+<v>BCD\Design01\System Reference Guides</v>
+<v>BCD\Design01\System Reference Guides\cy_boot_v5_70</v>
+<v>BCD\Design01\ADC_DelSig_v3_30.pdf</v>
+<v>BCD\Design01\and_v1_0.pdf</v>
+<v>BCD\Design01\Counter_v3_0</v>
+<v>BCD\Design01\Counter_v3_0\Counter_v3_0.pdf</v>
+<v>BCD\Design01\cy_clock_v2_20</v>
+<v>BCD\Design01\cy_clock_v2_20\cy_clock_v2_20.pdf</v>
+<v>BCD\Design01\cy_isr_v1_70</v>
+<v>BCD\Design01\cy_isr_v1_70\cy_isr_v1_70.pdf</v>
+<v>BCD\Design01\cy_pins_v2_20</v>
+<v>BCD\Design01\cy_pins_v2_20\cy_pins_v2_20.pdf</v>
+<v>BCD\Design01\CyControlReg_v1_80</v>
+<v>BCD\Design01\CyControlReg_v1_80\CyControlReg_v1_80.pdf</v>
+<v>BCD\Design01\Debouncer_v1_0.pdf</v>
+<v>BCD\Design01\Gnd_v1_0.pdf</v>
+<v>BCD\Design01\IDAC8_v2_0.pdf</v>
+<v>BCD\Design01\ISource_v1_0.pdf</v>
+<v>BCD\Design01\LED_v1_0</v>
+<v>BCD\Design01\LED_v1_0\LED_v1_0.pdf</v>
+<v>BCD\Design01\mux_v1_10</v>
+<v>BCD\Design01\mux_v1_10\mux_v1_10.pdf</v>
+<v>BCD\Design01\not_v1_0.pdf</v>
+<v>BCD\Design01\PhotoDiode_v1_0.pdf</v>
+<v>BCD\Design01\Power_v1_0</v>
+<v>BCD\Design01\Power_v1_0\Power_v1_0.pdf</v>
+<v>BCD\Design01\PWM_v3_30</v>
+<v>BCD\Design01\PWM_v3_30\PWM_v3_30.pdf</v>
+<v>BCD\Design01\Resistor_v1_0</v>
+<v>BCD\Design01\Resistor_v1_0\Resistor_v1_0.pdf</v>
+<v>BCD\Design01\TIA_v2_0.pdf</v>
+<v>BCD\Design01\Timer_v2_80.pdf</v>
+<v>BCD\Design01\UART_v2_50.pdf</v>
+<v>BCD\Design01\VDAC8_v1_90.pdf</v>
+</ExpandedNodeIds>
+<VisibleNodeIds />
+</CyGuid_2a325b3b-c96a-4e9f-b7a0-2c44ecb5f237>
+</TreeStatesV2>
+</CyGuid_1b906a0f-a7b6-4e4d-a428-82f98b53cb35>
+</dataGuid>
+</userData>
+</CyGuid_fdba8dfd-b15b-4469-9bbb-9e40c3e70997>
+<Unloaded />
+<OpenDocs>
+<name v=".\Design01.cydsn\main.c" />
+<name v=".\Design01.cydsn\gripper.c" />
+<name v=".\Design01.cydsn\TopDesign\TopDesign.cysch" />
+<name v=".\Design01.cydsn\ultrasonic.c" />
+<name v=".\Design01.cydsn\Design01.cydwr" />
+<name v=".\Design01.cydsn\movement.c" />
+<name v=".\Design01.cydsn\header01.h" />
+<name v=".\Design01.cydsn\cyapicallbacks.h" />
+<name v=".\Design01.cydsn\colorsensor.c" />
+<name v=".\Design01.cydsn\lifting.c" />
+</OpenDocs>
+<OpenDocsLayout><![CDATA[<?xml version="1.0"?><!--
+
+  Actipro Docking/MDI for WinForms
+  Copyright (c) 2001-2016 Actipro Software LLC.  All rights reserved.
+  http://www.actiprosoftware.com
+
+--><DocumentLayout Version="1.0"><LayoutData><TabbedMdiRootContainer Orientation="Horizontal"><TabbedMdiContainer Size="1055, 495" SelectedTabbedMdiWindow="531651dc-3a1e-45c7-a9d5-66e332829a46"><ToolWindow Key="Start Page:bd4649ab-da6b-4d04-a663-c722b8bf99db:Start Page" Guid="f8b57dcd-8e17-4816-9787-9b3458fb452c" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\main.c" Guid="c7144e0a-bb77-4a2b-bd0e-c1ee0034ac44" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\gripper.c" Guid="2e8af4fa-5409-4db2-b97e-5f3c6ef4ca3d" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\TopDesign\TopDesign.cysch" Guid="531651dc-3a1e-45c7-a9d5-66e332829a46" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\ultrasonic.c" Guid="a556e163-6530-4646-9076-d33bffe8e812" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\Design01.cydwr" Guid="80cfa78a-12f8-447c-a975-3ed2f67633b5" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\movement.c" Guid="927d6795-9acb-4b28-ac03-c1d8e443664a" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\header01.h" Guid="6b11414a-7a3b-4a31-a9ea-45a2ca1b7e39" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\cyapicallbacks.h" Guid="da0f7043-8bae-47fb-835f-9f8d30f22cd5" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\colorsensor.c" Guid="3b00a448-4abe-4d0b-bcfa-5dafe8d384e6" /><DocumentWindow Key="C:\Users\zhaoh\Downloads\bcd0909new\bcd0904\bcd\Design01.cydsn\lifting.c" Guid="d2e333ec-17ea-49cb-9025-ae511dda258f" /></TabbedMdiContainer></TabbedMdiRootContainer><FloatingContainers /></LayoutData></DocumentLayout>]]></OpenDocsLayout>
+<config v="" />
+<AutoUpdate v="true" />
+</CyGuid_843a90a4-0c4b-4e44-991d-05e7fb117a21>
+</CyXmlSerializer>

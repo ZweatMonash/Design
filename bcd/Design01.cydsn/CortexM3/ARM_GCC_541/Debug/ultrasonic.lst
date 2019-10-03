@@ -1,0 +1,1551 @@
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"ultrasonic.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.global	__aeabi_ui2f
+  20              		.global	__aeabi_f2d
+  21              		.global	__aeabi_dsub
+  22              		.global	__aeabi_ddiv
+  23              		.global	__aeabi_d2f
+  24              		.section	.text.Timer_1_ISR_Handler,"ax",%progbits
+  25              		.align	2
+  26              		.global	Timer_1_ISR_Handler
+  27              		.thumb
+  28              		.thumb_func
+  29              		.type	Timer_1_ISR_Handler, %function
+  30              	Timer_1_ISR_Handler:
+  31              	.LFB64:
+  32              		.file 1 "ultrasonic.c"
+   1:ultrasonic.c  **** #include "header.h"
+   2:ultrasonic.c  **** #include <math.h>
+   3:ultrasonic.c  **** #include "stdlib.h"
+   4:ultrasonic.c  **** //#include "header01.h"
+   5:ultrasonic.c  **** 
+   6:ultrasonic.c  **** float count = 0.0;
+   7:ultrasonic.c  **** float distance;
+   8:ultrasonic.c  **** char distance_str[100];
+   9:ultrasonic.c  **** int obst_detect = 0;
+  10:ultrasonic.c  **** int array;
+  11:ultrasonic.c  **** float distancearray[10];
+  12:ultrasonic.c  **** 
+  13:ultrasonic.c  **** extern CY_ISR(Timer_1_ISR_Handler){
+  33              		.loc 1 13 0
+  34              		.cfi_startproc
+  35              		@ args = 0, pretend = 0, frame = 0
+  36              		@ frame_needed = 0, uses_anonymous_args = 0
+  37 0000 70B5     		push	{r4, r5, r6, lr}
+  38              		.cfi_def_cfa_offset 16
+  39              		.cfi_offset 4, -16
+  40              		.cfi_offset 5, -12
+  41              		.cfi_offset 6, -8
+  42              		.cfi_offset 14, -4
+  43 0002 82B0     		sub	sp, sp, #8
+  44              		.cfi_def_cfa_offset 24
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 2
+
+
+  14:ultrasonic.c  ****     //UART_1_PutString("\n ISR \n");
+  15:ultrasonic.c  ****     Timer_1_ReadStatusRegister(); //Clears interrupt and stop interrupts from firing successively
+  45              		.loc 1 15 0
+  46 0004 FFF7FEFF 		bl	Timer_1_ReadStatusRegister
+  47              	.LVL0:
+  16:ultrasonic.c  ****     count = Timer_1_ReadCounter();
+  48              		.loc 1 16 0
+  49 0008 FFF7FEFF 		bl	Timer_1_ReadCounter
+  50              	.LVL1:
+  51 000c FFF7FEFF 		bl	__aeabi_ui2f
+  52              	.LVL2:
+  53 0010 194B     		ldr	r3, .L3+8
+  54 0012 1860     		str	r0, [r3]	@ float
+  17:ultrasonic.c  ****     distance = (65535.0 - count)/58.0;
+  55              		.loc 1 17 0
+  56 0014 FFF7FEFF 		bl	__aeabi_f2d
+  57              	.LVL3:
+  58 0018 0246     		mov	r2, r0
+  59 001a 0B46     		mov	r3, r1
+  60 001c 14A1     		adr	r1, .L3
+  61 001e D1E90001 		ldrd	r0, [r1]
+  62 0022 FFF7FEFF 		bl	__aeabi_dsub
+  63              	.LVL4:
+  64 0026 0022     		movs	r2, #0
+  65 0028 144B     		ldr	r3, .L3+12
+  66 002a FFF7FEFF 		bl	__aeabi_ddiv
+  67              	.LVL5:
+  68 002e FFF7FEFF 		bl	__aeabi_d2f
+  69              	.LVL6:
+  70 0032 134C     		ldr	r4, .L3+16
+  71 0034 2060     		str	r0, [r4]	@ float
+  18:ultrasonic.c  ****     distancearray[array]=distance;
+  72              		.loc 1 18 0
+  73 0036 134A     		ldr	r2, .L3+20
+  74 0038 1668     		ldr	r6, [r2]
+  75 003a 134A     		ldr	r2, .L3+24
+  76 003c 42F82600 		str	r0, [r2, r6, lsl #2]	@ float
+  19:ultrasonic.c  ****     sprintf(distance_str,"The distance is %d %.3f centimeters.\n",array,distance);
+  77              		.loc 1 19 0
+  78 0040 124D     		ldr	r5, .L3+28
+  79 0042 FFF7FEFF 		bl	__aeabi_f2d
+  80              	.LVL7:
+  81 0046 CDE90001 		strd	r0, [sp]
+  82 004a 3246     		mov	r2, r6
+  83 004c 1049     		ldr	r1, .L3+32
+  84 004e 2846     		mov	r0, r5
+  85 0050 FFF7FEFF 		bl	sprintf
+  86              	.LVL8:
+  20:ultrasonic.c  ****     
+  21:ultrasonic.c  ****     UART_1_PutString(distance_str);
+  87              		.loc 1 21 0
+  88 0054 2846     		mov	r0, r5
+  89 0056 FFF7FEFF 		bl	UART_1_PutString
+  90              	.LVL9:
+  22:ultrasonic.c  ****     distance=0;
+  91              		.loc 1 22 0
+  92 005a 0023     		movs	r3, #0
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 3
+
+
+  93 005c 2360     		str	r3, [r4]	@ float
+  23:ultrasonic.c  **** //    if(distance[array] < 20){
+  24:ultrasonic.c  **** //        //LED_Write(1);
+  25:ultrasonic.c  **** //        obst_detect = 1;
+  26:ultrasonic.c  **** //    }
+  27:ultrasonic.c  **** //       else{
+  28:ultrasonic.c  **** //        LED_Write(0);
+  29:ultrasonic.c  **** //        obst_detect = 0;
+  30:ultrasonic.c  **** //    }
+  31:ultrasonic.c  ****     
+  32:ultrasonic.c  ****     CyDelay(200);    
+  94              		.loc 1 32 0
+  95 005e C820     		movs	r0, #200
+  96 0060 FFF7FEFF 		bl	CyDelay
+  97              	.LVL10:
+  33:ultrasonic.c  ****     isr_1_ClearPending();
+  98              		.loc 1 33 0
+  99 0064 FFF7FEFF 		bl	isr_1_ClearPending
+ 100              	.LVL11:
+  34:ultrasonic.c  **** }
+ 101              		.loc 1 34 0
+ 102 0068 02B0     		add	sp, sp, #8
+ 103              		.cfi_def_cfa_offset 16
+ 104              		@ sp needed
+ 105 006a 70BD     		pop	{r4, r5, r6, pc}
+ 106              	.L4:
+ 107 006c AFF30080 		.align	3
+ 108              	.L3:
+ 109 0070 00000000 		.word	0
+ 110 0074 E0FFEF40 		.word	1089470432
+ 111 0078 00000000 		.word	.LANCHOR0
+ 112 007c 00004D40 		.word	1078788096
+ 113 0080 00000000 		.word	distance
+ 114 0084 00000000 		.word	array
+ 115 0088 00000000 		.word	distancearray
+ 116 008c 00000000 		.word	distance_str
+ 117 0090 00000000 		.word	.LC0
+ 118              		.cfi_endproc
+ 119              	.LFE64:
+ 120              		.size	Timer_1_ISR_Handler, .-Timer_1_ISR_Handler
+ 121              		.section	.text.Sense1,"ax",%progbits
+ 122              		.align	2
+ 123              		.global	Sense1
+ 124              		.thumb
+ 125              		.thumb_func
+ 126              		.type	Sense1, %function
+ 127              	Sense1:
+ 128              	.LFB65:
+  35:ultrasonic.c  **** 
+  36:ultrasonic.c  **** float *Sense1()
+  37:ultrasonic.c  **** {
+ 129              		.loc 1 37 0
+ 130              		.cfi_startproc
+ 131              		@ args = 0, pretend = 0, frame = 0
+ 132              		@ frame_needed = 0, uses_anonymous_args = 0
+ 133 0000 70B5     		push	{r4, r5, r6, lr}
+ 134              		.cfi_def_cfa_offset 16
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 4
+
+
+ 135              		.cfi_offset 4, -16
+ 136              		.cfi_offset 5, -12
+ 137              		.cfi_offset 6, -8
+ 138              		.cfi_offset 14, -4
+  38:ultrasonic.c  ****     
+  39:ultrasonic.c  ****     Control_Reg_4_Write(0);
+ 139              		.loc 1 39 0
+ 140 0002 0020     		movs	r0, #0
+ 141 0004 FFF7FEFF 		bl	Control_Reg_4_Write
+ 142              	.LVL12:
+  40:ultrasonic.c  ****     CyDelay(100);
+ 143              		.loc 1 40 0
+ 144 0008 6420     		movs	r0, #100
+ 145 000a FFF7FEFF 		bl	CyDelay
+ 146              	.LVL13:
+  41:ultrasonic.c  ****     array=0;
+ 147              		.loc 1 41 0
+ 148 000e 2E4E     		ldr	r6, .L7
+ 149 0010 0024     		movs	r4, #0
+ 150 0012 3460     		str	r4, [r6]
+  42:ultrasonic.c  ****     UART_1_PutString("Sensing front left\n");
+ 151              		.loc 1 42 0
+ 152 0014 2D48     		ldr	r0, .L7+4
+ 153 0016 FFF7FEFF 		bl	UART_1_PutString
+ 154              	.LVL14:
+  43:ultrasonic.c  ****     Trigger_fl_Write(1);
+ 155              		.loc 1 43 0
+ 156 001a 0120     		movs	r0, #1
+ 157 001c FFF7FEFF 		bl	Trigger_fl_Write
+ 158              	.LVL15:
+  44:ultrasonic.c  ****     CyDelayUs(10);
+ 159              		.loc 1 44 0
+ 160 0020 0A20     		movs	r0, #10
+ 161 0022 FFF7FEFF 		bl	CyDelayUs
+ 162              	.LVL16:
+  45:ultrasonic.c  ****     Trigger_fl_Write(0);
+ 163              		.loc 1 45 0
+ 164 0026 2046     		mov	r0, r4
+ 165 0028 FFF7FEFF 		bl	Trigger_fl_Write
+ 166              	.LVL17:
+  46:ultrasonic.c  ****     CyDelay(1000);
+ 167              		.loc 1 46 0
+ 168 002c 4FF47A70 		mov	r0, #1000
+ 169 0030 FFF7FEFF 		bl	CyDelay
+ 170              	.LVL18:
+  47:ultrasonic.c  ****     
+  48:ultrasonic.c  ****     
+  49:ultrasonic.c  ****     Control_Reg_4_Write(1);
+ 171              		.loc 1 49 0
+ 172 0034 0120     		movs	r0, #1
+ 173 0036 FFF7FEFF 		bl	Control_Reg_4_Write
+ 174              	.LVL19:
+  50:ultrasonic.c  ****     CyDelay(100);
+ 175              		.loc 1 50 0
+ 176 003a 6420     		movs	r0, #100
+ 177 003c FFF7FEFF 		bl	CyDelay
+ 178              	.LVL20:
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 5
+
+
+  51:ultrasonic.c  ****     array=1;
+ 179              		.loc 1 51 0
+ 180 0040 0125     		movs	r5, #1
+ 181 0042 3560     		str	r5, [r6]
+  52:ultrasonic.c  ****     UART_1_PutString("Sensing front right\n");
+ 182              		.loc 1 52 0
+ 183 0044 2248     		ldr	r0, .L7+8
+ 184 0046 FFF7FEFF 		bl	UART_1_PutString
+ 185              	.LVL21:
+  53:ultrasonic.c  ****     Trigger_fr_Write(1);
+ 186              		.loc 1 53 0
+ 187 004a 2846     		mov	r0, r5
+ 188 004c FFF7FEFF 		bl	Trigger_fr_Write
+ 189              	.LVL22:
+  54:ultrasonic.c  ****     CyDelayUs(10);
+ 190              		.loc 1 54 0
+ 191 0050 0A20     		movs	r0, #10
+ 192 0052 FFF7FEFF 		bl	CyDelayUs
+ 193              	.LVL23:
+  55:ultrasonic.c  ****     Trigger_fr_Write(0);
+ 194              		.loc 1 55 0
+ 195 0056 2046     		mov	r0, r4
+ 196 0058 FFF7FEFF 		bl	Trigger_fr_Write
+ 197              	.LVL24:
+  56:ultrasonic.c  ****     CyDelay(1000);
+ 198              		.loc 1 56 0
+ 199 005c 4FF47A70 		mov	r0, #1000
+ 200 0060 FFF7FEFF 		bl	CyDelay
+ 201              	.LVL25:
+  57:ultrasonic.c  ****    
+  58:ultrasonic.c  ****     Control_Reg_4_Write(2);
+ 202              		.loc 1 58 0
+ 203 0064 0220     		movs	r0, #2
+ 204 0066 FFF7FEFF 		bl	Control_Reg_4_Write
+ 205              	.LVL26:
+  59:ultrasonic.c  ****     CyDelay(100);
+ 206              		.loc 1 59 0
+ 207 006a 6420     		movs	r0, #100
+ 208 006c FFF7FEFF 		bl	CyDelay
+ 209              	.LVL27:
+  60:ultrasonic.c  ****     array=2;
+ 210              		.loc 1 60 0
+ 211 0070 0223     		movs	r3, #2
+ 212 0072 3360     		str	r3, [r6]
+  61:ultrasonic.c  ****     UART_1_PutString("Sensing back left\n");
+ 213              		.loc 1 61 0
+ 214 0074 1748     		ldr	r0, .L7+12
+ 215 0076 FFF7FEFF 		bl	UART_1_PutString
+ 216              	.LVL28:
+  62:ultrasonic.c  ****     Trigger_l_Write(1);
+ 217              		.loc 1 62 0
+ 218 007a 2846     		mov	r0, r5
+ 219 007c FFF7FEFF 		bl	Trigger_l_Write
+ 220              	.LVL29:
+  63:ultrasonic.c  ****     CyDelayUs(10);
+ 221              		.loc 1 63 0
+ 222 0080 0A20     		movs	r0, #10
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 6
+
+
+ 223 0082 FFF7FEFF 		bl	CyDelayUs
+ 224              	.LVL30:
+  64:ultrasonic.c  ****     Trigger_l_Write(0);
+ 225              		.loc 1 64 0
+ 226 0086 2046     		mov	r0, r4
+ 227 0088 FFF7FEFF 		bl	Trigger_l_Write
+ 228              	.LVL31:
+  65:ultrasonic.c  ****     CyDelay(1000);
+ 229              		.loc 1 65 0
+ 230 008c 4FF47A70 		mov	r0, #1000
+ 231 0090 FFF7FEFF 		bl	CyDelay
+ 232              	.LVL32:
+  66:ultrasonic.c  ****   
+  67:ultrasonic.c  ****     Control_Reg_4_Write(3);
+ 233              		.loc 1 67 0
+ 234 0094 0320     		movs	r0, #3
+ 235 0096 FFF7FEFF 		bl	Control_Reg_4_Write
+ 236              	.LVL33:
+  68:ultrasonic.c  ****     CyDelay(100);
+ 237              		.loc 1 68 0
+ 238 009a 6420     		movs	r0, #100
+ 239 009c FFF7FEFF 		bl	CyDelay
+ 240              	.LVL34:
+  69:ultrasonic.c  ****     array=3;
+ 241              		.loc 1 69 0
+ 242 00a0 0323     		movs	r3, #3
+ 243 00a2 3360     		str	r3, [r6]
+  70:ultrasonic.c  ****     UART_1_PutString("Sensing back right\n");
+ 244              		.loc 1 70 0
+ 245 00a4 0C48     		ldr	r0, .L7+16
+ 246 00a6 FFF7FEFF 		bl	UART_1_PutString
+ 247              	.LVL35:
+  71:ultrasonic.c  ****     Trigger_r_Write(1);
+ 248              		.loc 1 71 0
+ 249 00aa 2846     		mov	r0, r5
+ 250 00ac FFF7FEFF 		bl	Trigger_r_Write
+ 251              	.LVL36:
+  72:ultrasonic.c  ****     CyDelayUs(10);
+ 252              		.loc 1 72 0
+ 253 00b0 0A20     		movs	r0, #10
+ 254 00b2 FFF7FEFF 		bl	CyDelayUs
+ 255              	.LVL37:
+  73:ultrasonic.c  ****     Trigger_r_Write(0);
+ 256              		.loc 1 73 0
+ 257 00b6 2046     		mov	r0, r4
+ 258 00b8 FFF7FEFF 		bl	Trigger_r_Write
+ 259              	.LVL38:
+  74:ultrasonic.c  ****     CyDelay(1000);
+ 260              		.loc 1 74 0
+ 261 00bc 4FF47A70 		mov	r0, #1000
+ 262 00c0 FFF7FEFF 		bl	CyDelay
+ 263              	.LVL39:
+  75:ultrasonic.c  ****     
+  76:ultrasonic.c  ****     
+  77:ultrasonic.c  ****     return distancearray;      
+  78:ultrasonic.c  **** }...
+ 264              		.loc 1 78 0
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 7
+
+
+ 265 00c4 0548     		ldr	r0, .L7+20
+ 266 00c6 70BD     		pop	{r4, r5, r6, pc}
+ 267              	.L8:
+ 268              		.align	2
+ 269              	.L7:
+ 270 00c8 00000000 		.word	array
+ 271 00cc 28000000 		.word	.LC1
+ 272 00d0 3C000000 		.word	.LC2
+ 273 00d4 54000000 		.word	.LC3
+ 274 00d8 68000000 		.word	.LC4
+ 275 00dc 00000000 		.word	distancearray
+ 276              		.cfi_endproc
+ 277              	.LFE65:
+ 278              		.size	Sense1, .-Sense1
+ 279              		.comm	distancearray,40,4
+ 280              		.comm	array,4,4
+ 281              		.global	obst_detect
+ 282              		.comm	distance_str,100,4
+ 283              		.comm	distance,4,4
+ 284              		.global	count
+ 285              		.section	.rodata.str1.4,"aMS",%progbits,1
+ 286              		.align	2
+ 287              	.LC0:
+ 288 0000 54686520 		.ascii	"The distance is %d %.3f centimeters.\012\000"
+ 288      64697374 
+ 288      616E6365 
+ 288      20697320 
+ 288      25642025 
+ 289 0026 0000     		.space	2
+ 290              	.LC1:
+ 291 0028 53656E73 		.ascii	"Sensing front left\012\000"
+ 291      696E6720 
+ 291      66726F6E 
+ 291      74206C65 
+ 291      66740A00 
+ 292              	.LC2:
+ 293 003c 53656E73 		.ascii	"Sensing front right\012\000"
+ 293      696E6720 
+ 293      66726F6E 
+ 293      74207269 
+ 293      6768740A 
+ 294 0051 000000   		.space	3
+ 295              	.LC3:
+ 296 0054 53656E73 		.ascii	"Sensing back left\012\000"
+ 296      696E6720 
+ 296      6261636B 
+ 296      206C6566 
+ 296      740A00
+ 297 0067 00       		.space	1
+ 298              	.LC4:
+ 299 0068 53656E73 		.ascii	"Sensing back right\012\000"
+ 299      696E6720 
+ 299      6261636B 
+ 299      20726967 
+ 299      68740A00 
+ 300              		.bss
+ 301              		.align	2
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 8
+
+
+ 302              		.set	.LANCHOR0,. + 0
+ 303              		.type	count, %object
+ 304              		.size	count, 4
+ 305              	count:
+ 306 0000 00000000 		.space	4
+ 307              		.type	obst_detect, %object
+ 308              		.size	obst_detect, 4
+ 309              	obst_detect:
+ 310 0004 00000000 		.space	4
+ 311              		.text
+ 312              	.Letext0:
+ 313              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 314              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 315              		.file 4 "Generated_Source\\PSoC5/core_cm3.h"
+ 316              		.file 5 "Generated_Source\\PSoC5/Timer_1.h"
+ 317              		.file 6 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+ 318              		.file 7 "Generated_Source\\PSoC5/UART_1.h"
+ 319              		.file 8 "Generated_Source\\PSoC5/CyLib.h"
+ 320              		.file 9 "Generated_Source\\PSoC5/isr_1.h"
+ 321              		.file 10 "Generated_Source\\PSoC5/Control_Reg_4.h"
+ 322              		.file 11 "Generated_Source\\PSoC5/Trigger_fl.h"
+ 323              		.file 12 "Generated_Source\\PSoC5/Trigger_fr.h"
+ 324              		.file 13 "Generated_Source\\PSoC5/Trigger_l.h"
+ 325              		.file 14 "Generated_Source\\PSoC5/Trigger_r.h"
+ 326              		.section	.debug_info,"",%progbits
+ 327              	.Ldebug_info0:
+ 328 0000 8B040000 		.4byte	0x48b
+ 329 0004 0400     		.2byte	0x4
+ 330 0006 00000000 		.4byte	.Ldebug_abbrev0
+ 331 000a 04       		.byte	0x4
+ 332 000b 01       		.uleb128 0x1
+ 333 000c 57000000 		.4byte	.LASF37
+ 334 0010 0C       		.byte	0xc
+ 335 0011 2D000000 		.4byte	.LASF38
+ 336 0015 E5000000 		.4byte	.LASF39
+ 337 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 338 001d 00000000 		.4byte	0
+ 339 0021 00000000 		.4byte	.Ldebug_line0
+ 340 0025 02       		.uleb128 0x2
+ 341 0026 01       		.byte	0x1
+ 342 0027 06       		.byte	0x6
+ 343 0028 73020000 		.4byte	.LASF0
+ 344 002c 02       		.uleb128 0x2
+ 345 002d 01       		.byte	0x1
+ 346 002e 08       		.byte	0x8
+ 347 002f 49000000 		.4byte	.LASF1
+ 348 0033 02       		.uleb128 0x2
+ 349 0034 02       		.byte	0x2
+ 350 0035 05       		.byte	0x5
+ 351 0036 25020000 		.4byte	.LASF2
+ 352 003a 02       		.uleb128 0x2
+ 353 003b 02       		.byte	0x2
+ 354 003c 07       		.byte	0x7
+ 355 003d 44010000 		.4byte	.LASF3
+ 356 0041 03       		.uleb128 0x3
+ 357 0042 13000000 		.4byte	.LASF12
+ 358 0046 02       		.byte	0x2
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 9
+
+
+ 359 0047 3F       		.byte	0x3f
+ 360 0048 4C000000 		.4byte	0x4c
+ 361 004c 02       		.uleb128 0x2
+ 362 004d 04       		.byte	0x4
+ 363 004e 05       		.byte	0x5
+ 364 004f 4A020000 		.4byte	.LASF4
+ 365 0053 02       		.uleb128 0x2
+ 366 0054 04       		.byte	0x4
+ 367 0055 07       		.byte	0x7
+ 368 0056 32010000 		.4byte	.LASF5
+ 369 005a 02       		.uleb128 0x2
+ 370 005b 08       		.byte	0x8
+ 371 005c 05       		.byte	0x5
+ 372 005d EE010000 		.4byte	.LASF6
+ 373 0061 02       		.uleb128 0x2
+ 374 0062 08       		.byte	0x8
+ 375 0063 07       		.byte	0x7
+ 376 0064 A8010000 		.4byte	.LASF7
+ 377 0068 04       		.uleb128 0x4
+ 378 0069 04       		.byte	0x4
+ 379 006a 05       		.byte	0x5
+ 380 006b 696E7400 		.ascii	"int\000"
+ 381 006f 02       		.uleb128 0x2
+ 382 0070 04       		.byte	0x4
+ 383 0071 07       		.byte	0x7
+ 384 0072 9B010000 		.4byte	.LASF8
+ 385 0076 02       		.uleb128 0x2
+ 386 0077 08       		.byte	0x8
+ 387 0078 04       		.byte	0x4
+ 388 0079 67020000 		.4byte	.LASF9
+ 389 007d 02       		.uleb128 0x2
+ 390 007e 04       		.byte	0x4
+ 391 007f 07       		.byte	0x7
+ 392 0080 D7010000 		.4byte	.LASF10
+ 393 0084 02       		.uleb128 0x2
+ 394 0085 01       		.byte	0x1
+ 395 0086 08       		.byte	0x8
+ 396 0087 06020000 		.4byte	.LASF11
+ 397 008b 03       		.uleb128 0x3
+ 398 008c CF010000 		.4byte	.LASF13
+ 399 0090 03       		.byte	0x3
+ 400 0091 2C       		.byte	0x2c
+ 401 0092 41000000 		.4byte	0x41
+ 402 0096 02       		.uleb128 0x2
+ 403 0097 04       		.byte	0x4
+ 404 0098 04       		.byte	0x4
+ 405 0099 43000000 		.4byte	.LASF14
+ 406 009d 02       		.uleb128 0x2
+ 407 009e 08       		.byte	0x8
+ 408 009f 04       		.byte	0x4
+ 409 00a0 7B010000 		.4byte	.LASF15
+ 410 00a4 05       		.uleb128 0x5
+ 411 00a5 A7020000 		.4byte	.LASF16
+ 412 00a9 01       		.byte	0x1
+ 413 00aa 0D       		.byte	0xd
+ 414 00ab 00000000 		.4byte	.LFB64
+ 415 00af 94000000 		.4byte	.LFE64-.LFB64
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 10
+
+
+ 416 00b3 01       		.uleb128 0x1
+ 417 00b4 9C       		.byte	0x9c
+ 418 00b5 20010000 		.4byte	0x120
+ 419 00b9 06       		.uleb128 0x6
+ 420 00ba 08000000 		.4byte	.LVL0
+ 421 00be 0A040000 		.4byte	0x40a
+ 422 00c2 06       		.uleb128 0x6
+ 423 00c3 0C000000 		.4byte	.LVL1
+ 424 00c7 15040000 		.4byte	0x415
+ 425 00cb 07       		.uleb128 0x7
+ 426 00cc 54000000 		.4byte	.LVL8
+ 427 00d0 20040000 		.4byte	0x420
+ 428 00d4 EE000000 		.4byte	0xee
+ 429 00d8 08       		.uleb128 0x8
+ 430 00d9 01       		.uleb128 0x1
+ 431 00da 50       		.byte	0x50
+ 432 00db 02       		.uleb128 0x2
+ 433 00dc 75       		.byte	0x75
+ 434 00dd 00       		.sleb128 0
+ 435 00de 08       		.uleb128 0x8
+ 436 00df 01       		.uleb128 0x1
+ 437 00e0 51       		.byte	0x51
+ 438 00e1 05       		.uleb128 0x5
+ 439 00e2 03       		.byte	0x3
+ 440 00e3 00000000 		.4byte	.LC0
+ 441 00e7 08       		.uleb128 0x8
+ 442 00e8 01       		.uleb128 0x1
+ 443 00e9 52       		.byte	0x52
+ 444 00ea 02       		.uleb128 0x2
+ 445 00eb 76       		.byte	0x76
+ 446 00ec 00       		.sleb128 0
+ 447 00ed 00       		.byte	0
+ 448 00ee 07       		.uleb128 0x7
+ 449 00ef 5A000000 		.4byte	.LVL9
+ 450 00f3 2B040000 		.4byte	0x42b
+ 451 00f7 02010000 		.4byte	0x102
+ 452 00fb 08       		.uleb128 0x8
+ 453 00fc 01       		.uleb128 0x1
+ 454 00fd 50       		.byte	0x50
+ 455 00fe 02       		.uleb128 0x2
+ 456 00ff 75       		.byte	0x75
+ 457 0100 00       		.sleb128 0
+ 458 0101 00       		.byte	0
+ 459 0102 07       		.uleb128 0x7
+ 460 0103 64000000 		.4byte	.LVL10
+ 461 0107 36040000 		.4byte	0x436
+ 462 010b 16010000 		.4byte	0x116
+ 463 010f 08       		.uleb128 0x8
+ 464 0110 01       		.uleb128 0x1
+ 465 0111 50       		.byte	0x50
+ 466 0112 02       		.uleb128 0x2
+ 467 0113 08       		.byte	0x8
+ 468 0114 C8       		.byte	0xc8
+ 469 0115 00       		.byte	0
+ 470 0116 06       		.uleb128 0x6
+ 471 0117 68000000 		.4byte	.LVL11
+ 472 011b 41040000 		.4byte	0x441
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 11
+
+
+ 473 011f 00       		.byte	0
+ 474 0120 09       		.uleb128 0x9
+ 475 0121 7F020000 		.4byte	.LASF17
+ 476 0125 01       		.byte	0x1
+ 477 0126 24       		.byte	0x24
+ 478 0127 6D030000 		.4byte	0x36d
+ 479 012b 00000000 		.4byte	.LFB65
+ 480 012f E0000000 		.4byte	.LFE65-.LFB65
+ 481 0133 01       		.uleb128 0x1
+ 482 0134 9C       		.byte	0x9c
+ 483 0135 6D030000 		.4byte	0x36d
+ 484 0139 07       		.uleb128 0x7
+ 485 013a 08000000 		.4byte	.LVL12
+ 486 013e 4C040000 		.4byte	0x44c
+ 487 0142 4C010000 		.4byte	0x14c
+ 488 0146 08       		.uleb128 0x8
+ 489 0147 01       		.uleb128 0x1
+ 490 0148 50       		.byte	0x50
+ 491 0149 01       		.uleb128 0x1
+ 492 014a 30       		.byte	0x30
+ 493 014b 00       		.byte	0
+ 494 014c 07       		.uleb128 0x7
+ 495 014d 0E000000 		.4byte	.LVL13
+ 496 0151 36040000 		.4byte	0x436
+ 497 0155 60010000 		.4byte	0x160
+ 498 0159 08       		.uleb128 0x8
+ 499 015a 01       		.uleb128 0x1
+ 500 015b 50       		.byte	0x50
+ 501 015c 02       		.uleb128 0x2
+ 502 015d 08       		.byte	0x8
+ 503 015e 64       		.byte	0x64
+ 504 015f 00       		.byte	0
+ 505 0160 07       		.uleb128 0x7
+ 506 0161 1A000000 		.4byte	.LVL14
+ 507 0165 2B040000 		.4byte	0x42b
+ 508 0169 77010000 		.4byte	0x177
+ 509 016d 08       		.uleb128 0x8
+ 510 016e 01       		.uleb128 0x1
+ 511 016f 50       		.byte	0x50
+ 512 0170 05       		.uleb128 0x5
+ 513 0171 03       		.byte	0x3
+ 514 0172 28000000 		.4byte	.LC1
+ 515 0176 00       		.byte	0
+ 516 0177 07       		.uleb128 0x7
+ 517 0178 20000000 		.4byte	.LVL15
+ 518 017c 57040000 		.4byte	0x457
+ 519 0180 8A010000 		.4byte	0x18a
+ 520 0184 08       		.uleb128 0x8
+ 521 0185 01       		.uleb128 0x1
+ 522 0186 50       		.byte	0x50
+ 523 0187 01       		.uleb128 0x1
+ 524 0188 31       		.byte	0x31
+ 525 0189 00       		.byte	0
+ 526 018a 07       		.uleb128 0x7
+ 527 018b 26000000 		.4byte	.LVL16
+ 528 018f 62040000 		.4byte	0x462
+ 529 0193 9D010000 		.4byte	0x19d
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 12
+
+
+ 530 0197 08       		.uleb128 0x8
+ 531 0198 01       		.uleb128 0x1
+ 532 0199 50       		.byte	0x50
+ 533 019a 01       		.uleb128 0x1
+ 534 019b 3A       		.byte	0x3a
+ 535 019c 00       		.byte	0
+ 536 019d 07       		.uleb128 0x7
+ 537 019e 2C000000 		.4byte	.LVL17
+ 538 01a2 57040000 		.4byte	0x457
+ 539 01a6 B1010000 		.4byte	0x1b1
+ 540 01aa 08       		.uleb128 0x8
+ 541 01ab 01       		.uleb128 0x1
+ 542 01ac 50       		.byte	0x50
+ 543 01ad 02       		.uleb128 0x2
+ 544 01ae 74       		.byte	0x74
+ 545 01af 00       		.sleb128 0
+ 546 01b0 00       		.byte	0
+ 547 01b1 07       		.uleb128 0x7
+ 548 01b2 34000000 		.4byte	.LVL18
+ 549 01b6 36040000 		.4byte	0x436
+ 550 01ba C6010000 		.4byte	0x1c6
+ 551 01be 08       		.uleb128 0x8
+ 552 01bf 01       		.uleb128 0x1
+ 553 01c0 50       		.byte	0x50
+ 554 01c1 03       		.uleb128 0x3
+ 555 01c2 0A       		.byte	0xa
+ 556 01c3 E803     		.2byte	0x3e8
+ 557 01c5 00       		.byte	0
+ 558 01c6 07       		.uleb128 0x7
+ 559 01c7 3A000000 		.4byte	.LVL19
+ 560 01cb 4C040000 		.4byte	0x44c
+ 561 01cf D9010000 		.4byte	0x1d9
+ 562 01d3 08       		.uleb128 0x8
+ 563 01d4 01       		.uleb128 0x1
+ 564 01d5 50       		.byte	0x50
+ 565 01d6 01       		.uleb128 0x1
+ 566 01d7 31       		.byte	0x31
+ 567 01d8 00       		.byte	0
+ 568 01d9 07       		.uleb128 0x7
+ 569 01da 40000000 		.4byte	.LVL20
+ 570 01de 36040000 		.4byte	0x436
+ 571 01e2 ED010000 		.4byte	0x1ed
+ 572 01e6 08       		.uleb128 0x8
+ 573 01e7 01       		.uleb128 0x1
+ 574 01e8 50       		.byte	0x50
+ 575 01e9 02       		.uleb128 0x2
+ 576 01ea 08       		.byte	0x8
+ 577 01eb 64       		.byte	0x64
+ 578 01ec 00       		.byte	0
+ 579 01ed 07       		.uleb128 0x7
+ 580 01ee 4A000000 		.4byte	.LVL21
+ 581 01f2 2B040000 		.4byte	0x42b
+ 582 01f6 04020000 		.4byte	0x204
+ 583 01fa 08       		.uleb128 0x8
+ 584 01fb 01       		.uleb128 0x1
+ 585 01fc 50       		.byte	0x50
+ 586 01fd 05       		.uleb128 0x5
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 13
+
+
+ 587 01fe 03       		.byte	0x3
+ 588 01ff 3C000000 		.4byte	.LC2
+ 589 0203 00       		.byte	0
+ 590 0204 07       		.uleb128 0x7
+ 591 0205 50000000 		.4byte	.LVL22
+ 592 0209 6D040000 		.4byte	0x46d
+ 593 020d 18020000 		.4byte	0x218
+ 594 0211 08       		.uleb128 0x8
+ 595 0212 01       		.uleb128 0x1
+ 596 0213 50       		.byte	0x50
+ 597 0214 02       		.uleb128 0x2
+ 598 0215 75       		.byte	0x75
+ 599 0216 00       		.sleb128 0
+ 600 0217 00       		.byte	0
+ 601 0218 07       		.uleb128 0x7
+ 602 0219 56000000 		.4byte	.LVL23
+ 603 021d 62040000 		.4byte	0x462
+ 604 0221 2B020000 		.4byte	0x22b
+ 605 0225 08       		.uleb128 0x8
+ 606 0226 01       		.uleb128 0x1
+ 607 0227 50       		.byte	0x50
+ 608 0228 01       		.uleb128 0x1
+ 609 0229 3A       		.byte	0x3a
+ 610 022a 00       		.byte	0
+ 611 022b 07       		.uleb128 0x7
+ 612 022c 5C000000 		.4byte	.LVL24
+ 613 0230 6D040000 		.4byte	0x46d
+ 614 0234 3F020000 		.4byte	0x23f
+ 615 0238 08       		.uleb128 0x8
+ 616 0239 01       		.uleb128 0x1
+ 617 023a 50       		.byte	0x50
+ 618 023b 02       		.uleb128 0x2
+ 619 023c 74       		.byte	0x74
+ 620 023d 00       		.sleb128 0
+ 621 023e 00       		.byte	0
+ 622 023f 07       		.uleb128 0x7
+ 623 0240 64000000 		.4byte	.LVL25
+ 624 0244 36040000 		.4byte	0x436
+ 625 0248 54020000 		.4byte	0x254
+ 626 024c 08       		.uleb128 0x8
+ 627 024d 01       		.uleb128 0x1
+ 628 024e 50       		.byte	0x50
+ 629 024f 03       		.uleb128 0x3
+ 630 0250 0A       		.byte	0xa
+ 631 0251 E803     		.2byte	0x3e8
+ 632 0253 00       		.byte	0
+ 633 0254 07       		.uleb128 0x7
+ 634 0255 6A000000 		.4byte	.LVL26
+ 635 0259 4C040000 		.4byte	0x44c
+ 636 025d 67020000 		.4byte	0x267
+ 637 0261 08       		.uleb128 0x8
+ 638 0262 01       		.uleb128 0x1
+ 639 0263 50       		.byte	0x50
+ 640 0264 01       		.uleb128 0x1
+ 641 0265 32       		.byte	0x32
+ 642 0266 00       		.byte	0
+ 643 0267 07       		.uleb128 0x7
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 14
+
+
+ 644 0268 70000000 		.4byte	.LVL27
+ 645 026c 36040000 		.4byte	0x436
+ 646 0270 7B020000 		.4byte	0x27b
+ 647 0274 08       		.uleb128 0x8
+ 648 0275 01       		.uleb128 0x1
+ 649 0276 50       		.byte	0x50
+ 650 0277 02       		.uleb128 0x2
+ 651 0278 08       		.byte	0x8
+ 652 0279 64       		.byte	0x64
+ 653 027a 00       		.byte	0
+ 654 027b 07       		.uleb128 0x7
+ 655 027c 7A000000 		.4byte	.LVL28
+ 656 0280 2B040000 		.4byte	0x42b
+ 657 0284 92020000 		.4byte	0x292
+ 658 0288 08       		.uleb128 0x8
+ 659 0289 01       		.uleb128 0x1
+ 660 028a 50       		.byte	0x50
+ 661 028b 05       		.uleb128 0x5
+ 662 028c 03       		.byte	0x3
+ 663 028d 54000000 		.4byte	.LC3
+ 664 0291 00       		.byte	0
+ 665 0292 07       		.uleb128 0x7
+ 666 0293 80000000 		.4byte	.LVL29
+ 667 0297 78040000 		.4byte	0x478
+ 668 029b A6020000 		.4byte	0x2a6
+ 669 029f 08       		.uleb128 0x8
+ 670 02a0 01       		.uleb128 0x1
+ 671 02a1 50       		.byte	0x50
+ 672 02a2 02       		.uleb128 0x2
+ 673 02a3 75       		.byte	0x75
+ 674 02a4 00       		.sleb128 0
+ 675 02a5 00       		.byte	0
+ 676 02a6 07       		.uleb128 0x7
+ 677 02a7 86000000 		.4byte	.LVL30
+ 678 02ab 62040000 		.4byte	0x462
+ 679 02af B9020000 		.4byte	0x2b9
+ 680 02b3 08       		.uleb128 0x8
+ 681 02b4 01       		.uleb128 0x1
+ 682 02b5 50       		.byte	0x50
+ 683 02b6 01       		.uleb128 0x1
+ 684 02b7 3A       		.byte	0x3a
+ 685 02b8 00       		.byte	0
+ 686 02b9 07       		.uleb128 0x7
+ 687 02ba 8C000000 		.4byte	.LVL31
+ 688 02be 78040000 		.4byte	0x478
+ 689 02c2 CD020000 		.4byte	0x2cd
+ 690 02c6 08       		.uleb128 0x8
+ 691 02c7 01       		.uleb128 0x1
+ 692 02c8 50       		.byte	0x50
+ 693 02c9 02       		.uleb128 0x2
+ 694 02ca 74       		.byte	0x74
+ 695 02cb 00       		.sleb128 0
+ 696 02cc 00       		.byte	0
+ 697 02cd 07       		.uleb128 0x7
+ 698 02ce 94000000 		.4byte	.LVL32
+ 699 02d2 36040000 		.4byte	0x436
+ 700 02d6 E2020000 		.4byte	0x2e2
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 15
+
+
+ 701 02da 08       		.uleb128 0x8
+ 702 02db 01       		.uleb128 0x1
+ 703 02dc 50       		.byte	0x50
+ 704 02dd 03       		.uleb128 0x3
+ 705 02de 0A       		.byte	0xa
+ 706 02df E803     		.2byte	0x3e8
+ 707 02e1 00       		.byte	0
+ 708 02e2 07       		.uleb128 0x7
+ 709 02e3 9A000000 		.4byte	.LVL33
+ 710 02e7 4C040000 		.4byte	0x44c
+ 711 02eb F5020000 		.4byte	0x2f5
+ 712 02ef 08       		.uleb128 0x8
+ 713 02f0 01       		.uleb128 0x1
+ 714 02f1 50       		.byte	0x50
+ 715 02f2 01       		.uleb128 0x1
+ 716 02f3 33       		.byte	0x33
+ 717 02f4 00       		.byte	0
+ 718 02f5 07       		.uleb128 0x7
+ 719 02f6 A0000000 		.4byte	.LVL34
+ 720 02fa 36040000 		.4byte	0x436
+ 721 02fe 09030000 		.4byte	0x309
+ 722 0302 08       		.uleb128 0x8
+ 723 0303 01       		.uleb128 0x1
+ 724 0304 50       		.byte	0x50
+ 725 0305 02       		.uleb128 0x2
+ 726 0306 08       		.byte	0x8
+ 727 0307 64       		.byte	0x64
+ 728 0308 00       		.byte	0
+ 729 0309 07       		.uleb128 0x7
+ 730 030a AA000000 		.4byte	.LVL35
+ 731 030e 2B040000 		.4byte	0x42b
+ 732 0312 20030000 		.4byte	0x320
+ 733 0316 08       		.uleb128 0x8
+ 734 0317 01       		.uleb128 0x1
+ 735 0318 50       		.byte	0x50
+ 736 0319 05       		.uleb128 0x5
+ 737 031a 03       		.byte	0x3
+ 738 031b 68000000 		.4byte	.LC4
+ 739 031f 00       		.byte	0
+ 740 0320 07       		.uleb128 0x7
+ 741 0321 B0000000 		.4byte	.LVL36
+ 742 0325 83040000 		.4byte	0x483
+ 743 0329 34030000 		.4byte	0x334
+ 744 032d 08       		.uleb128 0x8
+ 745 032e 01       		.uleb128 0x1
+ 746 032f 50       		.byte	0x50
+ 747 0330 02       		.uleb128 0x2
+ 748 0331 75       		.byte	0x75
+ 749 0332 00       		.sleb128 0
+ 750 0333 00       		.byte	0
+ 751 0334 07       		.uleb128 0x7
+ 752 0335 B6000000 		.4byte	.LVL37
+ 753 0339 62040000 		.4byte	0x462
+ 754 033d 47030000 		.4byte	0x347
+ 755 0341 08       		.uleb128 0x8
+ 756 0342 01       		.uleb128 0x1
+ 757 0343 50       		.byte	0x50
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 16
+
+
+ 758 0344 01       		.uleb128 0x1
+ 759 0345 3A       		.byte	0x3a
+ 760 0346 00       		.byte	0
+ 761 0347 07       		.uleb128 0x7
+ 762 0348 BC000000 		.4byte	.LVL38
+ 763 034c 83040000 		.4byte	0x483
+ 764 0350 5B030000 		.4byte	0x35b
+ 765 0354 08       		.uleb128 0x8
+ 766 0355 01       		.uleb128 0x1
+ 767 0356 50       		.byte	0x50
+ 768 0357 02       		.uleb128 0x2
+ 769 0358 74       		.byte	0x74
+ 770 0359 00       		.sleb128 0
+ 771 035a 00       		.byte	0
+ 772 035b 0A       		.uleb128 0xa
+ 773 035c C4000000 		.4byte	.LVL39
+ 774 0360 36040000 		.4byte	0x436
+ 775 0364 08       		.uleb128 0x8
+ 776 0365 01       		.uleb128 0x1
+ 777 0366 50       		.byte	0x50
+ 778 0367 03       		.uleb128 0x3
+ 779 0368 0A       		.byte	0xa
+ 780 0369 E803     		.2byte	0x3e8
+ 781 036b 00       		.byte	0
+ 782 036c 00       		.byte	0
+ 783 036d 0B       		.uleb128 0xb
+ 784 036e 04       		.byte	0x4
+ 785 036f 96000000 		.4byte	0x96
+ 786 0373 0C       		.uleb128 0xc
+ 787 0374 5D010000 		.4byte	.LASF18
+ 788 0378 04       		.byte	0x4
+ 789 0379 1207     		.2byte	0x712
+ 790 037b 7F030000 		.4byte	0x37f
+ 791 037f 0D       		.uleb128 0xd
+ 792 0380 8B000000 		.4byte	0x8b
+ 793 0384 0E       		.uleb128 0xe
+ 794 0385 1F020000 		.4byte	.LASF19
+ 795 0389 01       		.byte	0x1
+ 796 038a 06       		.byte	0x6
+ 797 038b 96000000 		.4byte	0x96
+ 798 038f 05       		.uleb128 0x5
+ 799 0390 03       		.byte	0x3
+ 800 0391 00000000 		.4byte	count
+ 801 0395 0E       		.uleb128 0xe
+ 802 0396 3A000000 		.4byte	.LASF20
+ 803 039a 01       		.byte	0x1
+ 804 039b 07       		.byte	0x7
+ 805 039c 96000000 		.4byte	0x96
+ 806 03a0 05       		.uleb128 0x5
+ 807 03a1 03       		.byte	0x3
+ 808 03a2 00000000 		.4byte	distance
+ 809 03a6 0F       		.uleb128 0xf
+ 810 03a7 84000000 		.4byte	0x84
+ 811 03ab B6030000 		.4byte	0x3b6
+ 812 03af 10       		.uleb128 0x10
+ 813 03b0 7D000000 		.4byte	0x7d
+ 814 03b4 63       		.byte	0x63
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 17
+
+
+ 815 03b5 00       		.byte	0
+ 816 03b6 0E       		.uleb128 0xe
+ 817 03b7 82010000 		.4byte	.LASF21
+ 818 03bb 01       		.byte	0x1
+ 819 03bc 08       		.byte	0x8
+ 820 03bd A6030000 		.4byte	0x3a6
+ 821 03c1 05       		.uleb128 0x5
+ 822 03c2 03       		.byte	0x3
+ 823 03c3 00000000 		.4byte	distance_str
+ 824 03c7 0E       		.uleb128 0xe
+ 825 03c8 8F010000 		.4byte	.LASF22
+ 826 03cc 01       		.byte	0x1
+ 827 03cd 09       		.byte	0x9
+ 828 03ce 68000000 		.4byte	0x68
+ 829 03d2 05       		.uleb128 0x5
+ 830 03d3 03       		.byte	0x3
+ 831 03d4 00000000 		.4byte	obst_detect
+ 832 03d8 0E       		.uleb128 0xe
+ 833 03d9 57010000 		.4byte	.LASF23
+ 834 03dd 01       		.byte	0x1
+ 835 03de 0A       		.byte	0xa
+ 836 03df 68000000 		.4byte	0x68
+ 837 03e3 05       		.uleb128 0x5
+ 838 03e4 03       		.byte	0x3
+ 839 03e5 00000000 		.4byte	array
+ 840 03e9 0F       		.uleb128 0xf
+ 841 03ea 96000000 		.4byte	0x96
+ 842 03ee F9030000 		.4byte	0x3f9
+ 843 03f2 10       		.uleb128 0x10
+ 844 03f3 7D000000 		.4byte	0x7d
+ 845 03f7 09       		.byte	0x9
+ 846 03f8 00       		.byte	0
+ 847 03f9 0E       		.uleb128 0xe
+ 848 03fa E0010000 		.4byte	.LASF24
+ 849 03fe 01       		.byte	0x1
+ 850 03ff 0B       		.byte	0xb
+ 851 0400 E9030000 		.4byte	0x3e9
+ 852 0404 05       		.uleb128 0x5
+ 853 0405 03       		.byte	0x3
+ 854 0406 00000000 		.4byte	distancearray
+ 855 040a 11       		.uleb128 0x11
+ 856 040b 2F020000 		.4byte	.LASF25
+ 857 040f 2F020000 		.4byte	.LASF25
+ 858 0413 05       		.byte	0x5
+ 859 0414 5E       		.byte	0x5e
+ 860 0415 11       		.uleb128 0x11
+ 861 0416 0B020000 		.4byte	.LASF26
+ 862 041a 0B020000 		.4byte	.LASF26
+ 863 041e 05       		.byte	0x5
+ 864 041f 69       		.byte	0x69
+ 865 0420 11       		.uleb128 0x11
+ 866 0421 97020000 		.4byte	.LASF27
+ 867 0425 97020000 		.4byte	.LASF27
+ 868 0429 06       		.byte	0x6
+ 869 042a E7       		.byte	0xe7
+ 870 042b 11       		.uleb128 0x11
+ 871 042c 86020000 		.4byte	.LASF28
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 18
+
+
+ 872 0430 86020000 		.4byte	.LASF28
+ 873 0434 07       		.byte	0x7
+ 874 0435 8B       		.byte	0x8b
+ 875 0436 11       		.uleb128 0x11
+ 876 0437 9F020000 		.4byte	.LASF29
+ 877 043b 9F020000 		.4byte	.LASF29
+ 878 043f 08       		.byte	0x8
+ 879 0440 76       		.byte	0x76
+ 880 0441 11       		.uleb128 0x11
+ 881 0442 00000000 		.4byte	.LASF30
+ 882 0446 00000000 		.4byte	.LASF30
+ 883 044a 09       		.byte	0x9
+ 884 044b 28       		.byte	0x28
+ 885 044c 11       		.uleb128 0x11
+ 886 044d 53020000 		.4byte	.LASF31
+ 887 0451 53020000 		.4byte	.LASF31
+ 888 0455 0A       		.byte	0xa
+ 889 0456 2F       		.byte	0x2f
+ 890 0457 11       		.uleb128 0x11
+ 891 0458 21010000 		.4byte	.LASF32
+ 892 045c 21010000 		.4byte	.LASF32
+ 893 0460 0B       		.byte	0xb
+ 894 0461 26       		.byte	0x26
+ 895 0462 11       		.uleb128 0x11
+ 896 0463 FC010000 		.4byte	.LASF33
+ 897 0467 FC010000 		.4byte	.LASF33
+ 898 046b 08       		.byte	0x8
+ 899 046c 77       		.byte	0x77
+ 900 046d 11       		.uleb128 0x11
+ 901 046e 6A010000 		.4byte	.LASF34
+ 902 0472 6A010000 		.4byte	.LASF34
+ 903 0476 0C       		.byte	0xc
+ 904 0477 26       		.byte	0x26
+ 905 0478 11       		.uleb128 0x11
+ 906 0479 BF010000 		.4byte	.LASF35
+ 907 047d BF010000 		.4byte	.LASF35
+ 908 0481 0D       		.byte	0xd
+ 909 0482 26       		.byte	0x26
+ 910 0483 11       		.uleb128 0x11
+ 911 0484 1D000000 		.4byte	.LASF36
+ 912 0488 1D000000 		.4byte	.LASF36
+ 913 048c 0E       		.byte	0xe
+ 914 048d 26       		.byte	0x26
+ 915 048e 00       		.byte	0
+ 916              		.section	.debug_abbrev,"",%progbits
+ 917              	.Ldebug_abbrev0:
+ 918 0000 01       		.uleb128 0x1
+ 919 0001 11       		.uleb128 0x11
+ 920 0002 01       		.byte	0x1
+ 921 0003 25       		.uleb128 0x25
+ 922 0004 0E       		.uleb128 0xe
+ 923 0005 13       		.uleb128 0x13
+ 924 0006 0B       		.uleb128 0xb
+ 925 0007 03       		.uleb128 0x3
+ 926 0008 0E       		.uleb128 0xe
+ 927 0009 1B       		.uleb128 0x1b
+ 928 000a 0E       		.uleb128 0xe
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 19
+
+
+ 929 000b 55       		.uleb128 0x55
+ 930 000c 17       		.uleb128 0x17
+ 931 000d 11       		.uleb128 0x11
+ 932 000e 01       		.uleb128 0x1
+ 933 000f 10       		.uleb128 0x10
+ 934 0010 17       		.uleb128 0x17
+ 935 0011 00       		.byte	0
+ 936 0012 00       		.byte	0
+ 937 0013 02       		.uleb128 0x2
+ 938 0014 24       		.uleb128 0x24
+ 939 0015 00       		.byte	0
+ 940 0016 0B       		.uleb128 0xb
+ 941 0017 0B       		.uleb128 0xb
+ 942 0018 3E       		.uleb128 0x3e
+ 943 0019 0B       		.uleb128 0xb
+ 944 001a 03       		.uleb128 0x3
+ 945 001b 0E       		.uleb128 0xe
+ 946 001c 00       		.byte	0
+ 947 001d 00       		.byte	0
+ 948 001e 03       		.uleb128 0x3
+ 949 001f 16       		.uleb128 0x16
+ 950 0020 00       		.byte	0
+ 951 0021 03       		.uleb128 0x3
+ 952 0022 0E       		.uleb128 0xe
+ 953 0023 3A       		.uleb128 0x3a
+ 954 0024 0B       		.uleb128 0xb
+ 955 0025 3B       		.uleb128 0x3b
+ 956 0026 0B       		.uleb128 0xb
+ 957 0027 49       		.uleb128 0x49
+ 958 0028 13       		.uleb128 0x13
+ 959 0029 00       		.byte	0
+ 960 002a 00       		.byte	0
+ 961 002b 04       		.uleb128 0x4
+ 962 002c 24       		.uleb128 0x24
+ 963 002d 00       		.byte	0
+ 964 002e 0B       		.uleb128 0xb
+ 965 002f 0B       		.uleb128 0xb
+ 966 0030 3E       		.uleb128 0x3e
+ 967 0031 0B       		.uleb128 0xb
+ 968 0032 03       		.uleb128 0x3
+ 969 0033 08       		.uleb128 0x8
+ 970 0034 00       		.byte	0
+ 971 0035 00       		.byte	0
+ 972 0036 05       		.uleb128 0x5
+ 973 0037 2E       		.uleb128 0x2e
+ 974 0038 01       		.byte	0x1
+ 975 0039 3F       		.uleb128 0x3f
+ 976 003a 19       		.uleb128 0x19
+ 977 003b 03       		.uleb128 0x3
+ 978 003c 0E       		.uleb128 0xe
+ 979 003d 3A       		.uleb128 0x3a
+ 980 003e 0B       		.uleb128 0xb
+ 981 003f 3B       		.uleb128 0x3b
+ 982 0040 0B       		.uleb128 0xb
+ 983 0041 27       		.uleb128 0x27
+ 984 0042 19       		.uleb128 0x19
+ 985 0043 11       		.uleb128 0x11
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 20
+
+
+ 986 0044 01       		.uleb128 0x1
+ 987 0045 12       		.uleb128 0x12
+ 988 0046 06       		.uleb128 0x6
+ 989 0047 40       		.uleb128 0x40
+ 990 0048 18       		.uleb128 0x18
+ 991 0049 9642     		.uleb128 0x2116
+ 992 004b 19       		.uleb128 0x19
+ 993 004c 01       		.uleb128 0x1
+ 994 004d 13       		.uleb128 0x13
+ 995 004e 00       		.byte	0
+ 996 004f 00       		.byte	0
+ 997 0050 06       		.uleb128 0x6
+ 998 0051 898201   		.uleb128 0x4109
+ 999 0054 00       		.byte	0
+ 1000 0055 11       		.uleb128 0x11
+ 1001 0056 01       		.uleb128 0x1
+ 1002 0057 31       		.uleb128 0x31
+ 1003 0058 13       		.uleb128 0x13
+ 1004 0059 00       		.byte	0
+ 1005 005a 00       		.byte	0
+ 1006 005b 07       		.uleb128 0x7
+ 1007 005c 898201   		.uleb128 0x4109
+ 1008 005f 01       		.byte	0x1
+ 1009 0060 11       		.uleb128 0x11
+ 1010 0061 01       		.uleb128 0x1
+ 1011 0062 31       		.uleb128 0x31
+ 1012 0063 13       		.uleb128 0x13
+ 1013 0064 01       		.uleb128 0x1
+ 1014 0065 13       		.uleb128 0x13
+ 1015 0066 00       		.byte	0
+ 1016 0067 00       		.byte	0
+ 1017 0068 08       		.uleb128 0x8
+ 1018 0069 8A8201   		.uleb128 0x410a
+ 1019 006c 00       		.byte	0
+ 1020 006d 02       		.uleb128 0x2
+ 1021 006e 18       		.uleb128 0x18
+ 1022 006f 9142     		.uleb128 0x2111
+ 1023 0071 18       		.uleb128 0x18
+ 1024 0072 00       		.byte	0
+ 1025 0073 00       		.byte	0
+ 1026 0074 09       		.uleb128 0x9
+ 1027 0075 2E       		.uleb128 0x2e
+ 1028 0076 01       		.byte	0x1
+ 1029 0077 3F       		.uleb128 0x3f
+ 1030 0078 19       		.uleb128 0x19
+ 1031 0079 03       		.uleb128 0x3
+ 1032 007a 0E       		.uleb128 0xe
+ 1033 007b 3A       		.uleb128 0x3a
+ 1034 007c 0B       		.uleb128 0xb
+ 1035 007d 3B       		.uleb128 0x3b
+ 1036 007e 0B       		.uleb128 0xb
+ 1037 007f 49       		.uleb128 0x49
+ 1038 0080 13       		.uleb128 0x13
+ 1039 0081 11       		.uleb128 0x11
+ 1040 0082 01       		.uleb128 0x1
+ 1041 0083 12       		.uleb128 0x12
+ 1042 0084 06       		.uleb128 0x6
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 21
+
+
+ 1043 0085 40       		.uleb128 0x40
+ 1044 0086 18       		.uleb128 0x18
+ 1045 0087 9742     		.uleb128 0x2117
+ 1046 0089 19       		.uleb128 0x19
+ 1047 008a 01       		.uleb128 0x1
+ 1048 008b 13       		.uleb128 0x13
+ 1049 008c 00       		.byte	0
+ 1050 008d 00       		.byte	0
+ 1051 008e 0A       		.uleb128 0xa
+ 1052 008f 898201   		.uleb128 0x4109
+ 1053 0092 01       		.byte	0x1
+ 1054 0093 11       		.uleb128 0x11
+ 1055 0094 01       		.uleb128 0x1
+ 1056 0095 31       		.uleb128 0x31
+ 1057 0096 13       		.uleb128 0x13
+ 1058 0097 00       		.byte	0
+ 1059 0098 00       		.byte	0
+ 1060 0099 0B       		.uleb128 0xb
+ 1061 009a 0F       		.uleb128 0xf
+ 1062 009b 00       		.byte	0
+ 1063 009c 0B       		.uleb128 0xb
+ 1064 009d 0B       		.uleb128 0xb
+ 1065 009e 49       		.uleb128 0x49
+ 1066 009f 13       		.uleb128 0x13
+ 1067 00a0 00       		.byte	0
+ 1068 00a1 00       		.byte	0
+ 1069 00a2 0C       		.uleb128 0xc
+ 1070 00a3 34       		.uleb128 0x34
+ 1071 00a4 00       		.byte	0
+ 1072 00a5 03       		.uleb128 0x3
+ 1073 00a6 0E       		.uleb128 0xe
+ 1074 00a7 3A       		.uleb128 0x3a
+ 1075 00a8 0B       		.uleb128 0xb
+ 1076 00a9 3B       		.uleb128 0x3b
+ 1077 00aa 05       		.uleb128 0x5
+ 1078 00ab 49       		.uleb128 0x49
+ 1079 00ac 13       		.uleb128 0x13
+ 1080 00ad 3F       		.uleb128 0x3f
+ 1081 00ae 19       		.uleb128 0x19
+ 1082 00af 3C       		.uleb128 0x3c
+ 1083 00b0 19       		.uleb128 0x19
+ 1084 00b1 00       		.byte	0
+ 1085 00b2 00       		.byte	0
+ 1086 00b3 0D       		.uleb128 0xd
+ 1087 00b4 35       		.uleb128 0x35
+ 1088 00b5 00       		.byte	0
+ 1089 00b6 49       		.uleb128 0x49
+ 1090 00b7 13       		.uleb128 0x13
+ 1091 00b8 00       		.byte	0
+ 1092 00b9 00       		.byte	0
+ 1093 00ba 0E       		.uleb128 0xe
+ 1094 00bb 34       		.uleb128 0x34
+ 1095 00bc 00       		.byte	0
+ 1096 00bd 03       		.uleb128 0x3
+ 1097 00be 0E       		.uleb128 0xe
+ 1098 00bf 3A       		.uleb128 0x3a
+ 1099 00c0 0B       		.uleb128 0xb
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 22
+
+
+ 1100 00c1 3B       		.uleb128 0x3b
+ 1101 00c2 0B       		.uleb128 0xb
+ 1102 00c3 49       		.uleb128 0x49
+ 1103 00c4 13       		.uleb128 0x13
+ 1104 00c5 3F       		.uleb128 0x3f
+ 1105 00c6 19       		.uleb128 0x19
+ 1106 00c7 02       		.uleb128 0x2
+ 1107 00c8 18       		.uleb128 0x18
+ 1108 00c9 00       		.byte	0
+ 1109 00ca 00       		.byte	0
+ 1110 00cb 0F       		.uleb128 0xf
+ 1111 00cc 01       		.uleb128 0x1
+ 1112 00cd 01       		.byte	0x1
+ 1113 00ce 49       		.uleb128 0x49
+ 1114 00cf 13       		.uleb128 0x13
+ 1115 00d0 01       		.uleb128 0x1
+ 1116 00d1 13       		.uleb128 0x13
+ 1117 00d2 00       		.byte	0
+ 1118 00d3 00       		.byte	0
+ 1119 00d4 10       		.uleb128 0x10
+ 1120 00d5 21       		.uleb128 0x21
+ 1121 00d6 00       		.byte	0
+ 1122 00d7 49       		.uleb128 0x49
+ 1123 00d8 13       		.uleb128 0x13
+ 1124 00d9 2F       		.uleb128 0x2f
+ 1125 00da 0B       		.uleb128 0xb
+ 1126 00db 00       		.byte	0
+ 1127 00dc 00       		.byte	0
+ 1128 00dd 11       		.uleb128 0x11
+ 1129 00de 2E       		.uleb128 0x2e
+ 1130 00df 00       		.byte	0
+ 1131 00e0 3F       		.uleb128 0x3f
+ 1132 00e1 19       		.uleb128 0x19
+ 1133 00e2 3C       		.uleb128 0x3c
+ 1134 00e3 19       		.uleb128 0x19
+ 1135 00e4 6E       		.uleb128 0x6e
+ 1136 00e5 0E       		.uleb128 0xe
+ 1137 00e6 03       		.uleb128 0x3
+ 1138 00e7 0E       		.uleb128 0xe
+ 1139 00e8 3A       		.uleb128 0x3a
+ 1140 00e9 0B       		.uleb128 0xb
+ 1141 00ea 3B       		.uleb128 0x3b
+ 1142 00eb 0B       		.uleb128 0xb
+ 1143 00ec 00       		.byte	0
+ 1144 00ed 00       		.byte	0
+ 1145 00ee 00       		.byte	0
+ 1146              		.section	.debug_aranges,"",%progbits
+ 1147 0000 24000000 		.4byte	0x24
+ 1148 0004 0200     		.2byte	0x2
+ 1149 0006 00000000 		.4byte	.Ldebug_info0
+ 1150 000a 04       		.byte	0x4
+ 1151 000b 00       		.byte	0
+ 1152 000c 0000     		.2byte	0
+ 1153 000e 0000     		.2byte	0
+ 1154 0010 00000000 		.4byte	.LFB64
+ 1155 0014 94000000 		.4byte	.LFE64-.LFB64
+ 1156 0018 00000000 		.4byte	.LFB65
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 23
+
+
+ 1157 001c E0000000 		.4byte	.LFE65-.LFB65
+ 1158 0020 00000000 		.4byte	0
+ 1159 0024 00000000 		.4byte	0
+ 1160              		.section	.debug_ranges,"",%progbits
+ 1161              	.Ldebug_ranges0:
+ 1162 0000 00000000 		.4byte	.LFB64
+ 1163 0004 94000000 		.4byte	.LFE64
+ 1164 0008 00000000 		.4byte	.LFB65
+ 1165 000c E0000000 		.4byte	.LFE65
+ 1166 0010 00000000 		.4byte	0
+ 1167 0014 00000000 		.4byte	0
+ 1168              		.section	.debug_line,"",%progbits
+ 1169              	.Ldebug_line0:
+ 1170 0000 8A020000 		.section	.debug_str,"MS",%progbits,1
+ 1170      02003802 
+ 1170      00000201 
+ 1170      FB0E0D00 
+ 1170      01010101 
+ 1171              	.LASF30:
+ 1172 0000 6973725F 		.ascii	"isr_1_ClearPending\000"
+ 1172      315F436C 
+ 1172      65617250 
+ 1172      656E6469 
+ 1172      6E6700
+ 1173              	.LASF12:
+ 1174 0013 5F5F696E 		.ascii	"__int32_t\000"
+ 1174      7433325F 
+ 1174      7400
+ 1175              	.LASF36:
+ 1176 001d 54726967 		.ascii	"Trigger_r_Write\000"
+ 1176      6765725F 
+ 1176      725F5772 
+ 1176      69746500 
+ 1177              	.LASF38:
+ 1178 002d 756C7472 		.ascii	"ultrasonic.c\000"
+ 1178      61736F6E 
+ 1178      69632E63 
+ 1178      00
+ 1179              	.LASF20:
+ 1180 003a 64697374 		.ascii	"distance\000"
+ 1180      616E6365 
+ 1180      00
+ 1181              	.LASF14:
+ 1182 0043 666C6F61 		.ascii	"float\000"
+ 1182      7400
+ 1183              	.LASF1:
+ 1184 0049 756E7369 		.ascii	"unsigned char\000"
+ 1184      676E6564 
+ 1184      20636861 
+ 1184      7200
+ 1185              	.LASF37:
+ 1186 0057 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 1186      43313120 
+ 1186      352E342E 
+ 1186      31203230 
+ 1186      31363036 
+ 1187 008a 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 24
+
+
+ 1187      20726576 
+ 1187      6973696F 
+ 1187      6E203233 
+ 1187      37373135 
+ 1188 00bd 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 1188      66756E63 
+ 1188      74696F6E 
+ 1188      2D736563 
+ 1188      74696F6E 
+ 1189              	.LASF39:
+ 1190 00e5 433A5C55 		.ascii	"C:\\Users\\zhaoh\\Downloads\\bcd0926\\bcd0904\\bcd\\"
+ 1190      73657273 
+ 1190      5C7A6861 
+ 1190      6F685C44 
+ 1190      6F776E6C 
+ 1191 0112 44657369 		.ascii	"Design01.cydsn\000"
+ 1191      676E3031 
+ 1191      2E637964 
+ 1191      736E00
+ 1192              	.LASF32:
+ 1193 0121 54726967 		.ascii	"Trigger_fl_Write\000"
+ 1193      6765725F 
+ 1193      666C5F57 
+ 1193      72697465 
+ 1193      00
+ 1194              	.LASF5:
+ 1195 0132 6C6F6E67 		.ascii	"long unsigned int\000"
+ 1195      20756E73 
+ 1195      69676E65 
+ 1195      6420696E 
+ 1195      7400
+ 1196              	.LASF3:
+ 1197 0144 73686F72 		.ascii	"short unsigned int\000"
+ 1197      7420756E 
+ 1197      7369676E 
+ 1197      65642069 
+ 1197      6E7400
+ 1198              	.LASF23:
+ 1199 0157 61727261 		.ascii	"array\000"
+ 1199      7900
+ 1200              	.LASF18:
+ 1201 015d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 1201      52784275 
+ 1201      66666572 
+ 1201      00
+ 1202              	.LASF34:
+ 1203 016a 54726967 		.ascii	"Trigger_fr_Write\000"
+ 1203      6765725F 
+ 1203      66725F57 
+ 1203      72697465 
+ 1203      00
+ 1204              	.LASF15:
+ 1205 017b 646F7562 		.ascii	"double\000"
+ 1205      6C6500
+ 1206              	.LASF21:
+ 1207 0182 64697374 		.ascii	"distance_str\000"
+ 1207      616E6365 
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 25
+
+
+ 1207      5F737472 
+ 1207      00
+ 1208              	.LASF22:
+ 1209 018f 6F627374 		.ascii	"obst_detect\000"
+ 1209      5F646574 
+ 1209      65637400 
+ 1210              	.LASF8:
+ 1211 019b 756E7369 		.ascii	"unsigned int\000"
+ 1211      676E6564 
+ 1211      20696E74 
+ 1211      00
+ 1212              	.LASF7:
+ 1213 01a8 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 1213      206C6F6E 
+ 1213      6720756E 
+ 1213      7369676E 
+ 1213      65642069 
+ 1214              	.LASF35:
+ 1215 01bf 54726967 		.ascii	"Trigger_l_Write\000"
+ 1215      6765725F 
+ 1215      6C5F5772 
+ 1215      69746500 
+ 1216              	.LASF13:
+ 1217 01cf 696E7433 		.ascii	"int32_t\000"
+ 1217      325F7400 
+ 1218              	.LASF10:
+ 1219 01d7 73697A65 		.ascii	"sizetype\000"
+ 1219      74797065 
+ 1219      00
+ 1220              	.LASF24:
+ 1221 01e0 64697374 		.ascii	"distancearray\000"
+ 1221      616E6365 
+ 1221      61727261 
+ 1221      7900
+ 1222              	.LASF6:
+ 1223 01ee 6C6F6E67 		.ascii	"long long int\000"
+ 1223      206C6F6E 
+ 1223      6720696E 
+ 1223      7400
+ 1224              	.LASF33:
+ 1225 01fc 43794465 		.ascii	"CyDelayUs\000"
+ 1225      6C617955 
+ 1225      7300
+ 1226              	.LASF11:
+ 1227 0206 63686172 		.ascii	"char\000"
+ 1227      00
+ 1228              	.LASF26:
+ 1229 020b 54696D65 		.ascii	"Timer_1_ReadCounter\000"
+ 1229      725F315F 
+ 1229      52656164 
+ 1229      436F756E 
+ 1229      74657200 
+ 1230              	.LASF19:
+ 1231 021f 636F756E 		.ascii	"count\000"
+ 1231      7400
+ 1232              	.LASF2:
+ 1233 0225 73686F72 		.ascii	"short int\000"
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\cc4nEYub.s 			page 26
+
+
+ 1233      7420696E 
+ 1233      7400
+ 1234              	.LASF25:
+ 1235 022f 54696D65 		.ascii	"Timer_1_ReadStatusRegister\000"
+ 1235      725F315F 
+ 1235      52656164 
+ 1235      53746174 
+ 1235      75735265 
+ 1236              	.LASF4:
+ 1237 024a 6C6F6E67 		.ascii	"long int\000"
+ 1237      20696E74 
+ 1237      00
+ 1238              	.LASF31:
+ 1239 0253 436F6E74 		.ascii	"Control_Reg_4_Write\000"
+ 1239      726F6C5F 
+ 1239      5265675F 
+ 1239      345F5772 
+ 1239      69746500 
+ 1240              	.LASF9:
+ 1241 0267 6C6F6E67 		.ascii	"long double\000"
+ 1241      20646F75 
+ 1241      626C6500 
+ 1242              	.LASF0:
+ 1243 0273 7369676E 		.ascii	"signed char\000"
+ 1243      65642063 
+ 1243      68617200 
+ 1244              	.LASF17:
+ 1245 027f 53656E73 		.ascii	"Sense1\000"
+ 1245      653100
+ 1246              	.LASF28:
+ 1247 0286 55415254 		.ascii	"UART_1_PutString\000"
+ 1247      5F315F50 
+ 1247      75745374 
+ 1247      72696E67 
+ 1247      00
+ 1248              	.LASF27:
+ 1249 0297 73707269 		.ascii	"sprintf\000"
+ 1249      6E746600 
+ 1250              	.LASF29:
+ 1251 029f 43794465 		.ascii	"CyDelay\000"
+ 1251      6C617900 
+ 1252              	.LASF16:
+ 1253 02a7 54696D65 		.ascii	"Timer_1_ISR_Handler\000"
+ 1253      725F315F 
+ 1253      4953525F 
+ 1253      48616E64 
+ 1253      6C657200 
+ 1254              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

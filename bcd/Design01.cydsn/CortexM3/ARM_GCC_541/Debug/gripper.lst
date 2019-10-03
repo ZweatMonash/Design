@@ -1,0 +1,637 @@
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 1
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"gripper.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              		.section	.text.gripper_open,"ax",%progbits
+  20              		.align	2
+  21              		.global	gripper_open
+  22              		.thumb
+  23              		.thumb_func
+  24              		.type	gripper_open, %function
+  25              	gripper_open:
+  26              	.LFB64:
+  27              		.file 1 "gripper.c"
+   1:gripper.c     **** /* ========================================
+   2:gripper.c     ****  *
+   3:gripper.c     ****  * Copyright YOUR COMPANY, THE YEAR
+   4:gripper.c     ****  * All Rights Reserved
+   5:gripper.c     ****  * UNPUBLISHED, LICENSED SOFTWARE.
+   6:gripper.c     ****  *
+   7:gripper.c     ****  * CONFIDENTIAL AND PROPRIETARY INFORMATION
+   8:gripper.c     ****  * WHICH IS THE PROPERTY OF your company.
+   9:gripper.c     ****  *
+  10:gripper.c     ****  * ========================================
+  11:gripper.c     **** */
+  12:gripper.c     **** #include "header.h"
+  13:gripper.c     **** #include "math.h"
+  14:gripper.c     **** #include "stdlib.h"
+  15:gripper.c     **** #include "header01.h"
+  16:gripper.c     **** 
+  17:gripper.c     **** void gripper_open(){
+  28              		.loc 1 17 0
+  29              		.cfi_startproc
+  30              		@ args = 0, pretend = 0, frame = 0
+  31              		@ frame_needed = 0, uses_anonymous_args = 0
+  32 0000 08B5     		push	{r3, lr}
+  33              		.cfi_def_cfa_offset 8
+  34              		.cfi_offset 3, -8
+  35              		.cfi_offset 14, -4
+  18:gripper.c     **** PWM_1_Start();
+  36              		.loc 1 18 0
+  37 0002 FFF7FEFF 		bl	PWM_1_Start
+  38              	.LVL0:
+  19:gripper.c     **** PWM_1_WriteCompare(22);
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 2
+
+
+  39              		.loc 1 19 0
+  40 0006 1620     		movs	r0, #22
+  41 0008 FFF7FEFF 		bl	PWM_1_WriteCompare
+  42              	.LVL1:
+  20:gripper.c     **** CyDelay(1000);
+  43              		.loc 1 20 0
+  44 000c 4FF47A70 		mov	r0, #1000
+  45 0010 FFF7FEFF 		bl	CyDelay
+  46              	.LVL2:
+  47 0014 08BD     		pop	{r3, pc}
+  48              		.cfi_endproc
+  49              	.LFE64:
+  50              		.size	gripper_open, .-gripper_open
+  51 0016 00BF     		.section	.text.gripper_close,"ax",%progbits
+  52              		.align	2
+  53              		.global	gripper_close
+  54              		.thumb
+  55              		.thumb_func
+  56              		.type	gripper_close, %function
+  57              	gripper_close:
+  58              	.LFB65:
+  21:gripper.c     **** //PWM_1_Sleep();
+  22:gripper.c     **** }
+  23:gripper.c     **** 
+  24:gripper.c     **** void gripper_close(){
+  59              		.loc 1 24 0
+  60              		.cfi_startproc
+  61              		@ args = 0, pretend = 0, frame = 0
+  62              		@ frame_needed = 0, uses_anonymous_args = 0
+  63 0000 08B5     		push	{r3, lr}
+  64              		.cfi_def_cfa_offset 8
+  65              		.cfi_offset 3, -8
+  66              		.cfi_offset 14, -4
+  25:gripper.c     **** PWM_1_Start();
+  67              		.loc 1 25 0
+  68 0002 FFF7FEFF 		bl	PWM_1_Start
+  69              	.LVL3:
+  26:gripper.c     **** PWM_1_WriteCompare(25);
+  70              		.loc 1 26 0
+  71 0006 1920     		movs	r0, #25
+  72 0008 FFF7FEFF 		bl	PWM_1_WriteCompare
+  73              	.LVL4:
+  27:gripper.c     **** CyDelay(1000);
+  74              		.loc 1 27 0
+  75 000c 4FF47A70 		mov	r0, #1000
+  76 0010 FFF7FEFF 		bl	CyDelay
+  77              	.LVL5:
+  78 0014 08BD     		pop	{r3, pc}
+  79              		.cfi_endproc
+  80              	.LFE65:
+  81              		.size	gripper_close, .-gripper_close
+  82 0016 00BF     		.text
+  83              	.Letext0:
+  84              		.file 2 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  85              		.file 3 "c:\\program files (x86)\\cypress\\psoc creator\\4.2\\psoc creator\\import\\gnu\\arm\\5.4.
+  86              		.file 4 "Generated_Source\\PSoC5/PWM_1.h"
+  87              		.file 5 "Generated_Source\\PSoC5/CyLib.h"
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 3
+
+
+  88              		.file 6 "Generated_Source\\PSoC5/core_cm3.h"
+  89              		.section	.debug_info,"",%progbits
+  90              	.Ldebug_info0:
+  91 0000 59010000 		.4byte	0x159
+  92 0004 0400     		.2byte	0x4
+  93 0006 00000000 		.4byte	.Ldebug_abbrev0
+  94 000a 04       		.byte	0x4
+  95 000b 01       		.uleb128 0x1
+  96 000c 3A000000 		.4byte	.LASF21
+  97 0010 0C       		.byte	0xc
+  98 0011 73010000 		.4byte	.LASF22
+  99 0015 C8000000 		.4byte	.LASF23
+ 100 0019 00000000 		.4byte	.Ldebug_ranges0+0
+ 101 001d 00000000 		.4byte	0
+ 102 0021 00000000 		.4byte	.Ldebug_line0
+ 103 0025 02       		.uleb128 0x2
+ 104 0026 01       		.byte	0x1
+ 105 0027 06       		.byte	0x6
+ 106 0028 8A010000 		.4byte	.LASF0
+ 107 002c 02       		.uleb128 0x2
+ 108 002d 01       		.byte	0x1
+ 109 002e 08       		.byte	0x8
+ 110 002f 35010000 		.4byte	.LASF1
+ 111 0033 02       		.uleb128 0x2
+ 112 0034 02       		.byte	0x2
+ 113 0035 05       		.byte	0x5
+ 114 0036 C5010000 		.4byte	.LASF2
+ 115 003a 02       		.uleb128 0x2
+ 116 003b 02       		.byte	0x2
+ 117 003c 07       		.byte	0x7
+ 118 003d 0E000000 		.4byte	.LASF3
+ 119 0041 03       		.uleb128 0x3
+ 120 0042 A2010000 		.4byte	.LASF12
+ 121 0046 02       		.byte	0x2
+ 122 0047 3F       		.byte	0x3f
+ 123 0048 4C000000 		.4byte	0x4c
+ 124 004c 02       		.uleb128 0x2
+ 125 004d 04       		.byte	0x4
+ 126 004e 05       		.byte	0x5
+ 127 004f 56010000 		.4byte	.LASF4
+ 128 0053 02       		.uleb128 0x2
+ 129 0054 04       		.byte	0x4
+ 130 0055 07       		.byte	0x7
+ 131 0056 0C010000 		.4byte	.LASF5
+ 132 005a 02       		.uleb128 0x2
+ 133 005b 08       		.byte	0x8
+ 134 005c 05       		.byte	0x5
+ 135 005d 00000000 		.4byte	.LASF6
+ 136 0061 02       		.uleb128 0x2
+ 137 0062 08       		.byte	0x8
+ 138 0063 07       		.byte	0x7
+ 139 0064 1E010000 		.4byte	.LASF7
+ 140 0068 04       		.uleb128 0x4
+ 141 0069 04       		.byte	0x4
+ 142 006a 05       		.byte	0x5
+ 143 006b 696E7400 		.ascii	"int\000"
+ 144 006f 02       		.uleb128 0x2
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 4
+
+
+ 145 0070 04       		.byte	0x4
+ 146 0071 07       		.byte	0x7
+ 147 0072 21000000 		.4byte	.LASF8
+ 148 0076 02       		.uleb128 0x2
+ 149 0077 08       		.byte	0x8
+ 150 0078 04       		.byte	0x4
+ 151 0079 96010000 		.4byte	.LASF9
+ 152 007d 02       		.uleb128 0x2
+ 153 007e 04       		.byte	0x4
+ 154 007f 07       		.byte	0x7
+ 155 0080 D7010000 		.4byte	.LASF10
+ 156 0084 02       		.uleb128 0x2
+ 157 0085 01       		.byte	0x1
+ 158 0086 08       		.byte	0x8
+ 159 0087 43010000 		.4byte	.LASF11
+ 160 008b 03       		.uleb128 0x3
+ 161 008c CF010000 		.4byte	.LASF13
+ 162 0090 03       		.byte	0x3
+ 163 0091 2C       		.byte	0x2c
+ 164 0092 41000000 		.4byte	0x41
+ 165 0096 02       		.uleb128 0x2
+ 166 0097 04       		.byte	0x4
+ 167 0098 04       		.byte	0x4
+ 168 0099 BF010000 		.4byte	.LASF14
+ 169 009d 02       		.uleb128 0x2
+ 170 009e 08       		.byte	0x8
+ 171 009f 04       		.byte	0x4
+ 172 00a0 5F010000 		.4byte	.LASF15
+ 173 00a4 05       		.uleb128 0x5
+ 174 00a5 66010000 		.4byte	.LASF16
+ 175 00a9 01       		.byte	0x1
+ 176 00aa 11       		.byte	0x11
+ 177 00ab 00000000 		.4byte	.LFB64
+ 178 00af 16000000 		.4byte	.LFE64-.LFB64
+ 179 00b3 01       		.uleb128 0x1
+ 180 00b4 9C       		.byte	0x9c
+ 181 00b5 E7000000 		.4byte	0xe7
+ 182 00b9 06       		.uleb128 0x6
+ 183 00ba 06000000 		.4byte	.LVL0
+ 184 00be 3B010000 		.4byte	0x13b
+ 185 00c2 07       		.uleb128 0x7
+ 186 00c3 0C000000 		.4byte	.LVL1
+ 187 00c7 46010000 		.4byte	0x146
+ 188 00cb D5000000 		.4byte	0xd5
+ 189 00cf 08       		.uleb128 0x8
+ 190 00d0 01       		.uleb128 0x1
+ 191 00d1 50       		.byte	0x50
+ 192 00d2 01       		.uleb128 0x1
+ 193 00d3 46       		.byte	0x46
+ 194 00d4 00       		.byte	0
+ 195 00d5 09       		.uleb128 0x9
+ 196 00d6 14000000 		.4byte	.LVL2
+ 197 00da 51010000 		.4byte	0x151
+ 198 00de 08       		.uleb128 0x8
+ 199 00df 01       		.uleb128 0x1
+ 200 00e0 50       		.byte	0x50
+ 201 00e1 03       		.uleb128 0x3
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 5
+
+
+ 202 00e2 0A       		.byte	0xa
+ 203 00e3 E803     		.2byte	0x3e8
+ 204 00e5 00       		.byte	0
+ 205 00e6 00       		.byte	0
+ 206 00e7 05       		.uleb128 0x5
+ 207 00e8 48010000 		.4byte	.LASF17
+ 208 00ec 01       		.byte	0x1
+ 209 00ed 18       		.byte	0x18
+ 210 00ee 00000000 		.4byte	.LFB65
+ 211 00f2 16000000 		.4byte	.LFE65-.LFB65
+ 212 00f6 01       		.uleb128 0x1
+ 213 00f7 9C       		.byte	0x9c
+ 214 00f8 2A010000 		.4byte	0x12a
+ 215 00fc 06       		.uleb128 0x6
+ 216 00fd 06000000 		.4byte	.LVL3
+ 217 0101 3B010000 		.4byte	0x13b
+ 218 0105 07       		.uleb128 0x7
+ 219 0106 0C000000 		.4byte	.LVL4
+ 220 010a 46010000 		.4byte	0x146
+ 221 010e 18010000 		.4byte	0x118
+ 222 0112 08       		.uleb128 0x8
+ 223 0113 01       		.uleb128 0x1
+ 224 0114 50       		.byte	0x50
+ 225 0115 01       		.uleb128 0x1
+ 226 0116 49       		.byte	0x49
+ 227 0117 00       		.byte	0
+ 228 0118 09       		.uleb128 0x9
+ 229 0119 14000000 		.4byte	.LVL5
+ 230 011d 51010000 		.4byte	0x151
+ 231 0121 08       		.uleb128 0x8
+ 232 0122 01       		.uleb128 0x1
+ 233 0123 50       		.byte	0x50
+ 234 0124 03       		.uleb128 0x3
+ 235 0125 0A       		.byte	0xa
+ 236 0126 E803     		.2byte	0x3e8
+ 237 0128 00       		.byte	0
+ 238 0129 00       		.byte	0
+ 239 012a 0A       		.uleb128 0xa
+ 240 012b 7D010000 		.4byte	.LASF24
+ 241 012f 06       		.byte	0x6
+ 242 0130 1207     		.2byte	0x712
+ 243 0132 36010000 		.4byte	0x136
+ 244 0136 0B       		.uleb128 0xb
+ 245 0137 8B000000 		.4byte	0x8b
+ 246 013b 0C       		.uleb128 0xc
+ 247 013c 2E000000 		.4byte	.LASF18
+ 248 0140 2E000000 		.4byte	.LASF18
+ 249 0144 04       		.byte	0x4
+ 250 0145 92       		.byte	0x92
+ 251 0146 0C       		.uleb128 0xc
+ 252 0147 AC010000 		.4byte	.LASF19
+ 253 014b AC010000 		.4byte	.LASF19
+ 254 014f 04       		.byte	0x4
+ 255 0150 C3       		.byte	0xc3
+ 256 0151 0C       		.uleb128 0xc
+ 257 0152 04010000 		.4byte	.LASF20
+ 258 0156 04010000 		.4byte	.LASF20
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 6
+
+
+ 259 015a 05       		.byte	0x5
+ 260 015b 76       		.byte	0x76
+ 261 015c 00       		.byte	0
+ 262              		.section	.debug_abbrev,"",%progbits
+ 263              	.Ldebug_abbrev0:
+ 264 0000 01       		.uleb128 0x1
+ 265 0001 11       		.uleb128 0x11
+ 266 0002 01       		.byte	0x1
+ 267 0003 25       		.uleb128 0x25
+ 268 0004 0E       		.uleb128 0xe
+ 269 0005 13       		.uleb128 0x13
+ 270 0006 0B       		.uleb128 0xb
+ 271 0007 03       		.uleb128 0x3
+ 272 0008 0E       		.uleb128 0xe
+ 273 0009 1B       		.uleb128 0x1b
+ 274 000a 0E       		.uleb128 0xe
+ 275 000b 55       		.uleb128 0x55
+ 276 000c 17       		.uleb128 0x17
+ 277 000d 11       		.uleb128 0x11
+ 278 000e 01       		.uleb128 0x1
+ 279 000f 10       		.uleb128 0x10
+ 280 0010 17       		.uleb128 0x17
+ 281 0011 00       		.byte	0
+ 282 0012 00       		.byte	0
+ 283 0013 02       		.uleb128 0x2
+ 284 0014 24       		.uleb128 0x24
+ 285 0015 00       		.byte	0
+ 286 0016 0B       		.uleb128 0xb
+ 287 0017 0B       		.uleb128 0xb
+ 288 0018 3E       		.uleb128 0x3e
+ 289 0019 0B       		.uleb128 0xb
+ 290 001a 03       		.uleb128 0x3
+ 291 001b 0E       		.uleb128 0xe
+ 292 001c 00       		.byte	0
+ 293 001d 00       		.byte	0
+ 294 001e 03       		.uleb128 0x3
+ 295 001f 16       		.uleb128 0x16
+ 296 0020 00       		.byte	0
+ 297 0021 03       		.uleb128 0x3
+ 298 0022 0E       		.uleb128 0xe
+ 299 0023 3A       		.uleb128 0x3a
+ 300 0024 0B       		.uleb128 0xb
+ 301 0025 3B       		.uleb128 0x3b
+ 302 0026 0B       		.uleb128 0xb
+ 303 0027 49       		.uleb128 0x49
+ 304 0028 13       		.uleb128 0x13
+ 305 0029 00       		.byte	0
+ 306 002a 00       		.byte	0
+ 307 002b 04       		.uleb128 0x4
+ 308 002c 24       		.uleb128 0x24
+ 309 002d 00       		.byte	0
+ 310 002e 0B       		.uleb128 0xb
+ 311 002f 0B       		.uleb128 0xb
+ 312 0030 3E       		.uleb128 0x3e
+ 313 0031 0B       		.uleb128 0xb
+ 314 0032 03       		.uleb128 0x3
+ 315 0033 08       		.uleb128 0x8
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 7
+
+
+ 316 0034 00       		.byte	0
+ 317 0035 00       		.byte	0
+ 318 0036 05       		.uleb128 0x5
+ 319 0037 2E       		.uleb128 0x2e
+ 320 0038 01       		.byte	0x1
+ 321 0039 3F       		.uleb128 0x3f
+ 322 003a 19       		.uleb128 0x19
+ 323 003b 03       		.uleb128 0x3
+ 324 003c 0E       		.uleb128 0xe
+ 325 003d 3A       		.uleb128 0x3a
+ 326 003e 0B       		.uleb128 0xb
+ 327 003f 3B       		.uleb128 0x3b
+ 328 0040 0B       		.uleb128 0xb
+ 329 0041 11       		.uleb128 0x11
+ 330 0042 01       		.uleb128 0x1
+ 331 0043 12       		.uleb128 0x12
+ 332 0044 06       		.uleb128 0x6
+ 333 0045 40       		.uleb128 0x40
+ 334 0046 18       		.uleb128 0x18
+ 335 0047 9742     		.uleb128 0x2117
+ 336 0049 19       		.uleb128 0x19
+ 337 004a 01       		.uleb128 0x1
+ 338 004b 13       		.uleb128 0x13
+ 339 004c 00       		.byte	0
+ 340 004d 00       		.byte	0
+ 341 004e 06       		.uleb128 0x6
+ 342 004f 898201   		.uleb128 0x4109
+ 343 0052 00       		.byte	0
+ 344 0053 11       		.uleb128 0x11
+ 345 0054 01       		.uleb128 0x1
+ 346 0055 31       		.uleb128 0x31
+ 347 0056 13       		.uleb128 0x13
+ 348 0057 00       		.byte	0
+ 349 0058 00       		.byte	0
+ 350 0059 07       		.uleb128 0x7
+ 351 005a 898201   		.uleb128 0x4109
+ 352 005d 01       		.byte	0x1
+ 353 005e 11       		.uleb128 0x11
+ 354 005f 01       		.uleb128 0x1
+ 355 0060 31       		.uleb128 0x31
+ 356 0061 13       		.uleb128 0x13
+ 357 0062 01       		.uleb128 0x1
+ 358 0063 13       		.uleb128 0x13
+ 359 0064 00       		.byte	0
+ 360 0065 00       		.byte	0
+ 361 0066 08       		.uleb128 0x8
+ 362 0067 8A8201   		.uleb128 0x410a
+ 363 006a 00       		.byte	0
+ 364 006b 02       		.uleb128 0x2
+ 365 006c 18       		.uleb128 0x18
+ 366 006d 9142     		.uleb128 0x2111
+ 367 006f 18       		.uleb128 0x18
+ 368 0070 00       		.byte	0
+ 369 0071 00       		.byte	0
+ 370 0072 09       		.uleb128 0x9
+ 371 0073 898201   		.uleb128 0x4109
+ 372 0076 01       		.byte	0x1
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 8
+
+
+ 373 0077 11       		.uleb128 0x11
+ 374 0078 01       		.uleb128 0x1
+ 375 0079 31       		.uleb128 0x31
+ 376 007a 13       		.uleb128 0x13
+ 377 007b 00       		.byte	0
+ 378 007c 00       		.byte	0
+ 379 007d 0A       		.uleb128 0xa
+ 380 007e 34       		.uleb128 0x34
+ 381 007f 00       		.byte	0
+ 382 0080 03       		.uleb128 0x3
+ 383 0081 0E       		.uleb128 0xe
+ 384 0082 3A       		.uleb128 0x3a
+ 385 0083 0B       		.uleb128 0xb
+ 386 0084 3B       		.uleb128 0x3b
+ 387 0085 05       		.uleb128 0x5
+ 388 0086 49       		.uleb128 0x49
+ 389 0087 13       		.uleb128 0x13
+ 390 0088 3F       		.uleb128 0x3f
+ 391 0089 19       		.uleb128 0x19
+ 392 008a 3C       		.uleb128 0x3c
+ 393 008b 19       		.uleb128 0x19
+ 394 008c 00       		.byte	0
+ 395 008d 00       		.byte	0
+ 396 008e 0B       		.uleb128 0xb
+ 397 008f 35       		.uleb128 0x35
+ 398 0090 00       		.byte	0
+ 399 0091 49       		.uleb128 0x49
+ 400 0092 13       		.uleb128 0x13
+ 401 0093 00       		.byte	0
+ 402 0094 00       		.byte	0
+ 403 0095 0C       		.uleb128 0xc
+ 404 0096 2E       		.uleb128 0x2e
+ 405 0097 00       		.byte	0
+ 406 0098 3F       		.uleb128 0x3f
+ 407 0099 19       		.uleb128 0x19
+ 408 009a 3C       		.uleb128 0x3c
+ 409 009b 19       		.uleb128 0x19
+ 410 009c 6E       		.uleb128 0x6e
+ 411 009d 0E       		.uleb128 0xe
+ 412 009e 03       		.uleb128 0x3
+ 413 009f 0E       		.uleb128 0xe
+ 414 00a0 3A       		.uleb128 0x3a
+ 415 00a1 0B       		.uleb128 0xb
+ 416 00a2 3B       		.uleb128 0x3b
+ 417 00a3 0B       		.uleb128 0xb
+ 418 00a4 00       		.byte	0
+ 419 00a5 00       		.byte	0
+ 420 00a6 00       		.byte	0
+ 421              		.section	.debug_aranges,"",%progbits
+ 422 0000 24000000 		.4byte	0x24
+ 423 0004 0200     		.2byte	0x2
+ 424 0006 00000000 		.4byte	.Ldebug_info0
+ 425 000a 04       		.byte	0x4
+ 426 000b 00       		.byte	0
+ 427 000c 0000     		.2byte	0
+ 428 000e 0000     		.2byte	0
+ 429 0010 00000000 		.4byte	.LFB64
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 9
+
+
+ 430 0014 16000000 		.4byte	.LFE64-.LFB64
+ 431 0018 00000000 		.4byte	.LFB65
+ 432 001c 16000000 		.4byte	.LFE65-.LFB65
+ 433 0020 00000000 		.4byte	0
+ 434 0024 00000000 		.4byte	0
+ 435              		.section	.debug_ranges,"",%progbits
+ 436              	.Ldebug_ranges0:
+ 437 0000 00000000 		.4byte	.LFB64
+ 438 0004 16000000 		.4byte	.LFE64
+ 439 0008 00000000 		.4byte	.LFB65
+ 440 000c 16000000 		.4byte	.LFE65
+ 441 0010 00000000 		.4byte	0
+ 442 0014 00000000 		.4byte	0
+ 443              		.section	.debug_line,"",%progbits
+ 444              	.Ldebug_line0:
+ 445 0000 82010000 		.section	.debug_str,"MS",%progbits,1
+ 445      02005801 
+ 445      00000201 
+ 445      FB0E0D00 
+ 445      01010101 
+ 446              	.LASF6:
+ 447 0000 6C6F6E67 		.ascii	"long long int\000"
+ 447      206C6F6E 
+ 447      6720696E 
+ 447      7400
+ 448              	.LASF3:
+ 449 000e 73686F72 		.ascii	"short unsigned int\000"
+ 449      7420756E 
+ 449      7369676E 
+ 449      65642069 
+ 449      6E7400
+ 450              	.LASF8:
+ 451 0021 756E7369 		.ascii	"unsigned int\000"
+ 451      676E6564 
+ 451      20696E74 
+ 451      00
+ 452              	.LASF18:
+ 453 002e 50574D5F 		.ascii	"PWM_1_Start\000"
+ 453      315F5374 
+ 453      61727400 
+ 454              	.LASF21:
+ 455 003a 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+ 455      43313120 
+ 455      352E342E 
+ 455      31203230 
+ 455      31363036 
+ 456 006d 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+ 456      20726576 
+ 456      6973696F 
+ 456      6E203233 
+ 456      37373135 
+ 457 00a0 67202D66 		.ascii	"g -ffunction-sections -ffat-lto-objects\000"
+ 457      66756E63 
+ 457      74696F6E 
+ 457      2D736563 
+ 457      74696F6E 
+ 458              	.LASF23:
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 10
+
+
+ 459 00c8 433A5C55 		.ascii	"C:\\Users\\zhaoh\\Downloads\\bcd0926\\bcd0904\\bcd\\"
+ 459      73657273 
+ 459      5C7A6861 
+ 459      6F685C44 
+ 459      6F776E6C 
+ 460 00f5 44657369 		.ascii	"Design01.cydsn\000"
+ 460      676E3031 
+ 460      2E637964 
+ 460      736E00
+ 461              	.LASF20:
+ 462 0104 43794465 		.ascii	"CyDelay\000"
+ 462      6C617900 
+ 463              	.LASF5:
+ 464 010c 6C6F6E67 		.ascii	"long unsigned int\000"
+ 464      20756E73 
+ 464      69676E65 
+ 464      6420696E 
+ 464      7400
+ 465              	.LASF7:
+ 466 011e 6C6F6E67 		.ascii	"long long unsigned int\000"
+ 466      206C6F6E 
+ 466      6720756E 
+ 466      7369676E 
+ 466      65642069 
+ 467              	.LASF1:
+ 468 0135 756E7369 		.ascii	"unsigned char\000"
+ 468      676E6564 
+ 468      20636861 
+ 468      7200
+ 469              	.LASF11:
+ 470 0143 63686172 		.ascii	"char\000"
+ 470      00
+ 471              	.LASF17:
+ 472 0148 67726970 		.ascii	"gripper_close\000"
+ 472      7065725F 
+ 472      636C6F73 
+ 472      6500
+ 473              	.LASF4:
+ 474 0156 6C6F6E67 		.ascii	"long int\000"
+ 474      20696E74 
+ 474      00
+ 475              	.LASF15:
+ 476 015f 646F7562 		.ascii	"double\000"
+ 476      6C6500
+ 477              	.LASF16:
+ 478 0166 67726970 		.ascii	"gripper_open\000"
+ 478      7065725F 
+ 478      6F70656E 
+ 478      00
+ 479              	.LASF22:
+ 480 0173 67726970 		.ascii	"gripper.c\000"
+ 480      7065722E 
+ 480      6300
+ 481              	.LASF24:
+ 482 017d 49544D5F 		.ascii	"ITM_RxBuffer\000"
+ 482      52784275 
+ 482      66666572 
+ARM GAS  C:\Users\zhaoh\AppData\Local\Temp\ccpldHQu.s 			page 11
+
+
+ 482      00
+ 483              	.LASF0:
+ 484 018a 7369676E 		.ascii	"signed char\000"
+ 484      65642063 
+ 484      68617200 
+ 485              	.LASF9:
+ 486 0196 6C6F6E67 		.ascii	"long double\000"
+ 486      20646F75 
+ 486      626C6500 
+ 487              	.LASF12:
+ 488 01a2 5F5F696E 		.ascii	"__int32_t\000"
+ 488      7433325F 
+ 488      7400
+ 489              	.LASF19:
+ 490 01ac 50574D5F 		.ascii	"PWM_1_WriteCompare\000"
+ 490      315F5772 
+ 490      69746543 
+ 490      6F6D7061 
+ 490      726500
+ 491              	.LASF14:
+ 492 01bf 666C6F61 		.ascii	"float\000"
+ 492      7400
+ 493              	.LASF2:
+ 494 01c5 73686F72 		.ascii	"short int\000"
+ 494      7420696E 
+ 494      7400
+ 495              	.LASF13:
+ 496 01cf 696E7433 		.ascii	"int32_t\000"
+ 496      325F7400 
+ 497              	.LASF10:
+ 498 01d7 73697A65 		.ascii	"sizetype\000"
+ 498      74797065 
+ 498      00
+ 499              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran

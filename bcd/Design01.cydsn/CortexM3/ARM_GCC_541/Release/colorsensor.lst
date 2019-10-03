@@ -1,0 +1,58 @@
+ARM GAS  C:\Users\Zwe\AppData\Local\Temp\ccD3QHi6.s 			page 1
+
+
+   1              		.syntax unified
+   2              		.cpu cortex-m3
+   3              		.fpu softvfp
+   4              		.eabi_attribute 20, 1
+   5              		.eabi_attribute 21, 1
+   6              		.eabi_attribute 23, 3
+   7              		.eabi_attribute 24, 1
+   8              		.eabi_attribute 25, 1
+   9              		.eabi_attribute 26, 1
+  10              		.eabi_attribute 30, 4
+  11              		.eabi_attribute 34, 1
+  12              		.eabi_attribute 18, 4
+  13              		.thumb
+  14              		.syntax unified
+  15              		.file	"colorsensor.c"
+  16              		.text
+  17              	.Ltext0:
+  18              		.cfi_sections	.debug_frame
+  19              	.Letext0:
+  20              		.section	.debug_line,"",%progbits
+  21              	.Ldebug_line0:
+  22              		.section	.debug_str,"MS",%progbits,1
+  23              	.LASF0:
+  24 0000 474E5520 		.ascii	"GNU C11 5.4.1 20160609 (release) [ARM/embedded-5-br"
+  24      43313120 
+  24      352E342E 
+  24      31203230 
+  24      31363036 
+  25 0033 616E6368 		.ascii	"anch revision 237715] -mcpu=cortex-m3 -mthumb -g -O"
+  25      20726576 
+  25      6973696F 
+  25      6E203233 
+  25      37373135 
+  26 0066 73202D66 		.ascii	"s -ffunction-sections -ffat-lto-objects\000"
+  26      66756E63 
+  26      74696F6E 
+  26      2D736563 
+  26      74696F6E 
+  27              	.LASF1:
+  28 008e 433A5C55 		.ascii	"C:\\Users\\Zwe\\Desktop\\Monash\\Y3S2\\ECE3091 - EN"
+  28      73657273 
+  28      5C5A7765 
+  28      5C446573 
+  28      6B746F70 
+  29 00bb 47494E45 		.ascii	"GINEERING DESIGN\\bcd\\Design01.cydsn\000"
+  29      4552494E 
+  29      47204445 
+  29      5349474E 
+  29      5C626364 
+  30              	.LASF2:
+  31 00df 636F6C6F 		.ascii	"colorsensor.c\000"
+  31      7273656E 
+  31      736F722E 
+  31      6300
+  32              		.ident	"GCC: (GNU Tools for ARM Embedded Processors) 5.4.1 20160609 (release) [ARM/embedded-5-bran
